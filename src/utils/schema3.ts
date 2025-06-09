@@ -1,14 +1,12 @@
-
-
-export const schema2 = {
+export const schema3 = {
   PatNum: { path: "patient.member_id", default: 0 },
   LName: { path: "patient.last_name", default: "" },
   FName: { path: "patient.first_name", default: "" },
   MiddleI: { path: "patient.middle_name", default: "" },
   Preferred: { path: "patient.name", default: "" },
   PatStatus: { path: "patient.is_subscriber", default: 1 },
-  Gender: { path: "", default: 0 },
-  Position: { path: "patient.relationship", default: 0 },
+  Gender: { path: "patient.gender", default: 0 },
+  Position: { path: "", default: 0 },
   Birthdate: { path: "patient.dob", default: "" },
   SSN: { path: "", default: "" },
   Address: { path: "patient.address.street1", default: "" },
@@ -89,7 +87,7 @@ export const schema2 = {
   PatNum1: { path: "", default: 0 },
   Ordinal: { path: "", default: 0 },
   IsPending: { path: "", default: false },
-  Relationship: { path: "patient.relationship", default: "" },
+  Relationship: { path: "", default: "" },
   PatID: { path: "patient.member_id", default: "" },
   InsSubNum: { path: "", default: 0 },
   OrthoAutoFeeBilledOverride: { path: "", default: 0 },
@@ -101,12 +99,10 @@ export const schema2 = {
   DateEffective: { path: "patient.coverage.effective_date", default: "" },
   SubscriberID: { path: "subscriber.member_id", default: "" },
   GroupNum: { path: "plan.group_number", default: "" },
-  GroupName: { path: "plan.group_name", default: "" },
+  GroupName: { path: "plan.group_number", default: "" },
   CarrierNum: { path: "payer.id", default: "" },
   CarrierNum1: { path: "", default: "" },
   CarrierName: { path: "payer.name", default: "" },
   carrierPhone: { path: "", default: "" },
   ElectID: { path: "payer.received_id", default: "" }
 };
-
-

@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import {formatDataService} from '../services/formatdata.service';
 import { schema1 } from '../utils/schema1';
 import {schema2} from '../utils/schema2';
+import { schema3 } from '../utils/schema3';
 
 
 export const data1ToResult =async (req :Request,res:Response)=>{
@@ -6408,7 +6409,7 @@ export const data1ToResult =async (req :Request,res:Response)=>{
         }
     ]
     }
-    // Perform some transformation or processing on data1
+   
     const result = await  formatDataService(data1, schema1);
     res.json(result);
 }
@@ -7434,6 +7435,683 @@ export const data2ToResult = async(req :Request,res :Response)=>{
     ]
 }
     const result = await formatDataService(data,schema2);
+    res.json(result);
+
+}
+export const data3ToResult = async (req :Request,res : Response)=>{
+
+    const data ={
+    "onederfulId": "8cd60450-4223-11f0-bf99-2ff188113c5c",
+    "patient": {
+        "name": "VICKIE A RIVERS",
+        "first_name": "VICKIE",
+        "gender": "female",
+        "middle_name": "A",
+        "last_name": "RIVERS",
+        "age": "71",
+        "dob": "07/29/1953",
+        "member_id": "989393288",
+        "address": {
+            "street1": "667 OLD DOVER RD",
+            "city": "MORRIS PLAINS",
+            "zip": "07950",
+            "state": "NJ"
+        },
+        "coverage": {
+            "effective_date": "01/01/2025",
+            "end_date": "12/31/2025",
+            "status": "active"
+        },
+        "is_subscriber": false,
+        "metadata": [
+            {
+                "type": "plan_begin",
+                "value": "01/01/2025-12/31/2025",
+                "plan_begin": "01/01/2025-12/31/2025"
+            }
+        ]
+    },
+    "plan": {
+        "group_number": "1500980",
+        "number": "1500980",
+        "insurance_type": "ppo",
+        "payer_specific_description": "UHC DENTAL D0035137 (53116)",
+        "metadata": [
+            {
+                "value": "1500980",
+                "qualifier": "group_number"
+            }
+        ]
+    },
+    "subscriber": {
+        "name": "VICKIE A RIVERS",
+        "first_name": "VICKIE",
+        "gender": "female",
+        "middle_name": "A",
+        "last_name": "RIVERS",
+        "age": "71",
+        "dob": "07/29/1953",
+        "member_id": "989393288",
+        "address": {
+            "street1": "667 OLD DOVER RD",
+            "city": "MORRIS PLAINS",
+            "zip": "07950",
+            "state": "NJ"
+        },
+        "coverage": {
+            "effective_date": "01/01/2025",
+            "end_date": "12/31/2025",
+            "status": "active"
+        },
+        "is_subscriber": false,
+        "metadata": [
+            {
+                "type": "plan_begin",
+                "value": "01/01/2025-12/31/2025",
+                "plan_begin": "01/01/2025-12/31/2025"
+            }
+        ]
+    },
+    "payer": {
+        "id": "52133",
+        "name": "UNITEDHEALTHCARE DENTAL",
+        "received_id": "52133"
+    },
+    "provider": {
+        "npi": "1841787769",
+        "tax_id": "043212345",
+        "first_name": "AZADEH",
+        "last_name": "DIANAT"
+    },
+    "limitations": [
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120",
+            "quantity": "2",
+            "quantity_qualifier": "visits"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "1",
+                    "time_period_qualifier": "years",
+                    "time_period_value": "3"
+                }
+            ],
+            "limitation": "1 visits in 3 years"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "1",
+                    "time_period_qualifier": "years",
+                    "time_period_value": "3"
+                }
+            ],
+            "limitation": "1 visits in 3 years"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274",
+            "quantity": "1",
+            "quantity_qualifier": "visits"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110",
+            "quantity": "2",
+            "quantity_qualifier": "visits"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1208",
+            "quantity": "2",
+            "quantity_qualifier": "visits"
+        },
+        {
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910",
+            "quantity": "3",
+            "quantity_qualifier": "visits"
+        }
+    ],
+    "deductible": [
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "calendar",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "calendar",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "year_to_date",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "year_to_date",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "remaining",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "plan_period": "remaining",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "disclaimers": [
+                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        }
+    ],
+    "coinsurance": [
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "percent": "100",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        }
+    ],
+    "active_coverage": [
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "payer_specific_description": "UHC DENTAL D0035137 (53116) - UNITEDHEALTHCARE SPECIALTY BENEFITS DENTAL"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "network": "applies_all"
+        }
+    ],
+    "not_covered": [
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D1351"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2393"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2630"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2643"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2750"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2950"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D2954"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D4341"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D4381"
+        },
+        {
+            "disclaimers": [
+                "PRIOR EXTRACTIONS NOT COVERED"
+            ],
+            "network": "applies_all",
+            "procedure_code": "AD:D5110"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D5225"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D5670"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D5751"
+        },
+        {
+            "disclaimers": [
+                "PRIOR EXTRACTIONS NOT COVERED"
+            ],
+            "network": "applies_all",
+            "procedure_code": "AD:D6010"
+        },
+        {
+            "disclaimers": [
+                "PRIOR EXTRACTIONS NOT COVERED"
+            ],
+            "network": "applies_all",
+            "procedure_code": "AD:D6750"
+        },
+        {
+            "network": "applies_all",
+            "procedure_code": "AD:D9910"
+        },
+        {
+            "service_type": "restorative",
+            "disclaimers": [
+                "BENEFIT CLASS = MAJOR"
+            ],
+            "network": "applies_all"
+        },
+        {
+            "service_type": "periodontics",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "endodontics",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "adjunctive_dental_services",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "dental_crowns",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "orthodontics",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "prosthodontics",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "oral_surgery",
+            "network": "applies_all"
+        }
+    ],
+    "copayment": [
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        }
+    ],
+    "out_of_pocket": [
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "calendar",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "calendar",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "year_to_date",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "year_to_date",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "remaining",
+            "amount": "0.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "plan_period": "remaining",
+            "amount": "0.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        }
+    ]
+}
+    
+    const  result = await formatDataService(data,schema3);
     res.json(result);
 
 }
