@@ -1,10 +1,10 @@
-// File: types.ts
+
 export interface FieldMapping {
   path: string;
   default: any;
 }
 
-// File: Parser.ts
+
 export class Parser {
   private input: any;
 

@@ -1,5 +1,4 @@
-// it is mapping object for patient data to result format 
-// it maps data-3.json to the result 
+
 
 
 
