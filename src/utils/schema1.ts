@@ -3,11 +3,12 @@
 
 
 
+
 export const schema1 = {
   PataNum: { path: "patient.member_id", default: 0 },
   LName: { path: "patient.last_name", default: "" },
   FName: { path: "patient.first_name", default: "" },
-  MiddleI: { path: "", default: "" },
+  MiddleI: { path: "patient.middle_name", default: "" },
   Preferred: { path: "patient.name", default: "" },
   PatStatus: { path: "patient.is_subscriber", default: 1 },
   Gender: { path: "patient.gender", default: 0 },
@@ -53,7 +54,7 @@ export const schema1 = {
   Urgency: { path: "", default: 0 },
   DateFirstVisit: { path: "", default: "" },
   ClinicNum: { path: "", default: 0 },
-  HasIns: { path: "", default: false },
+  HasIns: { path: "patient.coverage.status", default: false },
   TrophyFolder: { path: "", default: "" },
   PlannedIsDone: { path: "", default: false },
   Premed: { path: "", default: false },
@@ -101,7 +102,10 @@ export const schema1 = {
   SecDateTEdit: { path: "", default: "" },
   PlanNum: { path: "plan.plan_id", default: 0 },
   Subscriber: { path: "subscriber.member_id", default: "" },
-  DateEffective: { path: "plan.effective_date", default: "" },
+  DateEffective: { 
+    path: ["plan.effective_date", "patient.coverage.effective_date"], 
+    default: ""
+  },
   SubscriberID: { path: "subscriber.member_id", default: "" },
   GroupNum: { path: "plan.group_number", default: "" },
   GroupName: { path: "plan.group_name", default: "" },
@@ -111,3 +115,5 @@ export const schema1 = {
   carrierPhone: { path: "payer.phone", default: "" },
   ElectID: { path: "payer.electronic_id", default: "" }
 };
+
+

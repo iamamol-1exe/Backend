@@ -1,9 +1,7 @@
-
 export interface FieldMapping {
-  path: string;
+  path: string | string[];
   default: any;
 }
-
 
 export class Parser {
   private input: any;
@@ -12,7 +10,22 @@ export class Parser {
     this.input = input;
   }
 
-  getValue(path: string): any {
+  getValue(path: string | string[]): any {
+    if (Array.isArray(path)) {
+      // Try each path in the array until a value is found
+      for (const p of path) {
+        const value = this.getValueFromPath(p);
+        if (value !== undefined) {
+          return value;
+        }
+      }
+      return undefined;
+    }
+    return this.getValueFromPath(path);
+  }
+
+  private getValueFromPath(path: string): any {
+    if (!path) return undefined;
     const keys = path.split(".");
     let current = this.input;
     for (const key of keys) {
@@ -27,7 +40,6 @@ export class Parser {
     return Array.isArray(value) ? value : [];
   }
 }
-
 
 export class JsonTransformer {
   private mapping: { [key: string]: FieldMapping };
@@ -46,10 +58,8 @@ export class JsonTransformer {
 
     for (const key in mapping) {
       const field = mapping[key];
-
-      result[key] = parser.getValue(field.path) !== undefined
-        ? parser.getValue(field.path)
-        : field.default;
+      const value = parser.getValue(field.path);
+      result[key] = value !== undefined ? value : field.default;
     }
 
     return result;

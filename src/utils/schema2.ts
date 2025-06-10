@@ -96,7 +96,10 @@ export const schema2 = {
   OrthoAutoNextClaimDate: { path: "", default: "" },
   SecDateTEntry: { path: "", default: "" },
   SecDateTEdit: { path: "", default: "" },
-  PlanNum: { path: "plan.number", default: 0 },
+   PlanNum: { 
+    path: ["plan.plan_id", "plan.number"], 
+    default: 0 
+  },
   Subscriber: { path: "subscriber.member_id", default: "" },
   DateEffective: { path: "patient.coverage.effective_date", default: "" },
   SubscriberID: { path: "subscriber.member_id", default: "" },
@@ -105,8 +108,14 @@ export const schema2 = {
   CarrierNum: { path: "payer.id", default: "" },
   CarrierNum1: { path: "", default: "" },
   CarrierName: { path: "payer.name", default: "" },
-  carrierPhone: { path: "", default: "" },
-  ElectID: { path: "payer.received_id", default: "" }
+  carrierPhone: { 
+    path: ["payer.phone", ""], 
+    default: "" 
+  },
+ ElectID: { 
+    path: ["payer.electronic_id", "payer.received_id"], 
+    default: "" 
+  }
 };
 
 

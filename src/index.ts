@@ -16,7 +16,7 @@ app.get('/',(req,res) =>{
 });
 
 
-app.use('/api/formatdata', formatDataRoutes);
+// app.use('/api/formatdata', formatDataRoutes);
 app.use('/api/formatdataparser', formatDataParser);
 
 
