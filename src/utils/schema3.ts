@@ -10,7 +10,7 @@ export const  schema3 = {
   Birthdate: { path: "patient.dob", default: "" },
   SSN: { path: "", default: "" },
   Address: { path: "patient.address.street1", default: "" },
-  Address2: { path: "", default: "" },
+  Address2: { path: "patient.address.street2", default: "" },
   City: { path: "patient.address.city", default: "" },
   State: { path: "patient.address.state", default: "" },
   Zip: { path: "patient.address.zip", default: "" },

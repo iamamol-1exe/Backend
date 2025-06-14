@@ -16,7 +16,11 @@ app.get('/',(req,res) =>{
 });
 
 
+// time consuming method for formating data 
 // app.use('/api/formatdata', formatDataRoutes);
+
+
+
 app.use('/api/formatdataparser', formatDataParser);
 
 

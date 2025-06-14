@@ -26,6 +26,15 @@ export class Parser {
 
   private getValueFromPath(path: string): any {
     if (!path) return undefined;
+    
+    // Handle concatenation with '+'
+    if (path.includes('+')) {
+      const parts = path.split('+').map(p => p.trim());
+      return parts.map(p => this.getValueFromPath(p))
+                  .filter(v => v !== undefined)
+                  .join('');
+    }
+
     const keys = path.split(".");
     let current = this.input;
     for (const key of keys) {

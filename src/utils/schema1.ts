@@ -12,7 +12,7 @@ export const schema1 = {
   Preferred: { path: "patient.name", default: "" },
   PatStatus: { path: "patient.is_subscriber", default: 1 },
   Gender: { path: "patient.gender", default: 0 },
-  Position: { path: "patient.relationship", default: 0 },
+  Position: { path: "", default: 0 },
   Birthdate: { path: "patient.dob", default: "" },
   SSN: { path: "", default: "" },
   Address: { path: "patient.address.street1", default: "" },
@@ -28,7 +28,7 @@ export const schema1 = {
   Email: { path: "patient.metadata[3].value", default: "" },
   Salutation: { path: "", default: "" },
   EstBalance: { path: "", default: 0 },
-  PriProv: { path: "", default: "" },
+  PriProv: { path: "provider.first_name + ' ' +  provider.last_name", default: "" },
   SecProv: { path: "", default: "" },
   FeeSched: { path: "", default: "" },
   BillingType: { path: "", default: "" },
@@ -100,7 +100,7 @@ export const schema1 = {
   OrthoAutoNextClaimDate: { path: "", default: "" },
   SecDateTEntry: { path: "", default: "" },
   SecDateTEdit: { path: "", default: "" },
-  PlanNum: { path: "plan.plan_id", default: 0 },
+  PlanNum: { path :[ "plan.plan_id","plan.number"] , default: 0 },
   Subscriber: { path: "subscriber.member_id", default: "" },
   DateEffective: { 
     path: ["plan.effective_date", "patient.coverage.effective_date"], 
@@ -113,7 +113,7 @@ export const schema1 = {
   CarrierNum1: { path: "", default: "" },
   CarrierName: { path: "payer.name", default: "" },
   carrierPhone: { path: "payer.phone", default: "" },
-  ElectID: { path: "payer.electronic_id", default: "" }
+  ElectID: { path :[ "payer.electronic_id" ,"payer.id"], default: "" }
 };
 
 

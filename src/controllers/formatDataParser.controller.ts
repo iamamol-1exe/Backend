@@ -3,1025 +3,3112 @@ import { formatDataParser } from '../services/formatDataParser.service';
 
 export const formatDataParser1 = (req :Request,res : Response) => {
     try {
-        const data ={
-    "onederfulId": "5f2943b0-421d-11f0-bf99-2ff188113c5c",
+        const payload = req.body;
+        console.log("Received payload:", payload);
+        const data =  {
+    "onederfulId": "ab556370-45c1-11f0-8c87-9365c0dd71cc",
     "patient": {
-        "name": "HILLARY CUEVAS",
-        "first_name": "HILLARY",
+        "name": "MARIA C CASAS",
+        "first_name": "MARIA",
         "gender": "female",
-        "last_name": "CUEVAS",
-        "age": "24",
-        "dob": "02/27/2001",
-        "member_id": "U0464363305",
+        "middle_name": "C",
+        "last_name": "CASAS",
+        "age": "32",
+        "dob": "01/28/1993",
+        "member_id": "W272528642",
         "address": {
-            "street1": "617 MCINTYRE AVE",
-            "city": "TAFT",
-            "zip": "783902825",
+            "street1": "1502 SKYLINE DR.",
+            "city": "PORTLAND",
+            "zip": "78374",
             "state": "TX"
         },
         "coverage": {
-            "effective_date": "04/01/2004",
-            "end_date": "12/31/2025",
+            "effective_date": "03/07/2022",
             "status": "active"
         },
-        "relationship": "self",
-        "is_subscriber": true,
+        "relationship": "spouse",
+        "is_subscriber": false,
         "metadata": [
             {
                 "type": "plan_begin",
-                "value": "01/01/2025",
-                "plan_begin": "01/01/2025"
+                "value": "03/07/2022",
+                "plan_begin": "03/07/2022"
             },
             {
-                "type": "plan_end",
-                "value": "12/31/2025",
-                "plan_end": "12/31/2025"
+                "type": "service",
+                "value": "06/10/2025",
+                "service": "06/10/2025"
             },
             {
                 "type": "eligibility_begin",
-                "value": "04/01/2004",
-                "eligibility_begin": "04/01/2004"
+                "value": "03/07/2022",
+                "eligibility_begin": "03/07/2022"
             }
         ]
     },
     "plan": {
-        "group_number": "3208168",
-        "prior_identifier_number": "U04643633",
-        "plan_network_identification_number": "DENTL",
-        "name": "REPUBLIC SERVICES, INC.",
-        "number": "3208168",
-        "group_name": "REPUBLIC SERVICES, INC.",
-        "payer_plan_name": "TOTAL",
-        "payer_plan_identifier": "DENTL",
+        "group_number": "037029201200001",
+        "name": "OCCIDENTAL PETROLEUM CORPORATION",
+        "number": "037029201200001",
+        "group_name": "OCCIDENTAL PETROLEUM CORPORATION",
         "insurance_type": "ppo",
-        "payer_specific_description": "Dental PPO",
+        "payer_specific_description": "PPO Dental 2000",
         "metadata": [
             {
-                "description": "REPUBLIC SERVICES, INC.",
-                "value": "3208168",
+                "description": "OCCIDENTAL PETROLEUM CORPORATION",
+                "value": "037029201200001",
                 "qualifier": "group_number"
-            },
-            {
-                "value": "U04643633",
-                "qualifier": "prior_identifier_number"
-            },
-            {
-                "description": "TOTAL",
-                "value": "DENTL",
-                "qualifier": "plan_network_identification_number"
             }
         ]
     },
     "subscriber": {
-        "name": "HILLARY CUEVAS",
-        "first_name": "HILLARY",
-        "gender": "female",
-        "last_name": "CUEVAS",
-        "age": "24",
-        "dob": "02/27/2001",
-        "member_id": "U0464363305",
-        "address": {
-            "street1": "617 MCINTYRE AVE",
-            "city": "TAFT",
-            "zip": "783902825",
-            "state": "TX"
-        },
+        "name": "JONATHON CASAS",
+        "first_name": "JONATHON",
+        "last_name": "CASAS",
+        "member_id": "W272528642",
         "coverage": {
-            "effective_date": "04/01/2004",
-            "end_date": "12/31/2025",
             "status": "active"
         },
-        "relationship": "self",
-        "is_subscriber": true,
-        "metadata": [
-            {
-                "type": "plan_begin",
-                "value": "01/01/2025",
-                "plan_begin": "01/01/2025"
-            },
-            {
-                "type": "plan_end",
-                "value": "12/31/2025",
-                "plan_end": "12/31/2025"
-            },
-            {
-                "type": "eligibility_begin",
-                "value": "04/01/2004",
-                "eligibility_begin": "04/01/2004"
-            }
-        ]
+        "is_subscriber": false
     },
+    "dependents": [
+        {
+            "name": "MARIA C CASAS",
+            "first_name": "MARIA",
+            "gender": "female",
+            "middle_name": "C",
+            "last_name": "CASAS",
+            "age": "32",
+            "dob": "01/28/1993",
+            "member_id": "W272528642",
+            "address": {
+                "street1": "1502 SKYLINE DR.",
+                "city": "PORTLAND",
+                "zip": "78374",
+                "state": "TX"
+            },
+            "coverage": {
+                "effective_date": "03/07/2022",
+                "status": "active"
+            },
+            "relationship": "spouse",
+            "is_subscriber": false,
+            "metadata": [
+                {
+                    "type": "plan_begin",
+                    "value": "03/07/2022",
+                    "plan_begin": "03/07/2022"
+                },
+                {
+                    "type": "service",
+                    "value": "06/10/2025",
+                    "service": "06/10/2025"
+                },
+                {
+                    "type": "eligibility_begin",
+                    "value": "03/07/2022",
+                    "eligibility_begin": "03/07/2022"
+                }
+            ]
+        }
+    ],
     "payer": {
-        "name": "CHLIC",
-        "id": "62308"
+        "id": "60054",
+        "name": "AETNA INC",
+        "received_id": "953402799"
     },
     "provider": {
-        "npi": "1114290798",
-        "tax_id": "043212345",
-        "first_name": "BADER",
-        "last_name": "ABDEEN"
+        "npi": "1508469610",
+        "first_name": "Hani",
+        "last_name": "Aref"
     },
     "limitations": [
         {
-            "service_type": "diagnostic_x_ray",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D0210 D0330",
-                "TOTAL",
-                "NO NETWORK"
+                "MISSING TOOTH CLAUSE DOES NOT APPLY"
             ],
-            "coverage_level": "individual",
-            "network": "in_network",
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Self Funded,CHLD TO 26 OR 26 IF FT STUDENT"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "diagnostic_dental",
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
             "health_service_descriptions": [
                 {
-                    "unit_qualifier": "months",
-                    "unit": "60",
-                    "time_period_qualifier": "remaining",
+                    "quantity_qualifier": "units",
+                    "quantity": "2",
+                    "time_period_qualifier": "calendar",
                     "time_period_value": "1"
                 }
             ],
-            "quantity": "1",
-            "quantity_qualifier": "visits",
-            "limitation": "1 remaining per 60 months"
+            "limitation": "2 units in 1 calendar"
         },
         {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277",
-                "TOTAL",
-                "NO NETWORK"
+            "service_type": "diagnostic_dental",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
             ],
-            "plan_period": "calendar",
-            "coverage_level": "individual",
-            "network": "in_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "coverage_level": "individual",
-            "network": "in_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0330"
-            ],
-            "coverage_level": "individual",
-            "network": "out_of_network",
             "health_service_descriptions": [
                 {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "service_type": "prosthodontics",
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 16"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
                     "unit_qualifier": "months",
-                    "unit": "60",
-                    "time_period_qualifier": "remaining",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "service_type": "preventive",
+            "disclaimers": [
+                "DENTAL PROPHYLAXIS COUNTER"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "3",
+                    "time_period_qualifier": "calendar",
                     "time_period_value": "1"
                 }
             ],
-            "quantity": "1",
-            "quantity_qualifier": "visits",
-            "limitation": "1 remaining per 60 months"
+            "limitation": "3 visits in 1 calendar"
         },
         {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277"
+            "service_type": "preventive",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
             ],
-            "plan_period": "calendar",
-            "coverage_level": "individual",
-            "network": "out_of_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "2",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "2 visits remaining"
         },
         {
-            "service_type": "diagnostic_x_ray",
+            "service_type": "diagnostic_dental",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "periodontics",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "restorative",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "endodontics",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "adjunctive_dental_services",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "dental_crowns",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "orthodontics",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "prosthodontics",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "oral_surgery",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "preventive",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "service_type": "diagnostic_dental",
             "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277"
+                "Shares frequency with D0145,D0150,D0180,DEDUCTIBLE DOES NOT APPLY"
             ],
-            "plan_period": "remaining",
-            "coverage_level": "individual",
-            "network": "out_of_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "adjunctive_dental_services",
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "orthodontics",
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "prosthodontics",
+            "disclaimers": [
+                "Shares frequency with D5130,D6110,D6112,D6114,D6116,D6119,D5284-D5286,D5863-D5864"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "disclaimers": [
+                "Shares frequency with D1120,D4346,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "MISSING TOOTH CLAUSE DOES NOT APPLY"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Self Funded,CHLD TO 26 OR 26 IF FT STUDENT"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "2",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "2 units in 1 calendar"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "2",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "2 units in 1 calendar"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "36"
+                }
+            ],
+            "limitation": "1 units per 36 months"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0330",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "36"
+                }
+            ],
+            "limitation": "1 units per 36 months"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0330",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0272",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "1 units in 1 calendar"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "1 units in 1 calendar"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0272",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "0",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "0 units remaining"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "0",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "0 units remaining"
+        },
+        {
+            "disclaimers": [
+                "DENTAL PROPHYLAXIS COUNTER"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "3",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "3 visits in 1 calendar"
+        },
+        {
+            "disclaimers": [
+                "DENTAL PROPHYLAXIS COUNTER"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1120",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "3",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "3 visits in 1 calendar"
+        },
+        {
+            "disclaimers": [
+                "DENTAL PROPHYLAXIS COUNTER"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4346",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "3",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "3 visits in 1 calendar"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "2",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "2 visits remaining"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1120",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "2",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "2 visits remaining"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4346",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "visits",
+                    "quantity": "2",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "2 visits remaining"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 16"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5110",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 16"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5213",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 17 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5120",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 17 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5214",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6010",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6058",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6750",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32 51 TO 82"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6240",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0140",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0220",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0272",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0330",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1120",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1510",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2391",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2392",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2393",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2740",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2750",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2930",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2950",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3220",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3310",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3320",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3330",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4260",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4341",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4346",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4355",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4381",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5110",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5120",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5213",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5214",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6010",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6057",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6058",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6240",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6750",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7140",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7210",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7220",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7230",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7240",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8070",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8080",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8090",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9110",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0145,D0150,D0180,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0140"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0220"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1510"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8070"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8080"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8090"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9110"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0120,D0145,D0180,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0330,D0372,D0387,D0701,D0709,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0270,D0273,D0274,D0373,D0388,D0708,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0272"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0270,D0272,D0273,D0373,D0388,D0708,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0210,D0372,D0387,D0701,D0709,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0330"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D1120,D4346,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D1110,D4346,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1120"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D1110,D1120,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4346"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D5130,D6110,D6112,D6114,D6116,D6119,D5284-D5286,D5863-D5864"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5110"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D5140,D6111,D6113,D6115,D6117,D6118,D5284-D5286,D5865-D5866"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5120"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D5211,D5221,D5223,D5225,D5227,D5864,D6112,D6116,D5281-D5282"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5213"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D5212,D5222,D5224,D5226,D5866,D6113,D6117"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5214"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D5110,D5120,D6013,D6112,D6113,D6116,D6117,D5211-D5286,D6205-D6253"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6010"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6055,D6549,D6940,D6950,D5211-D5283,D6058-D6920"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6058"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6055,D6549,D6940,D6950,D5211-D5283,D6058-D6920"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6750"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6010,D6012,D6013,D6040,D6050,D5211-D5283,D6205-D6253"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6240"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "MISSING TOOTH CLAUSE DOES NOT APPLY"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Self Funded,CHLD TO 26 OR 26 IF FT STUDENT"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0180",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "2",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "2 units in 1 calendar"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0180",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "1 units remaining"
+        },
+        {
+            "disclaimers": [
+                "PER FULL MOUTH"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0273",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "time_period_qualifier": "calendar",
+                    "time_period_value": "1"
+                }
+            ],
+            "limitation": "1 units in 1 calendar"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0273",
+            "service_dates": [
+                {
+                    "type": "latest_visit_or_consultation",
+                    "value": "02/03/2025",
+                    "latest_visit_or_consultation": "02/03/2025",
+                    "service_date": "02/03/2025"
+                }
+            ],
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "0",
+                    "time_period_qualifier": "remaining"
+                }
+            ],
+            "limitation": "0 units remaining"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6065",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6740",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "disclaimers": [
+                "TOOTH NUMBER 01 TO 32 51 TO 82"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6245",
+            "health_service_descriptions": [
+                {
+                    "quantity_qualifier": "units",
+                    "quantity": "1",
+                    "unit_qualifier": "months",
+                    "unit": "60"
+                }
+            ],
+            "limitation": "1 units per 60 months"
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9222",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9944",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0160",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0180",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0230",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0273",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0340",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0350",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0351",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0470",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2140",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2150",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2330",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2331",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2620",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2630",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2642",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2643",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3331",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3332",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3450",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4263",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4264",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4342",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6065",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6740",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6245",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8030",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8040",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8220",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8660",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8670",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8680",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8696",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8699",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9223",
+            "quantity": "99",
+            "quantity_qualifier": "age_high_value",
+            "age_limit": {
+                "age_high_value": "99"
+            }
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0160"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0230"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0340"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0350"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0351"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0470"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8030"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8040"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8220"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8660"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8670"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8680"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8696"
+        },
+        {
+            "disclaimers": [
+                "DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8699"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0120,D0145,D0150,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0180"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D0270,D0272,D0274,D0373,D0388,D0708,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0273"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6055,D6549,D6940,D6950,D5211-D5283,D6058-D6920"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6065"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6055,D6549,D6940,D6950,D5211-D5283,D6058-D6920"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6740"
+        },
+        {
+            "disclaimers": [
+                "Shares frequency with D6010,D6012,D6013,D6040,D6050,D5211-D5283,D6205-D6253"
+            ],
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6245"
         }
     ],
     "deductible": [
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
+                "Dental"
             ],
             "plan_period": "calendar",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "amount": "150.00",
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
+                "Dental"
             ],
             "plan_period": "remaining",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "175.00",
+            "amount": "150.00",
             "coverage_level": "family",
-            "network": "in_network"
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
+                "Dental"
             ],
-            "plan_period": "remaining",
-            "amount": "75.00",
+            "plan_period": "calendar",
+            "amount": "50.00",
             "coverage_level": "individual",
-            "network": "out_of_network"
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
+                "Dental"
             ],
             "plan_period": "remaining",
-            "amount": "175.00",
+            "amount": "50.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "calendar",
+            "amount": "150.00",
             "coverage_level": "family",
-            "network": "out_of_network"
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "remaining",
+            "amount": "150.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "calendar",
+            "amount": "50.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "remaining",
+            "amount": "50.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "calendar",
+            "amount": "150.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "remaining",
+            "amount": "150.00",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "calendar",
+            "amount": "50.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Dental"
+            ],
+            "plan_period": "remaining",
+            "amount": "50.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
         }
     ],
     "maximums": [
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
+                "DENTAL"
             ],
             "plan_period": "calendar",
             "amount": "2000.00",
             "coverage_level": "individual",
-            "network": "in_network"
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
+                "DENTAL"
+            ],
+            "plan_period": "remaining",
+            "amount": "1641.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Orthodontics"
+            ],
+            "plan_period": "lifetime",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Orthodontics"
+            ],
+            "plan_period": "lifetime_remaining",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "DENTAL"
             ],
             "plan_period": "calendar",
             "amount": "2000.00",
             "coverage_level": "individual",
-            "network": "out_of_network"
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
+                "DENTAL"
             ],
             "plan_period": "remaining",
-            "amount": "2000.00",
+            "amount": "1641.00",
             "coverage_level": "individual",
-            "network": "in_network"
+            "network": "applies_all"
         },
         {
             "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
+                "Orthodontics"
             ],
-            "plan_period": "remaining",
+            "plan_period": "lifetime",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Orthodontics"
+            ],
+            "plan_period": "lifetime_remaining",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "DENTAL"
+            ],
+            "plan_period": "calendar",
             "amount": "2000.00",
             "coverage_level": "individual",
-            "network": "out_of_network"
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "DENTAL"
+            ],
+            "plan_period": "remaining",
+            "amount": "1641.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Orthodontics"
+            ],
+            "plan_period": "lifetime",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Orthodontics"
+            ],
+            "plan_period": "lifetime_remaining",
+            "amount": "2500.00",
+            "coverage_level": "individual",
+            "network": "applies_all"
         }
     ],
     "coinsurance": [
         {
-            "service_type": "diagnostic_dental",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
+                "Preventative"
             ],
             "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "diagnostic_dental",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D3428 D3429 D3431 D3432 D4210 D4211 D4212 D4240 D4241 D4245 D4249 D4260 D4261 D4263 D4264 D4265 D4266 D4267 D4268 D4270 D4271 D4273 D4274 D4275 D4276 D4277 D4278 D4283 D4285 D4286 D4341 D4342 D4355 D4381",
-                "TOTAL",
-                "NO NETWORK"
+                "Basic"
             ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "periodontics",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D4346"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D3428 D3429 D3431 D3432 D4210 D4211 D4212 D4240 D4241 D4245 D4249 D4260 D4261 D4263 D4264 D4265 D4266 D4267 D4268 D4270 D4271 D4273 D4274 D4275 D4276 D4277 D4278 D4283 D4285 D4286 D4341 D4342 D4355 D4381"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2140 D2150 D2160 D2161 D2330 D2331 D2332 D2335 D2391 D2392 D2393 D2394 D2910 D2915 D2940 D2941 D2951 D2976 D2989 D2991 D5725",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2410 D2420 D2430 D2510 D2520 D2530 D2542 D2543 D2544 D2610 D2620 D2630 D2642 D2643 D2644 D2650 D2651 D2652 D2662 D2663 D2664 D2949 D5227 D5228",
-                "TOTAL",
-                "NO NETWORK"
+                "Major,Ortho"
             ],
             "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2140 D2150 D2160 D2161 D2330 D2331 D2332 D2335 D2391 D2392 D2393 D2394 D2910 D2915 D2940 D2941 D2951 D2976 D2989 D2991 D5725"
-            ],
+            "service_type": "diagnostic_dental",
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "adjunctive_dental_services",
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "preventive",
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "periodontics",
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
             "service_type": "restorative",
-            "disclaimers": [
-                "D2410 D2420 D2430 D2510 D2520 D2530 D2542 D2543 D2544 D2610 D2620 D2630 D2642 D2643 D2644 D2650 D2651 D2652 D2662 D2663 D2664 D2949 D5227 D5228"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
             "service_type": "endodontics",
-            "disclaimers": [
-                "D3110 D3120 D3220 D3221 D3230 D3240 D3310 D3320 D3330 D3331 D3332 D3333 D3346 D3347 D3348 D3351 D3352 D3353 D3355 D3356 D3357 D3410 D3421 D3425 D3426 D3427 D3430 D3450 D3471 D3472 D3473 D3501 D3502 D3503 D3911 D3920 D3921 D3950",
-                "TOTAL",
-                "NO NETWORK"
-            ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "endodontics",
-            "disclaimers": [
-                "D3110 D3120 D3220 D3221 D3230 D3240 D3310 D3320 D3330 D3331 D3332 D3333 D3346 D3347 D3348 D3351 D3352 D3353 D3355 D3356 D3357 D3410 D3421 D3425 D3426 D3427 D3430 D3450 D3471 D3472 D3473 D3501 D3502 D3503 D3911 D3920 D3921 D3950"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9910 D9911 D9930 D9942 D9943 D9944 D9945 D9946 D9950 D9951 D9952",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9938 D9939 D9940 D9947 D9948 D9949 D9954 D9955 D9956 D9957 D9959",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9910 D9911 D9930 D9942 D9943 D9944 D9945 D9946 D9950 D9951 D9952"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9938 D9939 D9940 D9947 D9948 D9949 D9954 D9955 D9956 D9957 D9959"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2920 D2980",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2710 D2712 D2720 D2721 D2722 D2740 D2750 D2751 D2752 D2753 D2780 D2781 D2782 D2783 D2790 D2791 D2792 D2794 D2799 D2928 D2929 D2930 D2931 D2932 D2933 D2934 D2950 D2952 D2953 D2954 D2957 D2960 D2961 D2962 D2970 D2971 D2975 D5863 D5864 D5865 D5866 D6085",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2920 D2980"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2710 D2712 D2720 D2721 D2722 D2740 D2750 D2751 D2752 D2753 D2780 D2781 D2782 D2783 D2790 D2791 D2792 D2794 D2799 D2928 D2929 D2930 D2931 D2932 D2933 D2934 D2950 D2952 D2953 D2954 D2957 D2960 D2961 D2962 D2970 D2971 D2975 D5863 D5864 D5865 D5866 D6085"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5410 D5411 D5421 D5422 D5510 D5511 D5512 D5520 D5610 D5611 D5612 D5620 D5621 D5622 D5630 D5640 D5650 D5660 D5670 D5671 D5710 D5711 D5720 D5721 D5730 D5731 D5740 D5741 D5750 D5751 D5760 D5761 D5765 D5850 D5851 D6930 D6980 D9120",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5110 D5120 D5130 D5140 D5211 D5212 D5213 D5214 D5221 D5222 D5223 D5224 D5225 D5226 D5281 D5282 D5283 D5284 D5286 D5810 D5811 D5820 D5821 D5860 D5861 D5876 D5999 D6053 D6054 D6058 D6059 D6060 D6061 D6062 D6063 D6064 D6065 D6066 D6067 D6068 D6069 D6070 D6071 D6072",
-                "D6073 D6074 D6075 D6076 D6077 D6078 D6079 D6082 D6083 D6084 D6086 D6087 D6088 D6089 D6090 D6092 D6093 D6094 D6096 D6097 D6098 D6099 D6110 D6111 D6112 D6113 D6114 D6115 D6116 D6117 D6118 D6119 D6120 D6121 D6122 D6123 D6193 D6194 D6195 D6197 D6198 D6205 D6210 D6211",
-                "D6212 D6214 D6240 D6241 D6242 D6243 D6245 D6250 D6251 D6252 D6545 D6548 D6549 D6600 D6601 D6602 D6603 D6604 D6605 D6606 D6607 D6608 D6609 D6610 D6611 D6612 D6613 D6614 D6615 D6624 D6634 D6710 D6720 D6721 D6722 D6740 D6750 D6751 D6752 D6753 D6780 D6781 D6782 D6783",
-                "D6784 D6790 D6791 D6792 D6793 D6794 D6795 D6970 D6972 D6973 D6975 D6976 D6977",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5410 D5411 D5421 D5422 D5510 D5511 D5512 D5520 D5610 D5611 D5612 D5620 D5621 D5622 D5630 D5640 D5650 D5660 D5670 D5671 D5710 D5711 D5720 D5721 D5730 D5731 D5740 D5741 D5750 D5751 D5760 D5761 D5765 D5850 D5851 D6930 D6980 D9120"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5110 D5120 D5130 D5140 D5211 D5212 D5213 D5214 D5221 D5222 D5223 D5224 D5225 D5226 D5281 D5282 D5283 D5284 D5286 D5810 D5811 D5820 D5821 D5860 D5861 D5876 D5999 D6053 D6054 D6058 D6059 D6060 D6061 D6062 D6063 D6064 D6065 D6066 D6067 D6068 D6069 D6070 D6071 D6072",
-                "D6073 D6074 D6075 D6076 D6077 D6078 D6079 D6082 D6083 D6084 D6086 D6087 D6088 D6089 D6090 D6092 D6093 D6094 D6096 D6097 D6098 D6099 D6110 D6111 D6112 D6113 D6114 D6115 D6116 D6117 D6118 D6119 D6120 D6121 D6122 D6123 D6193 D6194 D6195 D6197 D6198 D6205 D6210 D6211",
-                "D6212 D6214 D6240 D6241 D6242 D6243 D6245 D6250 D6251 D6252 D6545 D6548 D6549 D6600 D6601 D6602 D6603 D6604 D6605 D6606 D6607 D6608 D6609 D6610 D6611 D6612 D6613 D6614 D6615 D6624 D6634 D6710 D6720 D6721 D6722 D6740 D6750 D6751 D6752 D6753 D6780 D6781 D6782 D6783",
-                "D6784 D6790 D6791 D6792 D6793 D6794 D6795 D6970 D6972 D6973 D6975 D6976 D6977"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
             "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7111 D7140 D7210 D7250 D7251 D7252 D7261 D7270 D7272 D7280 D7282 D7285 D7286 D7288 D7290 D7310 D7311 D7320 D7321 D7340 D7350 D7410 D7411 D7412 D7413 D7414 D7415 D7440 D7441 D7450 D7451 D7465 D7471 D7472 D7473 D7485 D7490 D7510 D7511 D7520 D7521 D7550 D7560 D7950",
-                "D7951 D7952 D7960 D7961 D7963 D7970 D7971 D7972 D7995 D7996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7220 D7230 D7240 D7241",
-                "TOTAL",
-                "NO NETWORK"
-            ],
+            "service_type": "dental_crowns",
             "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7111 D7140 D7210 D7250 D7251 D7252 D7261 D7270 D7272 D7280 D7282 D7285 D7286 D7288 D7290 D7310 D7311 D7320 D7321 D7340 D7350 D7410 D7411 D7412 D7413 D7414 D7415 D7440 D7441 D7450 D7451 D7465 D7471 D7472 D7473 D7485 D7490 D7510 D7511 D7520 D7521 D7550 D7560 D7950",
-                "D7951 D7952 D7960 D7961 D7963 D7970 D7971 D7972 D7995 D7996"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7220 D7230 D7240 D7241"
-            ],
+            "service_type": "orthodontics",
             "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "preventive",
+            "service_type": "prosthodontics",
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
+                "Preventative"
             ],
             "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "preventive",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D1354 D1355 D1550 D1551 D1552 D1553",
-                "TOTAL",
-                "NO NETWORK"
+                "Basic"
             ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "preventive",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
+                "Major,Ortho"
+            ],
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0120"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0140"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0150"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0210"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0220"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0272"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0274"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0330"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1110"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1120"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D1510"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4346"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9110"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2391"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2392"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2393"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3220"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3310"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3320"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3330"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4260"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4341"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4355"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4381"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4910"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7140"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7210"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7220"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7230"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D7240"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2740"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2750"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2930"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2950"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5110"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5120"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5213"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D5214"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6010"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6057"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6058"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6240"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6750"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8070"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8080"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8090"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "Preventative"
             ],
             "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "preventive",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D1354 D1355 D1550 D1551 D1552 D1553"
+                "Basic"
             ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "anesthesia",
+            "service_type": "health_benefit_plan_coverage",
             "disclaimers": [
-                "D9220 D9221 D9222 D9223 D9239 D9241 D9242 D9243",
-                "TOTAL",
-                "NO NETWORK"
+                "Major,Ortho"
             ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all"
         },
         {
-            "service_type": "anesthesia",
-            "disclaimers": [
-                "D9220 D9221 D9222 D9223 D9239 D9241 D9242 D9243"
-            ],
             "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9222"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2140"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2150"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2330"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2331"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3331"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3332"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D3450"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4263"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4264"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D4342"
+        },
+        {
+            "percent": "80",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9223"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D9944"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0340"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0350"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0351"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0470"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2620"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2630"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2642"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D2643"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6065"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6740"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D6245"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8030"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8040"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8220"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8660"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8670"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8680"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8696"
+        },
+        {
+            "percent": "50",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D8699"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0160"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0180"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0230"
+        },
+        {
+            "percent": "100",
+            "coverage_level": "family",
+            "network": "applies_all",
+            "procedure_code": "AD:D0273"
         }
     ],
     "active_coverage": [
         {
             "service_type": "health_benefit_plan_coverage",
             "insurance_type": "ppo",
-            "payer_specific_description": "Dental PPO"
+            "coverage_level": "family",
+            "payer_specific_description": "PPO Dental 2000"
         },
         {
-            "service_type": "dental_care"
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "coverage_level": "family",
+            "payer_specific_description": "PPO Dental 2000"
         },
         {
-            "service_type": "diagnostic_dental",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "periodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "restorative",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "endodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "dental_crowns",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "prosthodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "oral_surgery",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "anesthesia",
-            "network": "applies_all"
+            "service_type": "health_benefit_plan_coverage",
+            "insurance_type": "ppo",
+            "coverage_level": "family",
+            "payer_specific_description": "PPO Dental 2000"
         }
     ],
     "not_covered": [
         {
             "service_type": "maxillofacial_prosthetics",
+            "disclaimers": [
+                "Shares frequency with D1120,D4346,DEDUCTIBLE DOES NOT APPLY"
+            ],
+            "coverage_level": "family",
             "network": "applies_all"
         },
         {
-            "service_type": "orthodontics",
-            "network": "applies_all"
+            "coverage_level": "family",
+            "procedure_code": "AD:D1206"
+        },
+        {
+            "coverage_level": "family",
+            "procedure_code": "AD:D1208"
+        },
+        {
+            "coverage_level": "family",
+            "procedure_code": "AD:D1330"
+        },
+        {
+            "coverage_level": "family",
+            "procedure_code": "AD:D1351"
+        },
+        {
+            "coverage_level": "family",
+            "procedure_code": "AD:D9230"
+        },
+        {
+            "coverage_level": "family",
+            "procedure_code": "AD:D9941"
+        }
+    ],
+    "payer_specific_info": [
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "STANDARD DENTAL NETWORK,PPO II NETWORK,DENTAL EXTEND NETWORK"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "STANDARD DENTAL NETWORK,PPO II NETWORK,DENTAL EXTEND NETWORK"
+            ],
+            "coverage_level": "family"
+        },
+        {
+            "service_type": "health_benefit_plan_coverage",
+            "disclaimers": [
+                "STANDARD DENTAL NETWORK,PPO II NETWORK,DENTAL EXTEND NETWORK"
+            ],
+            "coverage_level": "family"
         }
     ]
-       }; 
+}
         const type = "patient"; 
         const result = formatDataParser(data,type);
         res.status(200).json(result);
@@ -1031,1714 +3118,3 @@ export const formatDataParser1 = (req :Request,res : Response) => {
 }
 
 
-export const formatDataParser2 = (req : Request,res : Response) =>{
-    try {
-        const type = "patient2";
-        const data = {
-    "onederfulId": "5f2943b0-421d-11f0-bf99-2ff188113c5c",
-    "patient": {
-        "name": "HILLARY CUEVAS",
-        "first_name": "HILLARY",
-        "gender": "female",
-        "last_name": "CUEVAS",
-        "age": "24",
-        "dob": "02/27/2001",
-        "member_id": "U0464363305",
-        "address": {
-            "street1": "617 MCINTYRE AVE",
-            "city": "TAFT",
-            "zip": "783902825",
-            "state": "TX"
-        },
-        "coverage": {
-            "effective_date": "04/01/2004",
-            "end_date": "12/31/2025",
-            "status": "active"
-        },
-        "relationship": "self",
-        "is_subscriber": true,
-        "metadata": [
-            {
-                "type": "plan_begin",
-                "value": "01/01/2025",
-                "plan_begin": "01/01/2025"
-            },
-            {
-                "type": "plan_end",
-                "value": "12/31/2025",
-                "plan_end": "12/31/2025"
-            },
-            {
-                "type": "eligibility_begin",
-                "value": "04/01/2004",
-                "eligibility_begin": "04/01/2004"
-            }
-        ]
-    },
-    "plan": {
-        "group_number": "3208168",
-        "prior_identifier_number": "U04643633",
-        "plan_network_identification_number": "DENTL",
-        "name": "REPUBLIC SERVICES, INC.",
-        "number": "3208168",
-        "group_name": "REPUBLIC SERVICES, INC.",
-        "payer_plan_name": "TOTAL",
-        "payer_plan_identifier": "DENTL",
-        "insurance_type": "ppo",
-        "payer_specific_description": "Dental PPO",
-        "metadata": [
-            {
-                "description": "REPUBLIC SERVICES, INC.",
-                "value": "3208168",
-                "qualifier": "group_number"
-            },
-            {
-                "value": "U04643633",
-                "qualifier": "prior_identifier_number"
-            },
-            {
-                "description": "TOTAL",
-                "value": "DENTL",
-                "qualifier": "plan_network_identification_number"
-            }
-        ]
-    },
-    "subscriber": {
-        "name": "HILLARY CUEVAS",
-        "first_name": "HILLARY",
-        "gender": "female",
-        "last_name": "CUEVAS",
-        "age": "24",
-        "dob": "02/27/2001",
-        "member_id": "U0464363305",
-        "address": {
-            "street1": "617 MCINTYRE AVE",
-            "city": "TAFT",
-            "zip": "783902825",
-            "state": "TX"
-        },
-        "coverage": {
-            "effective_date": "04/01/2004",
-            "end_date": "12/31/2025",
-            "status": "active"
-        },
-        "relationship": "self",
-        "is_subscriber": true,
-        "metadata": [
-            {
-                "type": "plan_begin",
-                "value": "01/01/2025",
-                "plan_begin": "01/01/2025"
-            },
-            {
-                "type": "plan_end",
-                "value": "12/31/2025",
-                "plan_end": "12/31/2025"
-            },
-            {
-                "type": "eligibility_begin",
-                "value": "04/01/2004",
-                "eligibility_begin": "04/01/2004"
-            }
-        ]
-    },
-    "payer": {
-        "name": "CHLIC",
-        "id": "62308"
-    },
-    "provider": {
-        "npi": "1114290798",
-        "tax_id": "043212345",
-        "first_name": "BADER",
-        "last_name": "ABDEEN"
-    },
-    "limitations": [
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0330",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "coverage_level": "individual",
-            "network": "in_network",
-            "health_service_descriptions": [
-                {
-                    "unit_qualifier": "months",
-                    "unit": "60",
-                    "time_period_qualifier": "remaining",
-                    "time_period_value": "1"
-                }
-            ],
-            "quantity": "1",
-            "quantity_qualifier": "visits",
-            "limitation": "1 remaining per 60 months"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "coverage_level": "individual",
-            "network": "in_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "coverage_level": "individual",
-            "network": "in_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0330"
-            ],
-            "coverage_level": "individual",
-            "network": "out_of_network",
-            "health_service_descriptions": [
-                {
-                    "unit_qualifier": "months",
-                    "unit": "60",
-                    "time_period_qualifier": "remaining",
-                    "time_period_value": "1"
-                }
-            ],
-            "quantity": "1",
-            "quantity_qualifier": "visits",
-            "limitation": "1 remaining per 60 months"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277"
-            ],
-            "plan_period": "calendar",
-            "coverage_level": "individual",
-            "network": "out_of_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0270 D0272 D0273 D0274 D0277"
-            ],
-            "plan_period": "remaining",
-            "coverage_level": "individual",
-            "network": "out_of_network",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        }
-    ],
-    "deductible": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
-            ],
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "75.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "175.00",
-            "coverage_level": "family",
-            "network": "out_of_network"
-        }
-    ],
-    "maximums": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "2000.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "calendar",
-            "amount": "2000.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "2000.00",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "disclaimers": [
-                "AMOUNTS APPLY TO BOTH IN-NETWORK AND OUT-OF-NETWORK"
-            ],
-            "plan_period": "remaining",
-            "amount": "2000.00",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        }
-    ],
-    "coinsurance": [
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "D0120 D0140 D0145 D0150 D0160 D0170 D0180 D0372 D0373 D0374 D0387 D0388 D0389 D0415 D0600 D0606 D4910 D4920 D9995 D9996"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D3428 D3429 D3431 D3432 D4210 D4211 D4212 D4240 D4241 D4245 D4249 D4260 D4261 D4263 D4264 D4265 D4266 D4267 D4268 D4270 D4271 D4273 D4274 D4275 D4276 D4277 D4278 D4283 D4285 D4286 D4341 D4342 D4355 D4381",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D4346"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "periodontics",
-            "disclaimers": [
-                "D3428 D3429 D3431 D3432 D4210 D4211 D4212 D4240 D4241 D4245 D4249 D4260 D4261 D4263 D4264 D4265 D4266 D4267 D4268 D4270 D4271 D4273 D4274 D4275 D4276 D4277 D4278 D4283 D4285 D4286 D4341 D4342 D4355 D4381"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2140 D2150 D2160 D2161 D2330 D2331 D2332 D2335 D2391 D2392 D2393 D2394 D2910 D2915 D2940 D2941 D2951 D2976 D2989 D2991 D5725",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2410 D2420 D2430 D2510 D2520 D2530 D2542 D2543 D2544 D2610 D2620 D2630 D2642 D2643 D2644 D2650 D2651 D2652 D2662 D2663 D2664 D2949 D5227 D5228",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2140 D2150 D2160 D2161 D2330 D2331 D2332 D2335 D2391 D2392 D2393 D2394 D2910 D2915 D2940 D2941 D2951 D2976 D2989 D2991 D5725"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "D2410 D2420 D2430 D2510 D2520 D2530 D2542 D2543 D2544 D2610 D2620 D2630 D2642 D2643 D2644 D2650 D2651 D2652 D2662 D2663 D2664 D2949 D5227 D5228"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "endodontics",
-            "disclaimers": [
-                "D3110 D3120 D3220 D3221 D3230 D3240 D3310 D3320 D3330 D3331 D3332 D3333 D3346 D3347 D3348 D3351 D3352 D3353 D3355 D3356 D3357 D3410 D3421 D3425 D3426 D3427 D3430 D3450 D3471 D3472 D3473 D3501 D3502 D3503 D3911 D3920 D3921 D3950",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "endodontics",
-            "disclaimers": [
-                "D3110 D3120 D3220 D3221 D3230 D3240 D3310 D3320 D3330 D3331 D3332 D3333 D3346 D3347 D3348 D3351 D3352 D3353 D3355 D3356 D3357 D3410 D3421 D3425 D3426 D3427 D3430 D3450 D3471 D3472 D3473 D3501 D3502 D3503 D3911 D3920 D3921 D3950"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9910 D9911 D9930 D9942 D9943 D9944 D9945 D9946 D9950 D9951 D9952",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9938 D9939 D9940 D9947 D9948 D9949 D9954 D9955 D9956 D9957 D9959",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9110 D9912"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9910 D9911 D9930 D9942 D9943 D9944 D9945 D9946 D9950 D9951 D9952"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "disclaimers": [
-                "D9938 D9939 D9940 D9947 D9948 D9949 D9954 D9955 D9956 D9957 D9959"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2920 D2980",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2710 D2712 D2720 D2721 D2722 D2740 D2750 D2751 D2752 D2753 D2780 D2781 D2782 D2783 D2790 D2791 D2792 D2794 D2799 D2928 D2929 D2930 D2931 D2932 D2933 D2934 D2950 D2952 D2953 D2954 D2957 D2960 D2961 D2962 D2970 D2971 D2975 D5863 D5864 D5865 D5866 D6085",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2920 D2980"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "dental_crowns",
-            "disclaimers": [
-                "D2710 D2712 D2720 D2721 D2722 D2740 D2750 D2751 D2752 D2753 D2780 D2781 D2782 D2783 D2790 D2791 D2792 D2794 D2799 D2928 D2929 D2930 D2931 D2932 D2933 D2934 D2950 D2952 D2953 D2954 D2957 D2960 D2961 D2962 D2970 D2971 D2975 D5863 D5864 D5865 D5866 D6085"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5410 D5411 D5421 D5422 D5510 D5511 D5512 D5520 D5610 D5611 D5612 D5620 D5621 D5622 D5630 D5640 D5650 D5660 D5670 D5671 D5710 D5711 D5720 D5721 D5730 D5731 D5740 D5741 D5750 D5751 D5760 D5761 D5765 D5850 D5851 D6930 D6980 D9120",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5110 D5120 D5130 D5140 D5211 D5212 D5213 D5214 D5221 D5222 D5223 D5224 D5225 D5226 D5281 D5282 D5283 D5284 D5286 D5810 D5811 D5820 D5821 D5860 D5861 D5876 D5999 D6053 D6054 D6058 D6059 D6060 D6061 D6062 D6063 D6064 D6065 D6066 D6067 D6068 D6069 D6070 D6071 D6072",
-                "D6073 D6074 D6075 D6076 D6077 D6078 D6079 D6082 D6083 D6084 D6086 D6087 D6088 D6089 D6090 D6092 D6093 D6094 D6096 D6097 D6098 D6099 D6110 D6111 D6112 D6113 D6114 D6115 D6116 D6117 D6118 D6119 D6120 D6121 D6122 D6123 D6193 D6194 D6195 D6197 D6198 D6205 D6210 D6211",
-                "D6212 D6214 D6240 D6241 D6242 D6243 D6245 D6250 D6251 D6252 D6545 D6548 D6549 D6600 D6601 D6602 D6603 D6604 D6605 D6606 D6607 D6608 D6609 D6610 D6611 D6612 D6613 D6614 D6615 D6624 D6634 D6710 D6720 D6721 D6722 D6740 D6750 D6751 D6752 D6753 D6780 D6781 D6782 D6783",
-                "D6784 D6790 D6791 D6792 D6793 D6794 D6795 D6970 D6972 D6973 D6975 D6976 D6977",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5410 D5411 D5421 D5422 D5510 D5511 D5512 D5520 D5610 D5611 D5612 D5620 D5621 D5622 D5630 D5640 D5650 D5660 D5670 D5671 D5710 D5711 D5720 D5721 D5730 D5731 D5740 D5741 D5750 D5751 D5760 D5761 D5765 D5850 D5851 D6930 D6980 D9120"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "prosthodontics",
-            "disclaimers": [
-                "D5110 D5120 D5130 D5140 D5211 D5212 D5213 D5214 D5221 D5222 D5223 D5224 D5225 D5226 D5281 D5282 D5283 D5284 D5286 D5810 D5811 D5820 D5821 D5860 D5861 D5876 D5999 D6053 D6054 D6058 D6059 D6060 D6061 D6062 D6063 D6064 D6065 D6066 D6067 D6068 D6069 D6070 D6071 D6072",
-                "D6073 D6074 D6075 D6076 D6077 D6078 D6079 D6082 D6083 D6084 D6086 D6087 D6088 D6089 D6090 D6092 D6093 D6094 D6096 D6097 D6098 D6099 D6110 D6111 D6112 D6113 D6114 D6115 D6116 D6117 D6118 D6119 D6120 D6121 D6122 D6123 D6193 D6194 D6195 D6197 D6198 D6205 D6210 D6211",
-                "D6212 D6214 D6240 D6241 D6242 D6243 D6245 D6250 D6251 D6252 D6545 D6548 D6549 D6600 D6601 D6602 D6603 D6604 D6605 D6606 D6607 D6608 D6609 D6610 D6611 D6612 D6613 D6614 D6615 D6624 D6634 D6710 D6720 D6721 D6722 D6740 D6750 D6751 D6752 D6753 D6780 D6781 D6782 D6783",
-                "D6784 D6790 D6791 D6792 D6793 D6794 D6795 D6970 D6972 D6973 D6975 D6976 D6977"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "disclaimers": [
-                "D0210 D0220 D0230 D0240 D0251 D0270 D0272 D0273 D0274 D0277 D0330 D0391 D0701 D0705 D0706 D0707 D0708 D0709"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7111 D7140 D7210 D7250 D7251 D7252 D7261 D7270 D7272 D7280 D7282 D7285 D7286 D7288 D7290 D7310 D7311 D7320 D7321 D7340 D7350 D7410 D7411 D7412 D7413 D7414 D7415 D7440 D7441 D7450 D7451 D7465 D7471 D7472 D7473 D7485 D7490 D7510 D7511 D7520 D7521 D7550 D7560 D7950",
-                "D7951 D7952 D7960 D7961 D7963 D7970 D7971 D7972 D7995 D7996",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7220 D7230 D7240 D7241",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7111 D7140 D7210 D7250 D7251 D7252 D7261 D7270 D7272 D7280 D7282 D7285 D7286 D7288 D7290 D7310 D7311 D7320 D7321 D7340 D7350 D7410 D7411 D7412 D7413 D7414 D7415 D7440 D7441 D7450 D7451 D7465 D7471 D7472 D7473 D7485 D7490 D7510 D7511 D7520 D7521 D7550 D7560 D7950",
-                "D7951 D7952 D7960 D7961 D7963 D7970 D7971 D7972 D7995 D7996"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "oral_surgery",
-            "disclaimers": [
-                "D7220 D7230 D7240 D7241"
-            ],
-            "percent": "50",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1354 D1355 D1550 D1551 D1552 D1553",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1110 D1555 D1556 D1557 D1558 D1701 D1702 D1703 D1704 D1705 D1706 D1707 D1708 D1709 D1710 D1711 D1712 D1713 D1714 D1781 D1782 D1783"
-            ],
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "D1354 D1355 D1550 D1551 D1552 D1553"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        },
-        {
-            "service_type": "anesthesia",
-            "disclaimers": [
-                "D9220 D9221 D9222 D9223 D9239 D9241 D9242 D9243",
-                "TOTAL",
-                "NO NETWORK"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "in_network"
-        },
-        {
-            "service_type": "anesthesia",
-            "disclaimers": [
-                "D9220 D9221 D9222 D9223 D9239 D9241 D9242 D9243"
-            ],
-            "percent": "80",
-            "coverage_level": "individual",
-            "network": "out_of_network"
-        }
-    ],
-    "active_coverage": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "payer_specific_description": "Dental PPO"
-        },
-        {
-            "service_type": "dental_care"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "periodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "restorative",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "endodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "dental_crowns",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "prosthodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "diagnostic_x_ray",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "oral_surgery",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "anesthesia",
-            "network": "applies_all"
-        }
-    ],
-    "not_covered": [
-        {
-            "service_type": "maxillofacial_prosthetics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "orthodontics",
-            "network": "applies_all"
-        }
-    ]
-}
-        const result = formatDataParser(data,type);
-        res.status(200).json(result);
-
-    }
-    catch (error : any){
-        res.status(500).json({error : error.message});
-    }
-}
-
-export const  formatDataParser3 = (req : Request,res :Response) =>{
-    try{ 
-        const type = "patient3";
-        const data = {
-    "onederfulId": "8cd60450-4223-11f0-bf99-2ff188113c5c",
-    "patient": {
-        "name": "VICKIE A RIVERS",
-        "first_name": "VICKIE",
-        "gender": "female",
-        "middle_name": "A",
-        "last_name": "RIVERS",
-        "age": "71",
-        "dob": "07/29/1953",
-        "member_id": "989393288",
-        "address": {
-            "street1": "667 OLD DOVER RD",
-            "city": "MORRIS PLAINS",
-            "zip": "07950",
-            "state": "NJ"
-        },
-        "coverage": {
-            "effective_date": "01/01/2025",
-            "end_date": "12/31/2025",
-            "status": "active"
-        },
-        "is_subscriber": false,
-        "metadata": [
-            {
-                "type": "plan_begin",
-                "value": "01/01/2025-12/31/2025",
-                "plan_begin": "01/01/2025-12/31/2025"
-            }
-        ]
-    },
-    "plan": {
-        "group_number": "1500980",
-        "number": "1500980",
-        "insurance_type": "ppo",
-        "payer_specific_description": "UHC DENTAL D0035137 (53116)",
-        "metadata": [
-            {
-                "value": "1500980",
-                "qualifier": "group_number"
-            }
-        ]
-    },
-    "subscriber": {
-        "name": "VICKIE A RIVERS",
-        "first_name": "VICKIE",
-        "gender": "female",
-        "middle_name": "A",
-        "last_name": "RIVERS",
-        "age": "71",
-        "dob": "07/29/1953",
-        "member_id": "989393288",
-        "address": {
-            "street1": "667 OLD DOVER RD",
-            "city": "MORRIS PLAINS",
-            "zip": "07950",
-            "state": "NJ"
-        },
-        "coverage": {
-            "effective_date": "01/01/2025",
-            "end_date": "12/31/2025",
-            "status": "active"
-        },
-        "is_subscriber": false,
-        "metadata": [
-            {
-                "type": "plan_begin",
-                "value": "01/01/2025-12/31/2025",
-                "plan_begin": "01/01/2025-12/31/2025"
-            }
-        ]
-    },
-    "payer": {
-        "id": "52133",
-        "name": "UNITEDHEALTHCARE DENTAL",
-        "received_id": "52133"
-    },
-    "provider": {
-        "npi": "1841787769",
-        "tax_id": "043212345",
-        "first_name": "AZADEH",
-        "last_name": "DIANAT"
-    },
-    "limitations": [
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0120",
-            "quantity": "2",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0150",
-            "health_service_descriptions": [
-                {
-                    "quantity_qualifier": "visits",
-                    "quantity": "1",
-                    "time_period_qualifier": "years",
-                    "time_period_value": "3"
-                }
-            ],
-            "limitation": "1 visits in 3 years"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0210",
-            "health_service_descriptions": [
-                {
-                    "quantity_qualifier": "visits",
-                    "quantity": "1",
-                    "time_period_qualifier": "years",
-                    "time_period_value": "3"
-                }
-            ],
-            "limitation": "1 visits in 3 years"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0274",
-            "quantity": "1",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1110",
-            "quantity": "2",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1208",
-            "quantity": "2",
-            "quantity_qualifier": "visits"
-        },
-        {
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D4910",
-            "quantity": "3",
-            "quantity_qualifier": "visits"
-        }
-    ],
-    "deductible": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "year_to_date",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "year_to_date",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "remaining",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "plan_period": "remaining",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D0120"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0120"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D0150"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0150"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D0210"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0210"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D0274"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0274"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D1110"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1110"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D1208"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1208"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all",
-            "procedure_code": "AD:D4910"
-        },
-        {
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D4910"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "disclaimers": [
-                "PLAN LEVEL DEDUCTIBLE DOES NOT APPLY"
-            ],
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        }
-    ],
-    "coinsurance": [
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0120"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0150"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0210"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0274"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1110"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1208"
-        },
-        {
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D4910"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "percent": "100",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        }
-    ],
-    "active_coverage": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "payer_specific_description": "UHC DENTAL D0035137 (53116) - UNITEDHEALTHCARE SPECIALTY BENEFITS DENTAL"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D0120"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D0150"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D0210"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D0274"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D1110"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D1208"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D4910"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "network": "applies_all"
-        }
-    ],
-    "not_covered": [
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D1351"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2393"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2630"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2643"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2750"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2950"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D2954"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D4341"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D4381"
-        },
-        {
-            "disclaimers": [
-                "PRIOR EXTRACTIONS NOT COVERED"
-            ],
-            "network": "applies_all",
-            "procedure_code": "AD:D5110"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D5225"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D5670"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D5751"
-        },
-        {
-            "disclaimers": [
-                "PRIOR EXTRACTIONS NOT COVERED"
-            ],
-            "network": "applies_all",
-            "procedure_code": "AD:D6010"
-        },
-        {
-            "disclaimers": [
-                "PRIOR EXTRACTIONS NOT COVERED"
-            ],
-            "network": "applies_all",
-            "procedure_code": "AD:D6750"
-        },
-        {
-            "network": "applies_all",
-            "procedure_code": "AD:D9910"
-        },
-        {
-            "service_type": "restorative",
-            "disclaimers": [
-                "BENEFIT CLASS = MAJOR"
-            ],
-            "network": "applies_all"
-        },
-        {
-            "service_type": "periodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "endodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "adjunctive_dental_services",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "dental_crowns",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "orthodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "prosthodontics",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "oral_surgery",
-            "network": "applies_all"
-        }
-    ],
-    "copayment": [
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0120"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0150"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0210"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D0274"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1110"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D1208"
-        },
-        {
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all",
-            "procedure_code": "AD:D4910"
-        },
-        {
-            "service_type": "diagnostic_dental",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "preventive",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        }
-    ],
-    "out_of_pocket": [
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "calendar",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "year_to_date",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "year_to_date",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "remaining",
-            "amount": "0.00",
-            "coverage_level": "family",
-            "network": "applies_all"
-        },
-        {
-            "service_type": "health_benefit_plan_coverage",
-            "insurance_type": "ppo",
-            "plan_period": "remaining",
-            "amount": "0.00",
-            "coverage_level": "individual",
-            "network": "applies_all"
-        }
-    ]
-}
-    const result = formatDataParser(data,type);
-    res.status(200).json(result);
-    }
-      catch (error : any){
-        res.status(500).json({error : error.message});
-    }
-}
