@@ -1,25 +1,19 @@
-
-
-
-
-
-
 export const schema1 = {
   PataNum: { path: "patient.member_id", default: 0 },
   LName: { path: "patient.last_name", default: "" },
   FName: { path: "patient.first_name", default: "" },
   MiddleI: { path: "patient.middle_name", default: "" },
   Preferred: { path: "patient.name", default: "" },
-  PatStatus: { path: "patient.is_subscriber", default: 1 },
+  PatStatus: { path: ["patient.coverage.status","patient.is_subscriber"], default: 1 },
   Gender: { path: "patient.gender", default: 0 },
   Position: { path: "", default: 0 },
   Birthdate: { path: "patient.dob", default: "" },
   SSN: { path: "", default: "" },
-  Address: { path: "patient.address.street1", default: "" },
-  Address2: { path: "patient.address.street2", default: "" },
-  City: { path: "patient.address.city", default: "" },
-  State: { path: "patient.address.state", default: "" },
-  Zip: { path: "patient.address.zip", default: "" },
+  Address: { path:[ "patient.address.street1","subscriber.address.street1","patient.address.street"], default: "" },
+  Address2: { path: [ "patient.address.street1","subscriber.address.street2"], default: "" },
+  City: { path: [ "patient.address.street1","subscriber.address.city"], default: "" },
+  State: { path: [ "patient.address.street1","subscriber.address.state"], default: "" },
+  Zip: { path:  [ "patient.address.street1","subscriber.address.zip"], default: "" },
   HmPhone: { path: "patient.metadata[0].value", default: "" },
   WkPhone: { path: "patient.metadata[1].value", default: "" },
   WirelessPhone: { path: "patient.metadata[2].value", default: "" },
@@ -35,7 +29,7 @@ export const schema1 = {
   ImageFolder: { path: "", default: "" },
   AddrNote: { path: "", default: "" },
   FamFinUrgNote: { path: "", default: "" },
-  MedUrgNote: { path: "", default: "" },
+  MedUrgNote: { path: "plan.disclaimers", default: "" },
   ApptModNote: { path: "", default: "" },
   StudentStatus: { path: "", default: "" },
   SchoolName: { path: "", default: "" },
@@ -110,9 +104,9 @@ export const schema1 = {
   GroupNum: { path: "plan.group_number", default: "" },
   GroupName: { path: "plan.group_name", default: "" },
   CarrierNum: { path: "payer.id", default: "" },
-  CarrierNum1: { path: "", default: "" },
+  CarrierNum1: { path: "payer.id", default: "" },
   CarrierName: { path: "payer.name", default: "" },
-  carrierPhone: { path: "payer.phone", default: "" },
+  carrierPhone: { path: ["payer.phone","payer.phone_number"], default: "" },
   ElectID: { path :[ "payer.electronic_id" ,"payer.id"], default: "" }
 };
 

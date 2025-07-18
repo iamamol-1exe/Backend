@@ -1,7 +1,5 @@
-export interface FieldMapping {
-  path: string | string[];
-  default: any;
-}
+import {FieldMapping} from '../types/fieldmapping'
+
 
 export class Parser {
   private input: any;
@@ -32,7 +30,7 @@ export class Parser {
       const parts = path.split('+').map(p => p.trim());
       return parts.map(p => this.getValueFromPath(p))
                   .filter(v => v !== undefined)
-                  .join('');
+                  .join(' ');
     }
 
     const keys = path.split(".");

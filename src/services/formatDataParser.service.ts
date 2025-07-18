@@ -1,6 +1,6 @@
-import { TransformerFactory, PatientType } from "../utils/TransformerFactory";
+import { TransformerFactory } from "../utils/TransformerFactory";
 
-export const formatDataParser = (data: any, type: PatientType): any => {
-    const transformer = TransformerFactory.create(type);
+export const formatDataParser = (data: any,): any => {
+    const transformer = TransformerFactory.create();
     return transformer.transform(data);
 }
