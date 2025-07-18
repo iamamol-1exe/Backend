@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { formatDataParser } from '../services/formatDataParser.service';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
+import { HttpResponse } from '../utils/responseUtils';
+
 
 
 export const formatDataParser1 = async (req :Request,res : Response) => {
@@ -14,13 +16,15 @@ export const formatDataParser1 = async (req :Request,res : Response) => {
                 "Authorization" : `Bearer ${token}`
             },
         })
-        // console.log(response.data)
+        
         const data = response.data;
         const result = await formatDataParser(data);
-        res.status(200).json(result);
+        // res.status(200).json(result);
+        return HttpResponse.success(res,result,"Data is Parsed");   
 
-    } catch (error : any) {
-        
+    } catch (error) {
+        console.error("error is occurred : ",error);
+        return HttpResponse.internalServerError(res,"Internal Server error");
     }
 }
 
