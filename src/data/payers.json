@@ -1,0 +1,1755 @@
+[
+  {
+    "alt_payer_ids": ["01901", "01033", "DDIC"],
+    "features": ["eligibility"],
+    "id": "94276",
+    "name": "Delta Dental - DDIC",
+    "onederfulPayerId": "DDIC",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "51022",
+    "name": "Delta Dental of Delaware",
+    "onederfulPayerId": "DD_DELAWARE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_CONNECTICUT", "37307", "DDNJ1", "22189T1", "TLU56"],
+    "features": ["eligibility"],
+    "id": "22189",
+    "name": "Delta Dental of New Jersey",
+    "onederfulPayerId": "DD_NEW_JERSEY",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBNM1", "G0079", "00790"],
+    "features": ["eligibility"],
+    "id": "84100",
+    "name": "Blue Cross Blue Shield of New Mexico",
+    "onederfulPayerId": "BCBS_NEW_MEXICO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["BCBSM"],
+    "features": ["eligibility"],
+    "id": "BBMDQ",
+    "name": "Blue Cross Blue Shield of Michigan/ Medicare Advantage",
+    "onederfulPayerId": "BCBS_MICHIGAN",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["53473"],
+    "features": ["eligibility"],
+    "id": "CB870",
+    "name": "Blue Cross Blue Shield of Rhode Island",
+    "onederfulPayerId": "BCBS_RHODE_ISLAND",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["93200"],
+    "features": ["eligibility"],
+    "id": "00932",
+    "name": "Blue Cross Blue Shield of Washington (Regence)",
+    "onederfulPayerId": "BLUE_SHIELD_WASHINGTON",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "IDIND",
+    "name": "Delta Dental of Illinois (Individual)",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["63665", "66893"],
+    "features": ["eligibility"],
+    "id": "80705",
+    "name": "Great West Healthcare",
+    "onederfulPayerId": "CIGNA_SELECT",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBMT1", "00751"],
+    "features": ["eligibility"],
+    "id": "TLU06",
+    "name": "Blue Cross Blue Shield of Montana",
+    "onederfulPayerId": "BCBS_MONTANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDAZ1", "86207"],
+    "features": ["eligibility"],
+    "id": "86027",
+    "name": "Delta Dental of Arizona",
+    "onederfulPayerId": "DD_AZ",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPCO"],
+    "features": ["eligibility"],
+    "id": "84056",
+    "name": "Delta Dental of Colorado",
+    "onederfulPayerId": "DD_COLORADO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDCA3"],
+    "features": ["eligibility"],
+    "id": "CDCAP",
+    "name": "DeltaCare USA / PMI - Encounters",
+    "onederfulPayerId": "DELTACARE_USA_ENCOUNTERS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD060", "700"],
+    "features": ["eligibility"],
+    "id": "00700",
+    "name": "Blue Cross Blue Shield of Connecticut- Family Plan",
+    "onederfulPayerId": "ANTHEM_BCBS_CONNECTICUT",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_GEORGIA", "DDGAO"],
+    "features": ["eligibility"],
+    "id": "DDGA1",
+    "name": "Delta Dental of Georgia",
+    "onederfulPayerId": "DD_GEORGIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_MARYLAND"],
+    "features": ["eligibility"],
+    "id": "DDMD1",
+    "name": "Delta Dental of Maryland",
+    "onederfulPayerId": "DD_MARYLAND",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["MDWA1", "CKWA1"],
+    "features": ["eligibility"],
+    "id": "77045",
+    "name": "Medicaid of Washington",
+    "onederfulPayerId": "MEDICAID_WASHINGTON",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "DD_NORTH_DAKOTA",
+      "3M",
+      "07000",
+      "07029",
+      "CDND1",
+      "0700",
+      "DDMN",
+      "DDND",
+      "7000",
+      "TFZ37",
+      "TFZ08",
+      "07000D",
+      "R7005",
+      "26004",
+      "MHP01",
+      "TLZ37",
+      "DDMN1"
+    ],
+    "features": ["eligibility"],
+    "id": "CDMN1",
+    "name": "Delta Dental of Minnesota",
+    "onederfulPayerId": "DD_MINNESOTA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "04356",
+    "name": "Dentaquest - Commercial",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CX068",
+    "name": "Physicians Mutual",
+    "onederfulPayerId": "PHYSICIANS_MUTUAL",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "PACIFICARE",
+      "BLUE_SHIELD_CALIFORNIA",
+      "CX060",
+      "CX053",
+      "BSCA1",
+      "5213",
+      "CX056",
+      "CX057",
+      "37060",
+      "94036",
+      "CX001",
+      "UHC01",
+      "52133T1",
+      "52133T3",
+      "52133T2",
+      "TPC06",
+      "TLW58",
+      "TLX81",
+      "TLW59",
+      "TLW68",
+      "TLX06",
+      "TBS03",
+      "TLW57",
+      "87726",
+      "TLU44",
+      "UHC_API"
+    ],
+    "features": ["eligibility"],
+    "id": "52133",
+    "name": "United Healthcare Dental",
+    "onederfulPayerId": "UNITED_HEALTHCARE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "52080",
+    "name": "AFLAC of New York",
+    "onederfulPayerId": "AFLAC_NY",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "46278",
+    "name": "Envolve Dental",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDCA2", "DDCA3"],
+    "features": ["eligibility"],
+    "id": "CDCA2",
+    "name": "DeltaCare USA / PMI - Claim",
+    "onederfulPayerId": "DELTACARE_CLAIMS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["22099T1"],
+    "features": ["eligibility"],
+    "id": "22099",
+    "name": "Blue Cross Blue Shield of NJ (Horizon) ",
+    "onederfulPayerId": "HORIZON",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "AARP1",
+    "name": "AARP Dental Insurance Plan",
+    "onederfulPayerId": "AARP",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "DELTU",
+      "CDMI0",
+      "DDPM",
+      "DDPMI",
+      "CBMIO",
+      "DTPMI",
+      "CDMIO",
+      "97276",
+      "A1432",
+      "10004",
+      "UFC01"
+    ],
+    "features": ["eligibility"],
+    "id": "DELTA",
+    "name": "Delta Dental of Michigan",
+    "onederfulPayerId": "DD_MICHIGAN",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPKS", "E3960"],
+    "features": ["eligibility"],
+    "id": "CDKS1",
+    "name": "Delta Dental of Kansas",
+    "onederfulPayerId": "DD_KS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["10002", "99010"],
+    "features": ["eligibility"],
+    "id": "DEHI1",
+    "name": "Hawaii Dental Services (Delta Dental of HI)",
+    "onederfulPayerId": "HAWAII_DENTAL_SERVICE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["E3240"],
+    "features": ["eligibility"],
+    "id": "CKMS1",
+    "name": "Medicaid of Mississippi",
+    "onederfulPayerId": "MEDICAID_MS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "UNITED_CONCORDIA_FEDERAL_EMPLOYEES_PROGRAM",
+      "PERSONAL_CHOICE",
+      "HERSHEY_HEALTHSMILE",
+      "BLUE_SHIELD_PENNSYLVANNIA",
+      "UCCDP",
+      "54771",
+      "CX013",
+      "89070",
+      "CX007",
+      "CBPA2",
+      "CB865",
+      "CX002",
+      "DXTAS",
+      "18004",
+      "UCCTR",
+      "UCCMB",
+      "UCCEN",
+      "UCCDE",
+      "UCCAP",
+      "00864",
+      "TLW33",
+      "CXOO7",
+      "TLX74",
+      "CX008",
+      "TFQ25",
+      "CBMNU",
+      "CBAR2",
+      "TEMU1",
+      "99998",
+      "99994",
+      "TES03",
+      "99997",
+      "Z9901",
+      "99995",
+      "BCBS_LOUISIANA",
+      "MINNESOTA_BLUE_CROSS_DENTAL_(UCCI)",
+      "53287",
+      "BXMN1",
+      "TLU22",
+      "00720",
+      "CX004",
+      "00301",
+      "00800",
+      "TLX78",
+      "TLX12",
+      "CBNYW",
+      "CBNYE"
+    ],
+    "features": ["eligibility"],
+    "id": "0000D",
+    "name": "United Concordia",
+    "onederfulPayerId": "UNITED_CONCORDIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["90162", "06120"],
+    "features": ["eligibility"],
+    "id": "91062",
+    "name": "Delta Dental of Washington",
+    "onederfulPayerId": "DD_WASHINGTON",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CX089", "DX214"],
+    "features": ["eligibility"],
+    "id": "TFQ56",
+    "name": "Deseret Mutual Benefit Administrators",
+    "onederfulPayerId": "DESERET_MUTUAL_BENEFIT_ADMINISTRATORS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["BCBS_WASHINGTON", "47570T3", "47570T2", "47570T1", "00430", "DX102"],
+    "features": ["eligibility"],
+    "id": "47570",
+    "name": "Blue Cross Blue Shield of Alaska (Premera)",
+    "onederfulPayerId": "BCBS_ALASKA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "43091",
+    "name": "Delta Dental of South Carolina",
+    "onederfulPayerId": "DELTA_DENTAL_SOUTH_CAROLINA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["TLY55", "DNC00"],
+    "features": ["eligibility"],
+    "id": "CKNC1",
+    "name": "Medicaid of North Carolina",
+    "onederfulPayerId": "MEDICAID_NC",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CX091", "TFQ19"],
+    "features": ["eligibility"],
+    "id": "86098",
+    "name": "AVESIS",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_LOUISIANA"],
+    "features": ["eligibility"],
+    "id": "DDLA1",
+    "name": "Delta Dental of Louisiana",
+    "onederfulPayerId": "DD_LOUISIANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CB833", "TLU03"],
+    "features": ["eligibility"],
+    "id": "29076",
+    "name": "Medical Mutual of Ohio (MMO)",
+    "onederfulPayerId": "MMO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "UFT_WELFARE_FUND",
+      "HEALTHSOURCE_PROVIDENT",
+      "CONNECTICUT_GENERAL_CIGNA",
+      "80840",
+      "TLX70",
+      "62308T2",
+      "62308T1",
+      "10050",
+      "CIGN1",
+      "TLX24",
+      "TLU64",
+      "71056",
+      "68195",
+      "CHLIC",
+      "CGHMO"
+    ],
+    "features": ["eligibility"],
+    "id": "62308",
+    "name": "Cigna",
+    "onederfulPayerId": "CIGNA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["BLUE_ADVANTAGE", "CBAR1", "CBAR5", "P-US", "TLY26"],
+    "features": ["eligibility"],
+    "id": "83470",
+    "name": "Blue Cross Blue Shield of Arkansas",
+    "onederfulPayerId": "BCBS_ARKANSAS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "ARIND",
+    "name": "Delta Dental of AR Indv",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "31096",
+    "name": "Delta Dental of West Virginia",
+    "onederfulPayerId": "DD_WEST_VIRGINIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "61101",
+      "10841",
+      "73288T2",
+      "73288T1",
+      "73288T6",
+      "73288T5",
+      "73288T4",
+      "73288T3"
+    ],
+    "features": ["eligibility"],
+    "id": "73288",
+    "name": "Humana Dental",
+    "onederfulPayerId": "HUMANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKCT1",
+    "name": "Medicaid of Connecticut",
+    "onederfulPayerId": "MEDICAID_CONNECTICUT",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKOH1",
+    "name": "Medicaid of Ohio",
+    "onederfulPayerId": "MEDICAID_OH",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["39033"],
+    "features": ["eligibility"],
+    "id": "39069",
+    "name": "Delta Dental of Wisconsin",
+    "onederfulPayerId": "DD_WI",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["SKYGEN"],
+    "features": ["eligibility"],
+    "id": "SKYGN",
+    "name": "Molina Healthcare",
+    "onederfulPayerId": "MOLINA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD060"],
+    "features": ["eligibility"],
+    "id": "65358",
+    "name": "Blue Cross Blue Shield of Connecticut",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD265"],
+    "features": ["eligibility"],
+    "id": "84101",
+    "name": "Blue Cross Blue Shield of Nevada",
+    "onederfulPayerId": "ANTHEM_BCBS_NEVADA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["35092"],
+    "features": ["eligibility"],
+    "id": "TLU78",
+    "name": "Morris Associates",
+    "onederfulPayerId": "HEALTHSCOPE_MORRIS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CX107", "SX107"],
+    "features": ["eligibility"],
+    "id": "TPC17",
+    "name": "Select Health",
+    "onederfulPayerId": "SELECTHEALTH",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DX231"],
+    "features": ["eligibility"],
+    "id": "37242",
+    "name": "Aultra Administrative Group",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DX067"],
+    "features": ["eligibility"],
+    "id": "47171",
+    "name": "Blue Cross Blue Shield of Kansas City",
+    "onederfulPayerId": "BCBS_KANSAS_CITY_MO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "44054",
+    "name": "GEHA Employee Program",
+    "onederfulPayerId": "GEHA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD270"],
+    "features": ["eligibility"],
+    "id": "BNH01",
+    "name": "Blue Cross Blue Shield of New Hampshire",
+    "onederfulPayerId": "ANTHEM_BCBS_NEW_HAMPSHIRE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "43471",
+    "name": "Benefit Management / Inetico",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["61603", "61604"],
+    "features": ["eligibility"],
+    "id": "LX049",
+    "name": "Primewest Health",
+    "onederfulPayerId": "PRIMEWEST",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "CX034",
+      "TDN02",
+      "TLY47",
+      "FX136",
+      "TLX87",
+      "TLZ09",
+      "TLX86",
+      "TLX85",
+      "TLU18",
+      "TLX88",
+      "TDN01"
+    ],
+    "features": ["eligibility"],
+    "id": "00580",
+    "name": "Blue Cross Blue Shield of Maryland / CAREFIRST",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["00850", "85100", "TLW13", "CB850", "REGENCE_BCBS_OREGON_OUT"],
+    "features": ["eligibility"],
+    "id": "00851",
+    "name": "Blue Cross Blue Shield of Oregon (Regence)",
+    "onederfulPayerId": "BCBS_OREGON",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["COUNCIL_CARPENTERS_WELFARE_FUND", "ICW01", "CDIN1", "DDPIN", "DDPI"],
+    "features": ["eligibility"],
+    "id": "DELTI",
+    "name": "Delta Dental of Indiana",
+    "onederfulPayerId": "DD_INDIANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["4614"],
+    "features": ["eligibility"],
+    "id": "04614",
+    "name": "Delta Dental of Massachusetts",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKIN1",
+    "name": "Medicaid of Indiana",
+    "onederfulPayerId": "MEDICAID_INDIANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["2027", "02027T3", "02027T2", "02027T1"],
+    "features": ["eligibility"],
+    "id": "02027",
+    "name": "Delta Dental of Northeast (ME NH VT)",
+    "onederfulPayerId": "DD_NORTHEAST",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "HUMANA_SPECIALTY_BENEFITS_STATE_FLORIDA_DENTAL",
+      "HUMANA_SPECIALTY_BENEFITS_FLORIDA_HEALTHY_KIDS_DENTAL",
+      "HUMANA_COMPBENEFITS_FEDERAL_PLAN_DENTAL"
+    ],
+    "features": ["eligibility"],
+    "id": "CX021",
+    "name": "CompBenefits",
+    "onederfulPayerId": "COMPBENEFITS_AND_HUMANA_SPECIALTY_BENEFITS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CDIAM",
+    "name": "Delta Dental of Iowa - DWP",
+    "onederfulPayerId": "DD_IOWA_GOVERNMENT",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["14165", "P-MVP"],
+    "features": ["eligibility"],
+    "id": "TLX30",
+    "name": "MVP Select Care",
+    "onederfulPayerId": "MVP_SELECT_CARE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "86001 - 86003",
+      "86047 - 86049",
+      "WT004 - WT006",
+      "WT006",
+      "WT005",
+      "WT004",
+      "86049",
+      "86048",
+      "86047",
+      "86003",
+      "86002",
+      "86001"
+    ],
+    "features": ["eligibility"],
+    "id": "GP133",
+    "name": "UHC Dental Government Programs",
+    "onederfulPayerId": "COMMUNITY_UNITED_HEALTHCARE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKMA1",
+    "name": "Medicaid of Massachusetts (Mass Health)",
+    "onederfulPayerId": "MEDICAID_MA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPA1", "23166T1", "TLU51", "TLX23", "00008"],
+    "features": ["eligibility"],
+    "id": "23166",
+    "name": "Delta Dental of Pennsylvania",
+    "onederfulPayerId": "DD_PENNSYLVANIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["Z0001", "AD241"],
+    "features": ["eligibility"],
+    "id": "TLX52",
+    "name": "Blue Cross Blue Shield of Missouri",
+    "onederfulPayerId": "BCBS_MO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_FLORIDA"],
+    "features": ["eligibility"],
+    "id": "DDFL1",
+    "name": "Delta Dental of Florida",
+    "onederfulPayerId": "DD_FLORIDA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["01066"],
+    "features": ["eligibility"],
+    "id": "R7002",
+    "name": "Wilson Mcshane Corporation",
+    "onederfulPayerId": "WILSON_MCSHANE_CORP",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "ANTHEM_BCBS_OHIO",
+      "ANTHEM_BCBS_KENTUCKY",
+      "ANTHEM_BCBS_INDIANA",
+      "AD332",
+      "AD160",
+      "AD130",
+      "84105T3",
+      "84105T2",
+      "84105T1",
+      "TLU91",
+      "TLU89",
+      "TLU90",
+      "P-NYF"
+    ],
+    "features": ["eligibility"],
+    "id": "84105",
+    "name": "Blue Cross Blue Shield (Anthem)",
+    "onederfulPayerId": "ANTHEM",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["WDENC", "01130", "WT016"],
+    "features": ["eligibility"],
+    "id": "WT016",
+    "name": "Encara",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CB900", "31004"],
+    "features": ["eligibility"],
+    "id": "84980",
+    "name": "Blue Cross Blue Shield of Texas",
+    "onederfulPayerId": "BCBS_TEXAS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["47009", "CX092", "TLZ28"],
+    "features": ["eligibility"],
+    "id": "TLX77",
+    "name": "Security Life Insurance Co of America",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPAR", "CDAR1", "DEPAR", "00001", "CDAK1"],
+    "features": ["eligibility"],
+    "id": "DELAR",
+    "name": "Delta Dental of Arkansas",
+    "onederfulPayerId": "DD_AR",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["72630"],
+    "features": ["eligibility"],
+    "id": "60033",
+    "name": "FIRST AMERITAS LIFE INSURANCE CORPORATION OF NY",
+    "onederfulPayerId": "AMERITAS_NEW_YORK",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["HDSMH"],
+    "features": ["eligibility"],
+    "id": "TMCHI",
+    "name": "Medicaid of Hawaii (Hawaii Dental Services)",
+    "onederfulPayerId": "HDS_MEDICAID",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CB923", "AD423"],
+    "features": ["eligibility"],
+    "id": "84103",
+    "name": "Blue Cross Blue Shield of Virginia (Trigon)",
+    "onederfulPayerId": "ANTHEM_BCBS_VIRGINIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["MCNA2", "CKLA1", "CKLA2"],
+    "features": ["eligibility"],
+    "id": "65030",
+    "name": "Managed Care of North America (MCNA)",
+    "onederfulPayerId": "MCNA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "DDMS1",
+    "name": "Delta Dental of Mississippi",
+    "onederfulPayerId": "DD_MISSISSIPPI",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["TRIGON_BCBS_VIRGINIA", "TRIGON_BCBS_COLORADO", "84103"],
+    "features": ["eligibility"],
+    "id": "47198",
+    "name": "Blue Cross of California (Wellpoint)",
+    "onederfulPayerId": "ANTHEM_BCBS_CALIFORNIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["80314D", "80314T2", "80314T1"],
+    "features": ["eligibility"],
+    "id": "80314",
+    "name": "UNICARE",
+    "onederfulPayerId": "UNICARE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "GWD01",
+    "name": "Golden West Dental  ",
+    "onederfulPayerId": "GOLDEN_WEST",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "P-SID",
+      "TPC16",
+      "TPC18",
+      "TPC19 - TCP100",
+      "TPC68",
+      "TPC67",
+      "TPC69",
+      "TPC66",
+      "TPC64",
+      "TPC63",
+      "TPC62",
+      "TPC61",
+      "TPC60",
+      "TPC59",
+      "TPC58",
+      "TPC57",
+      "TPC56",
+      "TPC55",
+      "TPC54",
+      "TPC53",
+      "TPC52",
+      "TPC51",
+      "TPC50",
+      "TPC49",
+      "TPC48",
+      "TPC47",
+      "TPC46",
+      "TPC45",
+      "TPC44",
+      "TPC43",
+      "TPC42",
+      "TPC41",
+      "TPC40",
+      "TPC39",
+      "TPC38",
+      "TPC37",
+      "TPC36",
+      "TPC35",
+      "TPC34",
+      "TPC33",
+      "TPC32",
+      "TPC31",
+      "TPC30",
+      "TPC29",
+      "TPC28",
+      "TPC27",
+      "TPC26",
+      "TPC25",
+      "TPC24",
+      "TPC23",
+      "TPC22",
+      "TPC21",
+      "TPC20",
+      "TPC19",
+      "TPC100",
+      "TPC99",
+      "TPC98",
+      "TPC97",
+      "TPC96",
+      "TPC95",
+      "TPC94",
+      "TPC93",
+      "TPC92",
+      "TPC91",
+      "TPC90",
+      "TPC89",
+      "TPC88",
+      "TPC87",
+      "TPC86",
+      "TPC85",
+      "TPC84",
+      "TPC83",
+      "TPC82",
+      "TPC81",
+      "TPC80",
+      "TPC79",
+      "TPC78",
+      "TPC77",
+      "TPC76",
+      "TPC75",
+      "TPC74",
+      "TPC73",
+      "TPC72",
+      "TPC71",
+      "TPC70",
+      "TPC65"
+    ],
+    "features": ["eligibility"],
+    "id": "CX076",
+    "name": "Administrative Services (ASO) ",
+    "onederfulPayerId": "ADMINISTRATIVE_SERVICES_ONLY",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "78077",
+    "name": "Equitable",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["GACS1"],
+    "features": ["eligibility"],
+    "id": "SCION",
+    "name": "SCION Dental",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "WVCS1",
+    "name": "Caresource - West Virginia",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["61271T1"],
+    "features": ["eligibility"],
+    "id": "61271",
+    "name": "Principal Financial Group",
+    "onederfulPayerId": "PRINCIPAL",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["00390", "00890", "67004"],
+    "features": ["eligibility"],
+    "id": "CBTN1",
+    "name": "Blue Cross Blue Shield of Tennessee",
+    "onederfulPayerId": "BCBS_TENNESSEE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["38004", "04210"],
+    "features": ["eligibility"],
+    "id": "CBMA1",
+    "name": "Blue Cross Blue Shield of Massachusetts",
+    "onederfulPayerId": "BCBS_MASSACHUSETTS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "ALH01",
+    "name": "Aliera Healthcare",
+    "onederfulPayerId": "ALIERA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKAL1",
+    "name": "Medicaid of Alabama",
+    "onederfulPayerId": "MEDICAID_ALABAMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["13411"],
+    "features": ["eligibility"],
+    "id": "89009",
+    "name": "Standard Insurance Company of New York",
+    "onederfulPayerId": "STANDARD_INSURANCE_NEW_YORK",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "INTERNATIONAL_BROTHERHOOD_ELECTRICAL_WORKERS",
+      "DDPOH",
+      "CDOH1",
+      "DDPO",
+      "15004",
+      "A1317"
+    ],
+    "features": ["eligibility"],
+    "id": "DELTO",
+    "name": "Delta Dental of Ohio",
+    "onederfulPayerId": "DD_OHIO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["99004", "TLZ27", "10001"],
+    "features": ["eligibility"],
+    "id": "HMSA1",
+    "name": "HMSA (Hawaii Medical Services) - Commercial",
+    "onederfulPayerId": "HMSA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_TEXAS"],
+    "features": ["eligibility"],
+    "id": "DDTX1",
+    "name": "Delta Dental of Texas",
+    "onederfulPayerId": "DD_TEXAS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "66043",
+    "name": "Delta Dental of Puerto Rico",
+    "onederfulPayerId": "DD_PUERTO_RICO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["81040"],
+    "features": ["eligibility"],
+    "id": "TLU11",
+    "name": "Allegiance Benefit Plan Management",
+    "onederfulPayerId": "ALLEGIANCE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "70123",
+    "name": "WV PEIA",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "36088",
+    "name": "Reliance Standard Life",
+    "onederfulPayerId": "RELIANCE_STANDARD_LIFE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD180"],
+    "features": ["eligibility"],
+    "id": "BME01",
+    "name": "Blue Cross Blue Shield of Maine",
+    "onederfulPayerId": "ANTHEM_BCBS_MAINE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBNY1"],
+    "features": ["eligibility"],
+    "id": "55093",
+    "name": "Blue Cross Blue Shield of New York (Empire)",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "71064",
+    "name": "HealthChoice",
+    "onederfulPayerId": "HEALTHCHOICE_OKLAHOMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "PRIMECARE_WISCONSIN",
+      "PHOENIX_HEALTH_DENTAQUEST",
+      "MERCY_CARE",
+      "MEDICAID_WISCONSIN_PRIMECARE",
+      "MEDICAID_WISCONSIN_HUMANA_TDC",
+      "MEDICAID_WISCONSIN_DENTAQUEST",
+      "MEDICAID_VIRGINIA_HEALTHKEEPERS",
+      "MEDICAID_VIRGINIA",
+      "MEDICAID_TEXAS_DENTAQUEST",
+      "MEDICAID_TENNESSEE_BLUECARE",
+      "MEDICAID_SOUTH_CAROLINA",
+      "MEDICAID_MARYLAND",
+      "MEDICAID_KENTUKY_DORAL_DENTAL",
+      "MEDICAID_ILLINOIS",
+      "MEDICAID_IDAHO",
+      "MEDICAID_COLORADO",
+      "DENTAQUEST_GOVERNMENT",
+      "AMERIGROUP_WA_MEDICARE",
+      "AMERIGROUP_GA",
+      "AFFINITY_HEALTH",
+      "TPC14",
+      "13357",
+      "11315",
+      "25143",
+      "23284",
+      "13265",
+      "CKO14",
+      "09824",
+      "31114",
+      "CXO14",
+      "CIMSA",
+      "CKSC1",
+      "CKKY3",
+      "CKIL1",
+      "CKID1",
+      "CKCO1",
+      "86052",
+      "CKVA1",
+      "CKMD1",
+      "CX014T1",
+      "22348",
+      "77016",
+      "SCXIX",
+      "WT001",
+      "TPC11",
+      "TLW15",
+      "COMED",
+      "AIDID",
+      "MCMD1"
+    ],
+    "features": ["eligibility"],
+    "id": "CX014",
+    "name": "DentaQuest - Government",
+    "onederfulPayerId": "MEDICAID_DENTAQUEST",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBGA1", "54000"],
+    "features": ["eligibility"],
+    "id": "SB601",
+    "name": "Blue Cross Blue Shield of Georgia",
+    "onederfulPayerId": "ANTHEM_BCBS_GEORGIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["32_BJ"],
+    "features": ["eligibility"],
+    "id": "11198",
+    "name": "Delta Dental of New York",
+    "onederfulPayerId": "DD_NEW_YORK",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CX032", "CX047", "61492", "61301"],
+    "features": ["eligibility"],
+    "id": "47009",
+    "name": "Ameritas Life Insurance Company",
+    "onederfulPayerId": "AMERITAS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["TLW42", "CX099"],
+    "features": ["eligibility"],
+    "id": "77777",
+    "name": "Delta Dental of California",
+    "onederfulPayerId": "DD_CALIFORNIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_MONTANA"],
+    "features": ["eligibility"],
+    "id": "DDMT1",
+    "name": "Delta Dental of Montana",
+    "onederfulPayerId": "DD_MONTANA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "SDCOM",
+    "name": "SCION Dental Commercial  ",
+    "onederfulPayerId": "DIRECT_DENTAL",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDKY", "17004"],
+    "features": ["eligibility"],
+    "id": "CDKY1",
+    "name": "Delta Dental of Kentucky",
+    "onederfulPayerId": "DD_KY",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "ANTHEM_BCBS_WISCONSIN_FEP",
+      "P-DBC",
+      "BWI01",
+      "00950",
+      "TCX01",
+      "CB950",
+      "AD450",
+      "00450"
+    ],
+    "features": ["eligibility"],
+    "id": "39141",
+    "name": "Blue Cross Blue Shield of Wisconsin",
+    "onederfulPayerId": "BCBS_WISCONSIN",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "HCH01",
+    "name": "Healthcare Highways Health Plan  ",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "68246",
+      "6005",
+      "68241",
+      "57604",
+      "6824",
+      "60054T2",
+      "60054T1",
+      "60054T17",
+      "60054T10",
+      "60054T9",
+      "60054T8",
+      "60054T7",
+      "60054T6",
+      "60054T5",
+      "60054T4",
+      "60054T3",
+      "60054T16",
+      "60054T15",
+      "60054T14",
+      "60054T13",
+      "60054T12",
+      "60054T11",
+      "953402799",
+      "18014"
+    ],
+    "features": ["eligibility"],
+    "id": "60054",
+    "name": "AETNA",
+    "onederfulPayerId": "AETNA_DENTAL_PLANS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["BFL01", "CBFLU", "TLZ31"],
+    "features": ["eligibility"],
+    "id": "76031",
+    "name": "Florida Combined Life (BCBS OF FL)",
+    "onederfulPayerId": "FLORIDA_COMBINED_LIFE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBKS1"],
+    "features": ["eligibility"],
+    "id": "47163",
+    "name": "Blue Cross Blue Shield of Kansas",
+    "onederfulPayerId": "BCBS_KANSAS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "93524",
+    "name": "Advantage Dental",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "58066",
+    "name": "AFLAC of Georgia",
+    "onederfulPayerId": "AFLAC_GA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CX035"],
+    "features": ["eligibility"],
+    "id": "DCP01",
+    "name": "Dental Care Plus",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "R7004",
+    "name": "FLEX Compensation",
+    "onederfulPayerId": "FLEX_COMPENSATION",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CBID2"],
+    "features": ["eligibility"],
+    "id": "00611",
+    "name": "Regence Blue Shield of Idaho",
+    "onederfulPayerId": "BLUE_SHIELD_IDAHO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["93024"],
+    "features": ["eligibility"],
+    "id": "69019",
+    "name": "Standard Insurance Company of New York",
+    "onederfulPayerId": "STANDARD_INSURANCE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "96938",
+    "name": "Gateway Healthy Plan",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DENTAL_GUARD_PREFERRED", "TLZ41"],
+    "features": ["eligibility"],
+    "id": "64246",
+    "name": "Guardian Life Insurance Co",
+    "onederfulPayerId": "GUARDIAN",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["AD050"],
+    "features": ["eligibility"],
+    "id": "84099",
+    "name": "Blue Cross Blue Shield of Colorado",
+    "onederfulPayerId": "ANTHEM_BCBS_COLORADO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDUTO", "DD_UTAH"],
+    "features": ["eligibility"],
+    "id": "DDUT1",
+    "name": "Delta Dental of Utah",
+    "onederfulPayerId": "DD_UTAH",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["13317"],
+    "features": ["eligibility"],
+    "id": "71005",
+    "name": "First Reliance Standard Life - New York",
+    "onederfulPayerId": "FIRST_RELIANCE_STANDARD",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["65978", "TLZ16", "TES01"],
+    "features": ["eligibility"],
+    "id": "0000E",
+    "name": "Metropolitan Life Insurance Company",
+    "onederfulPayerId": "METLIFE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["54084"],
+    "features": ["eligibility"],
+    "id": "CDVA1",
+    "name": "Delta Dental of Virginia",
+    "onederfulPayerId": "DD_VIRGINIA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["12B25", "BCSOK", "SB840", "TBOK1"],
+    "features": ["eligibility"],
+    "id": "00840",
+    "name": "Blue Cross Blue Shield of Oklahoma",
+    "onederfulPayerId": "BCBS_OKLAHOMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["70408T1"],
+    "features": ["eligibility"],
+    "id": "70408",
+    "name": "Sun Life Financial",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "93525",
+    "name": "Northwest Dental Services",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "50503",
+    "name": "Altus Dental",
+    "onederfulPayerId": "ALTUS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_ALABAMA"],
+    "features": ["eligibility"],
+    "id": "DDAL1",
+    "name": "Delta Dental of Alabama",
+    "onederfulPayerId": "DD_ALABAMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_NEVADA"],
+    "features": ["eligibility"],
+    "id": "DDNV1",
+    "name": "Delta Dental of Nevada",
+    "onederfulPayerId": "DD_NEVADA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["56010", "DDPNC", "DDNC", "DDNC1"],
+    "features": ["eligibility"],
+    "id": "56101",
+    "name": "Delta Dental of North Carolina",
+    "onederfulPayerId": "DD_NORTH_CAROLINA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "82029",
+    "name": "Delta Dental of Idaho",
+    "onederfulPayerId": "DD_ID",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["05030", "MW150", "P-MOE", "TLY40", "PIP02", "PIP01"],
+    "features": ["eligibility"],
+    "id": "47598",
+    "name": "Delta Dental of Illinois Group Plans",
+    "onederfulPayerId": "DD_ILLINOIS_GROUP_PLANS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "GI813",
+    "name": "Guardian Managed DentalGuard (Individual Market)",
+    "onederfulPayerId": "MANAGED_DENTALGUARD",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["CDNE1", "DDNE"],
+    "features": ["eligibility"],
+    "id": "07027",
+    "name": "Delta Dental of Nebraska",
+    "onederfulPayerId": "DD_NEBRASKA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["ALBLS", "07600"],
+    "features": ["eligibility"],
+    "id": "CBAL1",
+    "name": "Blue Cross Blue Shield of Alabama",
+    "onederfulPayerId": "BCBS_ALABAMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CKUT1",
+    "name": "Medicaid of Utah",
+    "onederfulPayerId": "MEDICAID_UTAH",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["85022", "DDPNM"],
+    "features": ["eligibility"],
+    "id": "DELTM",
+    "name": "Delta Dental of New Mexico",
+    "onederfulPayerId": "DD_NEW_MEXICO",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["5029"],
+    "features": ["eligibility"],
+    "id": "05029",
+    "name": "Delta Dental of Rhode Island",
+    "onederfulPayerId": "DD_RHODE_ISLAND",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DD_TRICARE", "37004", "DDPFS", "DDCA1"],
+    "features": ["eligibility"],
+    "id": "CDCA1",
+    "name": "Tricare Retiree Dental",
+    "onederfulPayerId": "TRICARE_RETIREE_DENTAL_PROGRAM",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DHS01", "MNMA1"],
+    "features": ["eligibility"],
+    "id": "CKMN1",
+    "name": "Medicaid of Minnesota",
+    "onederfulPayerId": "MEDICAID_MINNESOTA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["07031", "MEDIC", "MEPUB", "MEDICA"],
+    "features": ["eligibility"],
+    "id": "CX026",
+    "name": "MEDICA of Minnesota",
+    "onederfulPayerId": "MEDICA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["53589", "TLZ14"],
+    "features": ["eligibility"],
+    "id": "TBX01",
+    "name": "Blue Cross Blue Shield of Arizona",
+    "onederfulPayerId": "BCBS_ARIZONA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["WT002"],
+    "features": ["eligibility"],
+    "id": "BSCA2",
+    "name": "Blue Shield of California - Federal",
+    "onederfulPayerId": "BLUE_SHIELD_CALIFORNIA_FEDERAL",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["67814T2", "67814T1", "75238"],
+    "features": ["eligibility"],
+    "id": "67814",
+    "name": "Sun Life & Health Ins Co",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPTN", "CDTN1", "DDPT", "22004"],
+    "features": ["eligibility"],
+    "id": "DELTN",
+    "name": "Delta Dental of Tennessee",
+    "onederfulPayerId": "DD_TENNESSEE",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "34192",
+    "name": "Mutual Health Services",
+    "onederfulPayerId": "MUTUAL_HEALTH_SERVICES",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "CDIA1",
+    "name": "Delta Dental of Iowa",
+    "onederfulPayerId": "DD_IOWA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["25125", "TFQ69", "TLW06"],
+    "features": ["eligibility"],
+    "id": "43090",
+    "name": "Delta Dental of Missouri",
+    "onederfulPayerId": "DD_MISSOURI",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "R7003",
+    "name": "Benefit Inc",
+    "onederfulPayerId": "BENEFIT_INC",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "52147",
+    "name": "Delta Dental of District of Columbia (DC)",
+    "onederfulPayerId": "DD_WASHINGTON_DC",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "VYNE1",
+    "name": "Vyne Sample Responses",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [],
+    "features": ["eligibility"],
+    "id": "93221",
+    "name": "Asuris Northwest Health",
+    "onederfulPayerId": "ASURIS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["P-087"],
+    "features": ["eligibility"],
+    "id": "CX087",
+    "name": "Mutual of Omaha",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "UNITED_MEDICAL_RESOURCES",
+      "UMR_SAN_ANTONIO",
+      "UMR_HARRINGTON",
+      "33108",
+      "74223",
+      "95266",
+      "75196",
+      "75245",
+      "87265",
+      "52132"
+    ],
+    "features": ["eligibility"],
+    "id": "39026",
+    "name": "UMR",
+    "onederfulPayerId": "UMR_WAUSAU",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DX052"],
+    "features": ["eligibility"],
+    "id": "AULTC",
+    "name": "Aultcare",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["DDPOK", "CDOK1", "22229"],
+    "features": ["eligibility"],
+    "id": "DELOK",
+    "name": "Delta Dental of Oklahoma",
+    "onederfulPayerId": "DD_OKLAHOMA",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["GOO62", "G0062", "G0621", "CBIL1", "TLW12", "CB621", "23004"],
+    "features": ["eligibility"],
+    "id": "00621",
+    "name": "Blue Cross Blue Shield of Illinois",
+    "onederfulPayerId": "BCBS_ILLINOIS",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": ["R7001"],
+    "features": ["eligibility"],
+    "id": "TLY21",
+    "name": "Zenith Administrators (MN)",
+    "onederfulPayerId": "ZENITH",
+    "status": "ACTIVE"
+  },
+  {
+    "alt_payer_ids": [
+      "CX08",
+      "WT066",
+      "WT065",
+      "WT067",
+      "WT064",
+      "WT063",
+      "WT062",
+      "WT019",
+      "WT061",
+      "WT060",
+      "WT059",
+      "WT058",
+      "WT057",
+      "WT056",
+      "WT055",
+      "WT054",
+      "WT035",
+      "WT049",
+      "WT048",
+      "WT047",
+      "WT046",
+      "WT045",
+      "WT034",
+      "WT033",
+      "WT044",
+      "WT032",
+      "WT031",
+      "WT043",
+      "WT038",
+      "WT037",
+      "WT029",
+      "WT030",
+      "WT020",
+      "WT028",
+      "WT027",
+      "WT036",
+      "WT026",
+      "WT022",
+      "WT024",
+      "WT023",
+      "WT021",
+      "WT025",
+      "WT018",
+      "TPC12",
+      "LDP02",
+      "LDP01"
+    ],
+    "features": ["eligibility"],
+    "id": "CX083",
+    "name": "Liberty Dental Plan",
+    "onederfulPayerId": null,
+    "status": "ACTIVE"
+  }
+]
