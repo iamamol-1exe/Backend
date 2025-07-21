@@ -1,0 +1,15 @@
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:18:48.692Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:22:31.247Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:23:03.088Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:23:14.604Z"}
+{"level":"info","message":{"duration":"4ms","ip":"::1","method":"POST","status":404,"url":"/api/v1"},"service":"backend-api","timestamp":"2025-07-21T07:23:25.629Z"}
+{"level":"info","message":{"duration":"1ms","ip":"::1","method":"POST","status":404,"url":"/health"},"service":"backend-api","timestamp":"2025-07-21T07:23:36.300Z"}
+{"level":"info","message":{"duration":"1ms","ip":"::1","method":"POST","status":404,"url":"/health"},"service":"backend-api","timestamp":"2025-07-21T07:23:47.000Z"}
+{"level":"info","message":{"duration":"1ms","ip":"::1","method":"GET","status":200,"url":"/health"},"service":"backend-api","timestamp":"2025-07-21T07:23:50.988Z"}
+{"level":"info","message":{"duration":"1ms","ip":"::1","method":"GET","status":404,"url":"/api/v1/parse"},"service":"backend-api","timestamp":"2025-07-21T07:24:12.535Z"}
+{"level":"info","message":{"duration":"6224ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-21T07:29:13.265Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:32:38.098Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:33:30.671Z"}
+{"level":"info","message":{"duration":"11064ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-21T07:41:25.487Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-21T07:57:47.565Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-21T08:04:29.129Z"}
