@@ -1,5 +1,4 @@
-import {FieldMapping} from '../types/fieldmapping'
-
+import { FieldMapping } from "../types/fieldmapping";
 
 export class Parser {
   private input: any;
@@ -24,13 +23,14 @@ export class Parser {
 
   private getValueFromPath(path: string): any {
     if (!path) return undefined;
-    
+
     // Handle concatenation with '+'
-    if (path.includes('+')) {
-      const parts = path.split('+').map(p => p.trim());
-      return parts.map(p => this.getValueFromPath(p))
-                  .filter(v => v !== undefined)
-                  .join(' ');
+    if (path.includes("+")) {
+      const parts = path.split("+").map((p) => p.trim());
+      return parts
+        .map((p) => this.getValueFromPath(p))
+        .filter((v) => v !== undefined)
+        .join(" ");
     }
 
     const keys = path.split(".");
@@ -60,7 +60,10 @@ export class JsonTransformer {
     return this.buildObject(parser, this.mapping);
   }
 
-  private buildObject(parser: Parser, mapping: { [key: string]: FieldMapping }): any {
+  private buildObject(
+    parser: Parser,
+    mapping: { [key: string]: FieldMapping }
+  ): any {
     const result: any = {};
 
     for (const key in mapping) {
