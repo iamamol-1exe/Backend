@@ -402,3 +402,4 @@
 {"level":"info","message":{"duration":"18228ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T12:22:05.840Z"}
 {"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T12:22:30.506Z"}
 {"level":"info","message":{"duration":"32802ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T12:23:04.531Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T12:51:41.085Z"}
