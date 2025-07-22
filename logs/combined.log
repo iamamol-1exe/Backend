@@ -389,3 +389,16 @@
 {"level":"info","message":{"duration":"10317ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-21T15:39:47.614Z"}
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-21T15:41:58.445Z"}
 {"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T05:44:16.079Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T05:51:36.167Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T11:04:42.721Z"}
+{"level":"info","message":{"duration":"20794ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:07:28.925Z"}
+{"level":"info","message":{"duration":"11939ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:09:50.627Z"}
+{"level":"info","message":{"duration":"12766ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:11:13.577Z"}
+{"level":"info","message":{"duration":"26521ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:33:49.307Z"}
+{"level":"info","message":{"duration":"20347ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:35:13.558Z"}
+{"level":"info","message":{"duration":"11791ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:37:17.973Z"}
+{"level":"info","message":{"duration":"15430ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T11:38:44.836Z"}
+{"level":"info","message":{"duration":"4220ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T12:20:47.186Z"}
+{"level":"info","message":{"duration":"18228ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T12:22:05.840Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-22T12:22:30.506Z"}
+{"level":"info","message":{"duration":"32802ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-22T12:23:04.531Z"}

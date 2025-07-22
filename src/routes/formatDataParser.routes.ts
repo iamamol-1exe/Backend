@@ -5,6 +5,6 @@ import { authenticate } from "../middlewares/formatDataPraser.middleware";
 
 const router = express.Router();
 
-router.post("/parse", authenticate, formatDataParser1);
+router.post("/parse", formatDataParser1);
 
 export default router;
