@@ -7,6 +7,8 @@ const createParser =(data :any, provider : string) =>{
     if(!ParserClass){
         throw new Error(`No parser class is avaible ${provider}`);
 
+        
+
     }
    return new ParserClass(data);
     

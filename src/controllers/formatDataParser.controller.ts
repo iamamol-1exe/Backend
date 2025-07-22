@@ -18,6 +18,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
         "RESPONSE_MESSAGES.UNABLE_TO_FIND_PROVIDER"
       );
     }
+    console.log(onederfulPayerId);
 
     const response = await axios.post(url, payload, {
       headers: {
