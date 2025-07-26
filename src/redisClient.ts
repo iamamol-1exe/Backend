@@ -1,7 +1,10 @@
 import { createClient } from "redis";
+import  {logger}  from "./utils/logger";
 
 
-export const redisClient = createClient();
+export const redisClient = createClient({
+     url: process.env.REDIS_URL || 'redis://localhost:6379',
+    });
 
 
 redisClient.on('connect', ()=>{
@@ -12,7 +15,21 @@ redisClient.on('error',(err)=>{
     console.error( "Redis client error : ", err);
 })
 
-export const connectRedis = async ()=>{
+
+let isConnected = false;
+
+export const connectRedis = async (): Promise<void> => {
+  if (isConnected) return;
+  
+  try {
     await redisClient.connect();
+    isConnected = true;
+  } catch (error) {
+    logger.error('Failed to connect to Redis:', error);
+    throw error;
+  }
 };
+
+
+export const isRedisHealthy = (): boolean => redisClient.isReady;
 

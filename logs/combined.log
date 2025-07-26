@@ -459,3 +459,6 @@
 {"level":"info","message":{"duration":"13444ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-24T09:59:41.019Z"}
 {"level":"info","message":{"duration":"6116ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-24T10:03:32.765Z"}
 {"level":"info","message":{"duration":"11290ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-24T10:04:42.371Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-24T10:15:24.849Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-24T10:40:02.000Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-24T10:46:28.584Z"}
