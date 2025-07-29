@@ -1,3 +1,5 @@
+// old logic for dataparsing
+
 import { TransformerFactory } from "../utils/TransformerFactory";
 
 export const formatDataParser = (data: any,): any => {

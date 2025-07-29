@@ -28,7 +28,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     }
 
     
-
+    console.log(onederfulPayerId);
     const response = await axios.post(url, payload, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
 
     const data = response.data;
 
-    const parser = createParser(data, onederfulPayerId);
+    const parser = createParser(data, "united_healthcare");
     let parseredData = parser.parseToResultFormat();
 
     return HttpResponse.success(res, parseredData, "Successfull");

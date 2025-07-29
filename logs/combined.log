@@ -462,3 +462,67 @@
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-24T10:15:24.849Z"}
 {"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-24T10:40:02.000Z"}
 {"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-24T10:46:28.584Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-26T03:49:51.339Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-26T03:54:32.915Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-07-26T03:54:32.918Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T10:11:39.890Z"}
+{"level":"info","message":{"duration":"5392ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T10:21:35.224Z"}
+{"level":"info","message":{"duration":"10756ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T10:23:23.924Z"}
+{"level":"info","message":{"duration":"13594ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T10:34:54.638Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T10:36:35.292Z"}
+{"level":"info","message":{"duration":"13390ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T10:36:57.990Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T10:38:47.430Z"}
+{"level":"info","message":{"duration":"11987ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T10:39:04.524Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T10:40:43.112Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T10:43:48.394Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T11:10:58.422Z"}
+{"level":"info","message":{"duration":"9131ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:12:49.845Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T11:14:43.472Z"}
+{"level":"info","message":{"duration":"12045ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:15:02.893Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T11:19:01.026Z"}
+{"level":"info","message":{"duration":"11242ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:28:00.474Z"}
+{"level":"info","message":{"duration":"6944ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:29:06.615Z"}
+{"level":"info","message":{"duration":"10837ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:29:26.847Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T11:30:11.066Z"}
+{"level":"info","message":{"duration":"12047ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T11:30:27.825Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:12:36.430Z"}
+{"level":"info","message":{"duration":"8067ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:13:49.563Z"}
+{"level":"info","message":{"duration":"7433ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:14:51.662Z"}
+{"level":"info","message":{"duration":"5190ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:18:25.275Z"}
+{"level":"info","message":{"duration":"11822ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:19:23.268Z"}
+{"level":"info","message":{"duration":"8666ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:25:06.316Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:28:01.823Z"}
+{"level":"info","message":{"duration":"15372ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:28:31.620Z"}
+{"level":"error","message":{"error":"Unexpected non-whitespace character after JSON at position 337 (line 17 column 1)","ip":"::1","method":"POST","stack":"SyntaxError: Unexpected non-whitespace character after JSON at position 337 (line 17 column 1)\n    at JSON.parse (<anonymous>)\n    at parse (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/body-parser/lib/types/json.js:77:19)\n    at /mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/body-parser/lib/read.js:123:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)\n    at invokeCallback (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:238:16)\n    at done (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)","url":"/api/v1/parse"},"service":"backend-api","timestamp":"2025-07-29T12:29:27.766Z"}
+{"level":"error","message":{"error":"Unexpected non-whitespace character after JSON at position 337 (line 17 column 1)","ip":"::1","method":"POST","stack":"SyntaxError: Unexpected non-whitespace character after JSON at position 337 (line 17 column 1)\n    at JSON.parse (<anonymous>)\n    at parse (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/body-parser/lib/types/json.js:77:19)\n    at /mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/body-parser/lib/read.js:123:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)\n    at invokeCallback (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:238:16)\n    at done (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/mnt/c/Users/AMOL/Desktop/Work/Backend/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)","url":"/api/v1/parse"},"service":"backend-api","timestamp":"2025-07-29T12:29:31.826Z"}
+{"level":"info","message":{"duration":"7258ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:31:05.198Z"}
+{"level":"info","message":{"duration":"7449ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:33:34.858Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:34:26.879Z"}
+{"level":"info","message":{"duration":"12ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:34:33.271Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:36:16.657Z"}
+{"level":"info","message":{"duration":"12ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:36:29.682Z"}
+{"level":"info","message":{"duration":"3ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:38:17.798Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:38:56.159Z"}
+{"level":"info","message":{"duration":"21ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:39:09.355Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:41:21.807Z"}
+{"level":"info","message":{"duration":"13ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:41:30.367Z"}
+{"level":"info","message":{"duration":"5ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:41:49.672Z"}
+{"level":"info","message":{"duration":"7ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:41:57.233Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:43:28.914Z"}
+{"level":"info","message":{"duration":"12ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:43:35.783Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:44:40.040Z"}
+{"level":"info","message":{"duration":"12ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:44:43.734Z"}
+{"level":"info","message":{"duration":"9ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:50:54.326Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T12:51:37.665Z"}
+{"level":"info","message":{"duration":"9964ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T12:52:06.779Z"}
+{"level":"info","message":{"duration":"5876ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:07:49.710Z"}
+{"level":"info","message":{"duration":"14425ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:09:12.723Z"}
+{"level":"info","message":{"duration":"46520ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:13:01.038Z"}
+{"level":"info","message":{"duration":"4516ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:13:22.220Z"}
+{"level":"info","message":{"duration":"17767ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:14:55.404Z"}
+{"level":"info","message":{"duration":"14305ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:15:32.979Z"}
+{"level":"info","message":{"duration":"31945ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:18:31.737Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-07-29T13:21:48.795Z"}
+{"level":"info","message":{"duration":"37471ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-07-29T13:26:14.865Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-07-29T13:30:04.953Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-07-29T13:30:04.956Z"}

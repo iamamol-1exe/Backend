@@ -1,9 +1,48 @@
 import AetnaParser from "./parsers/AtenaParser";
+import DeltaDentalParser from "./parsers/DeltaDentalParser";
+import UnitedHealthcareParser from "./parsers/UnitedHealthcare";
 
-
-const parserRegistry : {[key : string] :any } = {
-    aetna_dental_plans  : AetnaParser,
-    dd_california : AetnaParser
-}
+const parserRegistry: { [key: string]: any } = {
+  aetna_dental_plans: AetnaParser,
+  dd_california: DeltaDentalParser,
+  united_healthcare: UnitedHealthcareParser,
+  dd_washington: DeltaDentalParser,
+  delta_dental_south_carolina: DeltaDentalParser,
+  dd_delaware: DeltaDentalParser,
+  dd_new_jersey: DeltaDentalParser,
+  dd_arizona: DeltaDentalParser,
+  dd_colorado: DeltaDentalParser,
+  dd_georgia: DeltaDentalParser,
+  dd_maryland: DeltaDentalParser,
+  dd_minnesota: DeltaDentalParser,
+  dd_ks: DeltaDentalParser,
+  dd_louisiana: DeltaDentalParser,
+  dd_montana: DeltaDentalParser,
+  dd_ky: DeltaDentalParser,
+  dd_new_mexico: DeltaDentalParser,
+  dd_rhode_island: DeltaDentalParser,
+  dd_tennessee: DeltaDentalParser,
+  dd_missouri: DeltaDentalParser,
+  dd_washington_dc: DeltaDentalParser,
+  dd_alabama: DeltaDentalParser,
+  dd_nevada: DeltaDentalParser,
+  dd_north_carolina: DeltaDentalParser,
+  dd_id: DeltaDentalParser,
+  dd_illinois_group_plans: DeltaDentalParser,
+  dd_northeast: DeltaDentalParser,
+  dd_nebraska: DeltaDentalParser,
+  dd_utah: DeltaDentalParser,
+  dd_ar: DeltaDentalParser,
+  dd_oklahoma: DeltaDentalParser,
+  dd_pennsylvania: DeltaDentalParser,
+  dd_michigan: DeltaDentalParser,
+  dd_florida: DeltaDentalParser,
+  dd_io: DeltaDentalParser,
+  dd_mississippi: DeltaDentalParser,
+  dd_texas: DeltaDentalParser,
+  dd_west_virginia: DeltaDentalParser,
+  dd_indiana: DeltaDentalParser,
+  dd_ny: DeltaDentalParser,
+};
 
 export default parserRegistry;

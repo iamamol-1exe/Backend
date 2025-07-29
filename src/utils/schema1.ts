@@ -1,3 +1,5 @@
+// old logic for dataparsing
+
 export const schema1 = {
   PataNum: { path: "patient.member_id", default: 0 },
   LName: { path: "patient.last_name", default: "" },

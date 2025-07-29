@@ -1,10 +1,10 @@
 import BaseParser from "./BaseParser";
 
-class AetnaParser extends BaseParser {
+class DeltaDentalParser extends BaseParser {
   parsePatient() {
     const pat = this.data.patient ?? {};
-    const cov = pat.coverage ?? {};
-    const subscriber = this.data.subscriber ?? {};
+    const cov = pat.coverage;
+    const subscriber = this.data.subscriber;
     return {
       firstName: pat.first_name || "",
       lastName: pat.last_name || "",
@@ -31,15 +31,6 @@ class AetnaParser extends BaseParser {
       subscribername: subscriber.name,
     };
   }
-
-  parseProvider() {
-    const prov = this.data.provider ?? {};
-    return {
-      npi: prov.npi || "",
-      lastName: prov.last_name || "",
-    };
-  }
-
   parsePlan() {
     const plan = this.data.plan ?? {};
     const payer = this.data.payer ?? {};
@@ -52,14 +43,20 @@ class AetnaParser extends BaseParser {
       CarrierName: payer.name || "",
       carrierPhone: payer.phone || payer.phone_number || "",
       ElectID: payer.id || "",
-      BillingType: plan.plan_type || "",
+      insurance_type: plan.insurance_type || "",
     };
   }
-
-  parseBalance() {
-    const benefits = this.data.benefits ?? [];
+  parseProvider() {
+    const prov = this.data.provider ?? {};
     return {
-      EstBalance: benefits[0].family_maximum_remaining,
+      npi: prov.npi || "",
+      lastName: prov.last_name || "",
+    };
+  }
+  parseBalance() {
+    const benefits = this.data.benefits;
+    return {
+      EstBalance: benefits[0].individual_maximum_remaining || 0,
     };
   }
 
@@ -70,8 +67,6 @@ class AetnaParser extends BaseParser {
     if (g === "F" || g === "FEMALE") return "F";
     return g;
   }
-
-  // Main mapping to output schema
   parseToResultFormat() {
     const patient = this.parsePatient();
     const plan = this.parsePlan();
@@ -104,7 +99,7 @@ class AetnaParser extends BaseParser {
       PriProv: plan.CarrierName || "",
       SecProv: "",
       FeeSched: "",
-      BillingType: plan.BillingType || "",
+      BillingType: plan.insurance_type || "",
       ImageFolder: "",
       AddrNote: "",
       FamFinUrgNote: "",
@@ -189,4 +184,4 @@ class AetnaParser extends BaseParser {
   }
 }
 
-export default AetnaParser;
+export default DeltaDentalParser;
