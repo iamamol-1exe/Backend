@@ -1,3 +1,6 @@
+// old logic for dataparsing
+
+
 import { schema1 } from "./schema1";
 import { JsonTransformer } from "./parser";
 

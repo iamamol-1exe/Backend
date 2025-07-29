@@ -1,13 +1,20 @@
 import http from "http";
 import app from "./app";
 import { logger } from "./utils/logger";
-
+import { connectRedis, redisClient } from "./redisClient";
 const server = http.createServer(app);
 const PORT = process.env.PORT || 3000;
 
 // Graceful shutdown handler
-const gracefulShutdown = (signal: string) => {
+const gracefulShutdown = async (signal: string) => {
   logger.info(`Received ${signal}, starting graceful shutdown...`);
+
+  try {
+    await redisClient.quit();
+    logger.info("Redis client disconnected successfully");
+  } catch (err) {
+    logger.error("Error during Redis disconnection:", err);
+  }
 
   server.close((err) => {
     if (err) {
@@ -41,8 +48,20 @@ process.on("unhandledRejection", (reason, promise) => {
   gracefulShutdown("unhandledRejection");
 });
 
-server.listen(PORT, () => {
-  logger.info(`Server is running on port ${PORT}`);
-});
+// Handle server start and Redis connection
+const startServer = async () => {
+  try {
+    await connectRedis(); //
+    server.listen(PORT, () => {
+      logger.info(`Server is running on port ${PORT}`);
+    });
+  } catch (err) {
+    logger.error("Failed to connect to Redis, server not starting", err);
+    process.exit(1);
+  }
+};
+
+startServer();
+
 
 export default server;

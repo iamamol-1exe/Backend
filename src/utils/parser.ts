@@ -1,3 +1,6 @@
+// old logic for dataparsing
+
+
 import { FieldMapping } from "../types/fieldmapping";
 
 export class Parser {
