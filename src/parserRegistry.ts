@@ -1,6 +1,7 @@
-import AetnaParser from "./parsers/AtenaParser";
-import DeltaDentalParser from "./parsers/DeltaDentalParser";
-import UnitedHealthcareParser from "./parsers/UnitedHealthcare";
+import AetnaParser from "./parsers/Patient parser/AtenaParser";
+import DeltaDentalParser from "./parsers/Patient parser/DeltaDentalParser";
+import UnitedHealthcareParser from "./parsers/Patient parser/UnitedHealthcare";
+
 
 const parserRegistry: { [key: string]: any } = {
   aetna_dental_plans: AetnaParser,

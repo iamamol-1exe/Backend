@@ -26,7 +26,8 @@ export const getAuthToken = async (): Promise<string | null> => {
       return null;
     }
     const { access_token } = response.data;
-    console.log(access_token);
+    console.log("access_token :",access_token);
+    
     await redisClient.set(redisKey, access_token, {
       EX: tokenExpiryTime,
     });

@@ -1,12 +1,13 @@
 export default abstract class BaseParser {
-  protected data: any;
+    protected data : any ;
+    protected onederfulPayerId : string;
 
-  constructor(data : any) {
-    this.data = data;
-  }
-  abstract parsePatient(): any;
-  abstract parseProvider(): any;
-  abstract parsePlan(): any;
-  abstract parseBalance() : any;
-  abstract parseToResultFormat () : any;
+
+    constructor(data : any,onederfulPayerId: string){
+        this.data = data;
+        this.onederfulPayerId = onederfulPayerId;
+    }
+    
+    abstract parseToResultFormat () : any;
+
 }

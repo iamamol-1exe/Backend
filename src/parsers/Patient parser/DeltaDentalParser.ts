@@ -1,6 +1,6 @@
-import BaseParser from "./BaseParser";
+import PatientBaseParser from "./PatientBaseParser";
 
-class UnitedHealthcareParser extends BaseParser {
+class DeltaDentalParser extends PatientBaseParser {
   parsePatient() {
     const pat = this.data.patient ?? {};
     const cov = pat.coverage;
@@ -56,7 +56,7 @@ class UnitedHealthcareParser extends BaseParser {
   parseBalance() {
     const benefits = this.data.benefits;
     return {
-      EstBalance: benefits[0].family_maximum_remaining || 0,
+      EstBalance: benefits[0].individual_maximum_remaining || 0,
     };
   }
 
@@ -184,4 +184,4 @@ class UnitedHealthcareParser extends BaseParser {
   }
 }
 
-export default UnitedHealthcareParser;
+export default DeltaDentalParser;

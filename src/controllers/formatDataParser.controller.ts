@@ -4,7 +4,7 @@ import axios from "axios";
 import { HttpResponse } from "../utils/responseUtils";
 import { getOnederfulPayerId } from "../utils/payerListHelper";
 import createParser from "../parserFactory";
-import chalk from "chalk";
+
 import { getAuthToken, getTokenFromRedis } from "../services/authToken.service";
 
 export const formatDataParser1 = async (req: Request, res: Response) => {
@@ -17,18 +17,18 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     }
     
     const identifier = payload.payer.id;
-   
+
     const onederfulPayerId =
       getOnederfulPayerId(identifier)?.toLocaleLowerCase() || null;
+
     if (!onederfulPayerId) {
       return HttpResponse.badRequest(
         res,
         "RESPONSE_MESSAGES.UNABLE_TO_FIND_PROVIDER"
       );
     }
-
+    console.log("onederfulPayerId : ",onederfulPayerId);
     
-    console.log(onederfulPayerId);
     const response = await axios.post(url, payload, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -37,10 +37,11 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
 
     const data = response.data;
 
-    const parser = createParser(data, "united_healthcare");
+    const parser = createParser(data, onederfulPayerId);
     let parseredData = parser.parseToResultFormat();
 
     return HttpResponse.success(res, parseredData, "Successfull");
+    
   } catch (error) {
     const errorMessage = axios.isAxiosError(error)
       ? error.response?.data?.message

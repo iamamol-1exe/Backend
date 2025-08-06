@@ -1,6 +1,6 @@
-import BaseParser from "./BaseParser";
+import PatientBaseParser from "./PatientBaseParser";
 
-class AetnaParser extends BaseParser {
+class AetnaParser extends PatientBaseParser {
   parsePatient() {
     const pat = this.data.patient ?? {};
     const cov = pat.coverage ?? {};
