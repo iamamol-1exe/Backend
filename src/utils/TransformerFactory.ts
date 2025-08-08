@@ -1,14 +1,14 @@
-// old logic for dataparsing
+// // old logic for dataparsing
 
 
-import { schema1 } from "./schema1";
-import { JsonTransformer } from "./parser";
+// import { schema1 } from "./schema1";
+// import { JsonTransformer } from "./parser";
 
-// input data types 
+// // input data types 
 
 
-export class TransformerFactory {
-  static create(): JsonTransformer {
-   return new JsonTransformer(schema1);
-  }
-}
+// export class TransformerFactory {
+//   static create(): JsonTransformer {
+//    return new JsonTransformer(schema1);
+//   }
+// }

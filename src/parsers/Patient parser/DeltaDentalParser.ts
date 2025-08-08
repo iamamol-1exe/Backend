@@ -43,7 +43,7 @@ class DeltaDentalParser extends PatientBaseParser {
       CarrierName: payer.name || "",
       carrierPhone: payer.phone || payer.phone_number || "",
       ElectID: payer.id || "",
-      insurance_type: plan.insurance_type || "",
+      plan_type: plan.plan_type || "",
     };
   }
   parseProvider() {
@@ -99,7 +99,7 @@ class DeltaDentalParser extends PatientBaseParser {
       PriProv: plan.CarrierName || "",
       SecProv: "",
       FeeSched: "",
-      BillingType: plan.insurance_type || "",
+      BillingType: plan.plan_type || "",
       ImageFolder: "",
       AddrNote: "",
       FamFinUrgNote: "",
