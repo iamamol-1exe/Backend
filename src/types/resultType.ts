@@ -1,0 +1,55 @@
+export type resultType = {
+  pullClaimInformation: boolean;
+  formType: string;
+  clientId: string;
+  uploadDocument: any[];
+  agentName: string;
+  GroupName: string;
+  GroupNum: string;
+  PlanType: string;
+  networknote: string;
+  FeeSched: {
+    value: any;
+    label: string;
+  };
+  MonthRenew: string;
+  EffectiveDate: string;
+  shortcut: string;
+  shortcut1: string;
+  diagnosticApplied: any;
+  isWaitingPeriod: any;
+  diagnosticApplied1: string;
+  MTC: string;
+  ortho: any;
+  frequency_exam_unit: string;
+  shortcutfqexam: string;
+  examcv: any;
+  D0140share: string;
+  procCodeQuestions: any;
+  procCode: Array<{ value: number; label: string }>;
+  patientHistory: Array<{
+    date: string;
+    ToothRange: string;
+    surf: Array<null>;
+    procCode: object;
+    toothRange: string;
+  }>;
+  subscNote: string;
+  planNotes: string;
+  submit1: boolean;
+  submit: boolean;
+  MonetaryAmt_IndMax: string;
+  MonetaryAmt_FamMax: string;
+  ticketNo: number;
+  ticketId: string;
+  ticketData: any;
+  extraPatientHistory: Array<{
+    PatNum: number;
+    ProcDate: string;
+    Surf: string;
+    ToothNum: string;
+    ToothRange: string;
+    ProcCode: string;
+    ProcStatus: number;
+  }>;
+};

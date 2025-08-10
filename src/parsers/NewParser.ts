@@ -1,7 +1,10 @@
+import { ticket } from "../interface/ticket";
 import createParser from "../parserFactory";
+import { resultType } from "../types/resultType";
 import BaseParser from "./BaseParser";
+import { ProcCodeQuestionsParser } from "./Component-wise parser/procCodeQuestionsParser";
 
-import { ticket, ticketParser } from "./Component-wise parser/ticketParser";
+import { ticketParser } from "./Component-wise parser/ticketParser";
 
 class NewParser extends BaseParser {
   parseTicketData() {
@@ -49,13 +52,15 @@ class NewParser extends BaseParser {
         rules.dependent_child_max_age || rules.dependent_student_max_age || "",
     };
   }
-  parseToResultFormat() {
+  parseToResultFormat(): resultType {
     const benefitsInNetwork = this.data.benefits[0] ?? {};
     const ticketData = this.parseTicketData();
     const plan = this.data.plan ?? {};
     const patient = this.data.patient ?? {};
     const rules = this.data.rules ?? {};
     const ortho = this.parseOrtho() ?? {};
+    const procCodeQuestionsparser = new ProcCodeQuestionsParser(this.data);
+    const procCodeQuestionsData = procCodeQuestionsparser.parse();
     return {
       pullClaimInformation: false,
       formType: "1",
@@ -85,6 +90,25 @@ class NewParser extends BaseParser {
         benefitsInNetwork.coverages.diagnostic.exams.coinsurance_percentage ||
         "",
       D0140share: "",
+      procCodeQuestions: procCodeQuestionsData,
+      procCode: [{ value: 0, label: "" }],
+      patientHistory: [
+        {
+          date: "",
+          ToothRange: "",
+          surf: [],
+          procCode: {},
+          toothRange: "",
+        },
+      ],
+      subscNote: "",
+      planNotes: "",
+      submit1: true,
+      submit: false,
+      MonetaryAmt_IndMax: benefitsInNetwork.individual_maximum || "",
+      MonetaryAmt_FamMax: benefitsInNetwork.family_maximum || "",
+      ticketNo: 0,
+      ticketId: "",
       ticketData: ticketData,
       extraPatientHistory: [
         {

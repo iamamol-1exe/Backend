@@ -2,7 +2,6 @@ import AetnaParser from "./parsers/Patient parser/AtenaParser";
 import DeltaDentalParser from "./parsers/Patient parser/DeltaDentalParser";
 import UnitedHealthcareParser from "./parsers/Patient parser/UnitedHealthcare";
 
-
 const parserRegistry: { [key: string]: any } = {
   aetna_dental_plans: AetnaParser,
   dd_california: DeltaDentalParser,
@@ -33,6 +32,7 @@ const parserRegistry: { [key: string]: any } = {
   dd_northeast: DeltaDentalParser,
   dd_nebraska: DeltaDentalParser,
   dd_utah: DeltaDentalParser,
+  ddic: DeltaDentalParser,
   dd_ar: DeltaDentalParser,
   dd_oklahoma: DeltaDentalParser,
   dd_pennsylvania: DeltaDentalParser,
@@ -44,6 +44,7 @@ const parserRegistry: { [key: string]: any } = {
   dd_west_virginia: DeltaDentalParser,
   dd_indiana: DeltaDentalParser,
   dd_ny: DeltaDentalParser,
+  cigna: AetnaParser,
 };
 
 export default parserRegistry;
