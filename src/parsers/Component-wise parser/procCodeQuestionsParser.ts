@@ -12,7 +12,10 @@ export class ProcCodeQuestionsParser {
   // Public API
   parse(): datatype {
     return {
-      d0140: this.buildEmptyObject(),
+      d0140: {
+        examcv: this.getCoins("diagnostic", "exams"),
+        frequency_unit: this.getFrequencyUnit("diagnostic", "exams"),
+      },
 
       d1110: {
         frequency_unit: this.getFrequencyUnit("preventive", "prophy"),
@@ -381,7 +384,7 @@ export class ProcCodeQuestionsParser {
     const ben = this.pickInNetworkBenefits();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
-    
+
     const val =
       n?.coinsurance_percentage ??
       this.dot(
@@ -651,7 +654,8 @@ export class ProcCodeQuestionsParser {
     return path
       .split(".")
       .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
-  }
+}
+
 
   private getFMXPanoSharedFlag(): string {
     const ben = this.pickInNetworkBenefits();

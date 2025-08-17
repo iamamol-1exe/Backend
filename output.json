@@ -1,0 +1,420 @@
+{
+  "pullClaimInformation": false,
+  "formType": "",
+  "clientId": "",
+  "uploadDocument": [],
+  "agentName": "",
+  "GroupName": "HEALTHSPRING LIFE & HEALTH INSURANCE CDH",
+  "GroupNum": "2501430",
+  "PlanType": "HMO",
+  "networknote": "",
+  "FeeSched": {
+    "value": null,
+    "label": ""
+  },
+  "MonthRenew": "",
+  "EffectiveDate": "04/01/2025",
+  "shortcut": "",
+  "shortcut1": "",
+  "diagnosticApplied": "NO",
+  "isWaitingPeriod": "NO",
+  "diagnosticApplied1": "",
+  "MTC": "",
+  "ortho": {
+    "orthosc": "",
+    "orthosc1": "",
+    "orthoamountused": 0,
+    "MonetaryAmt_lifetimeCoverage": null,
+    "agelimit": ""
+  },
+  "frequency_exam_unit": "",
+  "shortcutfqexam": "",
+  "examcv": "",
+  "D0140share": "",
+  "procCodeQuestions": {
+    "d0140": {
+      "examcv": "",
+      "frequency_unit": "visits"
+    },
+    "d1110": {
+      "frequency_unit": "visits",
+      "prophcv": ""
+    },
+    "d0272": {
+      "frequency_unit": "visits",
+      "bitewingsc": "1 visit remaining.",
+      "bitwingcv": ""
+    },
+    "d0210": {
+      "frequency_unit": "years",
+      "fmxcv": ""
+    },
+    "fmxpanoshared": "Yes",
+    "d0330": {
+      "frequency_unit": "years",
+      "panocv": ""
+    },
+    "d1206": {
+      "frequency_unit": "visits",
+      "fluoridecv": "",
+      "flage": "200",
+      "age_limit": "200"
+    },
+    "d1351": {
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
+      "sealage": "",
+      "age_limit": ""
+    },
+    "d4266": {
+      "frequency_unit": "visits",
+      "4266freql": "1 visit remaining."
+    },
+    "d4266guide": "",
+    "norestrictions_3": "No",
+    "d4341": {
+      "frequency_unit": "visits",
+      "4341freql": "1 visit remaining."
+    },
+    "D4341quads": "No",
+    "norestrictions_0": "No",
+    "d4355": {
+      "frequency_unit": "",
+      "debridefreql": ""
+    },
+    "d4381": {
+      "frequency_unit": "visits",
+      "4381freql": "1 visit remaining."
+    },
+    "arestinFL": "No",
+    "norestrictions_1": "No",
+    "d4910": {
+      "frequency_unit": "",
+      "periocv": ""
+    },
+    "d4910guide": "",
+    "norestrictions_2": "No",
+    "prophyperioshared": "No",
+    "d7140": {
+      "frequency_unit": "",
+      "7140freql": ""
+    },
+    "d7210": {
+      "frequency_unit": "",
+      "7210freql": ""
+    },
+    "d7240": {
+      "frequency_unit": "",
+      "7240freql": ""
+    },
+    "dentormed": "Dental",
+    "d7953": {
+      "frequency_unit": "visits",
+      "7953freql": "1 visit remaining."
+    },
+    "d7953guide": "",
+    "norestrictions_4": "No",
+    "d2391": {
+      "frequency_unit": "visits",
+      "compositefreql": "1 visit remaining.",
+      "isDowngrade": "No",
+      "downgrade_code": {
+        "value": "",
+        "label": ""
+      },
+      "downgradeApplied": "No"
+    },
+    "d2392": {
+      "frequency_unit": "visits",
+      "isDowngrade": "No",
+      "downgrade_code": {
+        "value": "",
+        "label": ""
+      },
+      "downgradeApplied": "No"
+    },
+    "d2393": {
+      "frequency_unit": "visits",
+      "isDowngrade": "No",
+      "downgrade_code": {
+        "value": "",
+        "label": ""
+      },
+      "downgradeApplied": "No"
+    },
+    "d2394": {
+      "frequency_unit": "visits",
+      "isDowngrade": "No",
+      "downgrade_code": {
+        "value": "",
+        "label": ""
+      },
+      "downgradeApplied": "No"
+    },
+    "d2644": {
+      "frequency_unit": "visits",
+      "FrequencyLimitations": "1 visit remaining.",
+      "isDowngrade": "No"
+    },
+    "sealdprepd2644": "No",
+    "d2740": {
+      "frequency_unit": "visits",
+      "FrequencyLimitations": "1 visit remaining.",
+      "isDowngrade": "No"
+    },
+    "sealdprepd": "No",
+    "d2950": {
+      "frequency_unit": "visits",
+      "Freql": "1 visit remaining."
+    },
+    "d6010": {
+      "frequency_unit": "visits",
+      "6010freql": "1 visit remaining."
+    },
+    "d6057": {
+      "frequency_unit": "",
+      "6057freql": ""
+    },
+    "d6065": {
+      "frequency_unit": "visits",
+      "6065freql": "1 visit remaining.",
+      "isDowngrade": "No"
+    },
+    "d9230": {
+      "frequency_unit": "",
+      "9230freql": ""
+    },
+    "d9230guide": "",
+    "norestrictions_5": "No",
+    "d9944": {
+      "frequency_unit": "",
+      "9944freql": ""
+    },
+    "d9944guide": "",
+    "norestrictions_6": "No"
+  },
+  "procCode": [
+    {
+      "value": 0,
+      "label": ""
+    }
+  ],
+  "patientHistory": [
+    {
+      "date": "",
+      "ToothRange": "",
+      "surf": [],
+      "procCode": {},
+      "toothRange": ""
+    }
+  ],
+  "subscNote": "",
+  "planNotes": "",
+  "submit1": true,
+  "submit": false,
+  "MonetaryAmt_IndMax": 0,
+  "MonetaryAmt_FamMax": 0,
+  "MonetaryAmt_IndDeduct": 0,
+  "deductibleUsed": 0,
+  "MonetaryAmt_DiaIndDeduct": 0,
+  "MonetaryAmt_XrayIndDeduct": 0,
+  "insUsed": 0,
+  "MonetaryAmt_PreventativeDeductible": 0,
+  "WaitingPeriod": {
+    "restorativeWaitingPeriod": 0,
+    "endoWaitingPeriod": 0,
+    "perioWaitingPeriod": 0,
+    "oralWaitingPeriod": 0,
+    "crownsWaitingPeriod": 0,
+    "prosthodonticsWaitingPeriod": 0
+  },
+  "ConInsurance_Percantages": {
+    "percentage_diagnostic": 0,
+    "percentage_xray": 0,
+    "percentage_preventative": 0,
+    "percentage_restorative": 0,
+    "percentage_endo": 0,
+    "percentage_oralSurgery": 0,
+    "percentage_crowns": 0,
+    "percentage_prosthodontics": {
+      "prosthodontics_fixed": 0,
+      "prosthodontics_removable": 0
+    }
+  },
+  "ticketNo": 0,
+  "ticketId": "",
+  "ticketData": {
+    "ticket": {
+      "_id": "",
+      "ticketNo": 0,
+      "PatNum": 0,
+      "AptNum": 0,
+      "PatPlanNum": 0,
+      "PlanNum": 0,
+      "ticketType": 0,
+      "status": 0,
+      "rejectedReason": "",
+      "aptDate": "",
+      "isImported": false,
+      "ProviderName": "",
+      "Note": "",
+      "Metadata": {
+        "NotesForAgent": ""
+      },
+      "clinic_id": "",
+      "clinic_name": "",
+      "clinic_email": "",
+      "clinic_address": "",
+      "clinic_npi": 0,
+      "clinic_taxid": 0,
+      "clinic_provider_Fname": "",
+      "clinic_provider_Lname": "",
+      "clinic_about": "",
+      "isImportTicketEnabled": false,
+      "isDropPlanEnabled": false,
+      "formType": 0
+    },
+    "patient": {
+      "PataNum": "38X5F7X3301",
+      "LName": "GONZALES",
+      "FName": "CORINTHIA",
+      "MiddleI": "B",
+      "Preferred": "CORINTHIA B GONZALES",
+      "PatStatus": "ACTIVE",
+      "Gender": "F",
+      "Position": 0,
+      "Birthdate": "07/09/1978",
+      "SSN": "",
+      "Address": "11206 FOREST NIGHT",
+      "Address2": "",
+      "City": "LIVE OAK",
+      "State": "TX",
+      "Zip": "782334800",
+      "HmPhone": "",
+      "WkPhone": "",
+      "WirelessPhone": "",
+      "Guarantor": "38X5F7X3301",
+      "CreditType": "",
+      "Email": "",
+      "Salutation": "",
+      "EstBalance": 0,
+      "PriProv": "Cigna Dental Health, Inc.",
+      "SecProv": "",
+      "FeeSched": "",
+      "BillingType": "HMO",
+      "ImageFolder": "",
+      "AddrNote": "",
+      "FamFinUrgNote": "",
+      "MedUrgNote": [],
+      "ApptModNote": "",
+      "StudentStatus": "",
+      "SchoolName": "",
+      "ChartNumber": "",
+      "MedicaidID": "38X5F7X3301",
+      "Bal_0_30": 0,
+      "Bal_31_60": 0,
+      "Bal_61_90": 0,
+      "BalOver90": 0,
+      "InsEst": 0,
+      "BalTotal": 0,
+      "EmployerNum": 0,
+      "EmploymentNote": "",
+      "County": "",
+      "GradeLevel": "",
+      "Urgency": 0,
+      "DateFirstVisit": "",
+      "ClinicNum": 0,
+      "HasIns": "ACTIVE",
+      "TrophyFolder": "",
+      "PlannedIsDone": false,
+      "Premed": false,
+      "Ward": "",
+      "PreferConfirmMethod": 0,
+      "PreferContactMethod": 0,
+      "PreferRecallMethod": 0,
+      "SchedBeforeTime": "",
+      "SchedAfterTime": "",
+      "SchedDayOfWeek": 0,
+      "Language": "",
+      "AdmitDate": "",
+      "Title": "",
+      "PayPlanDue": 0,
+      "SiteNum": 0,
+      "DateTStamp": "",
+      "ResponsParty": 0,
+      "CanadianEligibilityCode": 0,
+      "AskToArriveEarly": false,
+      "PreferContactConfidential": false,
+      "SuperFamily": 0,
+      "TxtMsgOk": false,
+      "SmokingSnoMed": "",
+      "Country": "",
+      "DateTimeDeceased": "",
+      "BillingCycleDay": 0,
+      "SecUserNumEntry": 0,
+      "SecDateEntry": "",
+      "HasSuperBilling": false,
+      "PatNumCloneFrom": 0,
+      "DiscountPlanNum": 0,
+      "HasSignedTil": false,
+      "ShortCodeOptIn": false,
+      "SecurityHash": "",
+      "PatPlanNum": 0,
+      "PatNum1": 0,
+      "Ordinal": 0,
+      "IsPending": false,
+      "Relationship": "",
+      "PatID": "38X5F7X3301",
+      "InsSubNum": "2501430",
+      "OrthoAutoFeeBilledOverride": 0,
+      "OrthoAutoNextClaimDate": "",
+      "SecDateTEntry": "",
+      "SecDateTEdit": "",
+      "PlanNum": "2501430",
+      "Subscriber": "CORINTHIA B GONZALES",
+      "DateEffective": "04/01/2025",
+      "SubscriberID": "38X5F7X3301",
+      "GroupNum": "2501430",
+      "GroupName": "HEALTHSPRING LIFE & HEALTH INSURANCE CDH",
+      "CarrierNum": "62308",
+      "CarrierNum1": "62308",
+      "CarrierName": "Cigna Dental Health, Inc.",
+      "carrierPhone": "(800) 997-1654",
+      "ElectID": "62308"
+    },
+    "subscriberName": "CORINTHIA GONZALES",
+    "subscriberDoB": "07/09/1978",
+    "subscribertoRelationship": "",
+    "latestTicketStatus": {
+      "status": "",
+      "dateTime": ""
+    },
+    "ordinal": "",
+    "subscriberPayload": {
+      "subscriber": {
+        "first_name": "CORINTHIA",
+        "last_name": "GONZALES",
+        "dob": "07/09/1978",
+        "member_id": "38X5F7X3301"
+      },
+      "provider": {
+        "npi": null
+      },
+      "payer": {
+        "id": "62308"
+      },
+      "version": "v2"
+    }
+  },
+  "extraPatientHistory": [
+    {
+      "PatNum": 0,
+      "ProcDate": "",
+      "Surf": "",
+      "ToothNum": "",
+      "ToothRange": "",
+      "ProcCode": "",
+      "ProcStatus": 0
+    }
+  ]
+}

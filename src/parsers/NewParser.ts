@@ -2,11 +2,46 @@ import { ticket } from "../interface/ticket";
 import createParser from "../parserFactory";
 import { resultType } from "../types/resultType";
 import BaseParser from "./BaseParser";
+import { ConInsurancePercantageClass } from "./Component-wise parser/ConInsurancePercentageParser";
 import { ProcCodeQuestionsParser } from "./Component-wise parser/procCodeQuestionsParser";
 
 import { ticketParser } from "./Component-wise parser/ticketParser";
-
+import { WaitingPeriodParser } from "./Component-wise parser/waitingPeriodParser";
+type datatype = Record<string, any>;
 class NewParser extends BaseParser {
+  dot(obj: datatype, path: string): any {
+    return path
+      .split(".")
+      .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
+  }
+  pickInNetworkBenefits(): datatype | null {
+    const benefits: datatype[] = this.data?.benefits ?? [];
+    if (!Array.isArray(benefits) || benefits.length === 0) return null;
+    const inn = benefits.find(
+      (b) => String(b?.network ?? "").toUpperCase() === "IN_NETWORK"
+    );
+    return inn ?? benefits[0] ?? null;
+  }
+  getCoins(category: string, node: string): number {
+    const ben = this.pickInNetworkBenefits();
+    if (!ben) return 0;
+    const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
+
+    const val =
+      n?.coinsurance_percentage ??
+      this.dot(
+        this.data,
+        `benefits.0.coverages.${category}.${node}.coinsurance_percentage`
+      );
+
+    if (val === null || val === undefined) return 0;
+    const num = Number(val);
+    if (Number.isFinite(num)) return num;
+
+    const s = String(val);
+    const m = s.match(/(\d{1,3})\s*%/);
+    return m ? Number(m[1]) : 0;
+  }
   parseTicketData() {
     const parser: any = createParser(this.data, this.onederfulPayerId);
     const patient: any = parser.parseToResultFormat();
@@ -38,18 +73,56 @@ class NewParser extends BaseParser {
       },
     };
   }
+  getDeductibleUsed() {
+    const benefitsInNetwork = this.data.benefits[0] ?? {};
+    const result =
+      benefitsInNetwork.individual_deductible -
+      benefitsInNetwork.individual_deductible_remaining +
+      benefitsInNetwork.family_deductible -
+      benefitsInNetwork.family_deductible_remaining;
+    return result;
+  }
+
+  getPreventativeDeduct(category: string): number {
+    const ben = this.pickInNetworkBenefits();
+    if (!ben) return 0;
+    const n = ben?.coverages?.[category] ?? ben?.[category];
+    const val =
+      n?.deductible_applies ??
+      this.dot(
+        this.data,
+        `benefits.0.coverages.${category}.deductible_applies`
+      );
+    if (!val) return 0;
+    // later will be addes
+    return 0;
+  }
+
+  getAmountUsed() {
+    const benefitsInNetwork = this.data.benefits[0] ?? {};
+    const result =
+      benefitsInNetwork.individual_maximum -
+      benefitsInNetwork.individual_maximum_remaining;
+    return result;
+  }
+
   parseOrtho() {
     const benefitsInNetwork = this.data.benefits[0] ?? {};
     const rules = this.data.rules;
     return {
       orthosc:
-        benefitsInNetwork.coverages.orthodontics.coinsurance_percentage || "",
+        benefitsInNetwork?.coverages?.orthodontics?.coinsurance_percentage ||
+        "",
       orthosc1: "",
-      orthoamountused: "",
+      orthoamountused:
+        benefitsInNetwork?.orthodontic_maximum -
+          benefitsInNetwork?.orthodontic_maximum_remaining || 0,
       MonetaryAmt_lifetimeCoverage:
-        benefitsInNetwork.orthodontic_maximum || null,
+        benefitsInNetwork?.orthodontic_maximum || null,
       agelimit:
-        rules.dependent_child_max_age || rules.dependent_student_max_age || "",
+        rules?.dependent_child_max_age ||
+        rules?.dependent_student_max_age ||
+        "",
     };
   }
   parseToResultFormat(): resultType {
@@ -60,10 +133,15 @@ class NewParser extends BaseParser {
     const rules = this.data.rules ?? {};
     const ortho = this.parseOrtho() ?? {};
     const procCodeQuestionsparser = new ProcCodeQuestionsParser(this.data);
+    const waitingParserobj = new WaitingPeriodParser(this.data);
+    const waitingData = waitingParserobj.parseWaitingPeriod();
     const procCodeQuestionsData = procCodeQuestionsparser.parse();
+    const percentageParser = new ConInsurancePercantageClass(this.data);
+    const percentages = percentageParser.parse();
+
     return {
       pullClaimInformation: false,
-      formType: "1",
+      formType: "",
       clientId: "",
       uploadDocument: [],
       agentName: "",
@@ -80,15 +158,13 @@ class NewParser extends BaseParser {
       shortcut: "",
       shortcut1: "",
       diagnosticApplied: rules.alternative_benefits_may_apply || "",
-      isWaitingPeriod: rules.waiting_period_for_basic_services || "",
+      isWaitingPeriod: waitingParserobj.getIsWaitingPeriod() || "",
       diagnosticApplied1: "",
-      MTC: rules.missing_tooth_clause_applies === "YES" ? "YES" : "NO",
+      MTC: rules.missing_tooth_clause_applies === "YES" ? "YES" : "",
       ortho: ortho,
       frequency_exam_unit: "",
       shortcutfqexam: "",
-      examcv:
-        benefitsInNetwork.coverages.diagnostic.exams.coinsurance_percentage ||
-        "",
+      examcv: this.getCoins("diagnostic", "exams") || "",
       D0140share: "",
       procCodeQuestions: procCodeQuestionsData,
       procCode: [{ value: 0, label: "" }],
@@ -105,8 +181,17 @@ class NewParser extends BaseParser {
       planNotes: "",
       submit1: true,
       submit: false,
-      MonetaryAmt_IndMax: benefitsInNetwork.individual_maximum || "",
-      MonetaryAmt_FamMax: benefitsInNetwork.family_maximum || "",
+      MonetaryAmt_IndMax: benefitsInNetwork.individual_maximum || 0,
+      MonetaryAmt_FamMax: benefitsInNetwork.family_maximum || 0,
+      MonetaryAmt_IndDeduct: benefitsInNetwork.individual_deductible || 0,
+      deductibleUsed: this.getDeductibleUsed() || 0,
+      MonetaryAmt_DiaIndDeduct: this.getPreventativeDeduct("diagnostic") || 0,
+      MonetaryAmt_XrayIndDeduct: this.getPreventativeDeduct("diagnostic") || 0,
+      insUsed: this.getAmountUsed() || 0,
+      MonetaryAmt_PreventativeDeductible:
+        this.getPreventativeDeduct("preventive"),
+      WaitingPeriod: waitingData,
+      ConInsurance_Percantages: percentages,
       ticketNo: 0,
       ticketId: "",
       ticketData: ticketData,

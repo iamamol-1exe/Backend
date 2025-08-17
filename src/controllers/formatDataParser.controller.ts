@@ -4,6 +4,7 @@ import { HttpResponse } from "../utils/responseUtils";
 import { getOnederfulPayerId } from "../utils/payerListHelper";
 import { getAuthToken, getTokenFromRedis } from "../services/authToken.service";
 import NewParser from "../parsers/NewParser";
+import fs from "fs";
 
 /**
  * Handles the parsing of formatted data by interacting with external services and utilities.
@@ -57,13 +58,19 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
       },
     });
 
-    const data = response.data;
-
-    // const parser = createParser(data, onederfulPayerId);
-    // let parseredData = parser.parseToResultFormat();
+    const data = response?.data;
+    fs.writeFileSync("data.json", JSON.stringify(data, null, 2), "utf8");
+    console.log("Data successfully stored in output.json");
 
     const parser = new NewParser(data, onederfulPayerId);
     const parseredData = parser.parseToResultFormat();
+    fs.writeFileSync(
+      "output.json",
+      JSON.stringify(parseredData, null, 2),
+      "utf8"
+    );
+    console.log("Data successfully stored in output.json");
+
     return HttpResponse.success(res, parseredData, "Successfull");
   } catch (error) {
     const errorMessage = axios.isAxiosError(error)

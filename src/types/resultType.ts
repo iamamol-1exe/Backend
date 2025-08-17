@@ -12,6 +12,7 @@ export type resultType = {
     value: any;
     label: string;
   };
+  MonetaryAmt_DiaIndDeduct: number;
   MonthRenew: string;
   EffectiveDate: string;
   shortcut: string;
@@ -38,8 +39,15 @@ export type resultType = {
   planNotes: string;
   submit1: boolean;
   submit: boolean;
-  MonetaryAmt_IndMax: string;
-  MonetaryAmt_FamMax: string;
+  MonetaryAmt_IndMax: number;
+  MonetaryAmt_FamMax: number;
+  deductibleUsed: number;
+  insUsed: number;
+  MonetaryAmt_XrayIndDeduct: number;
+  MonetaryAmt_IndDeduct: number;
+  MonetaryAmt_PreventativeDeductible: number;
+  ConInsurance_Percantages : any
+  WaitingPeriod: any;
   ticketNo: number;
   ticketId: string;
   ticketData: any;
