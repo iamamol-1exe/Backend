@@ -4,61 +4,61 @@
   "clientId": "",
   "uploadDocument": [],
   "agentName": "",
-  "GroupName": "HEALTHSPRING LIFE & HEALTH INSURANCE CDH",
-  "GroupNum": "2501430",
-  "PlanType": "HMO",
+  "GroupName": "EVONIK CORPORATION",
+  "GroupNum": "017506403000012",
+  "PlanType": "PPO",
   "networknote": "",
   "FeeSched": {
     "value": null,
     "label": ""
   },
   "MonthRenew": "",
-  "EffectiveDate": "04/01/2025",
+  "EffectiveDate": "01/01/2025",
   "shortcut": "",
   "shortcut1": "",
-  "diagnosticApplied": "NO",
+  "diagnosticApplied": "YES",
   "isWaitingPeriod": "NO",
   "diagnosticApplied1": "",
-  "MTC": "",
+  "MTC": "YES",
   "ortho": {
-    "orthosc": "",
+    "orthosc": 50,
     "orthosc1": "",
     "orthoamountused": 0,
-    "MonetaryAmt_lifetimeCoverage": null,
-    "agelimit": ""
+    "MonetaryAmt_lifetimeCoverage": 1500,
+    "agelimit": 26
   },
   "frequency_exam_unit": "",
   "shortcutfqexam": "",
-  "examcv": "",
+  "examcv": 100,
   "D0140share": "",
   "procCodeQuestions": {
     "d0140": {
-      "examcv": "",
-      "frequency_unit": "visits"
+      "examcv": "100",
+      "frequency_unit": "years"
     },
     "d1110": {
-      "frequency_unit": "visits",
-      "prophcv": ""
+      "frequency_unit": "years",
+      "prophcv": "100"
     },
     "d0272": {
-      "frequency_unit": "visits",
-      "bitewingsc": "1 visit remaining.",
-      "bitwingcv": ""
+      "frequency_unit": "years",
+      "bitewingsc": "2 treatments per calendar year; 2 treatments remaining.",
+      "bitwingcv": "100"
     },
     "d0210": {
-      "frequency_unit": "years",
-      "fmxcv": ""
+      "frequency_unit": "months",
+      "fmxcv": "100"
     },
     "fmxpanoshared": "Yes",
     "d0330": {
-      "frequency_unit": "years",
-      "panocv": ""
+      "frequency_unit": "months",
+      "panocv": "100"
     },
     "d1206": {
-      "frequency_unit": "visits",
-      "fluoridecv": "",
-      "flage": "200",
-      "age_limit": "200"
+      "frequency_unit": "",
+      "fluoridecv": "0",
+      "flage": "",
+      "age_limit": ""
     },
     "d1351": {
       "frequency_unit": "",
@@ -67,14 +67,14 @@
       "age_limit": ""
     },
     "d4266": {
-      "frequency_unit": "visits",
-      "4266freql": "1 visit remaining."
+      "frequency_unit": "months",
+      "4266freql": "1 treatment every 24 months."
     },
     "d4266guide": "",
     "norestrictions_3": "No",
     "d4341": {
-      "frequency_unit": "visits",
-      "4341freql": "1 visit remaining."
+      "frequency_unit": "months",
+      "4341freql": "1 treatment every 24 months."
     },
     "D4341quads": "No",
     "norestrictions_0": "No",
@@ -83,14 +83,14 @@
       "debridefreql": ""
     },
     "d4381": {
-      "frequency_unit": "visits",
-      "4381freql": "1 visit remaining."
+      "frequency_unit": "years",
+      "4381freql": "2 visits per calendar year; 1 visit remaining."
     },
     "arestinFL": "No",
     "norestrictions_1": "No",
     "d4910": {
       "frequency_unit": "",
-      "periocv": ""
+      "periocv": "80"
     },
     "d4910guide": "",
     "norestrictions_2": "No",
@@ -109,76 +109,76 @@
     },
     "dentormed": "Dental",
     "d7953": {
-      "frequency_unit": "visits",
-      "7953freql": "1 visit remaining."
+      "frequency_unit": "months",
+      "7953freql": "1 treatment every 60 months."
     },
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2391": {
-      "frequency_unit": "visits",
-      "compositefreql": "1 visit remaining.",
-      "isDowngrade": "No",
+      "frequency_unit": "",
+      "compositefreql": "",
+      "isDowngrade": "Yes",
       "downgrade_code": {
-        "value": "",
-        "label": ""
+        "value": "D2140",
+        "label": "Amalgam Filling"
       },
-      "downgradeApplied": "No"
+      "downgradeApplied": "Yes"
     },
     "d2392": {
-      "frequency_unit": "visits",
-      "isDowngrade": "No",
+      "frequency_unit": "",
+      "isDowngrade": "Yes",
       "downgrade_code": {
-        "value": "",
-        "label": ""
+        "value": "D2140",
+        "label": "Amalgam Filling"
       },
-      "downgradeApplied": "No"
+      "downgradeApplied": "Yes"
     },
     "d2393": {
-      "frequency_unit": "visits",
-      "isDowngrade": "No",
+      "frequency_unit": "",
+      "isDowngrade": "Yes",
       "downgrade_code": {
-        "value": "",
-        "label": ""
+        "value": "D2140",
+        "label": "Amalgam Filling"
       },
-      "downgradeApplied": "No"
+      "downgradeApplied": "Yes"
     },
     "d2394": {
-      "frequency_unit": "visits",
-      "isDowngrade": "No",
+      "frequency_unit": "",
+      "isDowngrade": "Yes",
       "downgrade_code": {
-        "value": "",
-        "label": ""
+        "value": "D2140",
+        "label": "Amalgam Filling"
       },
-      "downgradeApplied": "No"
+      "downgradeApplied": "Yes"
     },
     "d2644": {
-      "frequency_unit": "visits",
-      "FrequencyLimitations": "1 visit remaining.",
-      "isDowngrade": "No"
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
+      "isDowngrade": "Yes"
     },
     "sealdprepd2644": "No",
     "d2740": {
-      "frequency_unit": "visits",
-      "FrequencyLimitations": "1 visit remaining.",
-      "isDowngrade": "No"
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
+      "isDowngrade": "Yes"
     },
     "sealdprepd": "No",
     "d2950": {
-      "frequency_unit": "visits",
-      "Freql": "1 visit remaining."
+      "frequency_unit": "",
+      "Freql": ""
     },
     "d6010": {
-      "frequency_unit": "visits",
-      "6010freql": "1 visit remaining."
+      "frequency_unit": "months",
+      "6010freql": "1 treatment every 60 months."
     },
     "d6057": {
       "frequency_unit": "",
       "6057freql": ""
     },
     "d6065": {
-      "frequency_unit": "visits",
-      "6065freql": "1 visit remaining.",
-      "isDowngrade": "No"
+      "frequency_unit": "months",
+      "6065freql": "1 treatment every 60 months.",
+      "isDowngrade": "Yes"
     },
     "d9230": {
       "frequency_unit": "",
@@ -212,35 +212,28 @@
   "planNotes": "",
   "submit1": true,
   "submit": false,
-  "MonetaryAmt_IndMax": 0,
+  "MonetaryAmt_IndMax": 1500,
   "MonetaryAmt_FamMax": 0,
-  "MonetaryAmt_IndDeduct": 0,
-  "deductibleUsed": 0,
+  "MonetaryAmt_IndDeduct": 50,
+  "deductibleUsed": 50,
   "MonetaryAmt_DiaIndDeduct": 0,
   "MonetaryAmt_XrayIndDeduct": 0,
-  "insUsed": 0,
+  "insUsed": 195,
   "MonetaryAmt_PreventativeDeductible": 0,
-  "WaitingPeriod": {
-    "restorativeWaitingPeriod": 0,
-    "endoWaitingPeriod": 0,
-    "perioWaitingPeriod": 0,
-    "oralWaitingPeriod": 0,
-    "crownsWaitingPeriod": 0,
-    "prosthodonticsWaitingPeriod": 0
-  },
-  "ConInsurance_Percantages": {
-    "percentage_diagnostic": 0,
-    "percentage_xray": 0,
-    "percentage_preventative": 0,
-    "percentage_restorative": 0,
-    "percentage_endo": 0,
-    "percentage_oralSurgery": 0,
-    "percentage_crowns": 0,
-    "percentage_prosthodontics": {
-      "prosthodontics_fixed": 0,
-      "prosthodontics_removable": 0
-    }
-  },
+  "percentage_diagnostic": 100,
+  "percentage_xray": 100,
+  "percentage_preventative": 100,
+  "percentage_restorative": 50,
+  "percentage_crowns": 50,
+  "percentage_endo": 80,
+  "percentage_oralSurgery": 50,
+  "percentage_prosthodontics": 50,
+  "restorativeWaitingPeriod": 0,
+  "endoWaitingPeriod": 0,
+  "perioWaitingPeriod": 0,
+  "oralWaitingPeriod": 0,
+  "crownsWaitingPeriod": 0,
+  "prosthodonticsWaitingPeriod": 0,
   "ticketNo": 0,
   "ticketId": "",
   "ticketData": {
@@ -275,33 +268,33 @@
       "formType": 0
     },
     "patient": {
-      "PataNum": "38X5F7X3301",
-      "LName": "GONZALES",
-      "FName": "CORINTHIA",
-      "MiddleI": "B",
-      "Preferred": "CORINTHIA B GONZALES",
+      "PataNum": "W210108451",
+      "LName": "DILALO",
+      "FName": "CHRISTA",
+      "MiddleI": "",
+      "Preferred": "CHRISTA DILALO",
       "PatStatus": "ACTIVE",
       "Gender": "F",
       "Position": 0,
-      "Birthdate": "07/09/1978",
+      "Birthdate": "05/21/1986",
       "SSN": "",
-      "Address": "11206 FOREST NIGHT",
+      "Address": "1025 SLEEPY HOLLOW LN",
       "Address2": "",
-      "City": "LIVE OAK",
-      "State": "TX",
-      "Zip": "782334800",
+      "City": "PLAINFIELD",
+      "State": "NJ",
+      "Zip": "07060",
       "HmPhone": "",
       "WkPhone": "",
       "WirelessPhone": "",
-      "Guarantor": "38X5F7X3301",
+      "Guarantor": "W210108451",
       "CreditType": "",
       "Email": "",
       "Salutation": "",
       "EstBalance": 0,
-      "PriProv": "Cigna Dental Health, Inc.",
+      "PriProv": "AETNA INC",
       "SecProv": "",
       "FeeSched": "",
-      "BillingType": "HMO",
+      "BillingType": "PPO",
       "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
@@ -310,7 +303,7 @@
       "StudentStatus": "",
       "SchoolName": "",
       "ChartNumber": "",
-      "MedicaidID": "38X5F7X3301",
+      "MedicaidID": "W210108451",
       "Bal_0_30": 0,
       "Bal_31_60": 0,
       "Bal_61_90": 0,
@@ -364,26 +357,26 @@
       "Ordinal": 0,
       "IsPending": false,
       "Relationship": "",
-      "PatID": "38X5F7X3301",
-      "InsSubNum": "2501430",
+      "PatID": "W210108451",
+      "InsSubNum": "017506403000012",
       "OrthoAutoFeeBilledOverride": 0,
       "OrthoAutoNextClaimDate": "",
       "SecDateTEntry": "",
       "SecDateTEdit": "",
-      "PlanNum": "2501430",
-      "Subscriber": "CORINTHIA B GONZALES",
-      "DateEffective": "04/01/2025",
-      "SubscriberID": "38X5F7X3301",
-      "GroupNum": "2501430",
-      "GroupName": "HEALTHSPRING LIFE & HEALTH INSURANCE CDH",
-      "CarrierNum": "62308",
-      "CarrierNum1": "62308",
-      "CarrierName": "Cigna Dental Health, Inc.",
-      "carrierPhone": "(800) 997-1654",
-      "ElectID": "62308"
+      "PlanNum": "017506403000012",
+      "Subscriber": "STEPHEN C MOLLER",
+      "DateEffective": "01/01/2025",
+      "SubscriberID": "W210108451",
+      "GroupNum": "017506403000012",
+      "GroupName": "EVONIK CORPORATION",
+      "CarrierNum": "60054",
+      "CarrierNum1": "60054",
+      "CarrierName": "AETNA INC",
+      "carrierPhone": "(800) 451-7715",
+      "ElectID": "60054"
     },
-    "subscriberName": "CORINTHIA GONZALES",
-    "subscriberDoB": "07/09/1978",
+    "subscriberName": "STEPHEN MOLLER",
+    "subscriberDoB": "",
     "subscribertoRelationship": "",
     "latestTicketStatus": {
       "status": "",
@@ -392,16 +385,16 @@
     "ordinal": "",
     "subscriberPayload": {
       "subscriber": {
-        "first_name": "CORINTHIA",
-        "last_name": "GONZALES",
-        "dob": "07/09/1978",
-        "member_id": "38X5F7X3301"
+        "first_name": "STEPHEN",
+        "last_name": "MOLLER",
+        "dob": null,
+        "member_id": "W210108451"
       },
       "provider": {
         "npi": null
       },
       "payer": {
-        "id": "62308"
+        "id": "60054"
       },
       "version": "v2"
     }

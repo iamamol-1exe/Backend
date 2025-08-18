@@ -26,7 +26,10 @@ export class WaitingPeriodParser {
 
   parseWaitingPeriod() {
     return {
-      restorativeWaitingPeriod: 0,
+      restorativeWaitingPeriod:
+        this.getIsWaitingPeriod() === "NO"
+          ? 0
+          : this.calcWaitingPeriod("restorative") || 0,
       endoWaitingPeriod:
         this.getIsWaitingPeriod() === "NO"
           ? 0

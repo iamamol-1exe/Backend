@@ -181,6 +181,8 @@ class NewParser extends BaseParser {
       planNotes: "",
       submit1: true,
       submit: false,
+
+      // deductible section
       MonetaryAmt_IndMax: benefitsInNetwork.individual_maximum || 0,
       MonetaryAmt_FamMax: benefitsInNetwork.family_maximum || 0,
       MonetaryAmt_IndDeduct: benefitsInNetwork.individual_deductible || 0,
@@ -190,11 +192,34 @@ class NewParser extends BaseParser {
       insUsed: this.getAmountUsed() || 0,
       MonetaryAmt_PreventativeDeductible:
         this.getPreventativeDeduct("preventive"),
-      WaitingPeriod: waitingData,
-      ConInsurance_Percantages: percentages,
+
+      // co-insurance percentage
+      percentage_diagnostic: percentages.percentage_diagnostic,
+      percentage_xray: percentages.percentage_xray,
+      percentage_preventative: percentages.percentage_preventative,
+      percentage_restorative: percentages.percentage_restorative,
+      percentage_crowns: percentages.percentage_crowns,
+      percentage_endo: percentages.percentage_endo,
+      percentage_oralSurgery: percentages.percentage_oralSurgery,
+      percentage_prosthodontics:
+        percentages.percentage_prosthodontics.prosthodontics_fixed,
+
+      // waiting data fields in months
+      restorativeWaitingPeriod: waitingData.restorativeWaitingPeriod,
+      endoWaitingPeriod: waitingData.endoWaitingPeriod,
+      perioWaitingPeriod: waitingData.perioWaitingPeriod,
+      oralWaitingPeriod: waitingData.oralWaitingPeriod,
+      crownsWaitingPeriod: waitingData.crownsWaitingPeriod,
+      prosthodonticsWaitingPeriod: waitingData.prosthodonticsWaitingPeriod,
+
       ticketNo: 0,
       ticketId: "",
+
+      // patient and ticket section
+
       ticketData: ticketData,
+
+      // service history
       extraPatientHistory: [
         {
           PatNum: 0,

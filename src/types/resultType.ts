@@ -46,8 +46,22 @@ export type resultType = {
   MonetaryAmt_XrayIndDeduct: number;
   MonetaryAmt_IndDeduct: number;
   MonetaryAmt_PreventativeDeductible: number;
-  ConInsurance_Percantages : any
-  WaitingPeriod: any;
+  percentage_diagnostic: number;
+  percentage_xray: number;
+  percentage_preventative: number;
+  percentage_restorative: number;
+  percentage_endo: number;
+  percentage_oralSurgery: number;
+  percentage_crowns: number;
+  percentage_prosthodontics: number;
+
+  restorativeWaitingPeriod: number;
+  endoWaitingPeriod: number;
+  perioWaitingPeriod: number;
+  oralWaitingPeriod: number;
+  crownsWaitingPeriod: number;
+  prosthodonticsWaitingPeriod: number;
+
   ticketNo: number;
   ticketId: string;
   ticketData: any;
