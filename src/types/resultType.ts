@@ -1,3 +1,5 @@
+import { ProcessedHistoryItem } from "../interface/serviceHistory";
+
 export type resultType = {
   pullClaimInformation: boolean;
   formType: string;
@@ -28,13 +30,7 @@ export type resultType = {
   D0140share: string;
   procCodeQuestions: any;
   procCode: Array<{ value: number; label: string }>;
-  patientHistory: Array<{
-    date: string;
-    ToothRange: string;
-    surf: Array<null>;
-    procCode: object;
-    toothRange: string;
-  }>;
+  patientHistory: ProcessedHistoryItem[];
   subscNote: string;
   planNotes: string;
   submit1: boolean;

@@ -4,6 +4,7 @@ import { resultType } from "../types/resultType";
 import BaseParser from "./BaseParser";
 import { ConInsurancePercantageClass } from "./Component-wise parser/ConInsurancePercentageParser";
 import { ProcCodeQuestionsParser } from "./Component-wise parser/procCodeQuestionsParser";
+import { ServiceHistoryParser } from "./Component-wise parser/serviceHistoryParser";
 
 import { ticketParser } from "./Component-wise parser/ticketParser";
 import { WaitingPeriodParser } from "./Component-wise parser/waitingPeriodParser";
@@ -138,6 +139,10 @@ class NewParser extends BaseParser {
     const procCodeQuestionsData = procCodeQuestionsparser.parse();
     const percentageParser = new ConInsurancePercantageClass(this.data);
     const percentages = percentageParser.parse();
+    const serviceHistoryParser = new ServiceHistoryParser(
+      this.pickInNetworkBenefits() || {}
+    );
+    const patientHistorydata = serviceHistoryParser.extractPatientHistory();
 
     return {
       pullClaimInformation: false,
@@ -161,22 +166,22 @@ class NewParser extends BaseParser {
       isWaitingPeriod: waitingParserobj.getIsWaitingPeriod() || "",
       diagnosticApplied1: "",
       MTC: rules.missing_tooth_clause_applies === "YES" ? "YES" : "",
+
       ortho: ortho,
-      frequency_exam_unit: "",
+
       shortcutfqexam: "",
+      frequency_exam_unit: procCodeQuestionsparser.getFrequencyUnit(
+        "diagnostic",
+        "exams"
+      ),
       examcv: this.getCoins("diagnostic", "exams") || "",
       D0140share: "",
+
+      // procCode question
       procCodeQuestions: procCodeQuestionsData,
       procCode: [{ value: 0, label: "" }],
-      patientHistory: [
-        {
-          date: "",
-          ToothRange: "",
-          surf: [],
-          procCode: {},
-          toothRange: "",
-        },
-      ],
+      //patient service history
+      patientHistory: patientHistorydata,
       subscNote: "",
       planNotes: "",
       submit1: true,

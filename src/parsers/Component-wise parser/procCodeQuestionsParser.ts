@@ -394,7 +394,7 @@ export class ProcCodeQuestionsParser {
     return this.percentToString(val);
   }
 
-  private getFrequencyUnit(category: string, node: string): string {
+  public getFrequencyUnit(category: string, node: string): string {
     const rule = this.getFrequencyRule(category, node);
     if (!rule) return "";
     const lower = String(rule).toLowerCase();
@@ -654,8 +654,7 @@ export class ProcCodeQuestionsParser {
     return path
       .split(".")
       .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
-}
-
+  }
 
   private getFMXPanoSharedFlag(): string {
     const ben = this.pickInNetworkBenefits();

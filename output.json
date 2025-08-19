@@ -4,31 +4,31 @@
   "clientId": "",
   "uploadDocument": [],
   "agentName": "",
-  "GroupName": "EVONIK CORPORATION",
-  "GroupNum": "017506403000012",
-  "PlanType": "PPO",
+  "GroupName": "Employees Retirement System of Texas",
+  "GroupNum": "20010-00323",
+  "PlanType": "",
   "networknote": "",
   "FeeSched": {
     "value": null,
     "label": ""
   },
   "MonthRenew": "",
-  "EffectiveDate": "01/01/2025",
+  "EffectiveDate": "09/01/2019",
   "shortcut": "",
   "shortcut1": "",
-  "diagnosticApplied": "YES",
+  "diagnosticApplied": "NO",
   "isWaitingPeriod": "NO",
   "diagnosticApplied1": "",
-  "MTC": "YES",
+  "MTC": "",
   "ortho": {
     "orthosc": 50,
     "orthosc1": "",
     "orthoamountused": 0,
-    "MonetaryAmt_lifetimeCoverage": 1500,
-    "agelimit": 26
+    "MonetaryAmt_lifetimeCoverage": 2000,
+    "agelimit": ""
   },
-  "frequency_exam_unit": "",
   "shortcutfqexam": "",
+  "frequency_exam_unit": "years",
   "examcv": 100,
   "D0140share": "",
   "procCodeQuestions": {
@@ -42,7 +42,7 @@
     },
     "d0272": {
       "frequency_unit": "years",
-      "bitewingsc": "2 treatments per calendar year; 2 treatments remaining.",
+      "bitewingsc": "2 visits every year.",
       "bitwingcv": "100"
     },
     "d0210": {
@@ -55,121 +55,121 @@
       "panocv": "100"
     },
     "d1206": {
-      "frequency_unit": "",
-      "fluoridecv": "0",
-      "flage": "",
-      "age_limit": ""
+      "frequency_unit": "years",
+      "fluoridecv": "100",
+      "flage": "18",
+      "age_limit": "18"
     },
     "d1351": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
-      "sealage": "",
-      "age_limit": ""
+      "frequency_unit": "months",
+      "FrequencyLimitations": "1 visit every 24 months.",
+      "sealage": "8",
+      "age_limit": "8"
     },
     "d4266": {
       "frequency_unit": "months",
-      "4266freql": "1 treatment every 24 months."
+      "4266freql": "1 visit every 36 months."
     },
     "d4266guide": "",
     "norestrictions_3": "No",
     "d4341": {
       "frequency_unit": "months",
-      "4341freql": "1 treatment every 24 months."
+      "4341freql": "1 visit every 24 months."
     },
     "D4341quads": "No",
     "norestrictions_0": "No",
     "d4355": {
-      "frequency_unit": "",
-      "debridefreql": ""
+      "frequency_unit": "visits",
+      "debridefreql": "1 visit per lifetime."
     },
     "d4381": {
       "frequency_unit": "years",
-      "4381freql": "2 visits per calendar year; 1 visit remaining."
+      "4381freql": "2 visits every year."
     },
     "arestinFL": "No",
     "norestrictions_1": "No",
     "d4910": {
-      "frequency_unit": "",
-      "periocv": "80"
+      "frequency_unit": "months",
+      "periocv": "50"
     },
     "d4910guide": "",
     "norestrictions_2": "No",
     "prophyperioshared": "No",
     "d7140": {
-      "frequency_unit": "",
-      "7140freql": ""
+      "frequency_unit": "visits",
+      "7140freql": "1 visit per lifetime."
     },
     "d7210": {
-      "frequency_unit": "",
-      "7210freql": ""
+      "frequency_unit": "days",
+      "7210freql": "1 visit per day."
     },
     "d7240": {
-      "frequency_unit": "",
-      "7240freql": ""
+      "frequency_unit": "days",
+      "7240freql": "1 visit per day."
     },
     "dentormed": "Dental",
     "d7953": {
       "frequency_unit": "months",
-      "7953freql": "1 treatment every 60 months."
+      "7953freql": "1 visit every 36 months."
     },
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2391": {
-      "frequency_unit": "",
-      "compositefreql": "",
-      "isDowngrade": "Yes",
+      "frequency_unit": "months",
+      "compositefreql": "1 visit every 24 months.",
+      "isDowngrade": "No",
       "downgrade_code": {
-        "value": "D2140",
-        "label": "Amalgam Filling"
+        "value": "",
+        "label": ""
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "No"
     },
     "d2392": {
-      "frequency_unit": "",
-      "isDowngrade": "Yes",
+      "frequency_unit": "months",
+      "isDowngrade": "No",
       "downgrade_code": {
-        "value": "D2140",
-        "label": "Amalgam Filling"
+        "value": "",
+        "label": ""
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "No"
     },
     "d2393": {
-      "frequency_unit": "",
-      "isDowngrade": "Yes",
+      "frequency_unit": "months",
+      "isDowngrade": "No",
       "downgrade_code": {
-        "value": "D2140",
-        "label": "Amalgam Filling"
+        "value": "",
+        "label": ""
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "No"
     },
     "d2394": {
-      "frequency_unit": "",
-      "isDowngrade": "Yes",
+      "frequency_unit": "months",
+      "isDowngrade": "No",
       "downgrade_code": {
-        "value": "D2140",
-        "label": "Amalgam Filling"
+        "value": "",
+        "label": ""
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "No"
     },
     "d2644": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
-      "isDowngrade": "Yes"
+      "frequency_unit": "months",
+      "FrequencyLimitations": "1 visit every 60 months.",
+      "isDowngrade": "No"
     },
     "sealdprepd2644": "No",
     "d2740": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
-      "isDowngrade": "Yes"
+      "frequency_unit": "months",
+      "FrequencyLimitations": "1 visit every 60 months.",
+      "isDowngrade": "No"
     },
     "sealdprepd": "No",
     "d2950": {
-      "frequency_unit": "",
-      "Freql": ""
+      "frequency_unit": "months",
+      "Freql": "1 visit every 60 months."
     },
     "d6010": {
       "frequency_unit": "months",
-      "6010freql": "1 treatment every 60 months."
+      "6010freql": "1 visit every 60 months."
     },
     "d6057": {
       "frequency_unit": "",
@@ -177,8 +177,8 @@
     },
     "d6065": {
       "frequency_unit": "months",
-      "6065freql": "1 treatment every 60 months.",
-      "isDowngrade": "Yes"
+      "6065freql": "1 visit every 60 months.",
+      "isDowngrade": "No"
     },
     "d9230": {
       "frequency_unit": "",
@@ -201,10 +201,75 @@
   ],
   "patientHistory": [
     {
-      "date": "",
+      "date": "06/12/2025",
       "ToothRange": "",
-      "surf": [],
-      "procCode": {},
+      "surf": "",
+      "procCode": "D0120",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "07/15/2021",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0150",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "07/15/2021",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0210",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "06/12/2025",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0230",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "06/12/2025",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0274",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "06/12/2025",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D1110",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "10/20/2015",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D2150",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "05/04/2022",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D2392",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "05/04/2022",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D2740",
+      "toothNumber": 0,
       "toothRange": ""
     }
   ],
@@ -212,20 +277,20 @@
   "planNotes": "",
   "submit1": true,
   "submit": false,
-  "MonetaryAmt_IndMax": 1500,
+  "MonetaryAmt_IndMax": 2000,
   "MonetaryAmt_FamMax": 0,
   "MonetaryAmt_IndDeduct": 50,
-  "deductibleUsed": 50,
+  "deductibleUsed": 200,
   "MonetaryAmt_DiaIndDeduct": 0,
   "MonetaryAmt_XrayIndDeduct": 0,
-  "insUsed": 195,
+  "insUsed": 112.5,
   "MonetaryAmt_PreventativeDeductible": 0,
   "percentage_diagnostic": 100,
   "percentage_xray": 100,
   "percentage_preventative": 100,
   "percentage_restorative": 50,
   "percentage_crowns": 50,
-  "percentage_endo": 80,
+  "percentage_endo": 50,
   "percentage_oralSurgery": 50,
   "percentage_prosthodontics": 50,
   "restorativeWaitingPeriod": 0,
@@ -268,33 +333,33 @@
       "formType": 0
     },
     "patient": {
-      "PataNum": "W210108451",
-      "LName": "DILALO",
-      "FName": "CHRISTA",
-      "MiddleI": "",
-      "Preferred": "CHRISTA DILALO",
+      "PataNum": "118882687401",
+      "LName": "Whitman",
+      "FName": "Jennifer",
+      "MiddleI": "C",
+      "Preferred": "Jennifer C Whitman",
       "PatStatus": "ACTIVE",
-      "Gender": "F",
+      "Gender": "",
       "Position": 0,
-      "Birthdate": "05/21/1986",
+      "Birthdate": "03/28/1976",
       "SSN": "",
-      "Address": "1025 SLEEPY HOLLOW LN",
+      "Address": "122 Bluehaw Dr",
       "Address2": "",
-      "City": "PLAINFIELD",
-      "State": "NJ",
-      "Zip": "07060",
+      "City": "Georgetown",
+      "State": "TX",
+      "Zip": "786284022",
       "HmPhone": "",
       "WkPhone": "",
       "WirelessPhone": "",
-      "Guarantor": "W210108451",
+      "Guarantor": "118882687401",
       "CreditType": "",
       "Email": "",
       "Salutation": "",
-      "EstBalance": 0,
-      "PriProv": "AETNA INC",
+      "EstBalance": 1887.5,
+      "PriProv": "Delta Dental Ins. Co. - Georgia",
       "SecProv": "",
       "FeeSched": "",
-      "BillingType": "PPO",
+      "BillingType": "",
       "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
@@ -303,7 +368,7 @@
       "StudentStatus": "",
       "SchoolName": "",
       "ChartNumber": "",
-      "MedicaidID": "W210108451",
+      "MedicaidID": "118882687401",
       "Bal_0_30": 0,
       "Bal_31_60": 0,
       "Bal_61_90": 0,
@@ -357,26 +422,26 @@
       "Ordinal": 0,
       "IsPending": false,
       "Relationship": "",
-      "PatID": "W210108451",
-      "InsSubNum": "017506403000012",
+      "PatID": "118882687401",
+      "InsSubNum": "20010-00323",
       "OrthoAutoFeeBilledOverride": 0,
       "OrthoAutoNextClaimDate": "",
       "SecDateTEntry": "",
       "SecDateTEdit": "",
-      "PlanNum": "017506403000012",
-      "Subscriber": "STEPHEN C MOLLER",
-      "DateEffective": "01/01/2025",
-      "SubscriberID": "W210108451",
-      "GroupNum": "017506403000012",
-      "GroupName": "EVONIK CORPORATION",
-      "CarrierNum": "60054",
-      "CarrierNum1": "60054",
-      "CarrierName": "AETNA INC",
-      "carrierPhone": "(800) 451-7715",
-      "ElectID": "60054"
+      "PlanNum": "20010-00323",
+      "Subscriber": "Jennifer C Whitman",
+      "DateEffective": "09/01/2019",
+      "SubscriberID": "118882687401",
+      "GroupNum": "20010-00323",
+      "GroupName": "Employees Retirement System of Texas",
+      "CarrierNum": "94276",
+      "CarrierNum1": "94276",
+      "CarrierName": "Delta Dental Ins. Co. - Georgia",
+      "carrierPhone": "(800) 521-2651",
+      "ElectID": "94276"
     },
-    "subscriberName": "STEPHEN MOLLER",
-    "subscriberDoB": "",
+    "subscriberName": "Jennifer Whitman",
+    "subscriberDoB": "03/28/1976",
     "subscribertoRelationship": "",
     "latestTicketStatus": {
       "status": "",
@@ -385,16 +450,16 @@
     "ordinal": "",
     "subscriberPayload": {
       "subscriber": {
-        "first_name": "STEPHEN",
-        "last_name": "MOLLER",
-        "dob": null,
-        "member_id": "W210108451"
+        "first_name": "Jennifer",
+        "last_name": "Whitman",
+        "dob": "03/28/1976",
+        "member_id": "118882687401"
       },
       "provider": {
         "npi": null
       },
       "payer": {
-        "id": "60054"
+        "id": "94276"
       },
       "version": "v2"
     }
