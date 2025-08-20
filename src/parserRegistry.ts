@@ -44,7 +44,9 @@ const parserRegistry: { [key: string]: any } = {
   dd_west_virginia: DeltaDentalParser,
   dd_indiana: DeltaDentalParser,
   dd_ny: DeltaDentalParser,
+  metlife: DeltaDentalParser,
   cigna: AetnaParser,
+  united_concordia : AetnaParser
 };
 
 export default parserRegistry;

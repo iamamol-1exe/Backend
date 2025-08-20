@@ -1,6 +1,8 @@
 import PatientBaseParser from "./PatientBaseParser";
 
 class UnitedHealthcareParser extends PatientBaseParser {
+  protected networkidentifiers: number = this.network === "IN_NETWORK" ? 0 : 1;
+
   parsePatient() {
     const pat = this.data.patient ?? {};
     const cov = pat.coverage;
@@ -56,7 +58,8 @@ class UnitedHealthcareParser extends PatientBaseParser {
   parseBalance() {
     const benefits = this.data.benefits;
     return {
-      EstBalance: benefits[0].family_maximum_remaining || 0,
+      EstBalance:
+        benefits[this.networkidentifiers].family_maximum_remaining || 0,
     };
   }
 

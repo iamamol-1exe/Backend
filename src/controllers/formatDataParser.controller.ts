@@ -3,8 +3,9 @@ import axios from "axios";
 import { HttpResponse } from "../utils/responseUtils";
 import { getOnederfulPayerId } from "../utils/payerListHelper";
 import { getAuthToken, getTokenFromRedis } from "../services/authToken.service";
-import NewParser from "../parsers/NewParser";
+import InNetworkParser from "../parsers/InNetworkParser";
 import fs from "fs";
+import OutOfNetworkPraser from "../parsers/OutOfNetworkPraser";
 
 /**
  * Handles the parsing of formatted data by interacting with external services and utilities.
@@ -33,12 +34,12 @@ import fs from "fs";
 export const formatDataParser1 = async (req: Request, res: Response) => {
   try {
     const url: any = process.env.URL;
-    const { payload } = req.body;
+    const { payload, networkQualifier } = req.body;
     let token = await getTokenFromRedis();
     if (!token) {
       token = await getAuthToken();
     }
-
+    console.log(networkQualifier);
     const identifier = payload.payer.id;
 
     const onederfulPayerId =
@@ -62,16 +63,21 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     fs.writeFileSync("data.json", JSON.stringify(data, null, 2), "utf8");
     console.log("Data successfully stored in output.json");
 
-    const parser = new NewParser(data, onederfulPayerId);
-    const parseredData = parser.parseToResultFormat();
-    fs.writeFileSync(
-      "output.json",
-      JSON.stringify(parseredData, null, 2),
-      "utf8"
-    );
-    console.log("Data successfully stored in output.json");
-
-    return HttpResponse.success(res, parseredData, "Successfull");
+    if (networkQualifier == "OUT_OF_NETWORK") {
+      const parser = new OutOfNetworkPraser(data, "cigna");
+      const parseredData = parser.parseToResultFormat();
+      fs.writeFileSync(
+        "output.json",
+        JSON.stringify(parseredData, null, 2),
+        "utf8"
+      );
+      console.log("Data successfully stored in output.json");
+      return HttpResponse.success(res, parseredData, "Successfull");
+    } else if (networkQualifier === "IN_NETWORK") {
+      const parser = new InNetworkParser(data, "cigna");
+      const parseredData = parser.parseToResultFormat();
+      return HttpResponse.success(res, parseredData, "Successfull");
+    }
   } catch (error) {
     const errorMessage = axios.isAxiosError(error)
       ? error.response?.data?.message

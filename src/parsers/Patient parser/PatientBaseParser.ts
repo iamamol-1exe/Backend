@@ -7,21 +7,22 @@
  * @abstract
  */
 
-
 export default abstract class PatientBaseParser {
   /**
    * The raw data received from the Eligibility API.
    * This data will be processed and parsed by the implementing class.
    */
   protected data: any;
+  protected network: string;
 
   /**
    * Initializes the parser with the raw data.
    *
    * @param data - The raw data received from the Eligibility API.
    */
-  constructor(data: any) {
+  constructor(data: any, network: string) {
     this.data = data;
+    this.network = network;
   }
 
   /**

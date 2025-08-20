@@ -4,21 +4,25 @@ type datatype = Record<string, any>;
 
 export class ProcCodeQuestionsParser {
   protected data: datatype;
+  protected networkidentifiers: string;
 
-  constructor(data: datatype) {
+  constructor(data: datatype, networkidentifiers: string) {
     this.data = data ?? {};
+    this.networkidentifiers = networkidentifiers;
   }
-
+  private get networkIdentifier(): number {
+    return this.networkidentifiers === "IN_NETWORK" ? 0 : 1;
+  }
   // Public API
   parse(): datatype {
     return {
       d0140: {
         examcv: this.getCoins("diagnostic", "exams"),
-        frequency_unit: this.getFrequencyUnit("diagnostic", "exams"),
+        frequency_unit: this.getFrequencyUnit("diagnostic", "exams"), // ok
       },
 
       d1110: {
-        frequency_unit: this.getFrequencyUnit("preventive", "prophy"),
+        frequency_unit: this.getFrequencyUnit("preventive", "prophy"), // ok
         prophcv: this.getCoins("preventive", "prophy"),
       },
 
@@ -379,9 +383,20 @@ export class ProcCodeQuestionsParser {
   private buildEmptyObject(): datatype {
     return {};
   }
-
+  pickOutOfNetWork(): datatype | null {
+    const benefits: datatype[] = this.data?.benefits ?? [];
+    if (!Array.isArray(benefits) || benefits.length === 0) return null;
+    const inn = benefits.find(
+      (b) => String(b?.network ?? "").toUpperCase() === "OUT_OF_NETWORK"
+    );
+    return inn ?? benefits[1] ?? null;
+  }
   private getCoins(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
+
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
 
@@ -399,15 +414,18 @@ export class ProcCodeQuestionsParser {
     if (!rule) return "";
     const lower = String(rule).toLowerCase();
     if (lower.includes("month")) return "months";
+    if (lower.includes("visit")) return "visits";
     if (lower.includes("year")) return "years";
     if (lower.includes("day")) return "days";
     if (lower.includes("week")) return "weeks";
-    if (lower.includes("visit")) return "visits";
     return "";
   }
 
   private getFrequencyLimitation(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const lim = n?.limitation;
@@ -436,7 +454,10 @@ export class ProcCodeQuestionsParser {
       });
       if (hit) return String(hit.text ?? "");
     }
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     const benDisclaimers = ben?.disclaimers ?? [];
     if (Array.isArray(benDisclaimers)) {
       const hit = benDisclaimers.find((d: any) => {
@@ -451,7 +472,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getNoRestrictionsFlag(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "No";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     if (!n) return "No";
@@ -464,7 +488,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getQuadLimitation(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const texts: string[] = [];
@@ -496,7 +523,10 @@ export class ProcCodeQuestionsParser {
         return "Yes";
       }
     }
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     const benDisclaimers = ben?.disclaimers ?? [];
     if (Array.isArray(benDisclaimers)) {
       if (
@@ -513,7 +543,7 @@ export class ProcCodeQuestionsParser {
   }
 
   private getProphyPerioSharedFlag(): string {
-    const prophy = this.getFrequencyRule("preventive", "prophy");
+    const prophy = this.getFrequencyRule("preventive", " ");
     const perio = this.getFrequencyRule(
       "periodontics",
       "periodontal_maintenance"
@@ -552,7 +582,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getSealDPrepFlag(procCode: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "No";
     const seal = ben?.coverages?.preventive?.sealants;
     const texts: string[] = [];
@@ -572,7 +605,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getUnitQualifier(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const unit = n?.limitation?.remaining_component?.unit_qualifier;
@@ -595,7 +631,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getAgeHigh(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const lim = n?.limitation;
@@ -618,7 +657,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getFrequencyRule(category: string, node: string): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const lim = n?.limitation;
@@ -657,7 +699,10 @@ export class ProcCodeQuestionsParser {
   }
 
   private getFMXPanoSharedFlag(): string {
-    const ben = this.pickInNetworkBenefits();
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
     if (!ben) return "";
     const fmxFreq = this.getFrequencyRule("diagnostic", "fmx");
     const panoFreq = this.getFrequencyRule("diagnostic", "panoramic_images");

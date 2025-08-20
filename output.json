@@ -4,16 +4,16 @@
   "clientId": "",
   "uploadDocument": [],
   "agentName": "",
-  "GroupName": "Employees Retirement System of Texas",
-  "GroupNum": "20010-00323",
-  "PlanType": "",
+  "GroupName": "BECHTEL CONSTRUCTION SERVICES",
+  "GroupNum": "2501245",
+  "PlanType": "PPO",
   "networknote": "",
   "FeeSched": {
     "value": null,
     "label": ""
   },
   "MonthRenew": "",
-  "EffectiveDate": "09/01/2019",
+  "EffectiveDate": "12/24/2023",
   "shortcut": "",
   "shortcut1": "",
   "diagnosticApplied": "NO",
@@ -21,28 +21,28 @@
   "diagnosticApplied1": "",
   "MTC": "",
   "ortho": {
-    "orthosc": 50,
+    "orthosc": "",
     "orthosc1": "",
     "orthoamountused": 0,
-    "MonetaryAmt_lifetimeCoverage": 2000,
-    "agelimit": ""
+    "MonetaryAmt_lifetimeCoverage": null,
+    "agelimit": 0
   },
   "shortcutfqexam": "",
-  "frequency_exam_unit": "years",
+  "frequency_exam_unit": "",
   "examcv": 100,
   "D0140share": "",
   "procCodeQuestions": {
     "d0140": {
       "examcv": "100",
-      "frequency_unit": "years"
+      "frequency_unit": ""
     },
     "d1110": {
-      "frequency_unit": "years",
+      "frequency_unit": "",
       "prophcv": "100"
     },
     "d0272": {
-      "frequency_unit": "years",
-      "bitewingsc": "2 visits every year.",
+      "frequency_unit": "",
+      "bitewingsc": "",
       "bitwingcv": "100"
     },
     "d0210": {
@@ -55,68 +55,68 @@
       "panocv": "100"
     },
     "d1206": {
-      "frequency_unit": "years",
+      "frequency_unit": "",
       "fluoridecv": "100",
       "flage": "18",
       "age_limit": "18"
     },
     "d1351": {
-      "frequency_unit": "months",
-      "FrequencyLimitations": "1 visit every 24 months.",
-      "sealage": "8",
-      "age_limit": "8"
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
+      "sealage": "18",
+      "age_limit": "18"
     },
     "d4266": {
-      "frequency_unit": "months",
-      "4266freql": "1 visit every 36 months."
+      "frequency_unit": "",
+      "4266freql": ""
     },
     "d4266guide": "",
     "norestrictions_3": "No",
     "d4341": {
-      "frequency_unit": "months",
-      "4341freql": "1 visit every 24 months."
+      "frequency_unit": "",
+      "4341freql": ""
     },
     "D4341quads": "No",
     "norestrictions_0": "No",
     "d4355": {
-      "frequency_unit": "visits",
-      "debridefreql": "1 visit per lifetime."
+      "frequency_unit": "",
+      "debridefreql": ""
     },
     "d4381": {
-      "frequency_unit": "years",
-      "4381freql": "2 visits every year."
+      "frequency_unit": "",
+      "4381freql": ""
     },
     "arestinFL": "No",
     "norestrictions_1": "No",
     "d4910": {
-      "frequency_unit": "months",
-      "periocv": "50"
+      "frequency_unit": "",
+      "periocv": "100"
     },
     "d4910guide": "",
     "norestrictions_2": "No",
     "prophyperioshared": "No",
     "d7140": {
-      "frequency_unit": "visits",
-      "7140freql": "1 visit per lifetime."
+      "frequency_unit": "months",
+      "7140freql": "2 visits remaining."
     },
     "d7210": {
-      "frequency_unit": "days",
-      "7210freql": "1 visit per day."
+      "frequency_unit": "visits",
+      "7210freql": "2 visits remaining."
     },
     "d7240": {
-      "frequency_unit": "days",
-      "7240freql": "1 visit per day."
+      "frequency_unit": "visits",
+      "7240freql": "2 visits remaining."
     },
     "dentormed": "Dental",
     "d7953": {
-      "frequency_unit": "months",
-      "7953freql": "1 visit every 36 months."
+      "frequency_unit": "",
+      "7953freql": ""
     },
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2391": {
-      "frequency_unit": "months",
-      "compositefreql": "1 visit every 24 months.",
+      "frequency_unit": "",
+      "compositefreql": "",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -125,7 +125,7 @@
       "downgradeApplied": "No"
     },
     "d2392": {
-      "frequency_unit": "months",
+      "frequency_unit": "",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -134,7 +134,7 @@
       "downgradeApplied": "No"
     },
     "d2393": {
-      "frequency_unit": "months",
+      "frequency_unit": "",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -143,7 +143,7 @@
       "downgradeApplied": "No"
     },
     "d2394": {
-      "frequency_unit": "months",
+      "frequency_unit": "",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -152,32 +152,32 @@
       "downgradeApplied": "No"
     },
     "d2644": {
-      "frequency_unit": "months",
-      "FrequencyLimitations": "1 visit every 60 months.",
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
       "isDowngrade": "No"
     },
     "sealdprepd2644": "No",
     "d2740": {
-      "frequency_unit": "months",
-      "FrequencyLimitations": "1 visit every 60 months.",
+      "frequency_unit": "",
+      "FrequencyLimitations": "",
       "isDowngrade": "No"
     },
     "sealdprepd": "No",
     "d2950": {
-      "frequency_unit": "months",
-      "Freql": "1 visit every 60 months."
+      "frequency_unit": "",
+      "Freql": ""
     },
     "d6010": {
-      "frequency_unit": "months",
-      "6010freql": "1 visit every 60 months."
+      "frequency_unit": "visits",
+      "6010freql": "1 visit remaining."
     },
     "d6057": {
       "frequency_unit": "",
       "6057freql": ""
     },
     "d6065": {
-      "frequency_unit": "months",
-      "6065freql": "1 visit every 60 months.",
+      "frequency_unit": "",
+      "6065freql": "",
       "isDowngrade": "No"
     },
     "d9230": {
@@ -199,98 +199,25 @@
       "label": ""
     }
   ],
-  "patientHistory": [
-    {
-      "date": "06/12/2025",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0120",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "07/15/2021",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0150",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "07/15/2021",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0210",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "06/12/2025",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0230",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "06/12/2025",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0274",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "06/12/2025",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D1110",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "10/20/2015",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2150",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "05/04/2022",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2392",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "05/04/2022",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2740",
-      "toothNumber": 0,
-      "toothRange": ""
-    }
-  ],
+  "patientHistory": [],
   "subscNote": "",
   "planNotes": "",
   "submit1": true,
   "submit": false,
-  "MonetaryAmt_IndMax": 2000,
+  "MonetaryAmt_IndMax": 1000,
   "MonetaryAmt_FamMax": 0,
   "MonetaryAmt_IndDeduct": 50,
-  "deductibleUsed": 200,
+  "deductibleUsed": 0,
   "MonetaryAmt_DiaIndDeduct": 0,
   "MonetaryAmt_XrayIndDeduct": 0,
-  "insUsed": 112.5,
   "MonetaryAmt_PreventativeDeductible": 0,
+  "insUsed": 285,
   "percentage_diagnostic": 100,
   "percentage_xray": 100,
   "percentage_preventative": 100,
   "percentage_restorative": 50,
   "percentage_crowns": 50,
-  "percentage_endo": 50,
+  "percentage_endo": 80,
   "percentage_oralSurgery": 50,
   "percentage_prosthodontics": 50,
   "restorativeWaitingPeriod": 0,
@@ -333,33 +260,33 @@
       "formType": 0
     },
     "patient": {
-      "PataNum": "118882687401",
-      "LName": "Whitman",
-      "FName": "Jennifer",
-      "MiddleI": "C",
-      "Preferred": "Jennifer C Whitman",
+      "PataNum": "U4364755301",
+      "LName": "WOOD",
+      "FName": "CHARLES",
+      "MiddleI": "",
+      "Preferred": "CHARLES WOOD",
       "PatStatus": "ACTIVE",
-      "Gender": "",
+      "Gender": "M",
       "Position": 0,
-      "Birthdate": "03/28/1976",
+      "Birthdate": "02/25/1984",
       "SSN": "",
-      "Address": "122 Bluehaw Dr",
+      "Address": "155 E CHANCE RD",
       "Address2": "",
-      "City": "Georgetown",
+      "City": "LUMBERTON",
       "State": "TX",
-      "Zip": "786284022",
+      "Zip": "776577764",
       "HmPhone": "",
       "WkPhone": "",
       "WirelessPhone": "",
-      "Guarantor": "118882687401",
+      "Guarantor": "U4364755301",
       "CreditType": "",
       "Email": "",
       "Salutation": "",
-      "EstBalance": 1887.5,
-      "PriProv": "Delta Dental Ins. Co. - Georgia",
+      "EstBalance": 0,
+      "PriProv": "CHLIC",
       "SecProv": "",
       "FeeSched": "",
-      "BillingType": "",
+      "BillingType": "PPO",
       "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
@@ -368,7 +295,7 @@
       "StudentStatus": "",
       "SchoolName": "",
       "ChartNumber": "",
-      "MedicaidID": "118882687401",
+      "MedicaidID": "U4364755301",
       "Bal_0_30": 0,
       "Bal_31_60": 0,
       "Bal_61_90": 0,
@@ -422,26 +349,26 @@
       "Ordinal": 0,
       "IsPending": false,
       "Relationship": "",
-      "PatID": "118882687401",
-      "InsSubNum": "20010-00323",
+      "PatID": "U4364755301",
+      "InsSubNum": "2501245",
       "OrthoAutoFeeBilledOverride": 0,
       "OrthoAutoNextClaimDate": "",
       "SecDateTEntry": "",
       "SecDateTEdit": "",
-      "PlanNum": "20010-00323",
-      "Subscriber": "Jennifer C Whitman",
-      "DateEffective": "09/01/2019",
-      "SubscriberID": "118882687401",
-      "GroupNum": "20010-00323",
-      "GroupName": "Employees Retirement System of Texas",
-      "CarrierNum": "94276",
-      "CarrierNum1": "94276",
-      "CarrierName": "Delta Dental Ins. Co. - Georgia",
-      "carrierPhone": "(800) 521-2651",
-      "ElectID": "94276"
+      "PlanNum": "2501245",
+      "Subscriber": "CHARLES WOOD",
+      "DateEffective": "12/24/2023",
+      "SubscriberID": "U4364755301",
+      "GroupNum": "2501245",
+      "GroupName": "BECHTEL CONSTRUCTION SERVICES",
+      "CarrierNum": "62308",
+      "CarrierNum1": "62308",
+      "CarrierName": "CHLIC",
+      "carrierPhone": "(800) 997-1654",
+      "ElectID": "62308"
     },
-    "subscriberName": "Jennifer Whitman",
-    "subscriberDoB": "03/28/1976",
+    "subscriberName": "CHARLES WOOD",
+    "subscriberDoB": "02/25/1984",
     "subscribertoRelationship": "",
     "latestTicketStatus": {
       "status": "",
@@ -450,16 +377,16 @@
     "ordinal": "",
     "subscriberPayload": {
       "subscriber": {
-        "first_name": "Jennifer",
-        "last_name": "Whitman",
-        "dob": "03/28/1976",
-        "member_id": "118882687401"
+        "first_name": "CHARLES",
+        "last_name": "WOOD",
+        "dob": "02/25/1984",
+        "member_id": "U4364755301"
       },
       "provider": {
         "npi": null
       },
       "payer": {
-        "id": "94276"
+        "id": "62308"
       },
       "version": "v2"
     }

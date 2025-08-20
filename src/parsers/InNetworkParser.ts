@@ -9,7 +9,7 @@ import { ServiceHistoryParser } from "./Component-wise parser/serviceHistoryPars
 import { ticketParser } from "./Component-wise parser/ticketParser";
 import { WaitingPeriodParser } from "./Component-wise parser/waitingPeriodParser";
 type datatype = Record<string, any>;
-class NewParser extends BaseParser {
+class InNetworkParser extends BaseParser {
   dot(obj: datatype, path: string): any {
     return path
       .split(".")
@@ -44,7 +44,11 @@ class NewParser extends BaseParser {
     return m ? Number(m[1]) : 0;
   }
   parseTicketData() {
-    const parser: any = createParser(this.data, this.onederfulPayerId);
+    const parser: any = createParser(
+      this.data,
+      this.onederfulPayerId,
+      "IN_NETWORK"
+    );
     const patient: any = parser.parseToResultFormat();
     const ticketparser = new ticketParser(this.data);
     const ticket: ticket = ticketparser.parseTicket();
@@ -85,7 +89,7 @@ class NewParser extends BaseParser {
   }
 
   getPreventativeDeduct(category: string): number {
-    const ben = this.pickInNetworkBenefits();
+    const ben = this.pickInNetworkBenefits() ?? {};
     if (!ben) return 0;
     const n = ben?.coverages?.[category] ?? ben?.[category];
     const val =
@@ -95,12 +99,14 @@ class NewParser extends BaseParser {
         `benefits.0.coverages.${category}.deductible_applies`
       );
     if (!val) return 0;
-    // later will be addes
-    return 0;
+
+    // If deductible applies to this category, return the individual deductible amount
+    const individualDeductible = ben.individual_deductible ?? 0;
+    return individualDeductible;
   }
 
   getAmountUsed() {
-    const benefitsInNetwork = this.data.benefits[0] ?? {};
+    const benefitsInNetwork = this.pickInNetworkBenefits() ?? {};
     const result =
       benefitsInNetwork.individual_maximum -
       benefitsInNetwork.individual_maximum_remaining;
@@ -108,7 +114,7 @@ class NewParser extends BaseParser {
   }
 
   parseOrtho() {
-    const benefitsInNetwork = this.data.benefits[0] ?? {};
+    const benefitsInNetwork = this.pickInNetworkBenefits() ?? {};
     const rules = this.data.rules;
     return {
       orthosc:
@@ -121,23 +127,28 @@ class NewParser extends BaseParser {
       MonetaryAmt_lifetimeCoverage:
         benefitsInNetwork?.orthodontic_maximum || null,
       agelimit:
-        rules?.dependent_child_max_age ||
-        rules?.dependent_student_max_age ||
-        "",
+        benefitsInNetwork?.coverages?.orthodontics
+          ?.limited_orthodontic_treatment?.limitation?.age_high_value || 0,
     };
   }
   parseToResultFormat(): resultType {
-    const benefitsInNetwork = this.data.benefits[0] ?? {};
+    const benefitsInNetwork = this.pickInNetworkBenefits() ?? {};
     const ticketData = this.parseTicketData();
     const plan = this.data.plan ?? {};
     const patient = this.data.patient ?? {};
     const rules = this.data.rules ?? {};
     const ortho = this.parseOrtho() ?? {};
-    const procCodeQuestionsparser = new ProcCodeQuestionsParser(this.data);
-    const waitingParserobj = new WaitingPeriodParser(this.data);
+    const procCodeQuestionsparser = new ProcCodeQuestionsParser(
+      this.data,
+      "IN_NETWORK"
+    );
+    const waitingParserobj = new WaitingPeriodParser(this.data, "IN_NETWORK");
     const waitingData = waitingParserobj.parseWaitingPeriod();
     const procCodeQuestionsData = procCodeQuestionsparser.parse();
-    const percentageParser = new ConInsurancePercantageClass(this.data);
+    const percentageParser = new ConInsurancePercantageClass(
+      this.data,
+      "OUT_OF_NETWORK"
+    );
     const percentages = percentageParser.parse();
     const serviceHistoryParser = new ServiceHistoryParser(
       this.pickInNetworkBenefits() || {}
@@ -165,7 +176,7 @@ class NewParser extends BaseParser {
       diagnosticApplied: rules.alternative_benefits_may_apply || "",
       isWaitingPeriod: waitingParserobj.getIsWaitingPeriod() || "",
       diagnosticApplied1: "",
-      MTC: rules.missing_tooth_clause_applies === "YES" ? "YES" : "",
+      MTC: rules.missing_tooth_clause_applies || "",
 
       ortho: ortho,
 
@@ -174,7 +185,7 @@ class NewParser extends BaseParser {
         "diagnostic",
         "exams"
       ),
-      examcv: this.getCoins("diagnostic", "exams") || "",
+      examcv: this.getCoins("diagnostic", "exams") || 0,
       D0140share: "",
 
       // procCode question
@@ -182,8 +193,10 @@ class NewParser extends BaseParser {
       procCode: [{ value: 0, label: "" }],
       //patient service history
       patientHistory: patientHistorydata,
+
       subscNote: "",
       planNotes: "",
+
       submit1: true,
       submit: false,
 
@@ -240,4 +253,4 @@ class NewParser extends BaseParser {
   }
 }
 
-export default NewParser;
+export default InNetworkParser;
