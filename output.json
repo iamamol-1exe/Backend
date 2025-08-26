@@ -4,16 +4,16 @@
   "clientId": "",
   "uploadDocument": [],
   "agentName": "",
-  "GroupName": "BECHTEL CONSTRUCTION SERVICES",
-  "GroupNum": "2501245",
-  "PlanType": "PPO",
+  "GroupName": "KNOWLES CORPORATION",
+  "GroupNum": "20316-000-00005-00000",
+  "PlanType": "GROUP_POLICY",
   "networknote": "",
   "FeeSched": {
     "value": null,
     "label": ""
   },
   "MonthRenew": "",
-  "EffectiveDate": "12/24/2023",
+  "EffectiveDate": "01/01/2015",
   "shortcut": "",
   "shortcut1": "",
   "diagnosticApplied": "NO",
@@ -21,102 +21,121 @@
   "diagnosticApplied1": "",
   "MTC": "",
   "ortho": {
-    "orthosc": "",
+    "orthosc": 50,
     "orthosc1": "",
     "orthoamountused": 0,
-    "MonetaryAmt_lifetimeCoverage": null,
+    "MonetaryAmt_lifetimeCoverage": 1500,
     "agelimit": 0
   },
   "shortcutfqexam": "",
-  "frequency_exam_unit": "",
+  "frequency_exam_unit": "years",
   "examcv": 100,
   "D0140share": "",
   "procCodeQuestions": {
     "d0140": {
       "examcv": "100",
-      "frequency_unit": ""
+      "frequency": 2,
+      "frequency_unit": "years"
     },
     "d1110": {
-      "frequency_unit": "",
+      "frequency_unit": "years",
+      "frequency": 2,
       "prophcv": "100"
     },
     "d0272": {
-      "frequency_unit": "",
-      "bitewingsc": "",
+      "frequency_unit": "years",
+      "bitewingsc": "2 treatments per calendar year.",
+      "frequency": 2,
       "bitwingcv": "100"
     },
     "d0210": {
-      "frequency_unit": "months",
+      "frequency_unit": "years",
+      "frequency": 1,
       "fmxcv": "100"
     },
     "fmxpanoshared": "Yes",
     "d0330": {
-      "frequency_unit": "months",
+      "frequency_unit": "years",
+      "frequency": 1,
       "panocv": "100"
     },
     "d1206": {
-      "frequency_unit": "",
+      "frequency_unit": "years",
       "fluoridecv": "100",
       "flage": "18",
+      "frequency": 2,
       "age_limit": "18"
     },
     "d1351": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
-      "sealage": "18",
-      "age_limit": "18"
+      "frequency_unit": "lifetime",
+      "FrequencyLimitations": "1 treatment per lifetime.",
+      "frequency": 1,
+      "sealage": "15",
+      "age_limit": "15"
     },
     "d4266": {
-      "frequency_unit": "",
-      "4266freql": ""
+      "periocv": "80",
+      "frequency_unit": "years",
+      "frequency": 1,
+      "4266freql": "1 treatment every 2 years."
     },
     "d4266guide": "",
     "norestrictions_3": "No",
     "d4341": {
-      "frequency_unit": "",
-      "4341freql": ""
+      "frequency_unit": "months",
+      "frequency": 1,
+      "4341freql": "1 treatment every 24 months."
     },
     "D4341quads": "No",
     "norestrictions_0": "No",
     "d4355": {
-      "frequency_unit": "",
-      "debridefreql": ""
+      "frequency_unit": "lifetime",
+      "frequency": 1,
+      "debridefreql": "1 treatment per lifetime."
     },
     "d4381": {
-      "frequency_unit": "",
-      "4381freql": ""
+      "frequency_unit": "years",
+      "frequency": 1,
+      "4381freql": "1 treatment every 2 years."
     },
     "arestinFL": "No",
     "norestrictions_1": "No",
     "d4910": {
-      "frequency_unit": "",
-      "periocv": "100"
+      "frequency_unit": "years",
+      "4910freql": "2 treatments per calendar year.",
+      "frequency": 2,
+      "periocv": "80"
     },
     "d4910guide": "",
     "norestrictions_2": "No",
     "prophyperioshared": "No",
     "d7140": {
-      "frequency_unit": "months",
-      "7140freql": "2 visits remaining."
+      "frequency_unit": "lifetime",
+      "frequency": 1,
+      "7140freql": "1 treatment per lifetime."
     },
     "d7210": {
-      "frequency_unit": "visits",
-      "7210freql": "2 visits remaining."
+      "frequency_unit": "lifetime",
+      "frequency": 1,
+      "7210freql": "1 treatment per lifetime."
     },
     "d7240": {
-      "frequency_unit": "visits",
-      "7240freql": "2 visits remaining."
+      "frequency_unit": "lifetime",
+      "frequency": 1,
+      "7240freql": "1 treatment per lifetime."
     },
     "dentormed": "Dental",
     "d7953": {
       "frequency_unit": "",
+      "frequency": 0,
       "7953freql": ""
     },
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2391": {
-      "frequency_unit": "",
-      "compositefreql": "",
+      "frequency_unit": "months",
+      "frequency": 1,
+      "compositefreql": "1 treatment every 12 months.",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -125,7 +144,8 @@
       "downgradeApplied": "No"
     },
     "d2392": {
-      "frequency_unit": "",
+      "frequency_unit": "months",
+      "frequency": 1,
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -134,7 +154,8 @@
       "downgradeApplied": "No"
     },
     "d2393": {
-      "frequency_unit": "",
+      "frequency_unit": "months",
+      "frequency": 1,
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -143,7 +164,8 @@
       "downgradeApplied": "No"
     },
     "d2394": {
-      "frequency_unit": "",
+      "frequency_unit": "months",
+      "frequency": 1,
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -152,46 +174,72 @@
       "downgradeApplied": "No"
     },
     "d2644": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
+      "frequency_unit": "years",
+      "frequency": 1,
+      "FrequencyLimitations": "1 treatment every 5 years.",
       "isDowngrade": "No"
     },
     "sealdprepd2644": "No",
     "d2740": {
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
+      "frequency_unit": "years",
+      "frequency": 1,
+      "FrequencyLimitations": "1 treatment every 5 years.",
       "isDowngrade": "No"
     },
     "sealdprepd": "No",
     "d2950": {
-      "frequency_unit": "",
-      "Freql": ""
+      "frequency_unit": "years",
+      "frequency": 1,
+      "Freql": "1 treatment every 5 years."
     },
     "d6010": {
-      "frequency_unit": "visits",
-      "6010freql": "1 visit remaining."
+      "frequency_unit": "years",
+      "frequency": 1,
+      "6010freql": "1 treatment every 5 years."
+    },
+    "D6241": {
+      "ponticscv": "50",
+      "frequency": 1,
+      "d6241freql": "1 treatment every 5 years.",
+      "isDowngrade": "No"
     },
     "d6057": {
-      "frequency_unit": "",
-      "6057freql": ""
+      "frequency_unit": "years",
+      "frequency": 1,
+      "6057freql": "1 treatment every 5 years."
     },
     "d6065": {
-      "frequency_unit": "",
-      "6065freql": "",
+      "frequency_unit": "years",
+      "frequency": 1,
+      "6065freql": "1 treatment every 5 years.",
       "isDowngrade": "No"
     },
     "d9230": {
       "frequency_unit": "",
+      "frequency": 0,
       "9230freql": ""
     },
     "d9230guide": "",
     "norestrictions_5": "No",
     "d9944": {
       "frequency_unit": "",
+      "frequency": 0,
       "9944freql": ""
     },
     "d9944guide": "",
-    "norestrictions_6": "No"
+    "norestrictions_6": "No",
+    "d5110": {
+      "compe_dencv": "50"
+    },
+    "d5130": {
+      "immediatecv": "50"
+    },
+    "d5213": {
+      "partial_denturescv": "50"
+    },
+    "d5225": {
+      "partial_denturescv": "50"
+    }
   },
   "procCode": [
     {
@@ -199,26 +247,123 @@
       "label": ""
     }
   ],
-  "patientHistory": [],
+  "patientHistory": [
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0120",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0150",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "03/02/2015",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0210",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/03/2020",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0270",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/03/2020",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0274",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "03/02/2015",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D0330",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D1110",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D1120",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "07/21/2023",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D1206",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "07/21/2023",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D1208",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D4346",
+      "toothNumber": 0,
+      "toothRange": ""
+    },
+    {
+      "date": "01/15/2024",
+      "ToothRange": "",
+      "surf": "",
+      "procCode": "D4910",
+      "toothNumber": 0,
+      "toothRange": ""
+    }
+  ],
   "subscNote": "",
   "planNotes": "",
   "submit1": true,
   "submit": false,
-  "MonetaryAmt_IndMax": 1000,
+  "MonetaryAmt_IndMax": 2000,
   "MonetaryAmt_FamMax": 0,
-  "MonetaryAmt_IndDeduct": 50,
-  "deductibleUsed": 0,
+  "MonetaryAmt_IndDeduct": 0,
+  "deductibleUsed": -50,
   "MonetaryAmt_DiaIndDeduct": 0,
   "MonetaryAmt_XrayIndDeduct": 0,
+  "insUsed": 0,
   "MonetaryAmt_PreventativeDeductible": 0,
-  "insUsed": 285,
   "percentage_diagnostic": 100,
   "percentage_xray": 100,
   "percentage_preventative": 100,
   "percentage_restorative": 50,
   "percentage_crowns": 50,
   "percentage_endo": 80,
-  "percentage_oralSurgery": 50,
+  "percentage_oralSurgery": 80,
   "percentage_prosthodontics": 50,
   "restorativeWaitingPeriod": 0,
   "endoWaitingPeriod": 0,
@@ -260,33 +405,33 @@
       "formType": 0
     },
     "patient": {
-      "PataNum": "U4364755301",
-      "LName": "WOOD",
-      "FName": "CHARLES",
+      "PataNum": "612828987",
+      "LName": "MARIN",
+      "FName": "MARIO",
       "MiddleI": "",
-      "Preferred": "CHARLES WOOD",
+      "Preferred": "MARIO MARIN",
       "PatStatus": "ACTIVE",
       "Gender": "M",
       "Position": 0,
-      "Birthdate": "02/25/1984",
+      "Birthdate": "09/08/1974",
       "SSN": "",
-      "Address": "155 E CHANCE RD",
+      "Address": "13512 CORNELIUS STREET",
       "Address2": "",
-      "City": "LUMBERTON",
-      "State": "TX",
-      "Zip": "776577764",
+      "City": "PACOIMA",
+      "State": "CA",
+      "Zip": "913310000",
       "HmPhone": "",
       "WkPhone": "",
       "WirelessPhone": "",
-      "Guarantor": "U4364755301",
+      "Guarantor": "612828987",
       "CreditType": "",
       "Email": "",
       "Salutation": "",
       "EstBalance": 0,
-      "PriProv": "CHLIC",
+      "PriProv": "DELTA DENTAL OF ILLINOIS GROUP PLANS",
       "SecProv": "",
       "FeeSched": "",
-      "BillingType": "PPO",
+      "BillingType": "GROUP_POLICY",
       "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
@@ -295,7 +440,7 @@
       "StudentStatus": "",
       "SchoolName": "",
       "ChartNumber": "",
-      "MedicaidID": "U4364755301",
+      "MedicaidID": "612828987",
       "Bal_0_30": 0,
       "Bal_31_60": 0,
       "Bal_61_90": 0,
@@ -349,26 +494,26 @@
       "Ordinal": 0,
       "IsPending": false,
       "Relationship": "",
-      "PatID": "U4364755301",
-      "InsSubNum": "2501245",
+      "PatID": "612828987",
+      "InsSubNum": "20316-000-00005-00000",
       "OrthoAutoFeeBilledOverride": 0,
       "OrthoAutoNextClaimDate": "",
       "SecDateTEntry": "",
       "SecDateTEdit": "",
-      "PlanNum": "2501245",
-      "Subscriber": "CHARLES WOOD",
-      "DateEffective": "12/24/2023",
-      "SubscriberID": "U4364755301",
-      "GroupNum": "2501245",
-      "GroupName": "BECHTEL CONSTRUCTION SERVICES",
-      "CarrierNum": "62308",
-      "CarrierNum1": "62308",
-      "CarrierName": "CHLIC",
-      "carrierPhone": "(800) 997-1654",
-      "ElectID": "62308"
+      "PlanNum": "20316-000-00005-00000",
+      "Subscriber": "MARIO MARIN",
+      "DateEffective": "01/01/2015",
+      "SubscriberID": "612828987",
+      "GroupNum": "20316-000-00005-00000",
+      "GroupName": "KNOWLES CORPORATION",
+      "CarrierNum": "05030",
+      "CarrierNum1": "05030",
+      "CarrierName": "DELTA DENTAL OF ILLINOIS GROUP PLANS",
+      "carrierPhone": "(800) 323-1743",
+      "ElectID": "05030"
     },
-    "subscriberName": "CHARLES WOOD",
-    "subscriberDoB": "02/25/1984",
+    "subscriberName": "MARIO MARIN",
+    "subscriberDoB": "09/08/1974",
     "subscribertoRelationship": "",
     "latestTicketStatus": {
       "status": "",
@@ -377,16 +522,16 @@
     "ordinal": "",
     "subscriberPayload": {
       "subscriber": {
-        "first_name": "CHARLES",
-        "last_name": "WOOD",
-        "dob": "02/25/1984",
-        "member_id": "U4364755301"
+        "first_name": "MARIO",
+        "last_name": "MARIN",
+        "dob": "09/08/1974",
+        "member_id": "612828987"
       },
       "provider": {
         "npi": null
       },
       "payer": {
-        "id": "62308"
+        "id": "05030"
       },
       "version": "v2"
     }

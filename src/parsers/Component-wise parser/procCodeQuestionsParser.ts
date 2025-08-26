@@ -18,17 +18,20 @@ export class ProcCodeQuestionsParser {
     return {
       d0140: {
         examcv: this.getCoins("diagnostic", "exams"),
+        frequency: this.getFrequency("diagnostic", "exams") || 0,
         frequency_unit: this.getFrequencyUnit("diagnostic", "exams"), // ok
       },
 
       d1110: {
         frequency_unit: this.getFrequencyUnit("preventive", "prophy"), // ok
+        frequency: this.getFrequency("preventive", "prophy"),
         prophcv: this.getCoins("preventive", "prophy"),
       },
 
       d0272: {
         frequency_unit: this.getFrequencyUnit("diagnostic", "bitewings"),
         bitewingsc: this.getFrequencyLimitation("diagnostic", "bitewings"),
+        frequency: this.getFrequency("diagnostic", "bitewings"),
         bitwingcv: this.getCoins("diagnostic", "bitewings"),
       },
 
@@ -36,6 +39,7 @@ export class ProcCodeQuestionsParser {
         frequency_unit:
           this.getUnitQualifier("diagnostic", "fmx") ||
           this.getFrequencyUnit("diagnostic", "fmx"),
+        frequency: this.getFrequency("diagnostic", "fmx"),
         fmxcv: this.getCoins("diagnostic", "fmx"),
       },
 
@@ -45,6 +49,7 @@ export class ProcCodeQuestionsParser {
         frequency_unit:
           this.getUnitQualifier("diagnostic", "panoramic_images") ||
           this.getFrequencyUnit("diagnostic", "panoramic_images"),
+        frequency: this.getFrequency("diagnostic", "panoramic_images"),
         panocv: this.getCoins("diagnostic", "panoramic_images"),
       },
 
@@ -52,6 +57,7 @@ export class ProcCodeQuestionsParser {
         frequency_unit: this.getFrequencyUnit("preventive", "fluoride"),
         fluoridecv: this.getCoins("preventive", "fluoride"),
         flage: this.getAgeHigh("preventive", "fluoride"),
+        frequency: this.getFrequency("preventive", "fluoride"),
         age_limit: this.getAgeHigh("preventive", "fluoride"),
       },
 
@@ -61,12 +67,18 @@ export class ProcCodeQuestionsParser {
           "preventive",
           "sealants"
         ),
+        frequency: this.getFrequency("preventive", "sealants"),
         sealage: this.getAgeHigh("preventive", "sealants"),
         age_limit: this.getAgeHigh("preventive", "sealants"),
       },
 
       d4266: {
+        periocv: this.getCoins("periodontics", "guided_tissue_regeneration"),
         frequency_unit: this.getFrequencyUnit(
+          "periodontics",
+          "guided_tissue_regeneration"
+        ),
+        frequency: this.getFrequency(
           "periodontics",
           "guided_tissue_regeneration"
         ),
@@ -75,7 +87,9 @@ export class ProcCodeQuestionsParser {
           "guided_tissue_regeneration"
         ),
       },
+
       d4266guide: this.getGuidanceText("d4266"),
+
       norestrictions_3: this.getNoRestrictionsFlag(
         "periodontics",
         "guided_tissue_regeneration"
@@ -83,6 +97,10 @@ export class ProcCodeQuestionsParser {
 
       d4341: {
         frequency_unit: this.getFrequencyUnit(
+          "periodontics",
+          "scaling_and_root_planing"
+        ),
+        frequency: this.getFrequency(
           "periodontics",
           "scaling_and_root_planing"
         ),
@@ -105,6 +123,8 @@ export class ProcCodeQuestionsParser {
           "periodontics",
           "full_mouth_debridement"
         ),
+        frequency: this.getFrequency("periodontics", "full_mouth_debridement"),
+
         debridefreql: this.getFrequencyLimitation(
           "periodontics",
           "full_mouth_debridement"
@@ -116,6 +136,11 @@ export class ProcCodeQuestionsParser {
           "periodontics",
           "scaling_presence_of_inflammation"
         ),
+        frequency: this.getFrequency(
+          "periodontics",
+          "scaling_presence_of_inflammation"
+        ),
+
         "4381freql": this.getFrequencyLimitation(
           "periodontics",
           "scaling_presence_of_inflammation"
@@ -132,6 +157,11 @@ export class ProcCodeQuestionsParser {
           "periodontics",
           "periodontal_maintenance"
         ),
+        "4910freql": this.getFrequencyLimitation(
+          "periodontics",
+          "periodontal_maintenance"
+        ),
+        frequency: this.getFrequency("periodontics", "periodontal_maintenance"),
         periocv: this.getCoins("periodontics", "periodontal_maintenance"),
       },
       d4910guide: this.getGuidanceText("d4910"),
@@ -152,6 +182,10 @@ export class ProcCodeQuestionsParser {
             "oral_maxillofacial_surgery",
             "extractions_and_removals"
           ),
+        frequency: this.getFrequency(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
+        ),
         "7140freql": this.getFrequencyLimitation(
           "oral_maxillofacial_surgery",
           "extractions_and_removals"
@@ -161,45 +195,61 @@ export class ProcCodeQuestionsParser {
       d7210: {
         frequency_unit: this.getFrequencyUnit(
           "oral_maxillofacial_surgery",
-          "advanced_surgical_procedures"
+          "extractions_and_removals"
+        ),
+        frequency: this.getFrequency(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
         ),
         "7210freql": this.getFrequencyLimitation(
           "oral_maxillofacial_surgery",
-          "advanced_surgical_procedures"
+          "extractions_and_removals"
         ),
       },
 
       d7240: {
         frequency_unit: this.getFrequencyUnit(
           "oral_maxillofacial_surgery",
-          "advanced_surgical_procedures"
+          "extractions_and_removals"
         ),
+        frequency: this.getFrequency(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
+        ),
+
         "7240freql": this.getFrequencyLimitation(
           "oral_maxillofacial_surgery",
-          "advanced_surgical_procedures"
+          "extractions_and_removals"
         ),
       },
 
       dentormed: this.getDentOrMedFlag(),
-
       d7953: {
         frequency_unit: this.getFrequencyUnit(
-          "implant_services",
-          "implant_bone_graft"
+          "oral_maxillofacial_surgery",
+          "extract_bone_graft"
+        ),
+        frequency: this.getFrequency(
+          "oral_maxillofacial_surgery",
+          "extract_bone_graft"
         ),
         "7953freql": this.getFrequencyLimitation(
-          "implant_services",
-          "implant_bone_graft"
+          "oral_maxillofacial_surgery",
+          "extract_bone_graft"
         ),
       },
       d7953guide: this.getGuidanceText("d7953"),
       norestrictions_4: this.getNoRestrictionsFlag(
-        "implant_services",
-        "implant_bone_graft"
+        "oral_maxillofacial_surgery",
+        "extract_bone_graft"
       ),
 
       d2391: {
         frequency_unit: this.getFrequencyUnit(
+          "restorative",
+          "anterior_composite_fillings"
+        ),
+        frequency: this.getFrequency(
           "restorative",
           "anterior_composite_fillings"
         ),
@@ -226,6 +276,10 @@ export class ProcCodeQuestionsParser {
           "restorative",
           "posterior_composite_fillings"
         ),
+        frequency: this.getFrequency(
+          "restorative",
+          "posterior_composite_fillings"
+        ),
         isDowngrade: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
@@ -242,6 +296,10 @@ export class ProcCodeQuestionsParser {
 
       d2393: {
         frequency_unit: this.getFrequencyUnit(
+          "restorative",
+          "posterior_composite_fillings"
+        ),
+        frequency: this.getFrequency(
           "restorative",
           "posterior_composite_fillings"
         ),
@@ -264,6 +322,10 @@ export class ProcCodeQuestionsParser {
           "restorative",
           "posterior_composite_fillings"
         ),
+        frequency: this.getFrequency(
+          "restorative",
+          "posterior_composite_fillings"
+        ),
         isDowngrade: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
@@ -283,6 +345,7 @@ export class ProcCodeQuestionsParser {
           "restorative",
           "composite_onlays"
         ),
+        frequency: this.getFrequency("restorative", "composite_onlays"),
         FrequencyLimitations: this.getFrequencyLimitation(
           "restorative",
           "composite_onlays"
@@ -296,6 +359,7 @@ export class ProcCodeQuestionsParser {
           "restorative",
           "porcelain_crowns"
         ),
+        frequency: this.getFrequency("restorative", "porcelain_crowns"),
         FrequencyLimitations: this.getFrequencyLimitation(
           "restorative",
           "porcelain_crowns"
@@ -306,6 +370,7 @@ export class ProcCodeQuestionsParser {
 
       d2950: {
         frequency_unit: this.getFrequencyUnit("restorative", "core_buildup"),
+        frequency: this.getFrequency("restorative", "core_buildup"),
         Freql: this.getFrequencyLimitation("restorative", "core_buildup"),
       },
 
@@ -315,25 +380,55 @@ export class ProcCodeQuestionsParser {
           "implant_services",
           "surgical_implant_placement"
         ),
+        frequency: this.getFrequency(
+          "implant_services",
+          "surgical_implant_placement"
+        ),
         "6010freql": this.getFrequencyLimitation(
           "implant_services",
           "surgical_implant_placement"
+        ),
+      },
+      D6241: {
+        ponticscv: this.getCoins(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal"
+        ),
+        frequency: this.getFrequency(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal"
+        ),
+        d6241freql: this.getFrequencyRule(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal"
+        ),
+        isDowngrade: this.getDowngradeFlag(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal"
         ),
       },
 
       d6057: {
         frequency_unit: this.getFrequencyUnit(
           "implant_services",
-          "implant_abutments_custom"
+          "implant_crowns_restorations"
+        ),
+        frequency: this.getFrequency(
+          "implant_services",
+          "implant_crowns_restorations"
         ),
         "6057freql": this.getFrequencyLimitation(
           "implant_services",
-          "implant_abutments_custom"
+          "implant_crowns_restorations"
         ),
       },
 
       d6065: {
         frequency_unit: this.getFrequencyUnit(
+          "implant_services",
+          "implant_supported_crowns"
+        ),
+        frequency: this.getFrequency(
           "implant_services",
           "implant_supported_crowns"
         ),
@@ -349,6 +444,7 @@ export class ProcCodeQuestionsParser {
 
       d9230: {
         frequency_unit: this.getFrequencyUnit("adjunctive_services", "nitrous"),
+        frequency: this.getFrequency("adjunctive_services", "nitrous"),
         "9230freql": this.getFrequencyLimitation(
           "adjunctive_services",
           "nitrous"
@@ -365,6 +461,10 @@ export class ProcCodeQuestionsParser {
           "adjunctive_services",
           "occlusal_guard_adjustment_repair"
         ),
+        frequency: this.getFrequency(
+          "adjunctive_services",
+          "occlusal_guard_adjustment_repair"
+        ),
         "9944freql": this.getFrequencyLimitation(
           "adjunctive_services",
           "occlusal_guard_adjustment_repair"
@@ -375,6 +475,30 @@ export class ProcCodeQuestionsParser {
         "adjunctive_services",
         "occlusal_guard_adjustment_repair"
       ),
+      d5110: {
+        compe_dencv: this.getCoins(
+          "prosthodontics_removable",
+          "complete_dentures"
+        ),
+      },
+      d5130: {
+        immediatecv: this.getCoins(
+          "prosthodontics_removable",
+          "immediate_dentures"
+        ),
+      },
+      d5213: {
+        partial_denturescv: this.getCoins(
+          "prosthodontics_removable",
+          "partial_dentures"
+        ),
+      },
+      d5225: {
+        partial_denturescv: this.getCoins(
+          "prosthodontics_removable",
+          "partial_dentures"
+        ),
+      },
     };
   }
 
@@ -383,6 +507,22 @@ export class ProcCodeQuestionsParser {
   private buildEmptyObject(): datatype {
     return {};
   }
+
+  private getFrequency(category: string, node: string): number {
+    const ben =
+      this.networkIdentifier === 0
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
+    if (!ben) return 0;
+    const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
+    const val =
+      n?.limitation?.frequency_count ??
+      n?.limitation?.frequency_component?.quantity;
+    const num = Number(val);
+    if (Number.isFinite(num)) return num;
+    else return 0;
+  }
+
   pickOutOfNetWork(): datatype | null {
     const benefits: datatype[] = this.data?.benefits ?? [];
     if (!Array.isArray(benefits) || benefits.length === 0) return null;
@@ -418,6 +558,7 @@ export class ProcCodeQuestionsParser {
     if (lower.includes("year")) return "years";
     if (lower.includes("day")) return "days";
     if (lower.includes("week")) return "weeks";
+    if (lower.includes("lifetime")) return "lifetime";
     return "";
   }
 

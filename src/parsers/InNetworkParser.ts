@@ -147,7 +147,7 @@ class InNetworkParser extends BaseParser {
     const procCodeQuestionsData = procCodeQuestionsparser.parse();
     const percentageParser = new ConInsurancePercantageClass(
       this.data,
-      "OUT_OF_NETWORK"
+      "IN_NETWORK"
     );
     const percentages = percentageParser.parse();
     const serviceHistoryParser = new ServiceHistoryParser(

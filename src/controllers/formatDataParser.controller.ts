@@ -58,14 +58,16 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
         Authorization: `Bearer ${token}`,
       },
     });
+    const data = response.data;
 
-    const data = response?.data;
     fs.writeFileSync("data.json", JSON.stringify(data, null, 2), "utf8");
     console.log("Data successfully stored in output.json");
 
     if (networkQualifier == "OUT_OF_NETWORK") {
+      console.log("network indentifier", networkQualifier);
       const parser = new OutOfNetworkPraser(data, "cigna");
       const parseredData = parser.parseToResultFormat();
+
       fs.writeFileSync(
         "output.json",
         JSON.stringify(parseredData, null, 2),
@@ -74,8 +76,15 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
       console.log("Data successfully stored in output.json");
       return HttpResponse.success(res, parseredData, "Successfull");
     } else if (networkQualifier === "IN_NETWORK") {
+      console.log("network indentifier", networkQualifier);
       const parser = new InNetworkParser(data, "cigna");
       const parseredData = parser.parseToResultFormat();
+
+      fs.writeFileSync(
+        "output.json",
+        JSON.stringify(parseredData, null, 2),
+        "utf8"
+      );
       return HttpResponse.success(res, parseredData, "Successfull");
     }
   } catch (error) {
