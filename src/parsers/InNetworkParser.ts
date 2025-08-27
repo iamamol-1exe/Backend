@@ -163,7 +163,7 @@ class InNetworkParser extends BaseParser {
       agentName: "",
       GroupName: plan.group_name || "",
       GroupNum: plan.group_number || "",
-      PlanType: plan.plan_type || "",
+      PlanType: "IN_NETWORK",
       networknote: "",
       FeeSched: {
         value: null,

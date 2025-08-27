@@ -62,6 +62,7 @@ export class ProcCodeQuestionsParser {
       },
 
       d1351: {
+        sealcv: this.getCoins("preventive", "sealants"),
         frequency_unit: this.getFrequencyUnit("preventive", "sealants"),
         FrequencyLimitations: this.getFrequencyLimitation(
           "preventive",
@@ -96,6 +97,10 @@ export class ProcCodeQuestionsParser {
       ),
 
       d4341: {
+        scaling_and_root_planingcv: this.getCoins(
+          "periodontics",
+          "scaling_and_root_planing"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "periodontics",
           "scaling_and_root_planing"
@@ -119,6 +124,10 @@ export class ProcCodeQuestionsParser {
       ),
 
       d4355: {
+        full_mouth_debridementcv: this.getCoins(
+          "periodontics",
+          "full_mouth_debridement"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "periodontics",
           "full_mouth_debridement"
@@ -137,6 +146,10 @@ export class ProcCodeQuestionsParser {
           "scaling_presence_of_inflammation"
         ),
         frequency: this.getFrequency(
+          "periodontics",
+          "scaling_presence_of_inflammation"
+        ),
+        scaling_presence_of_inflammationcv: this.getCoins(
           "periodontics",
           "scaling_presence_of_inflammation"
         ),
@@ -173,6 +186,10 @@ export class ProcCodeQuestionsParser {
       prophyperioshared: this.getProphyPerioSharedFlag(),
 
       d7140: {
+        extractions_and_removalscv: this.getCoins(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
+        ),
         frequency_unit:
           this.getUnitQualifier(
             "oral_maxillofacial_surgery",
@@ -193,6 +210,10 @@ export class ProcCodeQuestionsParser {
       },
 
       d7210: {
+        extractions_and_removalscv: this.getCoins(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "oral_maxillofacial_surgery",
           "extractions_and_removals"
@@ -208,6 +229,10 @@ export class ProcCodeQuestionsParser {
       },
 
       d7240: {
+        extractions_and_removalscv: this.getCoins(
+          "oral_maxillofacial_surgery",
+          "extractions_and_removals"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "oral_maxillofacial_surgery",
           "extractions_and_removals"
@@ -225,6 +250,10 @@ export class ProcCodeQuestionsParser {
 
       dentormed: this.getDentOrMedFlag(),
       d7953: {
+        extract_bone_graftcv: this.getCoins(
+          "oral_maxillofacial_surgery",
+          "extract_bone_graft"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "oral_maxillofacial_surgery",
           "extract_bone_graft"
@@ -245,6 +274,10 @@ export class ProcCodeQuestionsParser {
       ),
 
       d2391: {
+        anterior_composite_fillingscv: this.getCoins(
+          "restorative",
+          "anterior_composite_fillings"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "anterior_composite_fillings"
@@ -272,6 +305,11 @@ export class ProcCodeQuestionsParser {
       },
 
       d2392: {
+        posterior_composite_fillingscv: this.getCoins(
+          "restorative",
+          "posterior_composite_fillings"
+        ),
+
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "posterior_composite_fillings"
@@ -295,6 +333,11 @@ export class ProcCodeQuestionsParser {
       },
 
       d2393: {
+        anterior_composite_fillingscv: this.getCoins(
+          "restorative",
+          "anterior_composite_fillings"
+        ),
+
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "posterior_composite_fillings"
@@ -318,6 +361,11 @@ export class ProcCodeQuestionsParser {
       },
 
       d2394: {
+        posterior_composite_fillingscv: this.getCoins(
+          "restorative",
+          "posterior_composite_fillings"
+        ),
+
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "posterior_composite_fillings"
@@ -341,6 +389,7 @@ export class ProcCodeQuestionsParser {
       },
 
       d2644: {
+        composite_onlayscv: this.getCoins("restorative", "composite_onlays"),
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "composite_onlays"
@@ -355,6 +404,7 @@ export class ProcCodeQuestionsParser {
       sealdprepd2644: this.getSealDPrepFlag("d2644"),
 
       d2740: {
+        porcelain_crownscv: this.getCoins("restorative", "porcelain_crowns"),
         frequency_unit: this.getFrequencyUnit(
           "restorative",
           "porcelain_crowns"
@@ -369,6 +419,7 @@ export class ProcCodeQuestionsParser {
       sealdprepd: this.getSealDPrepFlag("d2740"),
 
       d2950: {
+        core_buildupcv: this.getCoins("restorative", "core_buildup"),
         frequency_unit: this.getFrequencyUnit("restorative", "core_buildup"),
         frequency: this.getFrequency("restorative", "core_buildup"),
         Freql: this.getFrequencyLimitation("restorative", "core_buildup"),
@@ -376,6 +427,10 @@ export class ProcCodeQuestionsParser {
 
       // Implants-related
       d6010: {
+        surgical_implant_placementcv: this.getCoins(
+          "implant_services",
+          "surgical_implant_placement"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "implant_services",
           "surgical_implant_placement"
@@ -409,6 +464,10 @@ export class ProcCodeQuestionsParser {
       },
 
       d6057: {
+        implant_crowns_restorationscv: this.getCoins(
+          "implant_services",
+          "implant_crowns_restorations"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "implant_services",
           "implant_crowns_restorations"
@@ -421,9 +480,13 @@ export class ProcCodeQuestionsParser {
           "implant_services",
           "implant_crowns_restorations"
         ),
-      },
+      }, //
 
       d6065: {
+        implant_supported_crownscv: this.getCoins(
+          "implant_services",
+          "implant_supported_crowns"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "implant_services",
           "implant_supported_crowns"
@@ -443,6 +506,7 @@ export class ProcCodeQuestionsParser {
       },
 
       d9230: {
+        nitrouscv: this.getCoins("adjunctive_services", "nitrous"),
         frequency_unit: this.getFrequencyUnit("adjunctive_services", "nitrous"),
         frequency: this.getFrequency("adjunctive_services", "nitrous"),
         "9230freql": this.getFrequencyLimitation(
@@ -457,6 +521,10 @@ export class ProcCodeQuestionsParser {
       ),
 
       d9944: {
+        occlusal_guard_adjustment_repaircv: this.getCoins(
+          "adjunctive_services",
+          "occlusal_guard_adjustment_repair"
+        ),
         frequency_unit: this.getFrequencyUnit(
           "adjunctive_services",
           "occlusal_guard_adjustment_repair"

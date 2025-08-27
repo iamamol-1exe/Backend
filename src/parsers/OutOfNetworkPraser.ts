@@ -163,7 +163,7 @@ class OutOfNetworkPraser extends BaseParser {
       agentName: "",
       GroupName: plan.group_name || "",
       GroupNum: plan.group_number || "",
-      PlanType: plan.plan_type || "",
+      PlanType: "OUT_OF_NETWORK",
       networknote: "",
       FeeSched: {
         value: null,
