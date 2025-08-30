@@ -24,6 +24,7 @@ export type resultType = {
   diagnosticApplied1: string;
   MTC: string;
   ortho: any;
+  missingtoothclause: string;
   frequency_exam_unit: string;
   shortcutfqexam: string;
   examcv: any;
@@ -42,14 +43,16 @@ export type resultType = {
   MonetaryAmt_XrayIndDeduct: number;
   MonetaryAmt_IndDeduct: number;
   MonetaryAmt_PreventativeDeductible: number;
-  percentage_diagnostic: number;
-  percentage_xray: number;
-  percentage_preventative: number;
-  percentage_restorative: number;
-  percentage_endo: number;
-  percentage_oralSurgery: number;
-  percentage_crowns: number;
-  percentage_prosthodontics: number;
+
+  percentage_diagnostic: number | string;
+  percentage_perio: number | string;
+  percentage_xray: number | string;
+  percentage_preventative: number | string;
+  percentage_restorative: number | string;
+  percentage_endo: number | string;
+  percentage_oralSurgery: number | string;
+  percentage_crowns: number | string;
+  percentage_prosthodontics: number | string;
 
   restorativeWaitingPeriod: number;
   endoWaitingPeriod: number;

@@ -82,9 +82,8 @@ class InNetworkParser extends BaseParser {
     const benefitsInNetwork = this.data.benefits[0] ?? {};
     const result =
       benefitsInNetwork.individual_deductible -
-      benefitsInNetwork.individual_deductible_remaining +
-      benefitsInNetwork.family_deductible -
-      benefitsInNetwork.family_deductible_remaining;
+      benefitsInNetwork.individual_deductible_remaining;
+
     return result;
   }
 
@@ -128,7 +127,7 @@ class InNetworkParser extends BaseParser {
         benefitsInNetwork?.orthodontic_maximum || null,
       agelimit:
         benefitsInNetwork?.coverages?.orthodontics
-          ?.limited_orthodontic_treatment?.limitation?.age_high_value || 0,
+          ?.limited_orthodontic_treatment?.limitation?.age_high_value || "",
     };
   }
   parseToResultFormat(): resultType {
@@ -170,13 +169,15 @@ class InNetworkParser extends BaseParser {
         label: "",
       },
       MonthRenew: "",
-      EffectiveDate: patient.coverage.effective_date || "00/00/0000",
+      EffectiveDate: patient.coverages.effective_date || "00/00/0000",
       shortcut: "",
       shortcut1: "",
-      diagnosticApplied: rules.alternative_benefits_may_apply || "",
+      diagnosticApplied:
+        benefitsInNetwork.coverages.diagnostic.deductible_applies || "",
       isWaitingPeriod: waitingParserobj.getIsWaitingPeriod() || "",
       diagnosticApplied1: "",
       MTC: rules.missing_tooth_clause_applies || "",
+      missingtoothclause: rules.missing_tooth_clause_applies || "",
 
       ortho: ortho,
 
@@ -217,6 +218,7 @@ class InNetworkParser extends BaseParser {
       percentage_preventative: percentages.percentage_preventative,
       percentage_restorative: percentages.percentage_restorative,
       percentage_crowns: percentages.percentage_crowns,
+      percentage_perio: percentages.percentage_perio,
       percentage_endo: percentages.percentage_endo,
       percentage_oralSurgery: percentages.percentage_oralSurgery,
       percentage_prosthodontics:

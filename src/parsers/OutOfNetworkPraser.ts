@@ -15,6 +15,12 @@ class OutOfNetworkPraser extends BaseParser {
       .split(".")
       .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
   }
+  getDeductibleApplies(category: string): boolean {
+    const benefits = this.pickOutOfNetWork();
+    const isApplied = benefits?.coverages?.[category]?.deductible_applies;
+
+    return isApplied;
+  }
 
   pickOutOfNetWork(): datatype | null {
     const benefits: datatype[] = this.data?.benefits ?? [];
@@ -22,18 +28,13 @@ class OutOfNetworkPraser extends BaseParser {
     const inn = benefits.find(
       (b) => String(b?.network ?? "").toUpperCase() === "OUT_OF_NETWORK"
     );
-    return inn ?? benefits[1] ?? null;
+    return inn ?? null;
   }
   getCoins(category: string, node: string) {
     const ben = this.pickOutOfNetWork();
     if (!ben) return 0;
-    const n = ben?.coverages?.[category]?.node ?? ben?.[category]?.[node];
-    const val =
-      n?.coinsurance_percentage ??
-      this.dot(
-        this.data,
-        `benefits.1.coverages.${category}.${node}.coinsurance_percentage`
-      );
+    const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
+    const val = n?.coinsurance_percentage;
     if (val === null || val === undefined) return 0;
     const num = Number(val);
     if (Number.isFinite(num)) return num;
@@ -46,9 +47,7 @@ class OutOfNetworkPraser extends BaseParser {
     const benefitsOutOfNetwork = this.pickOutOfNetWork() ?? {};
     const result =
       benefitsOutOfNetwork.individual_deductible -
-      benefitsOutOfNetwork.individual_deductible_remaining +
-      benefitsOutOfNetwork.family_deductible -
-      benefitsOutOfNetwork.family_deductible_remaining;
+      benefitsOutOfNetwork.individual_deductible_remaining;
 
     return result;
   }
@@ -126,7 +125,7 @@ class OutOfNetworkPraser extends BaseParser {
         benefitsOutOfNetwork?.orthodontic_maximum || null,
       agelimit:
         benefitsOutOfNetwork?.coverages?.orthodontics
-          ?.limited_orthodontic_treatment?.limitation?.age_high_value || 0,
+          ?.limited_orthodontic_treatment?.limitation?.age_high_value || "",
     };
   }
   parseToResultFormat() {
@@ -174,10 +173,11 @@ class OutOfNetworkPraser extends BaseParser {
 
       shortcut: "",
       shortcut1: "",
-      diagnosticApplied: rules.alternative_benefits_may_apply || "",
+      diagnosticApplied: this.getDeductibleApplies("diagnostic") || "",
       isWaitingPeriod: waitingParserobj.getIsWaitingPeriod() || "",
       diagnosticApplied1: "",
       MTC: rules.missing_tooth_clause_applies || "",
+      missingtoothclause: rules.missing_tooth_clause_applies || "",
 
       ortho: this.parseOrtho(),
       shortcutfqexam: "",
@@ -216,6 +216,7 @@ class OutOfNetworkPraser extends BaseParser {
       percentage_preventative: percentages.percentage_preventative,
       percentage_restorative: percentages.percentage_restorative,
       percentage_crowns: percentages.percentage_crowns,
+      percentage_perio: percentages.percentage_perio,
       percentage_endo: percentages.percentage_endo,
       percentage_oralSurgery: percentages.percentage_oralSurgery,
       percentage_prosthodontics:

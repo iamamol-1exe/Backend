@@ -6,7 +6,7 @@
   "agentName": "",
   "GroupName": "Employees Retirement System of Texas",
   "GroupNum": "20010-00601",
-  "PlanType": "plan.plan_type",
+  "PlanType": "OUT_OF_NETWORK",
   "networknote": "",
   "FeeSched": {
     "value": null,
@@ -16,135 +16,176 @@
   "EffectiveDate": "09/01/2019",
   "shortcut": "",
   "shortcut1": "",
-  "diagnosticApplied": "NO",
+  "diagnosticApplied": true,
   "isWaitingPeriod": "NO",
   "diagnosticApplied1": "",
   "MTC": "",
+  "missingtoothclause": "",
   "ortho": {
     "orthosc": 50,
     "orthosc1": "",
     "orthoamountused": 0,
     "MonetaryAmt_lifetimeCoverage": 2000,
-    "agelimit": 0
+    "agelimit": ""
   },
   "shortcutfqexam": "",
-  "frequency_exam_unit": "visits",
-  "examcv": 100,
+  "frequency_exam_unit": "years",
+  "examcv": 90,
   "D0140share": "",
   "procCodeQuestions": {
     "d0140": {
-      "examcv": "90",
+      "percentage": "90",
       "frequency": 2,
-      "frequency_unit": "visits"
+      "frequency_unit": "years"
+    },
+    "d0120": {
+      "percentage": "90",
+      "frequency": 2,
+      "frequency_unit": "years"
     },
     "d1110": {
-      "frequency_unit": "visits",
+      "frequency_unit": "years",
       "frequency": 2,
-      "prophcv": "90"
+      "percentage": "90"
     },
     "d0272": {
-      "frequency_unit": "visits",
+      "frequency_unit": "years",
       "bitewingsc": "2 visits every year.",
       "frequency": 2,
-      "bitwingcv": "90"
+      "percentage": "90"
+    },
+    "d0220": {
+      "frequency_unit": "days",
+      "frequency": 1,
+      "percentage": "90"
     },
     "d0210": {
       "frequency_unit": "months",
-      "frequency": 1,
-      "fmxcv": "90"
+      "frequency": "36",
+      "0210freql": "",
+      "percentage": "90"
+    },
+    "d3120": {
+      "percentage": "40",
+      "frequency_unit": "months",
+      "frequency": "24"
     },
     "fmxpanoshared": "Yes",
+    "d3331": {
+      "percentage": "40",
+      "frequency_unit": "visits"
+    },
+    "d4249": {
+      "percentage": "40",
+      "frequency_unit": "months",
+      "frequency": "36"
+    },
+    "d4267": {
+      "percentage": "40",
+      "frequency_unit": "months",
+      "frequency": "36"
+    },
+    "d4346": {
+      "percentage": "90",
+      "frequency_unit": "years",
+      "frequency": 2
+    },
+    "d4921": {
+      "percentage": "",
+      "frequency_unit": "",
+      "frequency": ""
+    },
+    "d7922": {
+      "percentage": "40",
+      "frequency_unit": "visits"
+    },
     "d0330": {
       "frequency_unit": "months",
-      "frequency": 1,
-      "panocv": "90"
+      "frequency": "36",
+      "percentage": "90"
     },
     "d1206": {
-      "frequency_unit": "visits",
-      "fluoridecv": "90",
-      "flage": "18",
+      "frequency_unit": "years",
+      "percentage": "90",
+      "flage": "",
       "frequency": 2,
       "age_limit": "18"
     },
     "d1351": {
-      "sealcv": "90",
+      "percentage": "90",
       "frequency_unit": "months",
       "FrequencyLimitations": "1 visit every 24 months.",
-      "frequency": 1,
+      "frequency": "24",
       "sealage": "8",
       "age_limit": "8"
     },
     "d4266": {
-      "periocv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "4266freql": "1 visit every 36 months."
+      "frequency": "36",
+      "4266freql": ""
     },
     "d4266guide": "",
     "norestrictions_3": "No",
     "d4341": {
-      "scaling_and_root_planingcv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "4341freql": "1 visit every 24 months."
+      "frequency": "24",
+      "4341freql": ""
     },
     "D4341quads": "No",
     "norestrictions_0": "No",
     "d4355": {
-      "full_mouth_debridementcv": "40",
+      "percentage": "40",
       "frequency_unit": "visits",
-      "frequency": 1,
-      "debridefreql": "1 visit per lifetime."
+      "debridefreql": ""
     },
     "d4381": {
-      "frequency_unit": "visits",
+      "frequency_unit": "years",
       "frequency": 2,
-      "scaling_presence_of_inflammationcv": "90",
-      "4381freql": "2 visits every year."
+      "percentage": "90",
+      "4381freql": ""
     },
     "arestinFL": "No",
     "norestrictions_1": "No",
     "d4910": {
       "frequency_unit": "months",
-      "4910freql": "1 visit every 36 months.",
-      "frequency": 1,
-      "periocv": "40"
+      "4910freql": "",
+      "frequency": "36",
+      "percentage": "40"
     },
     "d4910guide": "",
     "norestrictions_2": "No",
     "prophyperioshared": "No",
     "d7140": {
-      "extractions_and_removalscv": "40",
+      "percentage": "40",
       "frequency_unit": "visits",
-      "frequency": 1,
       "7140freql": "1 visit per lifetime."
     },
     "d7210": {
-      "extractions_and_removalscv": "40",
+      "percentage": "40",
       "frequency_unit": "visits",
-      "frequency": 1,
-      "7210freql": "1 visit per lifetime."
+      "frequency": "",
+      "7210freql": ""
     },
     "d7240": {
-      "extractions_and_removalscv": "40",
+      "percentage": "40",
       "frequency_unit": "visits",
-      "frequency": 1,
-      "7240freql": "1 visit per lifetime."
+      "7240freql": ""
     },
-    "dentormed": "Dental",
+    "dentmed7210": "Dental",
     "d7953": {
-      "extract_bone_graftcv": "40",
+      "percentage": "40",
       "frequency_unit": "visits",
-      "frequency": 1,
-      "7953freql": "1 visit per lifetime."
+      "7953freql": ""
     },
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2391": {
-      "anterior_composite_fillingscv": "70",
+      "percentage": "70",
       "frequency_unit": "months",
-      "frequency": 1,
-      "compositefreql": "1 visit every 24 months.",
+      "frequency": "24",
+      "compositefreql": "",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -153,9 +194,9 @@
       "downgradeApplied": "No"
     },
     "d2392": {
-      "posterior_composite_fillingscv": "70",
+      "percentage": "70",
       "frequency_unit": "months",
-      "frequency": 1,
+      "frequency": "24",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -164,9 +205,9 @@
       "downgradeApplied": "No"
     },
     "d2393": {
-      "anterior_composite_fillingscv": "70",
+      "percentage": "70",
       "frequency_unit": "months",
-      "frequency": 1,
+      "frequency": "24",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -175,9 +216,9 @@
       "downgradeApplied": "No"
     },
     "d2394": {
-      "posterior_composite_fillingscv": "70",
+      "percentage": "70",
       "frequency_unit": "months",
-      "frequency": 1,
+      "frequency": "24",
       "isDowngrade": "No",
       "downgrade_code": {
         "value": "",
@@ -186,79 +227,81 @@
       "downgradeApplied": "No"
     },
     "d2644": {
-      "composite_onlayscv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
+      "frequency": "60",
       "FrequencyLimitations": "1 visit every 60 months.",
       "isDowngrade": "No"
     },
     "sealdprepd2644": "No",
     "d2740": {
-      "porcelain_crownscv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
+      "frequency": "60",
       "FrequencyLimitations": "1 visit every 60 months.",
       "isDowngrade": "No"
     },
     "sealdprepd": "No",
     "d2950": {
-      "core_buildupcv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "Freql": "1 visit every 60 months."
+      "frequency": "60",
+      "Freql": ""
     },
     "d6010": {
-      "surgical_implant_placementcv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "6010freql": "1 visit every 60 months."
+      "frequency": "60",
+      "6010freql": ""
     },
     "D6241": {
-      "ponticscv": "40",
-      "frequency": 1,
-      "d6241freql": "1 visit every 60 months.",
+      "percentage": "40",
+      "frequency": "60",
+      "d6241freql": "",
       "isDowngrade": "No"
     },
     "d6057": {
-      "implant_crowns_restorationscv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "6057freql": "1 visit every 60 months."
+      "frequency": "60",
+      "6057freql": ""
     },
     "d6065": {
-      "implant_supported_crownscv": "40",
+      "percentage": "40",
       "frequency_unit": "months",
-      "frequency": 1,
-      "6065freql": "1 visit every 60 months.",
+      "frequency": "60",
+      "6065freql": "",
       "isDowngrade": "No"
     },
     "d9230": {
-      "nitrouscv": "",
+      "percentage": "",
       "frequency_unit": "",
-      "frequency": 0,
       "9230freql": ""
     },
     "d9230guide": "",
     "norestrictions_5": "No",
     "d9944": {
-      "occlusal_guard_adjustment_repaircv": "",
+      "percentage": "",
       "frequency_unit": "",
-      "frequency": 0,
       "9944freql": ""
     },
     "d9944guide": "",
     "norestrictions_6": "No",
     "d5110": {
-      "compe_dencv": "40"
+      "percentage": "40"
     },
     "d5130": {
-      "immediatecv": "40"
+      "percentage": "40"
     },
     "d5213": {
-      "partial_denturescv": "40"
+      "percentage": "40"
     },
     "d5225": {
-      "partial_denturescv": "40"
+      "percentage": "40"
+    },
+    "d9910": {
+      "percentage": "",
+      "frequenct_unit": ""
     }
   },
   "procCode": [
@@ -292,7 +335,7 @@
   "MonetaryAmt_IndMax": 2000,
   "MonetaryAmt_FamMax": 0,
   "MonetaryAmt_IndDeduct": 50,
-  "deductibleUsed": 100,
+  "deductibleUsed": 0,
   "MonetaryAmt_DiaIndDeduct": 50,
   "MonetaryAmt_XrayIndDeduct": 50,
   "MonetaryAmt_PreventativeDeductible": 50,
@@ -302,6 +345,7 @@
   "percentage_preventative": 90,
   "percentage_restorative": 40,
   "percentage_crowns": 40,
+  "percentage_perio": 40,
   "percentage_endo": 40,
   "percentage_oralSurgery": 40,
   "percentage_prosthodontics": 40,
@@ -367,7 +411,7 @@
       "CreditType": "",
       "Email": "",
       "Salutation": "",
-      "EstBalance": 0,
+      "EstBalance": 2000,
       "PriProv": "Delta Dental Ins. Co. - Georgia",
       "SecProv": "",
       "FeeSched": "",

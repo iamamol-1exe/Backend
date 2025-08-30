@@ -65,7 +65,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
 
     if (networkQualifier == "OUT_OF_NETWORK") {
       console.log("network indentifier", networkQualifier);
-      const parser = new OutOfNetworkPraser(data, "cigna");
+      const parser = new OutOfNetworkPraser(data, onederfulPayerId);
       const parseredData = parser.parseToResultFormat();
 
       fs.writeFileSync(
@@ -77,7 +77,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
       return HttpResponse.success(res, parseredData, "Successfull");
     } else if (networkQualifier === "IN_NETWORK") {
       console.log("network indentifier", networkQualifier);
-      const parser = new InNetworkParser(data, "cigna");
+      const parser = new InNetworkParser(data, onederfulPayerId);
       const parseredData = parser.parseToResultFormat();
 
       fs.writeFileSync(
