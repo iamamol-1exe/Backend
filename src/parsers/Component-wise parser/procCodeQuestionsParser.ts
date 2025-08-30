@@ -266,10 +266,7 @@ export class ProcCodeQuestionsParser {
           "oral_maxillofacial_surgery",
           "extractions_and_removals"
         ),
-        "7140freql": this.getFrequencyLimitation(
-          "oral_maxillofacial_surgery",
-          "extractions_and_removals"
-        ),
+        "7140freql": "",
       },
 
       d7210: {
@@ -632,12 +629,12 @@ export class ProcCodeQuestionsParser {
     const val =
       n?.limitation?.frequency_count ??
       n?.limitation?.frequency_component?.quantity;
-    const time_period_value =
-      n?.limitation?.frequency_component?.time_period_value;
+    const time_period_qualifier =
+      n?.limitation?.frequency_component?.time_period_qualifier;
 
-    if (time_period_value === "lifetime") return val;
+    console.log("time_period", time_period_qualifier);
 
-    return time_period_value === "1" ? val : time_period_value;
+    return time_period_qualifier === "1" ? val : time_period_qualifier;
     // const num = Number(val);
     // if (Number.isFinite(num)) return num;
     // else return 0;
