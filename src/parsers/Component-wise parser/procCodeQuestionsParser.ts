@@ -209,22 +209,6 @@ export class ProcCodeQuestionsParser {
         debridefreql: "",
       },
 
-      d4381: {
-        frequency_unit: this.getFrequencyUnit(
-          "periodontics",
-          "scaling_presence_of_inflammation"
-        ),
-        frequency: this.getFrequency(
-          "periodontics",
-          "scaling_presence_of_inflammation"
-        ),
-        percentage: this.getCoins(
-          "periodontics",
-          "scaling_presence_of_inflammation"
-        ),
-
-        "4381freql": "",
-      },
       arestinFL: this.getArestinFlag(),
       norestrictions_1: this.getNoRestrictionsFlag(
         "periodontics",
@@ -347,9 +331,10 @@ export class ProcCodeQuestionsParser {
         ),
         downgrade_code: this.getDowngradeCode(
           "restorative",
-          "posterior_composite_fillings"
+          "posterior_composite_fillings",
+          "d2391"
         ),
-        downgradeApplied: this.getDowngradeApplied(
+        downgradeApplied: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
         ),
@@ -375,9 +360,10 @@ export class ProcCodeQuestionsParser {
         ),
         downgrade_code: this.getDowngradeCode(
           "restorative",
-          "posterior_composite_fillings"
+          "posterior_composite_fillings",
+          "d2392"
         ),
-        downgradeApplied: this.getDowngradeApplied(
+        downgradeApplied: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
         ),
@@ -400,9 +386,10 @@ export class ProcCodeQuestionsParser {
         ),
         downgrade_code: this.getDowngradeCode(
           "restorative",
-          "posterior_composite_fillings"
+          "posterior_composite_fillings",
+          "d2393"
         ),
-        downgradeApplied: this.getDowngradeApplied(
+        downgradeApplied: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
         ),
@@ -428,9 +415,10 @@ export class ProcCodeQuestionsParser {
         ),
         downgrade_code: this.getDowngradeCode(
           "restorative",
-          "posterior_composite_fillings"
+          "posterior_composite_fillings",
+          "d2394"
         ),
-        downgradeApplied: this.getDowngradeApplied(
+        downgradeApplied: this.getDowngradeFlag(
           "restorative",
           "posterior_composite_fillings"
         ),
@@ -448,6 +436,11 @@ export class ProcCodeQuestionsParser {
           "composite_onlays"
         ),
         isDowngrade: this.getDowngradeFlag("restorative", "composite_onlays"),
+        downgrade_code: this.getDowngradeCode(
+          "restorative",
+          "composite_onlays",
+          "d2644"
+        ),
       },
       sealdprepd2644: this.getSealDPrepFlag("d2644"),
 
@@ -463,6 +456,11 @@ export class ProcCodeQuestionsParser {
           "porcelain_crowns"
         ),
         isDowngrade: this.getDowngradeFlag("restorative", "porcelain_crowns"),
+        downgrade_code: this.getDowngradeCode(
+          "restorative",
+          "porcelain_crowns",
+          "d2740"
+        ),
       },
       sealdprepd: this.getSealDPrepFlag("d2740"),
 
@@ -490,7 +488,7 @@ export class ProcCodeQuestionsParser {
         "6010freql": "",
       },
 
-      D6241: {
+      d6241: {
         percentage: this.getCoins(
           "prosthodontics_fixed",
           "pontics_porcelain_fused_to_metal"
@@ -503,6 +501,11 @@ export class ProcCodeQuestionsParser {
         isDowngrade: this.getDowngradeFlag(
           "prosthodontics_fixed",
           "pontics_porcelain_fused_to_metal"
+        ),
+        downgrade_code: this.getDowngradeCode(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal",
+          "d6241"
         ),
       },
 
@@ -539,6 +542,11 @@ export class ProcCodeQuestionsParser {
         isDowngrade: this.getDowngradeFlag(
           "implant_services",
           "implant_supported_crowns"
+        ),
+        downgrade_code: this.getDowngradeCode(
+          "implant_services",
+          "implant_supported_crowns",
+          "d6065"
         ),
       },
 
@@ -629,12 +637,19 @@ export class ProcCodeQuestionsParser {
     const val =
       n?.limitation?.frequency_count ??
       n?.limitation?.frequency_component?.quantity;
+
+    const time_period_value =
+      n?.limitation?.frequency_component?.time_period_value ??
+      n?.limitation?.frequency_component?.unit;
+
     const time_period_qualifier =
       n?.limitation?.frequency_component?.time_period_qualifier;
 
-    console.log("time_period", time_period_qualifier);
+    if (time_period_qualifier === "lifetime") return time_period_qualifier;
 
-    return time_period_qualifier === "1" ? val : time_period_qualifier;
+    if (!val) return "";
+
+    return time_period_value === "1" ? val : time_period_value;
     // const num = Number(val);
     // if (Number.isFinite(num)) return num;
     // else return 0;
@@ -815,24 +830,35 @@ export class ProcCodeQuestionsParser {
   }
 
   private getDowngradeFlag(category: string, node: string): string {
-    const alt = this.data?.rules?.alternative_benefits_may_apply;
-    if (typeof alt === "string" && alt.toUpperCase() === "YES") return "Yes";
-    return "No";
+    const benefits =
+      this.networkIdentifier === 1
+        ? this.pickInNetworkBenefits()
+        : this.pickOutOfNetWork();
+    const n = benefits?.coverages?.[category]?.[node];
+    const val = n?.alternate_benefit_applies;
+    return val === true ? "Yes" : "No";
   }
 
   private getDowngradeCode(
     category: string,
-    node: string
+    node: string,
+    code: string
   ): { value: string; label: string } {
     const isDown = this.getDowngradeFlag(category, node);
-    if (isDown === "Yes" && node.includes("composite")) {
-      return { value: "D2140", label: "Amalgam Filling" };
-    }
-    return { value: "", label: "" };
-  }
+    if (isDown !== "Yes") return { value: "", label: "" };
 
-  private getDowngradeApplied(category: string, node: string): string {
-    return this.getDowngradeFlag(category, node);
+    const map: Record<string, { value: string; label: string }> = {
+      d2391: { value: "D2140", label: "Amalgam Filling" },
+      d2392: { value: "D2150", label: "Amalgam Filling" },
+      d2393: { value: "D2160", label: "Amalgam Filling" },
+      d2394: { value: "D2161", label: "Amalgam Filling" },
+      d2644: { value: "D2544", label: "metallic_onlays" },
+      d2740: { value: "D2750", label: "porcelain_crowns" },
+      d6241: { value: "D6211", label: "pontics_cast_metal" },
+      d6065: { value: "D2740", label: "porcelain_crowns" },
+    };
+
+    return map[code] || { value: "", label: "" };
   }
 
   private getSealDPrepFlag(procCode: string): string {

@@ -169,7 +169,7 @@ class InNetworkParser extends BaseParser {
         label: "",
       },
       MonthRenew: "",
-      EffectiveDate: patient.coverages.effective_date || "00/00/0000",
+      EffectiveDate: patient?.coverage?.effective_date || "00/00/0000",
       shortcut: "",
       shortcut1: "",
       diagnosticApplied:

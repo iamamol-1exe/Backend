@@ -2504,3 +2504,126 @@
 {"level":"info","message":{"duration":"14273ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T04:16:18.113Z"}
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-08-30T04:19:20.745Z"}
 {"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-08-30T04:19:20.747Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T04:55:47.199Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T05:59:53.695Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:00:28.212Z"}
+{"level":"info","message":{"duration":"21775ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:00:56.186Z"}
+{"level":"info","message":{"duration":"14827ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:11:50.431Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:13:34.503Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:13:48.327Z"}
+{"level":"info","message":{"duration":"14210ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:14:11.170Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:14:55.412Z"}
+{"level":"info","message":{"duration":"16251ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:15:14.816Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:19:32.824Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:19:40.984Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:19:46.448Z"}
+{"level":"info","message":{"duration":"21878ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:20:10.160Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:21:37.129Z"}
+{"level":"info","message":{"duration":"15423ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:22:10.393Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:47:31.937Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:47:52.561Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:48:04.366Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:48:19.696Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T06:48:43.682Z"}
+{"level":"info","message":{"duration":"13839ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T06:49:09.463Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T07:02:39.664Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:23:56.072Z"}
+{"address":"::","code":"EADDRINUSE","errno":-4091,"level":"error","message":"Uncaught Exception: listen EADDRINUSE: address already in use :::4000","port":4000,"service":"backend-api","stack":"Error: listen EADDRINUSE: address already in use :::4000\n    at Server.setupListenHandle [as _listen2] (node:net:1912:16)\n    at listenInCluster (node:net:1969:12)\n    at Server.listen (node:net:2074:7)\n    at startServer (C:\\Users\\AMOL\\Desktop\\Work\\Backend\\src\\server.ts:55:12)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","syscall":"listen","timestamp":"2025-08-30T08:31:57.774Z"}
+{"level":"info","message":"Received uncaughtException, starting graceful shutdown...","service":"backend-api","timestamp":"2025-08-30T08:31:57.776Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-08-30T08:31:57.779Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:33:48.382Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:34:32.483Z"}
+{"level":"info","message":{"duration":"23545ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T08:35:22.386Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:54:51.793Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:55:14.381Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T08:55:46.871Z"}
+{"level":"info","message":{"duration":"14555ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T08:58:17.481Z"}
+{"level":"info","message":{"duration":"10025ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T09:00:38.045Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-08-30T09:02:27.367Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-08-30T09:02:27.370Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:14:35.360Z"}
+{"level":"info","message":{"duration":"17591ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T10:15:41.596Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:28:32.221Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:28:37.474Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:28:40.699Z"}
+{"level":"info","message":{"duration":"11953ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T10:29:28.809Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:30:44.536Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:31:02.193Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:46:02.793Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:46:17.699Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:52:26.663Z"}
+{"level":"info","message":{"duration":"13296ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T10:53:44.183Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:58:29.900Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:58:39.034Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:58:44.428Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T10:58:55.449Z"}
+{"level":"info","message":{"duration":"13558ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T10:59:14.721Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:00:25.595Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:00:34.599Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:02:39.658Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:08:36.350Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:08:47.501Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:08:53.657Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:08:59.494Z"}
+{"level":"info","message":{"duration":"10914ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:09:19.758Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:14:17.556Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:14:58.236Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:15:07.847Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:15:20.401Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:15:27.193Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:15:32.386Z"}
+{"level":"info","message":{"duration":"16744ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:15:54.886Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:21:14.002Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:21:49.270Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:21:54.542Z"}
+{"level":"info","message":{"duration":"12489ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:24:08.073Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:25:12.325Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:28:24.186Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:28:31.159Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:28:36.199Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:28:43.369Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:29:05.575Z"}
+{"level":"info","message":{"duration":"10933ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:29:26.856Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:29:42.015Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:30:12.590Z"}
+{"level":"info","message":{"duration":"15274ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:30:32.808Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:31:18.278Z"}
+{"level":"info","message":{"duration":"12344ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:31:31.074Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:32:50.212Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:33:33.880Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:33:45.376Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:33:50.677Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:34:19.792Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:34:26.278Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:34:30.828Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:36:08.932Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:36:15.049Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:36:39.023Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:36:50.782Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:37:11.810Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:37:22.791Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:38:00.488Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:03.014Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:11.669Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:35.022Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:39.190Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:44.423Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:50.850Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:39:55.660Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:40:00.747Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:40:40.871Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:40:55.022Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:41:02.653Z"}
+{"level":"info","message":{"duration":"14026ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:41:37.495Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:42:29.877Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:42:59.361Z"}
+{"level":"info","message":{"duration":"12772ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:43:13.379Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T11:55:41.182Z"}
+{"level":"info","message":{"duration":"16752ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T11:55:59.536Z"}
+{"level":"info","message":{"duration":"16243ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T12:03:10.179Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T12:07:21.626Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T12:07:41.672Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-08-30T12:07:47.042Z"}
+{"level":"info","message":{"duration":"11615ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-08-30T12:08:59.679Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-08-30T12:09:36.176Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-08-30T12:09:36.181Z"}

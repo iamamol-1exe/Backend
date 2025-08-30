@@ -54,12 +54,7 @@ class OutOfNetworkPraser extends BaseParser {
   getPreventativeDeduct(category: string) {
     const ben = this.pickOutOfNetWork() ?? {};
     const n = ben?.coverages?.[category] ?? ben?.[category];
-    const val =
-      n?.deductible_applies ??
-      this.dot(
-        this.data,
-        `benefits.1.coverages.${category}.deductible_applies`
-      );
+    const val = n?.deductible_applies;
     if (!val) return 0;
     // If deductible applies to this category, return the individual deductible amount
     const individualDeductible = ben.individual_deductible ?? 0;
@@ -128,7 +123,7 @@ class OutOfNetworkPraser extends BaseParser {
           ?.limited_orthodontic_treatment?.limitation?.age_high_value || "",
     };
   }
-  parseToResultFormat() {
+  parseToResultFormat(): resultType {
     const ticketData = this.parseTicketData();
     const plan = this.data.plan ?? {};
     const patient = this.data.patient ?? {};
