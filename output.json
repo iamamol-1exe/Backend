@@ -1,312 +1,258 @@
 {
   "pullClaimInformation": false,
+  "SubscriberIdUpdate": "",
   "formType": "",
   "clientId": "",
   "uploadDocument": [],
+  "handlePlanView": false,
   "agentName": "",
   "GroupName": "LOS ANGELES UNIFIED SCHOOL DISTRICT",
   "GroupNum": "016962301000001",
-  "PlanType": "IN_NETWORK",
-  "networknote": "",
+  "providersnetwork": "",
+  "providersnetwork1": "",
+  "providersnetwork2": "",
+  "PlanType": "OUT_OF_NETWORK",
+  "OONbenefits": "",
+  "address": "PO BOX 14094, LEXINGTON, KY",
+  "payerid": "953402799",
+  "timelyfiling": "",
+  "AOBaccepted": "",
   "FeeSched": {
     "value": null,
     "label": ""
   },
+  "didYouUpdateTheFeeScheduleWalaLa2Matensash": "",
   "MonthRenew": "",
   "EffectiveDate": "06/01/2023",
   "shortcut": "",
-  "shortcut1": "",
   "diagnosticApplied": "",
   "isWaitingPeriod": "NO",
-  "diagnosticApplied1": "",
-  "MTC": "NO",
   "missingtoothclause": "NO",
   "ortho": {
-    "orthosc": 50,
+    "orthosc": "",
     "orthosc1": "",
     "orthoamountused": 0,
     "MonetaryAmt_lifetimeCoverage": 750,
-    "agelimit": 99
+    "agelimit": 99,
+    "percentage": 50
   },
-  "shortcutfqexam": "",
-  "frequency_exam_unit": "years",
-  "examcv": 100,
-  "D0140share": "",
   "procCodeQuestions": {
-    "d0140": {
-      "percentage": "100",
-      "frequency": 2,
-      "frequency_unit": "years"
-    },
     "d0120": {
-      "percentage": "100",
-      "frequency": 2,
-      "frequency_unit": "years"
-    },
-    "d1110": {
-      "frequency_unit": "years",
-      "frequency": 2,
-      "percentage": "100"
-    },
-    "d0272": {
-      "frequency_unit": "years",
-      "bitewingsc": "2 treatments per calendar year; 1 treatment remaining.",
-      "frequency": 2,
-      "percentage": "100"
-    },
-    "d0220": {
-      "frequency_unit": "",
-      "frequency": "",
-      "percentage": "100"
+      "frequency_unit": 1,
+      "0120freql": "",
+      "percentage": "80",
+      "frequency": 2
     },
     "d0210": {
-      "frequency_unit": "years",
-      "frequency": "3",
+      "frequency_unit": 4,
       "0210freql": "",
-      "percentage": "100"
-    },
-    "d3120": {
       "percentage": "80",
-      "frequency_unit": "",
+      "frequency": "3"
+    },
+    "d0220": {
+      "frequency_unit": 0,
+      "0220freql": "",
+      "percentage": "80",
       "frequency": ""
     },
-    "fmxpanoshared": "Yes",
-    "d3331": {
+    "d0272": {
+      "frequency_unit": 1,
+      "bitwingcv": "",
       "percentage": "80",
-      "frequency": "",
-      "frequency_unit": ""
+      "frequency": 2,
+      "FrequencyLimitation": "2 treatments per calendar year; 1 treatment remaining."
+    },
+    "d1110": {
+      "frequency_unit": 1,
+      "prophcv": "",
+      "percentage": "80",
+      "frequency": 2
+    },
+    "d1206": {
+      "frequency_unit": 0,
+      "fluoridecv": "",
+      "flage": "",
+      "age_limit": "",
+      "percentage": "0",
+      "frequency": ""
+    },
+    "d1351": {
+      "frequency_unit": 0,
+      "FrequencyLimitations": "",
+      "sealage": "",
+      "sealantsteeth": "",
+      "age_limit": "",
+      "percentage": "0",
+      "frequency": ""
+    },
+    "d3120": {
+      "frequency_unit": 0,
+      "3120freql": "",
+      "sameday3120": "",
+      "percentage": "60",
+      "frequency": ""
+    },
+    "d3331": {
+      "frequency_unit": 0,
+      "3331freql": "",
+      "percentage": "60",
+      "frequency": ""
     },
     "d4249": {
-      "percentage": "80",
-      "frequency_unit": "",
+      "frequency_unit": 0,
+      "4249freql": "",
+      "percentage": "60",
       "frequency": ""
     },
     "d4267": {
-      "percentage": "80",
-      "frequency_unit": "months",
+      "frequency_unit": 5,
+      "4267freql": "",
+      "percentage": "60",
       "frequency": "24"
     },
+    "d4341": {
+      "frequency_unit": 5,
+      "4341freql": "",
+      "pocketdepth4341": "",
+      "norestrictions_1": "",
+      "sameday4341": "",
+      "percentage": "60",
+      "frequency": "24",
+      "quadvisit": ""
+    },
     "d4346": {
-      "percentage": "100",
-      "frequency_unit": "years",
+      "frequency_unit": 1,
+      "4346freql": "",
+      "perio4346": "",
+      "sameday4346": "",
+      "share4346": "",
+      "percentage": "80",
       "frequency": 2
     },
-    "d4921": {
-      "percentage": "",
-      "frequency_unit": "",
-      "frequency": ""
-    },
-    "d7922": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": ""
-    },
-    "d0330": {
-      "frequency_unit": "years",
-      "frequency": "3",
-      "percentage": "100"
-    },
-    "d1206": {
-      "frequency_unit": "",
-      "percentage": "0",
-      "flage": "",
-      "frequency": "",
-      "age_limit": ""
-    },
-    "d1351": {
-      "percentage": "0",
-      "frequency_unit": "",
-      "FrequencyLimitations": "",
-      "frequency": "",
-      "sealage": "",
-      "age_limit": ""
-    },
-    "d4266": {
-      "percentage": "80",
-      "frequency_unit": "months",
-      "frequency": "24",
-      "4266freql": ""
-    },
-    "d4266guide": "",
-    "norestrictions_3": "No",
-    "d4341": {
-      "percentage": "80",
-      "frequency_unit": "months",
-      "frequency": "24",
-      "4341freql": ""
-    },
-    "D4341quads": "No",
-    "norestrictions_0": "No",
     "d4355": {
-      "percentage": "80",
-      "frequency_unit": "years",
-      "frequency": "999",
-      "debridefreql": ""
+      "frequency_unit": 4,
+      "debridefreql": "",
+      "share4355": "",
+      "percentage": "60",
+      "frequency": "999"
     },
-    "arestinFL": "No",
-    "norestrictions_1": "No",
     "d4910": {
-      "frequency_unit": "years",
-      "4910freql": "",
+      "frequency_unit": 1,
+      "periocv": "",
+      "share4910": "",
+      "percentage": "60",
       "frequency": 2,
-      "percentage": "80"
+      "4910freql": ""
     },
-    "d4910guide": "",
-    "norestrictions_2": "No",
-    "prophyperioshared": "No",
-    "d7140": {
-      "percentage": "80",
+    "d4921": {
       "frequency_unit": "",
-      "frequency": "",
-      "7140freql": ""
+      "4921freql": "",
+      "percentage": "",
+      "frequency": ""
     },
     "d7210": {
-      "percentage": "80",
-      "frequency_unit": "",
+      "frequency_unit": 0,
+      "7210freql": "",
+      "percentage": "60",
       "frequency": "",
-      "7210freql": ""
+      "dentmed7210": ""
     },
-    "d7240": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
-      "7240freql": ""
+    "d7922": {
+      "frequency_unit": 0,
+      "7922freql": "",
+      "percentage": "60",
+      "frequency": ""
     },
-    "dentmed7210": "Dental",
     "d7953": {
+      "frequency_unit": 0,
+      "7953freql": "",
       "percentage": "0",
-      "frequency_unit": "",
-      "frequency": "",
-      "7953freql": ""
+      "frequency": ""
     },
-    "d7953guide": "",
-    "norestrictions_4": "No",
+    "restseat": "",
+    "restauth": "",
     "d2391": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
+      "frequency_unit": 0,
       "compositefreql": "",
       "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D2140",
         "label": "Amalgam Filling"
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "Yes",
+      "percentage": "60",
+      "frequency": ""
     },
     "d2392": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
+      "frequency_unit": 0,
       "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D2150",
         "label": "Amalgam Filling"
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "Yes",
+      "percentage": "60",
+      "frequency": ""
     },
     "d2393": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
+      "frequency_unit": 0,
       "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D2160",
         "label": "Amalgam Filling"
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "Yes",
+      "percentage": "60",
+      "frequency": ""
     },
     "d2394": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
+      "frequency_unit": 0,
       "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D2161",
         "label": "Amalgam Filling"
       },
-      "downgradeApplied": "Yes"
+      "downgradeApplied": "Yes",
+      "percentage": "60",
+      "frequency": ""
     },
-    "d2644": {
-      "percentage": "50",
-      "frequency_unit": "months",
-      "frequency": "36",
-      "FrequencyLimitations": "1 treatment every 36 months.",
-      "isDowngrade": "Yes",
-      "downgrade_code": {
-        "value": "D2544",
-        "label": "metallic_onlays"
-      }
-    },
-    "sealdprepd2644": "No",
     "d2740": {
-      "percentage": "50",
-      "frequency_unit": "months",
-      "frequency": "36",
+      "frequency_unit": 5,
       "FrequencyLimitations": "1 treatment every 36 months.",
+      "percentage": "50",
+      "frequency": "36",
       "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D2750",
         "label": "porcelain_crowns"
       }
     },
-    "sealdprepd": "No",
-    "d2950": {
-      "percentage": "80",
-      "frequency_unit": "",
-      "frequency": "",
-      "Freql": ""
-    },
     "d6010": {
+      "frequency_unit": 5,
+      "6010freql": "",
       "percentage": "0",
-      "frequency_unit": "months",
-      "frequency": "36",
-      "6010freql": ""
+      "frequency": "36"
     },
     "d6241": {
+      "frequency_unit": 0,
+      "FrequencyLimitations": "",
+      "isDowngrade": "Yes",
       "percentage": "50",
       "frequency": "36",
       "d6241freql": "",
-      "isDowngrade": "Yes",
       "downgrade_code": {
         "value": "D6211",
         "label": "pontics_cast_metal"
       }
     },
-    "d6057": {
-      "percentage": "0",
-      "frequency_unit": "months",
-      "frequency": "36",
-      "6057freql": ""
-    },
-    "d6065": {
-      "percentage": "50",
-      "frequency_unit": "months",
-      "frequency": "36",
-      "6065freql": "",
-      "isDowngrade": "Yes",
-      "downgrade_code": {
-        "value": "D2740",
-        "label": "porcelain_crowns"
-      }
-    },
-    "d9230": {
-      "percentage": "0",
-      "frequency_unit": "",
-      "frequency": "",
-      "9230freql": ""
-    },
-    "d9230guide": "",
-    "norestrictions_5": "No",
-    "d9944": {
-      "percentage": "50",
-      "frequency_unit": "months",
-      "frequency": "36",
-      "9944freql": ""
-    },
-    "d9944guide": "",
-    "norestrictions_6": "No",
     "d5110": {
       "percentage": "50"
+    },
+    "d4266": {
+      "percentage": "60",
+      "frequency_unit": 5,
+      "frequency": "24",
+      "4266freql": ""
     },
     "d5130": {
       "percentage": "50"
@@ -318,17 +264,101 @@
       "percentage": "50"
     },
     "d9910": {
+      "frequency_unit": "",
+      "9910freql": "",
       "percentage": "0",
       "frequency": "",
-      "frequenct_unit": ""
-    }
+      "frequenct_unit": 0
+    },
+    "d9944": {
+      "frequency_unit": 5,
+      "9944freql": "",
+      "percentage": "50",
+      "frequency": "36"
+    },
+    "d9944guide": "",
+    "norestrictions_6": "No",
+    "d0140": {
+      "percentage": "80",
+      "frequency": 2,
+      "frequency_unit": 1
+    },
+    "fmxpanoshared": "Yes",
+    "d0330": {
+      "frequency_unit": 4,
+      "frequency": "3",
+      "percentage": "80"
+    },
+    "d4266guide": "",
+    "norestrictions_3": "No",
+    "D4341quads": "No",
+    "norestrictions_0": "No",
+    "arestinFL": "No",
+    "norestrictions_1": "No",
+    "d4910guide": "",
+    "norestrictions_2": "No",
+    "prophyperioshared": "No",
+    "d7140": {
+      "percentage": "60",
+      "frequency_unit": 0,
+      "frequency": "",
+      "7140freql": ""
+    },
+    "d7240": {
+      "percentage": "60",
+      "frequency_unit": 0,
+      "frequency": "",
+      "7240freql": ""
+    },
+    "dentmed7210": "Dental",
+    "d7953guide": "",
+    "norestrictions_4": "No",
+    "d2644": {
+      "percentage": "50",
+      "frequency_unit": 5,
+      "frequency": "36",
+      "FrequencyLimitations": "1 treatment every 36 months.",
+      "isDowngrade": "Yes",
+      "downgrade_code": {
+        "value": "D2544",
+        "label": "metallic_onlays"
+      }
+    },
+    "sealdprepd2644": "No",
+    "sealdprepd": "No",
+    "d2950": {
+      "percentage": "60",
+      "frequency_unit": 0,
+      "frequency": "",
+      "Freql": ""
+    },
+    "d6057": {
+      "percentage": "0",
+      "frequency_unit": 5,
+      "frequency": "36",
+      "6057freql": ""
+    },
+    "d6065": {
+      "percentage": "50",
+      "frequency_unit": 5,
+      "frequency": "36",
+      "6065freql": "",
+      "isDowngrade": "Yes",
+      "downgrade_code": {
+        "value": "D2740",
+        "label": "porcelain_crowns"
+      }
+    },
+    "d9230": {
+      "percentage": "0",
+      "frequency_unit": 0,
+      "frequency": "",
+      "9230freql": ""
+    },
+    "d9230guide": "",
+    "norestrictions_5": "No"
   },
-  "procCode": [
-    {
-      "value": 0,
-      "label": ""
-    }
-  ],
+  "procCode": [],
   "patientHistory": [
     {
       "date": "04/08/2025",
@@ -387,33 +417,36 @@
       "toothRange": ""
     }
   ],
+  "subscNote1": "",
+  "txplan": {
+    "visibile": ""
+  },
   "subscNote": "",
   "planNotes": "",
-  "submit1": true,
+  "submit1": false,
   "submit": false,
   "MonetaryAmt_IndMax": 3000,
-  "MonetaryAmt_FamMax": 0,
+  "insUsed": 0,
   "MonetaryAmt_IndDeduct": 100,
   "deductibleUsed": 0,
   "MonetaryAmt_DiaIndDeduct": 0,
   "MonetaryAmt_XrayIndDeduct": 0,
-  "insUsed": 0,
   "MonetaryAmt_PreventativeDeductible": 0,
-  "percentage_diagnostic": 100,
-  "percentage_xray": 100,
-  "percentage_preventative": 100,
-  "percentage_restorative": 80,
-  "percentage_crowns": 50,
-  "percentage_perio": 80,
-  "percentage_endo": 80,
-  "percentage_oralSurgery": 80,
-  "percentage_prosthodontics": 50,
   "restorativeWaitingPeriod": 0,
   "endoWaitingPeriod": 0,
   "perioWaitingPeriod": 0,
   "oralWaitingPeriod": 0,
   "crownsWaitingPeriod": 0,
   "prosthodonticsWaitingPeriod": 0,
+  "percentage_diagnostic": 80,
+  "percentage_xray": 80,
+  "percentage_preventative": 80,
+  "percentage_restorative": 60,
+  "percentage_endo": 60,
+  "percentage_perio": 60,
+  "percentage_oralSurgery": 60,
+  "percentage_crowns": 50,
+  "percentage_prosthodontics": 50,
   "ticketNo": 0,
   "ticketId": "",
   "ticketData": {
@@ -448,7 +481,7 @@
       "formType": 0
     },
     "patient": {
-      "PataNum": "W280487159",
+      "PatNum": "W280487159",
       "LName": "NEGRETE",
       "FName": "JUAN",
       "MiddleI": "C",
@@ -478,7 +511,7 @@
       "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
-      "MedUrgNote": [],
+      "MedUrgNote": {},
       "ApptModNote": "",
       "StudentStatus": "",
       "SchoolName": "",
@@ -579,15 +612,6 @@
       "version": "v2"
     }
   },
-  "extraPatientHistory": [
-    {
-      "PatNum": 0,
-      "ProcDate": "",
-      "Surf": "",
-      "ToothNum": "",
-      "ToothRange": "",
-      "ProcCode": "",
-      "ProcStatus": 0
-    }
-  ]
+  "extraPatientHistory": [],
+  "diagnosticApplied1": ""
 }

@@ -27,12 +27,13 @@ export class WaitingPeriodParser {
     );
     return inn ?? benefits[1] ?? null;
   }
-  
+
   getIsWaitingPeriod() {
     const rules = this.data?.rules ?? {};
     const waitingForMajor = rules?.waiting_period_for_major_services;
     const waitingForBasic = rules?.waiting_period_for_basic_services;
     if (waitingForMajor === "NO" && waitingForBasic === "NO") return "NO";
+    if (waitingForMajor === "YES" && waitingForBasic === "YES") return "YES";
   }
 
   calcWaitingPeriod(category: string) {

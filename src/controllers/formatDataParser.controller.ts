@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, response, Response } from "express";
 import axios from "axios";
 import { HttpResponse } from "../utils/responseUtils";
 import { getOnederfulPayerId } from "../utils/payerListHelper";
@@ -6,6 +6,7 @@ import { getAuthToken, getTokenFromRedis } from "../services/authToken.service";
 import InNetworkParser from "../parsers/InNetworkParser";
 import fs from "fs";
 import OutOfNetworkPraser from "../parsers/OutOfNetworkPraser";
+import networkParser from "../parsers/parserNewtworkFactory";
 
 /**
  * Handles the parsing of formatted data by interacting with external services and utilities.
@@ -34,14 +35,14 @@ import OutOfNetworkPraser from "../parsers/OutOfNetworkPraser";
 export const formatDataParser1 = async (req: Request, res: Response) => {
   try {
     const url: any = process.env.URL;
-    const { payload, networkQualifier } = req.body;
+    const { payload, networkQualifier, formPayload } = req.body;
     let token = await getTokenFromRedis();
     if (!token) {
       token = await getAuthToken();
     }
-    console.log(networkQualifier);
-    const identifier = payload.payer.id;
+    console.log("Selected network :", networkQualifier);
 
+    const identifier = payload.payer.id;
     const onederfulPayerId =
       getOnederfulPayerId(identifier)?.toLocaleLowerCase() || null;
 
@@ -51,7 +52,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
         "RESPONSE_MESSAGES.UNABLE_TO_FIND_PROVIDER"
       );
     }
-    console.log("onederfulPayerId : ", onederfulPayerId);
+    console.log("onederfulPayerId :  ", onederfulPayerId);
 
     const response = await axios.post(url, payload, {
       headers: {
@@ -63,30 +64,19 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     fs.writeFileSync("data.json", JSON.stringify(data, null, 2), "utf8");
     console.log("Data successfully stored in output.json");
 
-    if (networkQualifier == "OUT_OF_NETWORK") {
-      console.log("network indentifier", networkQualifier);
-      const parser = new OutOfNetworkPraser(data, onederfulPayerId);
-      const parseredData = parser.parseToResultFormat();
-
-      fs.writeFileSync(
-        "output.json",
-        JSON.stringify(parseredData, null, 2),
-        "utf8"
-      );
-      console.log("Data successfully stored in output.json");
-      return HttpResponse.success(res, parseredData, "Successfull");
-    } else if (networkQualifier === "IN_NETWORK") {
-      console.log("network indentifier", networkQualifier);
-      const parser = new InNetworkParser(data, onederfulPayerId);
-      const parseredData = parser.parseToResultFormat();
-
-      fs.writeFileSync(
-        "output.json",
-        JSON.stringify(parseredData, null, 2),
-        "utf8"
-      );
-      return HttpResponse.success(res, parseredData, "Successfull");
-    }
+    const parser: any = networkParser(
+      data,
+      networkQualifier,
+      onederfulPayerId,
+      formPayload
+    );
+    const parseredData = parser.parseToResultFormat();
+    fs.writeFileSync(
+      "output.json",
+      JSON.stringify(parseredData, null, 2),
+      "utf8"
+    );
+    return HttpResponse.success(res, parseredData, "Successfull");
   } catch (error) {
     const errorMessage = axios.isAxiosError(error)
       ? error.response?.data?.message

@@ -79,7 +79,7 @@ class AetnaParser extends PatientBaseParser {
     const balance = this.parseBalance();
 
     return {
-      PataNum: patient.memberId || "",
+      PatNum: patient.memberId || "",
       LName: patient.lastName,
       FName: patient.firstName,
       MiddleI: patient.middleName || "",

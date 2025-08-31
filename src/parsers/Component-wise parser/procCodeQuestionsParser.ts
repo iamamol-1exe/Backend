@@ -36,7 +36,10 @@ export class ProcCodeQuestionsParser {
 
       d0272: {
         frequency_unit: this.getFrequencyUnit("diagnostic", "bitewings"),
-        bitewingsc: this.getFrequencyLimitation("diagnostic", "bitewings"),
+          FrequencyLimitation: this.getFrequencyLimitation(
+          "diagnostic",
+          "bitewings"
+        ),
         frequency: this.getFrequency("diagnostic", "bitewings"),
         percentage: this.getCoins("diagnostic", "bitewings"),
       },
@@ -676,17 +679,18 @@ export class ProcCodeQuestionsParser {
     return this.percentToString(val);
   }
 
-  public getFrequencyUnit(category: string, node: string): string {
+  public getFrequencyUnit(category: string, node: string): number {
     const rule = this.getFrequencyRule(category, node);
-    if (!rule) return "";
+    if (!rule) return 0;
     const lower = String(rule).toLowerCase();
-    if (lower.includes("month")) return "months";
-    if (lower.includes("year")) return "years";
-    if (lower.includes("day")) return "days";
-    if (lower.includes("week")) return "weeks";
-    if (lower.includes("visit")) return "visits";
-    if (lower.includes("lifetime")) return "lifetime";
-    return "";
+    if (lower.includes("every") && lower.includes("month")) return 5;
+    if (lower.includes("every") && lower.includes("year")) return 4;
+    if (lower.includes("per") && lower.includes("year")) return 1;
+    if (lower.includes("per") && lower.includes("lifetime")) return 6;
+    // if (lower.includes("day")) return 0;
+    // if (lower.includes("week")) return 0;
+    // if (lower.includes("visit")) return 0;
+    return 0;
   }
 
   private getFrequencyLimitation(category: string, node: string): string {

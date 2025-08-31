@@ -1,6 +1,6 @@
-import AetnaParser from "./parsers/Patient parser/AtenaParser";
-import DeltaDentalParser from "./parsers/Patient parser/DeltaDentalParser";
-import UnitedHealthcareParser from "./parsers/Patient parser/UnitedHealthcare";
+import AetnaParser from "./AtenaParser";
+import DeltaDentalParser from "./DeltaDentalParser";
+import UnitedHealthcareParser from "./UnitedHealthcare";
 
 const parserRegistry: { [key: string]: any } = {
   aetna_dental_plans: AetnaParser,
@@ -46,7 +46,8 @@ const parserRegistry: { [key: string]: any } = {
   dd_ny: DeltaDentalParser,
   metlife: DeltaDentalParser,
   cigna: AetnaParser,
-  united_concordia : AetnaParser
+  united_concordia: AetnaParser,
+  medicaid_dentaquest: DeltaDentalParser,
 };
 
 export default parserRegistry;
