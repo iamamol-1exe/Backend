@@ -178,7 +178,7 @@ class OutOfNetworkPraser extends BaseParser {
     mapperData[MAPPER_KEYS.PLANTYPE] = NETWORK_KEYS.OUT_OF_NETWORK;
     mapperData[MAPPER_KEYS.EFFECTIVEDATE] =
       patient?.coverage?.effective_date || "00/00/0000";
-    mapperData[MAPPER_KEYS.PAYERID] = payer?.payer_id || "";
+    mapperData[MAPPER_KEYS.PAYERID] = payer?.id || "";
     mapperData[MAPPER_KEYS.DIAGNOSTICAPPLIED] =
       benefitsOutOfNetwork?.coverages.diagnostic.deductible_applies || "";
     mapperData[MAPPER_KEYS.ADDRESS] = `${payer?.address?.street || ""}, ${
