@@ -62,11 +62,6 @@ class InNetworkParser extends BaseParser {
       subscriberName: subscriber.first_name + " " + subscriber.last_name || "",
       subscriberDoB: subscriber.dob || "",
       subscribertoRelationship: subscriber.relationship || "",
-      latestTicketStatus: {
-        status: "",
-        dateTime: "",
-      },
-      ordinal: "",
       subscriberPayload: {
         subscriber: {
           first_name: subscriber.first_name || "",
@@ -76,7 +71,6 @@ class InNetworkParser extends BaseParser {
         },
         provider: { npi: null },
         payer: { id: payer.id || null },
-        version: "v2",
       },
     };
   }
