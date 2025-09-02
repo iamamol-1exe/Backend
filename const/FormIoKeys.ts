@@ -5,6 +5,7 @@ export const FORMIO_KEYS = {
   ORAL_WAITING_PERIOD: "oralWaitingPeriod",
   CROWNS_WAITING_PERIOD: "crownsWaitingPeriod",
   PROSTHODONTICS_WAITING_PERIOD: "prosthodonticsWaitingPeriod",
+  ISWaitingPeriod: "isWaitingPeriod",
 };
 
 export const PERCENTAGE_SERVICES_FORMIO_KEYS: { [key: string]: string } = {

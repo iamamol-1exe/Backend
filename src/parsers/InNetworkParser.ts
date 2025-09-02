@@ -51,6 +51,22 @@ class InNetworkParser extends BaseParser {
     const m = s.match(/(\d{1,3})\s*%/);
     return m ? Number(m[1]) : 0;
   }
+  getCoinsByCategory(category: string): number {
+    const ben = this.pickInNetworkBenefits();
+    if (!ben) return 0;
+    const n = ben?.coverages?.[category] ?? ben?.[category];
+
+    const val =
+      n?.coinsurance_percentage ??
+      this.dot(
+        this.data,
+        `benefits.0.coverages.${category}?.coinsurance_percentage`
+      );
+
+    if (val === null || val === undefined) return 0;
+    const num = Number(val);
+    return num;
+  }
   parseTicketData() {
     const ticketparser = new ticketParser(this.data);
     const ticket: ticket = ticketparser.parseTicket();
@@ -97,14 +113,27 @@ class InNetworkParser extends BaseParser {
   getPreventativeDeduct(category: string): number {
     const ben = this.pickInNetworkBenefits() ?? {};
     if (!ben) return 0;
+
     const n = ben?.coverages?.[category] ?? ben?.[category];
-    const val = n?.deductible_applies;
+    let val = n?.deductible_applies;
+
+    if (category === "fmx") {
+      val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
+    }
     console.log(`deductiable ${category}`, val);
     if (!val) return 0;
 
-    // If deductible applies to this category, return the individual deductible amount
-    const individualDeductible = ben.individual_deductible ?? 0;
-    return individualDeductible;
+    // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible
+
+    let percentage: number = this.getCoinsByCategory(category);
+    if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");
+    const deductiable: number = ben?.individual_deductible;
+    if (!percentage || !deductiable) return 0;
+    const ans = (percentage / 100) * deductiable;
+
+    const fixedAmount = ans.toFixed(2);
+
+    return Number(fixedAmount);
   }
 
   getAmountUsed() {
@@ -170,8 +199,10 @@ class InNetworkParser extends BaseParser {
     mapperData[MAPPER_KEYS.EFFECTIVEDATE] =
       patient?.coverage?.effective_date || "00/00/0000";
     mapperData[MAPPER_KEYS.PAYERID] = payer?.id || "";
-    mapperData[MAPPER_KEYS.DIAGNOSTICAPPLIED] =
-      benefitsInNetwork?.coverages.diagnostic.deductible_applies || "";
+    mapperData[MAPPER_KEYS.DIAGNOSTICAPPLIED] = benefitsInNetwork?.coverages
+      ?.diagnostic?.deductible_applies
+      ? "YES"
+      : "NO";
     mapperData[MAPPER_KEYS.ADDRESS] =
       payer?.address?.street +
       ", " +
@@ -217,6 +248,8 @@ class InNetworkParser extends BaseParser {
     mapperData[FORMIO_KEYS.PROSTHODONTICS_WAITING_PERIOD] =
       waitingData.prosthodonticsWaitingPeriod;
     mapperData[FORMIO_KEYS.ORAL_WAITING_PERIOD] = waitingData.oralWaitingPeriod;
+    mapperData[FORMIO_KEYS.ISWaitingPeriod] =
+      waitingParserobj.getIsWaitingPeriod();
 
     // co-insurance percentage
     mapperData[PERCENTAGE_SERVICES_FORMIO_KEYS.PERCENTAGE_DIAGNOSTIC] =

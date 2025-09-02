@@ -48,6 +48,7 @@ const parserRegistry: { [key: string]: any } = {
   cigna: AetnaParser,
   united_concordia: AetnaParser,
   medicaid_dentaquest: DeltaDentalParser,
+  guardian: DeltaDentalParser,
 };
 
 export default parserRegistry;

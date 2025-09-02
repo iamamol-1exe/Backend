@@ -37,6 +37,22 @@ class OutOfNetworkPraser extends BaseParser {
     return outOfNetwork ?? benefits[0] ?? null;
   }
 
+  getCoinsByCategory(category: string): number {
+    const ben = this.pickOutOfNetworkBenefits();
+    if (!ben) return 0;
+    const n = ben?.coverages?.[category] ?? ben?.[category];
+
+    const val =
+      n?.coinsurance_percentage ??
+      this.dot(
+        this.data,
+        `benefits.0.coverages.${category}?.coinsurance_percentage`
+      );
+
+    if (val === null || val === undefined) return 0;
+    const num = Number(val);
+    return num;
+  }
   getCoins(category: string, node: string): number {
     const ben = this.pickOutOfNetworkBenefits();
     if (!ben) return 0;
@@ -104,16 +120,25 @@ class OutOfNetworkPraser extends BaseParser {
     if (!ben) return 0;
 
     const n = ben?.coverages?.[category] ?? ben?.[category];
-    const val =
-      n?.deductible_applies ??
-      this.dot(
-        this.data,
-        `benefits.0.coverages.${category}.deductible_applies`
-      );
+    let val = n?.deductible_applies;
 
+    if (category === "fmx") {
+      val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
+    }
+    console.log(`deductiable ${category}`, val);
     if (!val) return 0;
-    // If deductible applies to this category, return the individual deductible amount
-    return ben.individual_deductible ?? 0;
+
+    // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible
+
+    let percentage: number = this.getCoinsByCategory(category);
+    if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");
+    const deductiable: number = ben?.individual_deductible;
+    if (!percentage || !deductiable) return 0;
+    const ans = (percentage / 100) * deductiable;
+
+    const fixedAmount = ans.toFixed(2);
+
+    return Number(fixedAmount);
   }
 
   getAmountUsed() {
@@ -179,8 +204,10 @@ class OutOfNetworkPraser extends BaseParser {
     mapperData[MAPPER_KEYS.EFFECTIVEDATE] =
       patient?.coverage?.effective_date || "00/00/0000";
     mapperData[MAPPER_KEYS.PAYERID] = payer?.id || "";
-    mapperData[MAPPER_KEYS.DIAGNOSTICAPPLIED] =
-      benefitsOutOfNetwork?.coverages.diagnostic.deductible_applies || "";
+    mapperData[MAPPER_KEYS.DIAGNOSTICAPPLIED] = benefitsOutOfNetwork?.coverages
+      .diagnostic.deductible_applies
+      ? "YES"
+      : "NO";
     mapperData[MAPPER_KEYS.ADDRESS] = `${payer?.address?.street || ""}, ${
       payer?.address?.city || ""
     }, ${payer?.address?.state || ""}`;
