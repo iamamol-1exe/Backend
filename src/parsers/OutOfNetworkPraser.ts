@@ -42,12 +42,7 @@ class OutOfNetworkPraser extends BaseParser {
     if (!ben) return 0;
     const n = ben?.coverages?.[category] ?? ben?.[category];
 
-    const val =
-      n?.coinsurance_percentage ??
-      this.dot(
-        this.data,
-        `benefits.0.coverages.${category}?.coinsurance_percentage`
-      );
+    const val = n?.coinsurance_percentage;
 
     if (val === null || val === undefined) return 0;
     const num = Number(val);
@@ -58,13 +53,7 @@ class OutOfNetworkPraser extends BaseParser {
     if (!ben) return 0;
 
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
-    const val =
-      n?.coinsurance_percentage ??
-      this.dot(
-        this.data,
-        `benefits.0.coverages.${category}.${node}.coinsurance_percentage`
-      );
-
+    const val = n?.coinsurance_percentage;
     if (val === null || val === undefined) return 0;
     const num = Number(val);
     if (Number.isFinite(num)) return num;
