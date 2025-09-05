@@ -3200,3 +3200,63 @@
 {"level":"info","message":{"duration":"19936ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-02T06:57:43.395Z"}
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-02T06:59:23.480Z"}
 {"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-02T06:59:23.482Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-09-04T09:42:54.926Z"}
+{"level":"info","message":{"duration":"14226ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T09:46:52.910Z"}
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-09-04T09:57:33.816Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-04T09:58:12.541Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-04T09:58:23.942Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-04T09:58:23.948Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-04T09:58:30.062Z"}
+{"level":"info","message":{"duration":"48ms","ip":"::1","method":"POST","status":400,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:28:16.667Z"}
+{"level":"info","message":{"duration":"4ms","ip":"::1","method":"POST","status":400,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:28:38.531Z"}
+{"level":"info","message":{"duration":"4ms","ip":"::1","method":"POST","status":400,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:29:12.544Z"}
+{"level":"info","message":{"duration":"11569ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:30:13.795Z"}
+{"level":"error","message":{"error":"Unexpected non-whitespace character after JSON at position 443 (line 22 column 2)","ip":"::1","method":"POST","stack":"SyntaxError: Unexpected non-whitespace character after JSON at position 443 (line 22 column 2)\n    at JSON.parse (<anonymous>)\n    at parse (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\body-parser\\lib\\types\\json.js:77:19)\n    at D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\body-parser\\lib\\read.js:123:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)","url":"/api/v1/parse"},"service":"backend-api","timestamp":"2025-09-04T10:39:59.926Z"}
+{"level":"error","message":{"error":"Expected ',' or '}' after property value in JSON at position 9175 (line 243 column 6)","ip":"::1","method":"POST","stack":"SyntaxError: Expected ',' or '}' after property value in JSON at position 9175 (line 243 column 6)\n    at JSON.parse (<anonymous>)\n    at parse (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\body-parser\\lib\\types\\json.js:77:19)\n    at D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\body-parser\\lib\\read.js:123:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\HestiaDental\\onderfulParser\\Backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)","url":"/api/v1/parse"},"service":"backend-api","timestamp":"2025-09-04T10:48:27.763Z"}
+{"level":"info","message":{"duration":"12216ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:51:15.581Z"}
+{"level":"info","message":{"duration":"11351ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:52:16.560Z"}
+{"level":"info","message":{"duration":"9351ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T10:53:11.661Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-04T11:00:06.733Z"}
+{"level":"info","message":{"duration":"8811ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T15:55:22.614Z"}
+{"level":"info","message":{"duration":"7430ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T15:57:38.151Z"}
+{"level":"info","message":{"duration":"9935ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T16:02:24.640Z"}
+{"level":"info","message":{"duration":"6952ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-04T16:03:27.647Z"}
+{"level":"info","message":{"duration":"12291ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T06:01:11.294Z"}
+{"level":"info","message":{"duration":"8048ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T06:02:40.497Z"}
+{"level":"info","message":{"duration":"8003ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T06:52:22.300Z"}
+{"level":"info","message":{"duration":"9016ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T06:55:35.865Z"}
+{"level":"info","message":{"duration":"8380ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T06:56:43.577Z"}
+{"level":"info","message":{"duration":"10758ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:00:36.213Z"}
+{"level":"info","message":{"duration":"7957ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:17:19.625Z"}
+{"level":"info","message":{"duration":"7139ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:18:05.534Z"}
+{"level":"info","message":{"duration":"6445ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:18:24.063Z"}
+{"level":"info","message":{"duration":"6965ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:18:56.461Z"}
+{"level":"info","message":{"duration":"6150ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:00.023Z"}
+{"level":"info","message":{"duration":"6205ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:42.554Z"}
+{"level":"info","message":{"duration":"9357ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:43.449Z"}
+{"level":"info","message":{"duration":"9557ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:44.345Z"}
+{"level":"info","message":{"duration":"8877ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:49.872Z"}
+{"level":"info","message":{"duration":"9251ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:50.484Z"}
+{"level":"info","message":{"duration":"8399ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:50.956Z"}
+{"level":"info","message":{"duration":"12155ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:20:53.576Z"}
+{"level":"info","message":{"duration":"8168ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:21:39.056Z"}
+{"level":"info","message":{"duration":"9468ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:24:25.004Z"}
+{"level":"info","message":{"duration":"7042ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:24:58.484Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:34:52.274Z"}
+{"level":"info","message":{"duration":"8921ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:35:42.263Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:37:07.470Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:37:48.615Z"}
+{"level":"info","message":{"duration":"7857ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:38:24.999Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:39:22.516Z"}
+{"level":"info","message":{"duration":"7777ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:39:44.429Z"}
+{"level":"info","message":{"duration":"7338ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:40:18.389Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:43:16.038Z"}
+{"level":"info","message":{"duration":"7565ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:43:38.923Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:44:07.054Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-05T07:46:29.313Z"}
+{"level":"info","message":{"duration":"8235ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:47:24.658Z"}
+{"level":"info","message":{"duration":"7970ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:50:42.209Z"}
+{"level":"info","message":{"duration":"20004ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:52:09.672Z"}
+{"level":"info","message":{"duration":"8158ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-05T07:52:49.688Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-05T08:43:02.530Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-05T08:43:02.535Z"}

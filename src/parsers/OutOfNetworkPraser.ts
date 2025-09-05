@@ -117,7 +117,7 @@ class OutOfNetworkPraser extends BaseParser {
     console.log(`deductiable ${category}`, val);
     if (!val) return 0;
 
-    // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible
+    // if it is deductible applies to this category then get co-insurance percentage and find amount individual deductible
 
     let percentage: number = this.getCoinsByCategory(category);
     if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");

@@ -1,3 +1,4 @@
+import moment from "moment";
 import {
   ProcessedHistoryItem,
   ServiceHistory,
@@ -59,8 +60,12 @@ export class ServiceHistoryParser {
       const parsed = parseInt(item.tooth, 10);
       toothNumber = isNaN(parsed) ? 0 : parsed;
     }
+
+    const formattedServiceDate = moment(item.service_date, "MM/DD/YYYY")
+      .startOf("day") // sets time to 00:00:00
+      .format();
     return {
-      date: item.service_date,
+      date: formattedServiceDate,
       ToothRange: item.tooth || "", // Default to empty string if null
       surf: item.surfaces || "", // Default to empty string if null
       procCode: item.procedure_code,
