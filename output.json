@@ -1,111 +1,113 @@
 {
   "pullClaimInformation": false,
   "SubscriberIdUpdate": "",
-  "formType": "1",
-  "clientId": "6481c2511b618ee1c901e60b",
+  "formType": "",
+  "clientId": "",
   "uploadDocument": [],
   "handlePlanView": false,
   "agentName": "",
-  "GroupName": "UNIVERSITY OF CALIFORNIA",
-  "GroupNum": "18066-00401",
+  "GroupName": "TBI AIRPORT MANAGEMENT INC.",
+  "GroupNum": "5995955",
   "providersnetwork": "",
   "providersnetwork1": "",
   "providersnetwork2": "",
   "PlanType": "OUT_OF_NETWORK",
   "OONbenefits": "",
-  "address": "PO BOX 997330, SACRAMENTO, CA",
-  "payerid": "77777",
+  "address": "PO Box 981282, El Paso, TX",
+  "payerid": "65978",
   "timelyfiling": "",
   "AOBaccepted": "",
   "FeeSched": {
     "value": null,
-    "label": "None"
+    "label": ""
   },
   "didYouUpdateTheFeeScheduleWalaLa2Matensash": "",
   "MonthRenew": "",
-  "EffectiveDate": "01/01/2015",
+  "EffectiveDate": "01/01/2025",
   "shortcut": "",
-  "missingtoothclause": "",
+  "diagnosticApplied": "YES",
+  "isWaitingPeriod": "YES",
+  "missingtoothclause": "YES",
   "ortho": {
     "orthosc": "",
+    "orthosc1": "",
     "orthoamountused": 0,
-    "MonetaryAmt_lifetimeCoverage": 500,
-    "agelimit": 25,
-    "percentage": 50,
-    "orthosc1": ""
+    "MonetaryAmt_lifetimeCoverage": 2000,
+    "agelimit": "",
+    "percentage": 50
   },
   "procCodeQuestions": {
     "d0120": {
-      "frequency_unit": 6,
+      "frequency_unit": 1,
       "0120freql": "",
       "percentage": "100",
-      "frequency": "lifetime"
+      "frequency": 2
     },
     "d0210": {
-      "frequency_unit": 5,
+      "frequency_unit": 4,
       "0210freql": "",
       "percentage": "100",
-      "frequency": "60"
+      "frequency": "3"
     },
     "d0220": {
       "frequency_unit": 0,
       "0220freql": "",
       "percentage": "100",
-      "frequency": 1
+      "frequency": ""
     },
     "d0272": {
-      "frequency_unit": 4,
+      "frequency_unit": 1,
       "bitwingcv": "",
       "percentage": "100",
       "frequency": 1,
-      "FrequencyLimitation": "1 visit every year."
+      "FrequencyLimitation": "1 visit per calendar year."
     },
     "d1110": {
-      "frequency_unit": 5,
+      "frequency_unit": 1,
       "prophcv": "",
       "percentage": "100",
-      "frequency": "60"
+      "frequency": 2
     },
     "d1206": {
-      "frequency_unit": 4,
+      "frequency_unit": 1,
       "fluoridecv": "",
       "flage": "",
       "age_limit": "",
       "percentage": "100",
-      "frequency": 2
+      "frequency": 1
     },
     "d1351": {
-      "frequency_unit": 0,
-      "FrequencyLimitations": "",
+      "frequency_unit": 4,
+      "FrequencyLimitations": "1 visit every 3 calendar years.",
       "sealage": "",
       "sealantsteeth": "",
       "age_limit": "",
-      "percentage": "",
-      "frequency": ""
+      "percentage": "100",
+      "frequency": "3"
     },
     "d3120": {
-      "frequency_unit": 5,
+      "frequency_unit": 0,
       "3120freql": "",
       "sameday3120": "",
-      "percentage": "75",
-      "frequency": "24"
+      "percentage": "90",
+      "frequency": ""
     },
     "d3331": {
-      "frequency_unit": 5,
+      "frequency_unit": 4,
       "3331freql": "",
-      "percentage": "75",
-      "frequency": "24"
+      "percentage": "90",
+      "frequency": "99"
     },
     "d4249": {
       "frequency_unit": 5,
       "4249freql": "",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "36"
     },
     "d4267": {
       "frequency_unit": 5,
       "4267freql": "",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "36"
     },
     "d4341": {
@@ -114,32 +116,32 @@
       "pocketdepth4341": "",
       "norestrictions_1": "",
       "sameday4341": "",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "24",
       "quadvisit": ""
     },
     "d4346": {
-      "frequency_unit": 5,
+      "frequency_unit": 0,
       "4346freql": "",
       "perio4346": "",
       "sameday4346": "",
       "share4346": "",
-      "percentage": "100",
-      "frequency": "36"
+      "percentage": "90",
+      "frequency": ""
     },
     "d4355": {
-      "frequency_unit": 6,
+      "frequency_unit": 4,
       "debridefreql": "",
       "share4355": "",
-      "percentage": "100",
-      "frequency": "lifetime"
+      "percentage": "90",
+      "frequency": "99"
     },
     "d4910": {
-      "frequency_unit": 5,
+      "frequency_unit": 1,
       "periocv": "",
       "share4910": "",
-      "percentage": "100",
-      "frequency": "36",
+      "percentage": "90",
+      "frequency": 2,
       "4910freql": ""
     },
     "d4921": {
@@ -149,23 +151,23 @@
       "frequency": ""
     },
     "d7210": {
-      "frequency_unit": 6,
+      "frequency_unit": 0,
       "7210freql": "",
-      "percentage": "75",
-      "frequency": "lifetime",
+      "percentage": "90",
+      "frequency": "",
       "dentmed7210": ""
     },
     "d7922": {
-      "frequency_unit": 6,
+      "frequency_unit": 0,
       "7922freql": "",
-      "percentage": "75",
-      "frequency": "lifetime"
+      "percentage": "0",
+      "frequency": ""
     },
     "d7953": {
-      "frequency_unit": 6,
+      "frequency_unit": 4,
       "7953freql": "",
-      "percentage": "75",
-      "frequency": "lifetime"
+      "percentage": "60",
+      "frequency": "10"
     },
     "restseat": "",
     "restauth": "",
@@ -178,7 +180,7 @@
         "label": ""
       },
       "downgradeApplied": "No",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "24"
     },
     "d2392": {
@@ -189,7 +191,7 @@
         "label": ""
       },
       "downgradeApplied": "No",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "24"
     },
     "d2393": {
@@ -200,7 +202,7 @@
         "label": ""
       },
       "downgradeApplied": "No",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "24"
     },
     "d2394": {
@@ -211,13 +213,13 @@
         "label": ""
       },
       "downgradeApplied": "No",
-      "percentage": "75",
+      "percentage": "90",
       "frequency": "24"
     },
     "d2740": {
       "frequency_unit": 5,
       "FrequencyLimitations": "1 visit every 84 months.",
-      "percentage": "50",
+      "percentage": "60",
       "frequency": "84",
       "isDowngrade": "No",
       "downgrade_code": {
@@ -226,16 +228,16 @@
       }
     },
     "d6010": {
-      "frequency_unit": 5,
+      "frequency_unit": 4,
       "6010freql": "",
-      "percentage": "50",
-      "frequency": "84"
+      "percentage": "60",
+      "frequency": "10"
     },
     "d6241": {
-      "frequency_unit": 0,
+      "frequency_unit": 5,
       "FrequencyLimitations": "",
       "isDowngrade": "No",
-      "percentage": "50",
+      "percentage": "60",
       "frequency": "84",
       "d6241freql": "",
       "downgrade_code": {
@@ -244,47 +246,47 @@
       }
     },
     "d5110": {
-      "percentage": "50"
+      "percentage": "60"
     },
     "d4266": {
-      "percentage": "75",
+      "percentage": "90",
       "frequency_unit": 5,
       "frequency": "36",
       "4266freql": ""
     },
     "d5130": {
-      "percentage": "50"
+      "percentage": "60"
     },
     "d5213": {
-      "percentage": "50"
+      "percentage": "60"
     },
     "d5225": {
-      "percentage": "50"
+      "percentage": "60"
     },
     "d9910": {
       "frequency_unit": "",
       "9910freql": "",
-      "percentage": "",
+      "percentage": "0",
       "frequency": "",
       "frequenct_unit": 0
     },
     "d9944": {
-      "frequency_unit": 5,
+      "frequency_unit": 0,
       "9944freql": "",
-      "percentage": "50",
-      "frequency": "36"
+      "percentage": "0",
+      "frequency": ""
     },
     "d9944guide": "",
     "norestrictions_6": "No",
     "d0140": {
       "percentage": "100",
-      "frequency": "lifetime",
-      "frequency_unit": 6
+      "frequency": 2,
+      "frequency_unit": 1
     },
-    "fmxpanoshared": "Yes",
+    "fmxpanoshared": "No",
     "d0330": {
-      "frequency_unit": 5,
-      "frequency": "60",
+      "frequency_unit": 0,
+      "frequency": "",
       "percentage": "100"
     },
     "d4266guide": "",
@@ -295,24 +297,24 @@
     "norestrictions_1": "No",
     "d4910guide": "",
     "norestrictions_2": "No",
-    "prophyperioshared": "No",
+    "prophyperioshared": "Yes",
     "d7140": {
-      "percentage": "75",
-      "frequency_unit": 6,
-      "frequency": "lifetime",
+      "percentage": "90",
+      "frequency_unit": 0,
+      "frequency": "",
       "7140freql": ""
     },
     "d7240": {
-      "percentage": "75",
-      "frequency_unit": 6,
-      "frequency": "lifetime",
+      "percentage": "90",
+      "frequency_unit": 0,
+      "frequency": "",
       "7240freql": ""
     },
     "dentmed7210": "Dental",
     "d7953guide": "",
     "norestrictions_4": "No",
     "d2644": {
-      "percentage": "50",
+      "percentage": "60",
       "frequency_unit": 5,
       "frequency": "84",
       "FrequencyLimitations": "1 visit every 84 months.",
@@ -325,21 +327,21 @@
     "sealdprepd2644": "No",
     "sealdprepd": "No",
     "d2950": {
-      "percentage": "75",
+      "percentage": "60",
       "frequency_unit": 5,
-      "frequency": "60",
+      "frequency": "84",
       "Freql": ""
     },
     "d6057": {
-      "percentage": "50",
-      "frequency_unit": 5,
-      "frequency": "84",
+      "percentage": "60",
+      "frequency_unit": 4,
+      "frequency": "10",
       "6057freql": ""
     },
     "d6065": {
-      "percentage": "50",
-      "frequency_unit": 5,
-      "frequency": "84",
+      "percentage": "60",
+      "frequency_unit": 4,
+      "frequency": "10",
       "6065freql": "",
       "isDowngrade": "No",
       "downgrade_code": {
@@ -348,7 +350,7 @@
       }
     },
     "d9230": {
-      "percentage": "",
+      "percentage": "0",
       "frequency_unit": 0,
       "frequency": "",
       "9230freql": ""
@@ -356,23 +358,10 @@
     "d9230guide": "",
     "norestrictions_5": "No"
   },
-  "procCode": [
-    {
-      "value": 1,
-      "label": "T4528"
-    }
-  ],
+  "procCode": [],
   "patientHistory": [
     {
-      "date": "11/15/2024",
-      "procCode": "D0120",
-      "toothRange": "",
-      "surf": "",
-      "ToothRange": "",
-      "toothNumber": 0
-    },
-    {
-      "date": "12/18/2015",
+      "date": "08/08/2025",
       "ToothRange": "",
       "surf": "",
       "procCode": "D0150",
@@ -380,160 +369,114 @@
       "toothRange": ""
     },
     {
-      "date": "11/15/2024",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0230",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "12/14/2024",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D0350",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "11/15/2024",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D1208",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "12/14/2024",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2331",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "12/09/2021",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2392",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
       "date": "02/06/2023",
       "ToothRange": "",
       "surf": "",
-      "procCode": "D2750",
+      "procCode": "D0270",
       "toothNumber": 0,
       "toothRange": ""
     },
     {
-      "date": "12/09/2021",
+      "date": "08/08/2025",
       "ToothRange": "",
       "surf": "",
-      "procCode": "D2790",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "01/19/2023",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D2950",
-      "toothNumber": 0,
-      "toothRange": ""
-    },
-    {
-      "date": "01/26/2017",
-      "ToothRange": "",
-      "surf": "",
-      "procCode": "D9310",
+      "procCode": "D1110",
       "toothNumber": 0,
       "toothRange": ""
     }
   ],
-  "subscNote1": "SubscriberID: ",
+  "subscNote1": "",
   "txplan": {
     "visibile": ""
   },
-  "subscNote": " \nAdditional Notes:\nSubscriberID: ",
+  "subscNote": "",
   "planNotes": "",
-  "submit1": true,
+  "submit1": false,
   "submit": false,
-  "MonetaryAmt_IndMax": 1500,
+  "MonetaryAmt_IndMax": null,
+  "insUsed": 0,
+  "MonetaryAmt_IndDeduct": 0,
+  "deductibleUsed": 0,
+  "MonetaryAmt_DiaIndDeduct": 0,
+  "MonetaryAmt_XrayIndDeduct": 0,
+  "MonetaryAmt_PreventativeDeductible": 0,
   "restorativeWaitingPeriod": 0,
   "endoWaitingPeriod": 0,
   "perioWaitingPeriod": 0,
   "oralWaitingPeriod": 0,
   "crownsWaitingPeriod": 0,
   "prosthodonticsWaitingPeriod": 0,
+  "percentage_diagnostic": 100,
   "percentage_xray": 100,
   "percentage_preventative": 100,
-  "percentage_restorative": 75,
-  "percentage_endo": 75,
-  "percentage_oralSurgery": 75,
-  "ticketNo": 105986,
-  "ticketId": "68948628f68aece410e71a2a",
+  "percentage_restorative": 90,
+  "percentage_endo": 90,
+  "percentage_perio": 90,
+  "percentage_oralSurgery": 90,
+  "percentage_crowns": 60,
+  "percentage_prosthodontics": 60,
+  "ticketNo": 0,
+  "ticketId": "",
   "ticketData": {
     "ticket": {
-      "_id": "68948628f68aece410e71a2a",
-      "ticketNo": 105986,
-      "PatNum": 215,
-      "AptNum": 401,
-      "PatPlanNum": 230,
-      "PlanNum": 193,
-      "ticketType": 1,
-      "status": 3,
+      "_id": "",
+      "ticketNo": 0,
+      "PatNum": 0,
+      "AptNum": 0,
+      "PatPlanNum": 0,
+      "PlanNum": 0,
+      "ticketType": 0,
+      "status": 0,
       "rejectedReason": "",
-      "aptDate": "2025-01-01T10:10:00.000Z",
+      "aptDate": "",
       "isImported": false,
-      "ProviderName": "Treating Provider",
-      "Note": "sdsd\r\nfgfdgfdgfdgdfg\r\ndfgfdgfdg",
+      "ProviderName": "",
+      "Note": "",
       "Metadata": {
         "NotesForAgent": ""
       },
-      "clinic_id": "6481c2511b618ee1c901e60b",
-      "clinic_name": "PORTLANDDENTAL TESTCLINIC)",
-      "clinic_email": "hestia.spf@gmail.com",
-      "clinic_address": "1265 US-181 Frontage, Portland, TX 78374",
-      "clinic_npi": 1508469610,
-      "clinic_taxid": 461967342,
-      "clinic_provider_Fname": "Hani",
-      "clinic_provider_Lname": "Aref",
-      "clinic_about": "OTHER PROVIDERS: \r\nHani Aref - NPI 1508469610\r\nCampbell Janse - NPI 1134300395\r\nKim Youngjoon - NPI 1922618297\r\n\r\nCallback #\r\n361-777-0700\r\n361-777-0300\r\n\r\nDialer:\r\nUsername: 101@portlanddental\r\n\r\nPW: Soniva1234!\r\n\r\nFor DentaQuest and trust Always Use DentaQuest fee schedule",
-      "isImportTicketEnabled": true,
-      "isDropPlanEnabled": true,
-      "formType": 1
+      "clinic_id": "",
+      "clinic_name": "",
+      "clinic_email": "",
+      "clinic_address": "",
+      "clinic_npi": 0,
+      "clinic_taxid": 0,
+      "clinic_provider_Fname": "",
+      "clinic_provider_Lname": "",
+      "clinic_about": "",
+      "isImportTicketEnabled": false,
+      "isDropPlanEnabled": false,
+      "formType": 0
     },
     "patient": {
-      "PatNum": "113376652901",
-      "LName": "Arechiga",
-      "FName": "Jose",
-      "MiddleI": "A",
-      "Preferred": "Jose A Arechiga",
+      "PatNum": "619965045",
+      "LName": "ROSAS",
+      "FName": "RAMSES",
+      "MiddleI": "",
+      "Preferred": "RAMSES ROSAS",
       "PatStatus": "ACTIVE",
-      "Gender": "",
+      "Gender": "M",
       "Position": 0,
-      "Birthdate": "11/30/1978",
+      "Birthdate": "03/28/1997",
       "SSN": "",
-      "Address": "9525 Sylmar Ave Unit 1",
+      "Address": "15000 ROXFORD PLACE",
       "Address2": "",
-      "City": "Panorama City",
+      "City": "SYLMAR",
       "State": "CA",
-      "Zip": "914026987",
+      "Zip": "91342",
       "HmPhone": "",
       "WkPhone": "",
       "WirelessPhone": "",
-      "Guarantor": "113376652901",
+      "Guarantor": "619965045",
       "CreditType": "",
       "Email": "",
       "Salutation": "",
-      "EstBalance": 1700,
-      "PriProv": "Delta Dental of California",
+      "EstBalance": 0,
+      "PriProv": "MetLife",
       "SecProv": 0,
       "FeeSched": 0,
-      "BillingType": "",
-      "ImageFolder": "DunnAshlee215",
+      "BillingType": "GROUP_POLICY",
+      "ImageFolder": "",
       "AddrNote": "",
       "FamFinUrgNote": "",
       "MedUrgNote": "",
@@ -541,7 +484,7 @@
       "StudentStatus": "",
       "SchoolName": "",
       "ChartNumber": "",
-      "MedicaidID": "113376652901",
+      "MedicaidID": "619965045",
       "Bal_0_30": 0,
       "Bal_31_60": 0,
       "Bal_61_90": 0,
@@ -553,9 +496,9 @@
       "County": "",
       "GradeLevel": 0,
       "Urgency": 0,
-      "DateFirstVisit": "2025-01-01T00:00:00",
+      "DateFirstVisit": "",
       "ClinicNum": 0,
-      "HasIns": "I",
+      "HasIns": "",
       "TrophyFolder": "",
       "PlannedIsDone": 0,
       "Premed": 0,
@@ -563,15 +506,15 @@
       "PreferConfirmMethod": 0,
       "PreferContactMethod": 0,
       "PreferRecallMethod": 0,
-      "SchedBeforeTime": "00:00:00",
-      "SchedAfterTime": "00:00:00",
+      "SchedBeforeTime": "",
+      "SchedAfterTime": "",
       "SchedDayOfWeek": 0,
       "Language": "",
-      "AdmitDate": "0001-01-01T00:00:00",
+      "AdmitDate": "58957654",
       "Title": "",
       "PayPlanDue": 0,
       "SiteNum": 0,
-      "DateTStamp": "2025-02-11T10:39:38",
+      "DateTStamp": "",
       "ResponsParty": 0,
       "CanadianEligibilityCode": 0,
       "AskToArriveEarly": 0,
@@ -580,75 +523,63 @@
       "TxtMsgOk": 0,
       "SmokingSnoMed": "",
       "Country": "",
-      "DateTimeDeceased": "0001-01-01T00:00:00",
-      "BillingCycleDay": 1,
-      "SecUserNumEntry": 1,
-      "SecDateEntry": "2025-02-11T00:00:00",
+      "DateTimeDeceased": "",
+      "BillingCycleDay": 0,
+      "SecUserNumEntry": 0,
+      "SecDateEntry": "",
       "HasSuperBilling": 0,
       "PatNumCloneFrom": 0,
       "DiscountPlanNum": 0,
       "HasSignedTil": 0,
       "ShortCodeOptIn": 0,
-      "SecurityHash": "XP2S5LuIE3lQnd7s15Zr8VUeDzrDGRCkWp51XGm3Yuw=",
-      "PatPlanNum": 230,
-      "PatNum1": 215,
-      "Ordinal": 1,
+      "SecurityHash": "",
+      "PatPlanNum": 0,
+      "PatNum1": 0,
+      "Ordinal": 0,
       "IsPending": 0,
       "Relationship": "",
-      "PatID": "113376652901",
-      "InsSubNum": "18066-00401",
-      "OrthoAutoFeeBilledOverride": -1,
-      "OrthoAutoNextClaimDate": "0001-01-01T00:00:00",
-      "SecDateTEntry": "2025-02-11T10:37:50",
-      "SecDateTEdit": "2025-02-11T10:37:50",
-      "PlanNum": "18066-00401",
-      "Subscriber": "Jose A Arechiga",
-      "DateEffective": "01/01/2015",
-      "SubscriberID": "113376652901",
-      "GroupNum": "18066-00401",
-      "GroupName": "UNIVERSITY OF CALIFORNIA",
-      "CarrierNum": "77777",
-      "CarrierNum1": "77777",
-      "CarrierName": "Delta Dental of California",
-      "carrierPhone": "(800) 335-8227",
-      "ElectID": "77777"
+      "PatID": "619965045",
+      "InsSubNum": "5995955",
+      "OrthoAutoFeeBilledOverride": 0,
+      "OrthoAutoNextClaimDate": "",
+      "SecDateTEntry": "",
+      "SecDateTEdit": "",
+      "PlanNum": "5995955",
+      "Subscriber": "RAMSES ROSAS",
+      "DateEffective": "01/01/2025",
+      "SubscriberID": "619965045",
+      "GroupNum": "5995955",
+      "GroupName": "TBI AIRPORT MANAGEMENT INC.",
+      "CarrierNum": "65978",
+      "CarrierNum1": "65978",
+      "CarrierName": "MetLife",
+      "carrierPhone": "(800) 638-5433",
+      "ElectID": "65978"
     },
-    "subscriberName": "Jose Arechiga",
-    "subscriberDoB": "11/30/1978",
+    "subscriberName": "RAMSES ROSAS",
+    "subscriberDoB": "03/28/1997",
     "subscribertoRelationship": "",
     "latestTicketStatus": {
-      "status": "Scheduled",
-      "dateTime": "2025-02-11 11:20:00"
+      "status": "",
+      "dateTime": ""
     },
-    "ordinal": "Primary",
+    "ordinal": "",
     "subscriberPayload": {
       "subscriber": {
-        "first_name": "Jose",
-        "last_name": "Arechiga",
-        "dob": "11/30/1978",
-        "member_id": "113376652901"
+        "first_name": "RAMSES",
+        "last_name": "ROSAS",
+        "dob": "03/28/1997",
+        "member_id": "619965045"
       },
       "provider": {
         "npi": null
       },
       "payer": {
-        "id": "77777"
+        "id": "65978"
       },
-      "version": "v2"
+      "version": ""
     }
   },
   "extraPatientHistory": [],
-  "insUsed": 0,
-  "MonetaryAmt_IndDeduct": 50,
-  "deductibleUsed": 0,
-  "MonetaryAmt_DiaIndDeduct": 0,
-  "MonetaryAmt_XrayIndDeduct": 0,
-  "MonetaryAmt_PreventativeDeductible": 0,
-  "diagnosticApplied": "NO",
-  "isWaitingPeriod": "NO",
-  "percentage_diagnostic": 100,
-  "percentage_perio": 75,
-  "percentage_crowns": 50,
-  "percentage_prosthodontics": 50,
   "diagnosticApplied1": ""
 }

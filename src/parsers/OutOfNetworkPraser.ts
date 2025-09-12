@@ -150,7 +150,8 @@ class OutOfNetworkPraser extends BaseParser {
         benefitsOutOfNetwork?.orthodontic_maximum || null,
       agelimit:
         benefitsOutOfNetwork?.coverages?.orthodontics
-          ?.limited_orthodontic_treatment?.limitation?.age_high_value || "",
+          ?.comprehensive_orthodontic_treatment?.limitation?.age_high_value ||
+        "",
       percentage:
         benefitsOutOfNetwork?.coverages?.orthodontics?.coinsurance_percentage ||
         "",
@@ -158,7 +159,7 @@ class OutOfNetworkPraser extends BaseParser {
   }
 
   parseToResultFormat() {
-    const formDataIo: FormioData = this.formDataIO.data;
+    const formDataIo: FormioData = this.formDataIO?.data;
     const mapperData: any = {};
     const patient = this.data?.patient;
     const payer = this.data?.payer;

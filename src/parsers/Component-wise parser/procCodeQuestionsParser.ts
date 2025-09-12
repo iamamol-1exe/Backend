@@ -36,7 +36,7 @@ export class ProcCodeQuestionsParser {
 
       d0272: {
         frequency_unit: this.getFrequencyUnit("diagnostic", "bitewings"),
-          FrequencyLimitation: this.getFrequencyLimitation(
+        FrequencyLimitation: this.getFrequencyLimitation(
           "diagnostic",
           "bitewings"
         ),
@@ -492,6 +492,10 @@ export class ProcCodeQuestionsParser {
       },
 
       d6241: {
+        frequency_unit: this.getFrequencyUnit(
+          "prosthodontics_fixed",
+          "pontics_porcelain_fused_to_metal"
+        ),
         percentage: this.getCoins(
           "prosthodontics_fixed",
           "pontics_porcelain_fused_to_metal"
@@ -685,11 +689,11 @@ export class ProcCodeQuestionsParser {
     const lower = String(rule).toLowerCase();
     if (lower.includes("every") && lower.includes("month")) return 5;
     if (lower.includes("every") && lower.includes("year")) return 4;
+    if (lower.includes("every") && lower.includes("calendar")) return 4;
     if (lower.includes("per") && lower.includes("year")) return 1;
     if (lower.includes("per") && lower.includes("lifetime")) return 6;
-    // if (lower.includes("day")) return 0;
-    // if (lower.includes("week")) return 0;
-    // if (lower.includes("visit")) return 0;
+    if (lower.includes("every") && lower.includes("months")) return 5;
+
     return 0;
   }
 

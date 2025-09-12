@@ -73,7 +73,6 @@ class InNetworkParser extends BaseParser {
     const subscriber = this.data.subscriber ?? {};
     const payer = this.data.payer ?? {};
     return {
-      ticket: ticket,
       patient: this.mappingPatientData(),
       subscriberName: subscriber.first_name + " " + subscriber.last_name || "",
       subscriberDoB: subscriber.dob || "",
@@ -157,7 +156,8 @@ class InNetworkParser extends BaseParser {
         benefitsInNetwork?.orthodontic_maximum || null,
       agelimit:
         benefitsInNetwork?.coverages?.orthodontics
-          ?.limited_orthodontic_treatment?.limitation?.age_high_value || "",
+          ?.comprehensive_orthodontic_treatment?.limitation?.age_high_value ||
+        "",
       percentage:
         benefitsInNetwork?.coverages?.orthodontics?.coinsurance_percentage ||
         "",
