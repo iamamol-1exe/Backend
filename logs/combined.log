@@ -3358,3 +3358,7 @@
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-05T08:43:02.530Z"}
 {"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-05T08:43:02.535Z"}
 >>>>>>> 4fa47015c27916ab2e04b6e76cf729c494904dfb
+{"level":"info","message":"Server is running on port 4000","service":"backend-api","timestamp":"2025-09-12T11:17:33.336Z"}
+{"level":"info","message":{"duration":"28996ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-12T11:18:08.451Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-12T11:18:13.077Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-12T11:18:13.079Z"}
