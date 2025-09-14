@@ -1,26 +1,17 @@
+import { FormioData } from "../utils/formioDataMapper";
+
 export default abstract class BaseParser {
   protected data: any;
+  protected onederfulPayerId: string;
+  protected formDataIO: FormioData;
 
-  constructor(data : any) {
+  constructor(data: any, onederfulPayerId: string, formDataIO: FormioData) {
     this.data = data;
+    this.onederfulPayerId = onederfulPayerId;
+    this.formDataIO = formDataIO;
   }
-  abstract parsePatient(): any;
-  abstract parseProvider(): any;
-  abstract parsePlan(): any;
-  abstract parseDeductibles(): any;
-  abstract parseMaximums(): any;
-  abstract parseCoinsurances(): any;
-  abstract parseLimitations(): any;
-  
-  parse() {
-    return {
-      patient: this.parsePatient(),
-      provider: this.parseProvider(),
-      plan: this.parsePlan(),
-      deductibles: this.parseDeductibles(),
-      maximums: this.parseMaximums(),
-      coinsurances: this.parseCoinsurances(),
-      limitations: this.parseLimitations(),
-    };
-  }
+  // this method will return parsed data result
+  abstract parseTicketData(): any;
+  abstract parseOrtho(): any;
+  abstract parseToResultFormat(): any;
 }
