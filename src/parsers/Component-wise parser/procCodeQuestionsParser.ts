@@ -690,7 +690,7 @@ export class ProcCodeQuestionsParser {
     if (lower.includes("every") && lower.includes("month")) return 5;
     if (lower.includes("every") && lower.includes("year")) return 4;
     if (lower.includes("every") && lower.includes("calendar")) return 4;
-    if (lower.includes("per") && lower.includes("year")) return 1;
+    if (lower.includes("per") && lower.includes("year")) return 1;  
     if (lower.includes("per") && lower.includes("lifetime")) return 6;
     if (lower.includes("every") && lower.includes("months")) return 5;
 
