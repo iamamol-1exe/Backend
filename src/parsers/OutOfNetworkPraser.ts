@@ -37,24 +37,24 @@ class OutOfNetworkPraser extends BaseParser {
     return outOfNetwork ?? benefits[0] ?? null;
   }
 
-  getCoinsByCategory(category: string): number {
+  getCoinsByCategory(category: string): number | string {
     const ben = this.pickOutOfNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category] ?? ben?.[category];
 
     const val = n?.coinsurance_percentage;
 
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     return num;
   }
-  getCoins(category: string, node: string): number {
+  getCoins(category: string, node: string): number | string {
     const ben = this.pickOutOfNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
 
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const val = n?.coinsurance_percentage;
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     if (Number.isFinite(num)) return num;
 
@@ -104,9 +104,9 @@ class OutOfNetworkPraser extends BaseParser {
     return result;
   }
 
-  getPreventativeDeduct(category: string): number {
+  getPreventativeDeduct(category: string): number | string {
     const ben = this.pickOutOfNetworkBenefits() ?? {};
-    if (!ben) return 0;
+    if (!ben) return "";
 
     const n = ben?.coverages?.[category] ?? ben?.[category];
     let val = n?.deductible_applies;
@@ -115,15 +115,15 @@ class OutOfNetworkPraser extends BaseParser {
       val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
     }
     console.log(`deductiable ${category}`, val);
-    if (!val) return 0;
+    if (!val) return "";
 
     // if it is deductible applies to this category then get co-insurance percentage and find amount individual deductible
 
-    let percentage: number = this.getCoinsByCategory(category);
+    let percentage: number | string = this.getCoinsByCategory(category);
     if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");
     const deductiable: number = ben?.individual_deductible;
-    if (!percentage || !deductiable) return 0;
-    const ans = (percentage / 100) * deductiable;
+    if (!percentage || !deductiable) return "";
+    const ans = (Number(percentage) / 100) * deductiable;
 
     const fixedAmount = ans.toFixed(2);
 
@@ -135,7 +135,7 @@ class OutOfNetworkPraser extends BaseParser {
     const result =
       benefitsOutOfNetwork.individual_maximum -
       benefitsOutOfNetwork.individual_maximum_remaining;
-    return result;
+    return result.toFixed(2);
   }
 
   parseOrtho() {
@@ -145,7 +145,7 @@ class OutOfNetworkPraser extends BaseParser {
       orthosc1: "",
       orthoamountused:
         benefitsOutOfNetwork?.orthodontic_maximum -
-          benefitsOutOfNetwork?.orthodontic_maximum_remaining || 0,
+          benefitsOutOfNetwork?.orthodontic_maximum_remaining || "",
       MonetaryAmt_lifetimeCoverage:
         benefitsOutOfNetwork?.orthodontic_maximum || null,
       agelimit:
