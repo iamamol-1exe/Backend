@@ -1,13 +1,11 @@
 import { ticket } from "../interface/ticket";
-import createParser from "./Patient parser/parserPatientFactory";
-import { resultType } from "../types/resultType";
+import createParser from "./Patient_parser/parserPatientFactory";
 import BaseParser from "./BaseParser";
-import { ConInsurancePercantageClass } from "./Component-wise parser/ConInsurancePercentageParser";
-import { ProcCodeQuestionsParser } from "./Component-wise parser/procCodeQuestionsParser";
-import { ServiceHistoryParser } from "./Component-wise parser/serviceHistoryParser";
-
-import { ticketParser } from "./Component-wise parser/ticketParser";
-import { WaitingPeriodParser } from "./Component-wise parser/waitingPeriodParser";
+import { ConInsurancePercantageClass } from "./Component_wise_parser/ConInsurancePercentageParser";
+import { ProcCodeQuestionsParser } from "./Component_wise_parser/procCodeQuestionsParser";
+import { ServiceHistoryParser } from "./Component_wise_parser/serviceHistoryParser";
+import { ticketParser } from "./Component_wise_parser/ticketParser";
+import { WaitingPeriodParser } from "./Component_wise_parser/waitingPeriodParser";
 import {
   FORMIO_KEYS,
   NETWORK_KEYS,
@@ -31,9 +29,9 @@ class InNetworkParser extends BaseParser {
     );
     return inn ?? benefits[0] ?? null;
   }
-  getCoins(category: string, node: string): number {
+  getCoins(category: string, node: string): number | string {
     const ben = this.pickInNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
 
     const val =
@@ -43,7 +41,7 @@ class InNetworkParser extends BaseParser {
         `benefits.0.coverages.${category}.${node}.coinsurance_percentage`
       );
 
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     if (Number.isFinite(num)) return num;
 
@@ -51,9 +49,9 @@ class InNetworkParser extends BaseParser {
     const m = s.match(/(\d{1,3})\s*%/);
     return m ? Number(m[1]) : 0;
   }
-  getCoinsByCategory(category: string): number {
+  getCoinsByCategory(category: string): number | string {
     const ben = this.pickInNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category] ?? ben?.[category];
 
     const val =
@@ -63,7 +61,7 @@ class InNetworkParser extends BaseParser {
         `benefits.0.coverages.${category}?.coinsurance_percentage`
       );
 
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     return num;
   }
@@ -84,8 +82,8 @@ class InNetworkParser extends BaseParser {
           dob: subscriber.dob,
           member_id: subscriber.member_id || "",
         },
-        provider: { npi: null },
-        payer: { id: payer.id || null },
+        provider: { npi: "" },
+        payer: { id: payer.id || "" },
       },
     };
   }
@@ -109,9 +107,9 @@ class InNetworkParser extends BaseParser {
     return result;
   }
 
-  getPreventativeDeduct(category: string): number {
+  getPreventativeDeduct(category: string): number | string {
     const ben = this.pickInNetworkBenefits() ?? {};
-    if (!ben) return 0;
+    if (!ben) return "";
 
     const n = ben?.coverages?.[category] ?? ben?.[category];
     let val = n?.deductible_applies;
@@ -120,15 +118,15 @@ class InNetworkParser extends BaseParser {
       val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
     }
     console.log(`deductiable ${category}`, val);
-    if (!val) return 0;
+    if (!val) return "";
 
     // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible
 
-    let percentage: number = this.getCoinsByCategory(category);
+    let percentage: number | string = this.getCoinsByCategory(category);
     if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");
     const deductiable: number = ben?.individual_deductible;
     if (!percentage || !deductiable) return 0;
-    const ans = (percentage / 100) * deductiable;
+    const ans = (Number(percentage) / 100) * deductiable;
 
     const fixedAmount = ans.toFixed(2);
 
@@ -145,15 +143,14 @@ class InNetworkParser extends BaseParser {
 
   parseOrtho() {
     const benefitsInNetwork = this.pickInNetworkBenefits() ?? {};
-    const rules = this.data.rules;
     return {
       orthosc: "",
       orthosc1: "",
       orthoamountused:
         benefitsInNetwork?.orthodontic_maximum -
-          benefitsInNetwork?.orthodontic_maximum_remaining || 0,
+          benefitsInNetwork?.orthodontic_maximum_remaining || "",
       MonetaryAmt_lifetimeCoverage:
-        benefitsInNetwork?.orthodontic_maximum || null,
+        benefitsInNetwork?.orthodontic_maximum || "",
       agelimit:
         benefitsInNetwork?.coverages?.orthodontics
           ?.comprehensive_orthodontic_treatment?.limitation?.age_high_value ||

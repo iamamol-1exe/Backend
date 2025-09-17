@@ -55,10 +55,10 @@ export class ServiceHistoryParser {
       console.warn("Skipping invalid history item: missing required fields");
       return null;
     }
-    let toothNumber = 0;
+    let toothNumber: number | string = "";
     if (item.tooth) {
       const parsed = parseInt(item.tooth, 10);
-      toothNumber = isNaN(parsed) ? 0 : parsed;
+      toothNumber = isNaN(parsed) ? "" : parsed;
     }
 
     const formattedServiceDate = moment(item.service_date, "MM/DD/YYYY")

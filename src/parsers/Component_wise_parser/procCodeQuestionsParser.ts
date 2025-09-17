@@ -630,16 +630,12 @@ export class ProcCodeQuestionsParser {
 
   // Helping function for parsing data
 
-  private buildEmptyObject(): datatype {
-    return {};
-  }
-
   private getFrequency(category: string, node: string): number | string {
     const ben =
       this.networkIdentifier === 0
         ? this.pickInNetworkBenefits()
         : this.pickOutOfNetWork();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const val =
       n?.limitation?.frequency_count ??
@@ -652,14 +648,11 @@ export class ProcCodeQuestionsParser {
     const time_period_qualifier =
       n?.limitation?.frequency_component?.time_period_qualifier;
 
-    if (time_period_qualifier === "lifetime") return time_period_qualifier;
+    if (time_period_qualifier === "lifetime") return val;
 
     if (!val) return "";
 
     return time_period_value === "1" ? val : time_period_value;
-    // const num = Number(val);
-    // if (Number.isFinite(num)) return num;
-    // else return 0;
   }
 
   pickOutOfNetWork(): datatype | null {
@@ -683,18 +676,18 @@ export class ProcCodeQuestionsParser {
     return this.percentToString(val);
   }
 
-  public getFrequencyUnit(category: string, node: string): number {
+  public getFrequencyUnit(category: string, node: string): number | string {
     const rule = this.getFrequencyRule(category, node);
-    if (!rule) return 0;
+    if (!rule) return "";
     const lower = String(rule).toLowerCase();
     if (lower.includes("every") && lower.includes("month")) return 5;
     if (lower.includes("every") && lower.includes("year")) return 4;
     if (lower.includes("every") && lower.includes("calendar")) return 4;
-    if (lower.includes("per") && lower.includes("year")) return 1;  
+    if (lower.includes("per") && lower.includes("year")) return 1;
     if (lower.includes("per") && lower.includes("lifetime")) return 6;
     if (lower.includes("every") && lower.includes("months")) return 5;
 
-    return 0;
+    return "";
   }
 
   private getFrequencyLimitation(category: string, node: string): string {
@@ -911,12 +904,7 @@ export class ProcCodeQuestionsParser {
     return "";
   }
 
-  private getUnitByMonths(category: string, node: string): string {
-    const freq = this.getFrequencyRule(category, node);
-    if (!freq) return "";
-    const lower = String(freq).toLowerCase();
-    return lower.includes("month") ? "months" : "";
-  }
+  
 
   private getAgeHigh(category: string, node: string): string {
     const ben =
@@ -980,11 +968,6 @@ export class ProcCodeQuestionsParser {
     return inn ?? benefits[0] ?? null;
   }
 
-  private dot(obj: datatype, path: string): any {
-    return path
-      .split(".")
-      .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
-  }
 
   private getFMXPanoSharedFlag(): string {
     const ben =

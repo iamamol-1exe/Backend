@@ -1,5 +1,5 @@
 {
-  "onederfulId": "759a0900-9230-11f0-b253-d7418cb776f9",
+  "onederfulId": "02137850-93a6-11f0-b253-d7418cb776f9",
   "payer_transaction_id": null,
   "request_id": "89070",
   "response_id": "89070",
@@ -12186,7 +12186,7 @@
                 "time_period_value": "1"
               },
               "frequency_count": 1,
-              "frequency_rule": "1 visit every year.",
+              "frequency_rule": "1 visit per lifetime.",
               "remaining_component": {},
               "remaining_count": null
             },

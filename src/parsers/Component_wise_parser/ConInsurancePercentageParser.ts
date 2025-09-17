@@ -1,16 +1,11 @@
 type datatype = Record<string, any>;
+
 export class ConInsurancePercantageClass {
   protected data: datatype;
   protected networkidentifiers: string;
   constructor(data: datatype, networkidentifiers: string) {
     this.networkidentifiers = networkidentifiers;
     this.data = data;
-  }
-
-  dot(obj: datatype, path: string): any {
-    return path
-      .split(".")
-      .reduce((acc, key) => (acc && key in acc ? acc[key] : undefined), obj);
   }
 
   private get networkIdentifier(): number {
@@ -43,13 +38,8 @@ export class ConInsurancePercantageClass {
     if (!ben) return "";
     const n = ben?.coverages?.[category] ?? ben?.[category];
 
-    const val =
-      n?.coinsurance_percentage ??
-      this.dot(
-        this.data,
-        `benefits.0.coverages.${category}.coinsurance_percentage`
-      );
-    if (val === null || val === undefined) return 0;
+    const val = n?.coinsurance_percentage;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     if (Number.isFinite(num)) return num;
     const s = String(val);
@@ -57,13 +47,13 @@ export class ConInsurancePercantageClass {
     return m ? Number(m[1]) : "";
   }
 
-  getNestedCoins(category: string, node: string) {
+  getNestedCoins(category: string, node: string): number | string {
     const ben =
       this.networkIdentifier === 0
         ? this.pickInNetworkBenefits()
         : this.pickOutOfNetWork();
     console.log("network", this.networkIdentifier);
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const val = n?.coinsurance_percentage;
     if (val === null || val === undefined) return "";

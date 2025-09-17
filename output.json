@@ -31,7 +31,7 @@
   "ortho": {
     "orthosc": "",
     "orthosc1": "",
-    "orthoamountused": 0,
+    "orthoamountused": "",
     "MonetaryAmt_lifetimeCoverage": null,
     "agelimit": "",
     "percentage": ""
@@ -50,7 +50,7 @@
       "percentage": "100"
     },
     "d0220": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "0220freql": "",
       "frequency": "",
       "percentage": "100"
@@ -89,13 +89,13 @@
       "frequency_unit": 6,
       "3120freql": "",
       "sameday3120": "",
-      "frequency": "lifetime",
+      "frequency": 1,
       "percentage": "80"
     },
     "d3331": {
       "frequency_unit": 6,
       "3331freql": "",
-      "frequency": "lifetime",
+      "frequency": 1,
       "percentage": "80"
     },
     "d4249": {
@@ -107,7 +107,7 @@
     "d4267": {
       "frequency_unit": 6,
       "4267freql": "",
-      "frequency": "lifetime",
+      "frequency": 1,
       "percentage": "80"
     },
     "d4341": {
@@ -121,7 +121,7 @@
       "frequency": "24"
     },
     "d4346": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "4346freql": "",
       "perio4346": "",
       "sameday4346": "",
@@ -151,20 +151,20 @@
       "frequency": ""
     },
     "d7210": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "7210freql": "",
       "dentmed7210": "",
       "percentage": "80",
       "frequency": ""
     },
     "d7922": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "7922freql": "",
       "percentage": "0",
       "frequency": ""
     },
     "d7953": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "7953freql": "",
       "percentage": "0",
       "frequency": ""
@@ -228,7 +228,7 @@
       "frequency": "5"
     },
     "d6010": {
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "6010freql": "",
       "percentage": "0",
       "frequency": ""
@@ -250,7 +250,7 @@
     },
     "d4266": {
       "frequency_unit": 6,
-      "frequency": "lifetime",
+      "frequency": 1,
       "4266freql": "",
       "percentage": "80"
     },
@@ -267,13 +267,13 @@
       "frequency_unit": "",
       "9910freql": "",
       "frequency": "",
-      "frequenct_unit": 0,
+      "frequenct_unit": "",
       "percentage": "0"
     },
     "d9944": {
-      "frequency_unit": 4,
+      "frequency_unit": 6,
       "9944freql": "",
-      "frequency": "lifetime",
+      "frequency": 1,
       "percentage": "80"
     },
     "d9944guide": "",
@@ -300,13 +300,13 @@
     "prophyperioshared": "No",
     "d7140": {
       "percentage": "80",
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "frequency": "",
       "7140freql": ""
     },
     "d7240": {
       "percentage": "80",
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "frequency": "",
       "7240freql": ""
     },
@@ -334,7 +334,7 @@
     },
     "d6057": {
       "percentage": "0",
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "frequency": "",
       "6057freql": ""
     },
@@ -351,7 +351,7 @@
     },
     "d9230": {
       "percentage": "80",
-      "frequency_unit": 0,
+      "frequency_unit": "",
       "frequency": "",
       "9230freql": ""
     },
@@ -371,14 +371,14 @@
       "toothRange": "",
       "surf": "",
       "ToothRange": "",
-      "toothNumber": 0
+      "toothNumber": ""
     },
     {
       "date": "2023-06-08T00:00:00+05:30",
       "ToothRange": "",
       "surf": "",
       "procCode": "D0150",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     },
     {
@@ -386,7 +386,7 @@
       "ToothRange": "",
       "surf": "",
       "procCode": "D0274",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     },
     {
@@ -394,7 +394,7 @@
       "ToothRange": "",
       "surf": "",
       "procCode": "D1110",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     },
     {
@@ -402,7 +402,7 @@
       "ToothRange": "",
       "surf": "",
       "procCode": "D2740",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     },
     {
@@ -410,7 +410,7 @@
       "ToothRange": "",
       "surf": "",
       "procCode": "D2950",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     },
     {
@@ -418,7 +418,7 @@
       "ToothRange": "",
       "surf": "",
       "procCode": "D3320",
-      "toothNumber": 0,
+      "toothNumber": "",
       "toothRange": ""
     }
   ],
@@ -588,7 +588,7 @@
         "member_id": "135107523001"
       },
       "provider": {
-        "npi": null
+        "npi": ""
       },
       "payer": {
         "id": "CX007"
@@ -601,9 +601,9 @@
   "insUsed": 232.1400000000001,
   "MonetaryAmt_IndDeduct": 50,
   "deductibleUsed": 50,
-  "MonetaryAmt_DiaIndDeduct": 0,
+  "MonetaryAmt_DiaIndDeduct": "",
   "MonetaryAmt_XrayIndDeduct": 50,
-  "MonetaryAmt_PreventativeDeductible": 0,
+  "MonetaryAmt_PreventativeDeductible": "",
   "restorativeWaitingPeriod": 0,
   "endoWaitingPeriod": 0,
   "perioWaitingPeriod": 0,
