@@ -31,9 +31,9 @@ class InNetworkParser extends BaseParser {
     );
     return inn ?? benefits[0] ?? null;
   }
-  getCoins(category: string, node: string): number {
+  getCoins(category: string, node: string): number | string {
     const ben = this.pickInNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
 
     const val =
@@ -43,7 +43,7 @@ class InNetworkParser extends BaseParser {
         `benefits.0.coverages.${category}.${node}.coinsurance_percentage`
       );
 
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     if (Number.isFinite(num)) return num;
 
@@ -51,9 +51,9 @@ class InNetworkParser extends BaseParser {
     const m = s.match(/(\d{1,3})\s*%/);
     return m ? Number(m[1]) : 0;
   }
-  getCoinsByCategory(category: string): number {
+  getCoinsByCategory(category: string): number | string {
     const ben = this.pickInNetworkBenefits();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category] ?? ben?.[category];
 
     const val =
@@ -63,7 +63,7 @@ class InNetworkParser extends BaseParser {
         `benefits.0.coverages.${category}?.coinsurance_percentage`
       );
 
-    if (val === null || val === undefined) return 0;
+    if (val === null || val === undefined) return "";
     const num = Number(val);
     return num;
   }
@@ -109,9 +109,9 @@ class InNetworkParser extends BaseParser {
     return result;
   }
 
-  getPreventativeDeduct(category: string): number {
+  getPreventativeDeduct(category: string): number | string {
     const ben = this.pickInNetworkBenefits() ?? {};
-    if (!ben) return 0;
+    if (!ben) return "";
 
     const n = ben?.coverages?.[category] ?? ben?.[category];
     let val = n?.deductible_applies;
@@ -120,15 +120,15 @@ class InNetworkParser extends BaseParser {
       val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
     }
     console.log(`deductiable ${category}`, val);
-    if (!val) return 0;
+    if (!val) return "";
 
     // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible
 
-    let percentage: number = this.getCoinsByCategory(category);
+    let percentage: number | string = this.getCoinsByCategory(category);
     if (category === "fmx") percentage = this.getCoins("diagnostic", "fmx");
     const deductiable: number = ben?.individual_deductible;
-    if (!percentage || !deductiable) return 0;
-    const ans = (percentage / 100) * deductiable;
+    if (!percentage || !deductiable) return "";
+    const ans = (Number(percentage) / 100) * deductiable;
 
     const fixedAmount = ans.toFixed(2);
 
@@ -140,18 +140,18 @@ class InNetworkParser extends BaseParser {
     const result =
       benefitsInNetwork.individual_maximum -
       benefitsInNetwork.individual_maximum_remaining;
-    return result;
+    return result.toFixed(2);
   }
 
   parseOrtho() {
     const benefitsInNetwork = this.pickInNetworkBenefits() ?? {};
-    const rules = this.data.rules;
+    // const rules = this.data.rules;
     return {
       orthosc: "",
       orthosc1: "",
       orthoamountused:
         benefitsInNetwork?.orthodontic_maximum -
-          benefitsInNetwork?.orthodontic_maximum_remaining || 0,
+          benefitsInNetwork?.orthodontic_maximum_remaining || "",
       MonetaryAmt_lifetimeCoverage:
         benefitsInNetwork?.orthodontic_maximum || null,
       agelimit:

@@ -18,13 +18,13 @@ export class ProcCodeQuestionsParser {
     return {
       d0140: {
         percentage: this.getCoins("diagnostic", "exams"),
-        frequency: this.getFrequency("diagnostic", "exams") || 0,
+        frequency: this.getFrequency("diagnostic", "exams"),
         frequency_unit: this.getFrequencyUnit("diagnostic", "exams"), // ok
       },
 
       d0120: {
         percentage: this.getCoins("diagnostic", "exams"),
-        frequency: this.getFrequency("diagnostic", "exams") || 0,
+        frequency: this.getFrequency("diagnostic", "exams"),
         frequency_unit: this.getFrequencyUnit("diagnostic", "exams"), // ok
       },
 
@@ -147,8 +147,37 @@ export class ProcCodeQuestionsParser {
         frequency: this.getFrequency("preventive", "fluoride"),
         age_limit: this.getAgeHigh("preventive", "fluoride"),
       },
+      d1208: {
+        frequency_unit: this.getFrequencyUnit("preventive", "fluoride"),
+        percentage: this.getCoins("preventive", "fluoride"),
+        flage: "",
+        frequency: this.getFrequency("preventive", "fluoride"),
+        age_limit: this.getAgeHigh("preventive", "fluoride"),
+      },
 
       d1351: {
+        percentage: this.getCoins("preventive", "sealants"),
+        frequency_unit: this.getFrequencyUnit("preventive", "sealants"),
+        FrequencyLimitations: this.getFrequencyLimitation(
+          "preventive",
+          "sealants"
+        ),
+        frequency: this.getFrequency("preventive", "sealants"),
+        sealage: this.getAgeHigh("preventive", "sealants"),
+        age_limit: this.getAgeHigh("preventive", "sealants"),
+      },
+      d1352: {
+        percentage: this.getCoins("preventive", "sealants"),
+        frequency_unit: this.getFrequencyUnit("preventive", "sealants"),
+        FrequencyLimitations: this.getFrequencyLimitation(
+          "preventive",
+          "sealants"
+        ),
+        frequency: this.getFrequency("preventive", "sealants"),
+        sealage: this.getAgeHigh("preventive", "sealants"),
+        age_limit: this.getAgeHigh("preventive", "sealants"),
+      },
+      d1353: {
         percentage: this.getCoins("preventive", "sealants"),
         frequency_unit: this.getFrequencyUnit("preventive", "sealants"),
         FrequencyLimitations: this.getFrequencyLimitation(
@@ -652,7 +681,7 @@ export class ProcCodeQuestionsParser {
     const time_period_qualifier =
       n?.limitation?.frequency_component?.time_period_qualifier;
 
-    if (time_period_qualifier === "lifetime") return time_period_qualifier;
+    if (time_period_qualifier === "lifetime") return val;
 
     if (!val) return "";
 
@@ -683,18 +712,19 @@ export class ProcCodeQuestionsParser {
     return this.percentToString(val);
   }
 
-  public getFrequencyUnit(category: string, node: string): number {
+  public getFrequencyUnit(category: string, node: string): number | string {
     const rule = this.getFrequencyRule(category, node);
-    if (!rule) return 0;
+    if (!rule) return "";
     const lower = String(rule).toLowerCase();
     if (lower.includes("every") && lower.includes("month")) return 5;
     if (lower.includes("every") && lower.includes("year")) return 4;
     if (lower.includes("every") && lower.includes("calendar")) return 4;
     if (lower.includes("per") && lower.includes("year")) return 1;
-    if (lower.includes("per") && lower.includes("lifetime")) return 6;
+    if (lower.includes("per") && lower.includes("day")) return 6;
+    if (lower.includes("per") && lower.includes("lifetime")) return 7;
     if (lower.includes("every") && lower.includes("months")) return 5;
 
-    return 0;
+    return "";
   }
 
   private getFrequencyLimitation(category: string, node: string): string {

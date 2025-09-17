@@ -3362,3 +3362,67 @@
 {"level":"info","message":{"duration":"28996ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-12T11:18:08.451Z"}
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-12T11:18:13.077Z"}
 {"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-12T11:18:13.079Z"}
+{"level":"info","message":"Server is running on port 3000","service":"backend-api","timestamp":"2025-09-14T07:35:08.801Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-14T07:35:11.425Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-14T07:35:11.429Z"}
+{"level":"info","message":"Server is running on port 3000","service":"backend-api","timestamp":"2025-09-14T07:35:20.784Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T07:59:38.974Z"}
+{"level":"info","message":{"duration":"11161ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T08:07:36.030Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:23:36.080Z"}
+{"level":"info","message":{"duration":"8495ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T08:23:52.869Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:24:58.775Z"}
+{"level":"info","message":{"duration":"26945ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T08:25:32.384Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:28:53.444Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:29:42.080Z"}
+{"level":"info","message":{"duration":"51948ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T08:30:47.393Z"}
+{"level":"info","message":{"duration":"12028ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T08:34:09.675Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:44:25.921Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:44:36.643Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:44:58.037Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:46:56.704Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:47:05.288Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:53:58.690Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:57:24.417Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T08:58:58.302Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T09:00:01.595Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T09:00:59.144Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T09:01:14.970Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T09:02:58.447Z"}
+{"level":"info","message":{"duration":"7526ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T09:03:39.525Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T09:09:58.473Z"}
+{"level":"info","message":{"duration":"11876ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T09:10:17.207Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T12:08:22.522Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T12:09:10.410Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-14T16:11:25.773Z"}
+{"level":"info","message":{"duration":"10779ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-14T16:18:00.216Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T04:59:56.028Z"}
+{"level":"info","message":{"duration":"9083ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T05:05:26.155Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T05:27:21.110Z"}
+{"level":"info","message":{"duration":"9039ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T05:27:45.551Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T05:28:16.830Z"}
+{"level":"info","message":{"duration":"10589ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T05:28:44.520Z"}
+{"level":"info","message":{"duration":"13775ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T08:05:36.269Z"}
+{"level":"info","message":{"duration":"13317ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T10:22:24.265Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T10:33:22.030Z"}
+{"level":"info","message":{"duration":"10716ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T10:34:43.738Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T12:01:53.731Z"}
+{"level":"info","message":{"duration":"9503ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T12:30:59.389Z"}
+{"level":"info","message":{"duration":"7803ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T12:48:57.742Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-15T12:58:31.439Z"}
+{"level":"info","message":{"duration":"7471ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T12:59:05.764Z"}
+{"level":"info","message":{"duration":"5892ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T13:00:09.957Z"}
+{"level":"info","message":{"duration":"5592ms","ip":"::1","method":"POST","status":500,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T13:00:41.876Z"}
+{"level":"info","message":{"duration":"21122ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-15T13:01:35.851Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-16T06:15:57.248Z"}
+{"level":"info","message":{"duration":"15216ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-16T06:57:27.399Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-16T09:13:25.934Z"}
+{"level":"info","message":{"duration":"16904ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-16T09:15:07.821Z"}
+{"level":"info","message":{"duration":"29090ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-16T09:29:28.009Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-16T09:30:59.175Z"}
+{"level":"info","message":{"duration":"12636ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-16T15:18:50.833Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-17T14:10:51.066Z"}
+{"level":"info","message":{"duration":"18819ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-17T14:43:51.159Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-17T14:45:22.520Z"}
+{"level":"info","message":{"duration":"12966ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-17T14:46:28.537Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-17T14:52:36.183Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-17T14:56:48.797Z"}

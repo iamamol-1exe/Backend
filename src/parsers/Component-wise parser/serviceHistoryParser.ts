@@ -55,10 +55,10 @@ export class ServiceHistoryParser {
       console.warn("Skipping invalid history item: missing required fields");
       return null;
     }
-    let toothNumber = 0;
+    let toothNumber: string | number = "";
     if (item.tooth) {
       const parsed = parseInt(item.tooth, 10);
-      toothNumber = isNaN(parsed) ? 0 : parsed;
+      toothNumber = isNaN(parsed) ? "" : parsed;
     }
 
     const formattedServiceDate = moment(item.service_date, "MM/DD/YYYY")
@@ -69,7 +69,7 @@ export class ServiceHistoryParser {
       ToothRange: item.tooth || "", // Default to empty string if null
       surf: item.surfaces || "", // Default to empty string if null
       procCode: item.procedure_code,
-      toothNumber: toothNumber,
+      toothNumber: Number(toothNumber) === 0 ? "" : Number(toothNumber),
       toothRange: "",
     };
   }

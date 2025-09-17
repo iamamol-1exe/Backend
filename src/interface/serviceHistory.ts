@@ -12,6 +12,6 @@ export interface ProcessedHistoryItem {
   ToothRange: string;
   surf: string;
   procCode: string;
-  toothNumber: number;
+  toothNumber: number | string;
   toothRange: string;
 }
