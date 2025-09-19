@@ -39,20 +39,20 @@
   "procCodeQuestions": {
     "d0120": {
       "frequency_unit": 7,
-      "0120freql": "",
+      "0120freql": false,
       "percentage": "100",
       "frequency": 1
     },
     "d0210": {
       "frequency_unit": 5,
-      "0210freql": "",
+      "0210freql": false,
       "frequency": "60",
       "percentage": "100"
     },
     "d0220": {
-      "frequency_unit": 6,
-      "0220freql": "",
-      "frequency": 1,
+      "frequency_unit": "",
+      "0220freql": true,
+      "frequency": "",
       "percentage": "100"
     },
     "d0272": {
@@ -64,55 +64,55 @@
     },
     "d1110": {
       "frequency_unit": 4,
-      "prophcv": "",
+      "prophcv": false,
       "frequency": 2,
       "percentage": "100"
     },
     "d1206": {
       "frequency_unit": 4,
-      "fluoridecv": "",
+      "fluoridecv": false,
       "flage": "",
-      "age_limit": "18",
+      "age_limit": "",
       "percentage": "100",
       "frequency": 1
     },
     "d1351": {
       "frequency_unit": 5,
-      "FrequencyLimitations": "1 visit every 24 months.",
+      "FrequencyLimitations": false,
       "sealage": "15",
       "sealantsteeth": "",
-      "age_limit": "15",
+      "age_limit": "",
       "percentage": "100",
       "frequency": "24"
     },
     "d3120": {
       "frequency_unit": 7,
-      "3120freql": "",
+      "3120freql": false,
       "sameday3120": "",
       "percentage": "80",
       "frequency": 1
     },
     "d3331": {
       "frequency_unit": 7,
-      "3331freql": "",
+      "3331freql": false,
       "percentage": "80",
       "frequency": 1
     },
     "d4249": {
       "frequency_unit": 5,
-      "4249freql": "",
+      "4249freql": false,
       "percentage": "80",
       "frequency": "36"
     },
     "d4267": {
       "frequency_unit": 5,
-      "4267freql": "",
+      "4267freql": false,
       "percentage": "80",
       "frequency": "36"
     },
     "d4341": {
       "frequency_unit": 5,
-      "4341freql": "",
+      "4341freql": false,
       "pocketdepth4341": "",
       "norestrictions_1": "",
       "quadvisit": "",
@@ -122,7 +122,7 @@
     },
     "d4346": {
       "frequency_unit": 4,
-      "4346freql": "",
+      "4346freql": false,
       "perio4346": "",
       "sameday4346": "",
       "share4346": "",
@@ -131,7 +131,7 @@
     },
     "d4355": {
       "frequency_unit": 7,
-      "debridefreql": "",
+      "debridefreql": false,
       "share4355": "",
       "percentage": "80",
       "frequency": 1
@@ -140,7 +140,7 @@
       "frequency_unit": 4,
       "periocv": "",
       "share4910": "",
-      "4910freql": "",
+      "4910freql": false,
       "frequency": 4,
       "percentage": "80"
     },
@@ -152,20 +152,20 @@
     },
     "d7210": {
       "frequency_unit": 7,
-      "7210freql": "",
+      "7210freql": false,
       "dentmed7210": "",
       "percentage": "80",
       "frequency": 1
     },
     "d7922": {
       "frequency_unit": 7,
-      "7922freql": "",
+      "7922freql": false,
       "percentage": "80",
       "frequency": 1
     },
     "d7953": {
       "frequency_unit": 7,
-      "7953freql": "",
+      "7953freql": false,
       "percentage": "80",
       "frequency": 1
     },
@@ -173,54 +173,57 @@
     "restauth": "",
     "d2391": {
       "frequency_unit": 5,
-      "compositefreql": "",
-      "isDowngrade": "No",
+      "compositefreql": false,
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
       },
-      "downgradeApplied": "No",
+      "downgradeApplied": "",
       "percentage": "80",
       "frequency": "24"
     },
     "d2392": {
       "frequency_unit": 5,
-      "isDowngrade": "No",
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
       },
-      "downgradeApplied": "No",
+      "downgradeApplied": "",
       "percentage": "80",
+      "compositefreql": false,
       "frequency": "24"
     },
     "d2393": {
       "frequency_unit": 5,
       "frequency_unit1": "",
-      "isDowngrade": "No",
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
       },
-      "downgradeApplied": "No",
+      "downgradeApplied": "",
       "percentage": "80",
-      "frequency": "24"
+      "frequency": "24",
+      "compositefreql": false
     },
     "d2394": {
       "frequency_unit": 5,
-      "isDowngrade": "No",
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
       },
-      "downgradeApplied": "No",
+      "downgradeApplied": "",
       "percentage": "80",
-      "frequency": "24"
+      "frequency": "24",
+      "compositefreql": false
     },
     "d2740": {
       "frequency_unit": 5,
-      "FrequencyLimitations": "1 visit every 60 months.",
-      "isDowngrade": "No",
+      "FrequencyLimitations": false,
+      "isDowngrade": "",
       "percentage": "50",
       "frequency": "60",
       "downgrade_code": {
@@ -230,17 +233,16 @@
     },
     "d6010": {
       "frequency_unit": 5,
-      "6010freql": "",
+      "6010freql": false,
       "percentage": "50",
       "frequency": "60"
     },
     "d6241": {
       "frequency_unit": 5,
-      "FrequencyLimitations": "",
-      "isDowngrade": "No",
+      "FrequencyLimitations": false,
+      "isDowngrade": "",
       "percentage": "50",
       "frequency": "60",
-      "d6241freql": "",
       "downgrade_code": {
         "value": "",
         "label": ""
@@ -253,7 +255,7 @@
       "percentage": "80",
       "frequency_unit": 5,
       "frequency": "36",
-      "4266freql": ""
+      "4266freql": false
     },
     "d5130": {
       "percentage": "50"
@@ -266,25 +268,26 @@
     },
     "d9910": {
       "frequency_unit": "",
-      "9910freql": "",
+      "9910freql": true,
       "percentage": "",
       "frequency": "",
       "frequenct_unit": ""
     },
     "d9944": {
       "frequency_unit": "",
-      "9944freql": "",
+      "9944freql": true,
       "percentage": "",
       "frequency": ""
     },
     "d9944guide": "",
-    "norestrictions_6": "No",
+    "norestrictions_6": "",
     "d0140": {
       "percentage": "100",
       "frequency": 1,
-      "frequency_unit": 7
+      "frequency_unit": 7,
+      "0140freql": false
     },
-    "fmxpanoshared": "Yes",
+    "fmxpanoshared": "",
     "d0330": {
       "frequency_unit": 5,
       "frequency": "60",
@@ -295,79 +298,77 @@
       "percentage": "100",
       "flage": "",
       "frequency": 1,
-      "age_limit": "18"
+      "fluoridecv": false
     },
     "d1352": {
       "percentage": "100",
       "frequency_unit": 5,
-      "FrequencyLimitations": "1 visit every 24 months.",
+      "FrequencyLimitations": false,
       "frequency": "24",
-      "sealage": "15",
-      "age_limit": "15"
+      "sealage": "15"
     },
     "d1353": {
       "percentage": "100",
       "frequency_unit": 5,
-      "FrequencyLimitations": "1 visit every 24 months.",
+      "FrequencyLimitations": false,
       "frequency": "24",
-      "sealage": "15",
-      "age_limit": "15"
+      "sealage": "15"
     },
     "d4266guide": "",
-    "norestrictions_3": "No",
-    "D4341quads": "No",
-    "norestrictions_0": "No",
-    "arestinFL": "No",
-    "norestrictions_1": "No",
+    "norestrictions_3": "",
+    "D4341quads": "",
+    "norestrictions_0": "",
+    "arestinFL": "",
+    "norestrictions_1": "",
     "d4910guide": "",
-    "norestrictions_2": "No",
-    "prophyperioshared": "No",
+    "norestrictions_2": "",
+    "prophyperioshared": "",
     "d7140": {
       "percentage": "80",
       "frequency_unit": 7,
       "frequency": 1,
-      "7140freql": ""
+      "7140freql": false
     },
     "d7240": {
       "percentage": "80",
       "frequency_unit": 7,
       "frequency": 1,
-      "7240freql": ""
+      "7240freql": false
     },
-    "dentmed7210": "Dental",
+    "dentmed7210": "",
     "d7953guide": "",
-    "norestrictions_4": "No",
+    "norestrictions_4": "",
     "d2644": {
       "percentage": "50",
       "frequency_unit": 5,
       "frequency": "60",
-      "FrequencyLimitations": "1 visit every 60 months.",
-      "isDowngrade": "No",
+      "FrequencyLimitations": false,
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
       }
     },
-    "sealdprepd2644": "No",
-    "sealdprepd": "No",
+    "sealdprepd2644": "",
+    "sealdprepd": "",
     "d2950": {
       "percentage": "80",
       "frequency_unit": 5,
       "frequency": "60",
-      "Freql": ""
+      "2950freql": false
     },
     "d6057": {
       "percentage": "50",
       "frequency_unit": 5,
       "frequency": "60",
-      "6057freql": ""
+      "6057freql": false
     },
     "d6065": {
       "percentage": "50",
       "frequency_unit": 5,
       "frequency": "60",
-      "6065freql": "",
-      "isDowngrade": "No",
+      "6065freql": false,
+      "isDowngrade": "",
       "downgrade_code": {
         "value": "",
         "label": ""
@@ -377,10 +378,10 @@
       "percentage": "",
       "frequency_unit": "",
       "frequency": "",
-      "9230freql": ""
+      "9230freql": true
     },
     "d9230guide": "",
-    "norestrictions_5": "No"
+    "norestrictions_5": ""
   },
   "procCode": [
     {
@@ -405,21 +406,12 @@
   "planNotes": "Agent Name/Ref#: \nTreating Provider -- \n\n\n\n\n\nInsurance address: \nPayer ID: \nFee Schedule: None\nTimely Filing? -- \n\nFluoride age limit: \nSealants age limit: -- teeth covered: \n\nD4341 -- Pocket depth --   -- undefined days allowed between visits -- \n\n\n\n\n\n\nD9944 -- \nOrtho amount used -- ",
   "submit1": false,
   "submit": false,
-  "MonetaryAmt_IndMax": 2000,
+  "MonetaryAmt_IndMax": "",
   "ticketNo": 113839,
   "diagnosticApplied1": "",
-  "insUsed": "0.00",
-  "MonetaryAmt_IndDeduct": 25,
-  "deductibleUsed": 0,
   "MonetaryAmt_DiaIndDeduct": "",
   "MonetaryAmt_XrayIndDeduct": "",
   "MonetaryAmt_PreventativeDeductible": "",
-  "restorativeWaitingPeriod": 0,
-  "endoWaitingPeriod": 0,
-  "perioWaitingPeriod": 0,
-  "crownsWaitingPeriod": 0,
-  "prosthodonticsWaitingPeriod": 0,
-  "oralWaitingPeriod": 0,
   "percentage_diagnostic": 100,
   "percentage_xray": 100,
   "percentage_preventative": 100,
