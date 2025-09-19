@@ -172,7 +172,7 @@ export class ProcCodeQuestionsParser {
         percentage: this.getCoins("preventive", "fluoride"),
         fluoridecv: this.getFrequencyLimitationRadio("preventive", "fluoride"),
         frequency: this.getFrequency("preventive", "fluoride"),
-        age_limit: this.getAgeHigh("preventive", "fluoride"),
+        // age_limit: this.getAgeHigh("preventive", "fluoride"),
       },
       d1208: {
         frequency_unit: this.getFrequencyUnit("preventive", "fluoride"),
@@ -180,7 +180,7 @@ export class ProcCodeQuestionsParser {
         flage: "",
         frequency: this.getFrequency("preventive", "fluoride"),
         fluoridecv: this.getFrequencyLimitationRadio("preventive", "fluoride"),
-        age_limit: this.getAgeHigh("preventive", "fluoride"),
+        // age_limit: this.getAgeHigh("preventive", "fluoride"),
       },
 
       d1351: {
@@ -192,7 +192,7 @@ export class ProcCodeQuestionsParser {
         ),
         frequency: this.getFrequency("preventive", "sealants"),
         sealage: this.getAgeHigh("preventive", "sealants"),
-        age_limit: this.getAgeHigh("preventive", "sealants"),
+        // age_limit: this.getAgeHigh("preventive", "sealants"),
       },
       d1352: {
         percentage: this.getCoins("preventive", "sealants"),
@@ -203,7 +203,7 @@ export class ProcCodeQuestionsParser {
         ),
         frequency: this.getFrequency("preventive", "sealants"),
         sealage: this.getAgeHigh("preventive", "sealants"),
-        age_limit: this.getAgeHigh("preventive", "sealants"),
+        // age_limit: this.getAgeHigh("preventive", "sealants"),
       },
       d1353: {
         percentage: this.getCoins("preventive", "sealants"),
@@ -214,7 +214,7 @@ export class ProcCodeQuestionsParser {
         ),
         frequency: this.getFrequency("preventive", "sealants"),
         sealage: this.getAgeHigh("preventive", "sealants"),
-        age_limit: this.getAgeHigh("preventive", "sealants"),
+        // age_limit: this.getAgeHigh("preventive", "sealants"),
       },
 
       d4266: {
@@ -685,7 +685,7 @@ export class ProcCodeQuestionsParser {
       this.networkIdentifier === 0
         ? this.pickInNetworkBenefits()
         : this.pickOutOfNetWork();
-    if (!ben) return 0;
+    if (!ben) return "";
     const n = ben?.coverages?.[category]?.[node] ?? ben?.[category]?.[node];
     const val =
       n?.limitation?.frequency_count ??
@@ -701,6 +701,8 @@ export class ProcCodeQuestionsParser {
     if (time_period_qualifier === "lifetime") return val;
 
     if (!val) return "";
+
+    if (time_period_qualifier === "day" && val === 1) return "";
 
     return time_period_value === "1" ? val : time_period_value;
     // const num = Number(val);
@@ -737,7 +739,7 @@ export class ProcCodeQuestionsParser {
     if (lower.includes("every") && lower.includes("year")) return 4;
     if (lower.includes("every") && lower.includes("calendar")) return 4;
     if (lower.includes("per") && lower.includes("year")) return 1;
-    if (lower.includes("per") && lower.includes("day")) return 6;
+    if (lower.includes("per") && lower.includes("day")) return "";
     if (lower.includes("per") && lower.includes("lifetime")) return 7;
     if (lower.includes("every") && lower.includes("months")) return 5;
 
@@ -770,9 +772,12 @@ export class ProcCodeQuestionsParser {
   private getFrequencyLimitationRadio(
     category: string,
     node: string
-  ): boolean | string {
-    const coinsurance_percentage = this.getCoins(category, node);
-    if (Number(coinsurance_percentage)) return false;
+  ): string | boolean {
+    // const coinsurance_percentage = this.getCoins(category, node);
+    // if (Number(coinsurance_percentage)) return false;
+
+    const freqRule = this.getFrequencyUnit(category, node);
+    if (!freqRule) return true;
     const benefits =
       this.networkIdentifier === 0
         ? this.pickInNetworkBenefits()

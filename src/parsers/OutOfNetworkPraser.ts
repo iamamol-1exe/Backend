@@ -148,10 +148,7 @@ class OutOfNetworkPraser extends BaseParser {
           benefitsOutOfNetwork?.orthodontic_maximum_remaining || "",
       MonetaryAmt_lifetimeCoverage:
         benefitsOutOfNetwork?.orthodontic_maximum || null,
-      agelimit:
-        benefitsOutOfNetwork?.coverages?.orthodontics
-          ?.comprehensive_orthodontic_treatment?.limitation?.age_high_value ||
-        "",
+      agelimit: "",
       percentage:
         benefitsOutOfNetwork?.coverages?.orthodontics?.coinsurance_percentage ||
         "",
@@ -217,12 +214,13 @@ class OutOfNetworkPraser extends BaseParser {
     mapperData[MAPPER_KEYS.PATIENTHISTORY] = patientHistorydata;
 
     // Deductible fields
-    mapperData[MAPPER_KEYS.IND_ANNUAL_MAX] =
-      benefitsOutOfNetwork?.individual_maximum;
-    mapperData[MAPPER_KEYS.INS_USED] = this.getAmountUsed();
-    mapperData[MAPPER_KEYS.IND_DEDUCTIBLE] =
-      benefitsOutOfNetwork?.individual_deductible;
-    mapperData[MAPPER_KEYS.DEDUCTIBLE_USED] = this.getDeductibleUsed();
+    // mapperData[MAPPER_KEYS.IND_ANNUAL_MAX] =
+    //   benefitsOutOfNetwork?.individual_maximum;
+    // mapperData[MAPPER_KEYS.INS_USED] = this.getAmountUsed();
+    // mapperData[MAPPER_KEYS.IND_DEDUCTIBLE] =
+    //   benefitsOutOfNetwork?.individual_deductible;
+    // mapperData[MAPPER_KEYS.DEDUCTIBLE_USED] = this.getDeductibleUsed();
+
     mapperData[MAPPER_KEYS.MONETARY_AMT_DIA_IND_DEDUCT] =
       this.getPreventativeDeduct("diagnostic");
     mapperData[MAPPER_KEYS.MONETARY_AMT_XRAY_IND_DEDUCT] =
@@ -231,16 +229,16 @@ class OutOfNetworkPraser extends BaseParser {
       this.getPreventativeDeduct("preventive");
 
     // Waiting period
-    mapperData[FORMIO_KEYS.RESTORATIVE_WAITING_PERIOD] =
-      waitingData.restorativeWaitingPeriod;
-    mapperData[FORMIO_KEYS.ENDO_WAITING_PERIOD] = waitingData.endoWaitingPeriod;
-    mapperData[FORMIO_KEYS.PERIO_WAITING_PERIOD] =
-      waitingData.perioWaitingPeriod;
-    mapperData[FORMIO_KEYS.CROWNS_WAITING_PERIOD] =
-      waitingData.crownsWaitingPeriod;
-    mapperData[FORMIO_KEYS.PROSTHODONTICS_WAITING_PERIOD] =
-      waitingData.prosthodonticsWaitingPeriod;
-    mapperData[FORMIO_KEYS.ORAL_WAITING_PERIOD] = waitingData.oralWaitingPeriod;
+    // mapperData[FORMIO_KEYS.RESTORATIVE_WAITING_PERIOD] =
+    //   waitingData.restorativeWaitingPeriod;
+    // mapperData[FORMIO_KEYS.ENDO_WAITING_PERIOD] = waitingData.endoWaitingPeriod;
+    // mapperData[FORMIO_KEYS.PERIO_WAITING_PERIOD] =
+    //   waitingData.perioWaitingPeriod;
+    // mapperData[FORMIO_KEYS.CROWNS_WAITING_PERIOD] =
+    //   waitingData.crownsWaitingPeriod;
+    // mapperData[FORMIO_KEYS.PROSTHODONTICS_WAITING_PERIOD] =
+    //   waitingData.prosthodonticsWaitingPeriod;
+    // mapperData[FORMIO_KEYS.ORAL_WAITING_PERIOD] = waitingData.oralWaitingPeriod;
 
     // Co-insurance percentage
     mapperData[PERCENTAGE_SERVICES_FORMIO_KEYS.PERCENTAGE_DIAGNOSTIC] =
