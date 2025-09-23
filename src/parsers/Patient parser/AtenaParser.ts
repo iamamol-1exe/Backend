@@ -93,7 +93,7 @@ class AetnaParser extends PatientBaseParser {
       State: patient.address.state,
       Zip: patient.address.zip,
       Guarantor: patient.memberId || "",
-      EstBalance: balance.EstBalance || 0,
+      
       PriProv: plan.CarrierName || "",
       BillingType: plan.BillingType || "",
       MedicaidID: patient.memberId || "",

@@ -79,7 +79,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     const errorMessage = axios.isAxiosError(error)
       ? error.response?.data?.message
       : (error as Error).message;
-      console.error(error)
+    console.error(error);
     return HttpResponse.internalServerError(
       res,
       "Internal Server error",

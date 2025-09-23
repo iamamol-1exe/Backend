@@ -119,7 +119,7 @@ class InNetworkParser extends BaseParser {
     if (category === "fmx") {
       val = ben?.coverages?.diagnostic?.[category]?.deductible_applies;
     }
-    console.log(`deductiable ${category}`, val);
+
     if (!val) return "";
 
     // if it If deductible applies to this category then get co-insurance percentage and find amount individual deductible

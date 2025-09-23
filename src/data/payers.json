@@ -369,7 +369,14 @@
     "status": "ACTIVE"
   },
   {
-    "alt_payer_ids": ["BCBS_WASHINGTON", "47570T3", "47570T2", "47570T1", "00430", "DX102"],
+    "alt_payer_ids": [
+      "BCBS_WASHINGTON",
+      "47570T3",
+      "47570T2",
+      "47570T1",
+      "00430",
+      "DX102"
+    ],
     "features": ["eligibility"],
     "id": "47570",
     "name": "Blue Cross Blue Shield of Alaska (Premera)",
@@ -614,7 +621,13 @@
     "status": "ACTIVE"
   },
   {
-    "alt_payer_ids": ["00850", "85100", "TLW13", "CB850", "REGENCE_BCBS_OREGON_OUT"],
+    "alt_payer_ids": [
+      "00850",
+      "85100",
+      "TLW13",
+      "CB850",
+      "REGENCE_BCBS_OREGON_OUT"
+    ],
     "features": ["eligibility"],
     "id": "00851",
     "name": "Blue Cross Blue Shield of Oregon (Regence)",
@@ -622,7 +635,13 @@
     "status": "ACTIVE"
   },
   {
-    "alt_payer_ids": ["COUNCIL_CARPENTERS_WELFARE_FUND", "ICW01", "CDIN1", "DDPIN", "DDPI"],
+    "alt_payer_ids": [
+      "COUNCIL_CARPENTERS_WELFARE_FUND",
+      "ICW01",
+      "CDIN1",
+      "DDPIN",
+      "DDPI"
+    ],
     "features": ["eligibility"],
     "id": "DELTI",
     "name": "Delta Dental of Indiana",
@@ -1682,7 +1701,15 @@
     "status": "ACTIVE"
   },
   {
-    "alt_payer_ids": ["GOO62", "G0062", "G0621", "CBIL1", "TLW12", "CB621", "23004"],
+    "alt_payer_ids": [
+      "GOO62",
+      "G0062",
+      "G0621",
+      "CBIL1",
+      "TLW12",
+      "CB621",
+      "23004"
+    ],
     "features": ["eligibility"],
     "id": "00621",
     "name": "Blue Cross Blue Shield of Illinois",

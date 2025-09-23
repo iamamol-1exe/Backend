@@ -94,7 +94,6 @@ class UnitedHealthcareParser extends PatientBaseParser {
 
       Guarantor: patient.memberId || "",
 
-      EstBalance: balance.EstBalance || 0,
       PriProv: plan.CarrierName || "",
 
       BillingType: plan.insurance_type || "",

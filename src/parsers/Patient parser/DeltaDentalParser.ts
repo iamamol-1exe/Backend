@@ -93,7 +93,6 @@ class DeltaDentalParser extends PatientBaseParser {
 
       Guarantor: patient.memberId || "",
 
-      EstBalance: balance.EstBalance || 0,
       PriProv: plan.CarrierName || "",
 
       BillingType: plan.plan_type || "",
