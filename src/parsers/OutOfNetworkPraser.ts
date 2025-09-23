@@ -2,19 +2,19 @@ import { ticket } from "../interface/ticket";
 import createParser from "./Patient parser/parserPatientFactory";
 import { resultType } from "../types/resultType";
 import BaseParser from "./BaseParser";
-import { ConInsurancePercantageClass } from "./Component-wise parser/ConInsurancePercentageParser";
-import { ProcCodeQuestionsParser } from "./Component-wise parser/procCodeQuestionsParser";
-import { ServiceHistoryParser } from "./Component-wise parser/serviceHistoryParser";
-import { ticketParser } from "./Component-wise parser/ticketParser";
-import { WaitingPeriodParser } from "./Component-wise parser/waitingPeriodParser";
+import { ConInsurancePercantageClass } from "./ComponentWiseParser/ConInsurancePercentageParser";
+import { ProcCodeQuestionsParser } from "./ComponentWiseParser/procCodeQuestionsParser";
+import { ServiceHistoryParser } from "./ComponentWiseParser/serviceHistoryParser";
+import { ticketParser } from "./ComponentWiseParser/ticketParser";
+import { WaitingPeriodParser } from "./ComponentWiseParser/waitingPeriodParser";
 import {
   FORMIO_KEYS,
   NETWORK_KEYS,
   PERCENTAGE_SERVICES_FORMIO_KEYS,
-} from "../../const/FormIoKeys";
-import { MAPPER_KEYS } from "../../const/MapperDatakeys";
+} from "../const/FormIoKeys";
+import { MAPPER_KEYS } from "../const/MapperDatakeys";
 import { FormioData, mapValuesToForm } from "../utils/formioDataMapper";
-import { DATA_KEYS } from "../../const/DataKeys";
+import { DATA_KEYS } from "../const/DataKeys";
 
 type datatype = Record<string, any>;
 
