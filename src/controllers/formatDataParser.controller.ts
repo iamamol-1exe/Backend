@@ -40,8 +40,8 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     if (!token) {
       token = await getAuthToken();
     }
-    console.log("Selected network :", networkQualifier);
-
+    // console.log("Selected network :", networkQualifier);
+    // console.log("payload: ", payload.payload.payer.id)
     const identifier = payload.payer.id;
     const onederfulPayerId =
       getOnederfulPayerId(identifier)?.toLocaleLowerCase() || null;
@@ -79,6 +79,7 @@ export const formatDataParser1 = async (req: Request, res: Response) => {
     const errorMessage = axios.isAxiosError(error)
       ? error.response?.data?.message
       : (error as Error).message;
+      console.error(error)
     return HttpResponse.internalServerError(
       res,
       "Internal Server error",
