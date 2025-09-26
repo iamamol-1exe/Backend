@@ -51,17 +51,21 @@ process.on("unhandledRejection", (reason, promise) => {
 // Handle server start and Redis connection
 const startServer = async () => {
   try {
-    await connectRedis(); //
+    console.log("Starting server...");
+    await connectRedis();
+    console.log("Redis connected, starting HTTP server...");
+
     server.listen(PORT, () => {
       logger.info(`Server is running on port ${PORT}`);
+      console.log(`Server is running on port ${PORT}`);
     });
   } catch (err) {
     logger.error("Failed to connect to Redis, server not starting", err);
+    console.error("Server start error:", err);
     process.exit(1);
   }
 };
 
 startServer();
-
 
 export default server;

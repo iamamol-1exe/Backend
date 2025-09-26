@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon --watch src --ext ts,js --exec \"ts-node\" src/server.ts",
-    "start": "pm2-runtime start ecosystem.config.js",
+    "start": "npx ts-node src/server.ts",
     "pm2:start": "pm2 start ecosystem.config.js",
     "pm2:stop": "pm2 stop all",
     "pm2:restart": "pm2 restart all"

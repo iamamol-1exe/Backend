@@ -3657,3 +3657,8 @@
 {"level":"info","message":{"duration":"10877ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-23T12:09:50.725Z"}
 {"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-23T12:12:23.928Z"}
 {"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-23T12:12:23.932Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-23T12:20:26.682Z"}
+{"level":"info","message":"Received SIGINT, starting graceful shutdown...","service":"backend-api","timestamp":"2025-09-23T12:21:12.239Z"}
+{"level":"info","message":"Redis client disconnected successfully","service":"backend-api","timestamp":"2025-09-23T12:21:12.246Z"}
+{"level":"info","message":"Server is running on port 4001","service":"backend-api","timestamp":"2025-09-25T13:33:52.931Z"}
+{"level":"info","message":{"duration":"22761ms","ip":"::1","method":"POST","status":200,"url":"/parse"},"service":"backend-api","timestamp":"2025-09-25T13:37:47.192Z"}
